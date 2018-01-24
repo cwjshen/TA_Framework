@@ -2,6 +2,7 @@ package com.revature.webdriver;
 
 import java.io.File;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -10,7 +11,9 @@ import com.revature.pom.Login;
 import com.revature.pom.Logout;
 
 public class WDTestClass {
+	
 	static WebDriver wd = null;
+	
 	public static void main(String[] args) {
 		openApplication();
 		testMethod();
@@ -24,11 +27,15 @@ public class WDTestClass {
 	}
 
 	private static void testMethod() {
-		Login.user(wd).sendKeys("test.trainer@revature.com.int1");
-		Login.password(wd).sendKeys("p@$$w0rd2");
-		Login.signin(wd).submit();
+		wd.findElement(By.id("username")).sendKeys("test.trainer@revature.com.int1");
+		wd.findElement(By.name("pw")).sendKeys("p@$$w0rd2");
+		wd.findElement(By.id("Login")).submit();
+//		Login.user(wd).sendKeys("test.trainer@revature.com.int1");
+//		Login.password(wd).sendKeys("p@$$w0rd2");
+//		Login.signin(wd).submit();
 		
 		//HomePage.navigateToReportsPage(wd).click();
-		Logout.logout(wd).click();
+		//Logout.logout(wd).click();
+		wd.close();
 	}
 }
