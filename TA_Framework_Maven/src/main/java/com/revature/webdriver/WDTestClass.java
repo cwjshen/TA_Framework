@@ -5,7 +5,7 @@ import java.io.File;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-//import com.revature.pom.HomePage;
+import com.revature.pom.HomePage;
 import com.revature.pom.Login;
 import com.revature.pom.Logout;
 
@@ -28,7 +28,9 @@ public class WDTestClass {
 		Login.password(wd).sendKeys("p@$$w0rd2");
 		Login.signin(wd).submit();
 		
-		//HomePage.navigateToReportsPage(wd).click();
+		HomePage.navigateToReportsPage(wd).click();
 		Logout.logout(wd).click();
+		
+		wd.close();
 	}
 }
