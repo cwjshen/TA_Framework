@@ -3,3 +3,4 @@ TA_Framework_Maven/target/
 .project
 .settings/
 target/
+**/chromedriver.exe
