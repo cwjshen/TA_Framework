@@ -2,5 +2,5 @@ TA_Framework_Maven/target/
 .classpath
 .project
 .settings/
-target/
 **/chromedriver.exe
+**/geckodriver.exe
