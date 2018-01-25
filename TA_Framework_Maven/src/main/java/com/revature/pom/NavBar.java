@@ -9,7 +9,7 @@ public class NavBar {
 
 	public static WebElement navigateToOverviewPage(WebDriver d) {
 		try {
-			Thread.sleep(3000);
+			Thread.sleep(1000);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
@@ -18,7 +18,7 @@ public class NavBar {
 	}
 	public static WebElement navigateToBatchesPage(WebDriver d) {
 		try {
-			Thread.sleep(3000);
+			Thread.sleep(1000);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
@@ -27,7 +27,7 @@ public class NavBar {
 	}
 	public static WebElement navigateToLocationsPage(WebDriver d) {
 		try {
-			Thread.sleep(3000);
+			Thread.sleep(1000);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
@@ -36,7 +36,7 @@ public class NavBar {
 	}
 	public static WebElement navigateToCurriculaPage(WebDriver d) {
 		try {
-			Thread.sleep(3000);
+			Thread.sleep(1000);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
@@ -45,7 +45,7 @@ public class NavBar {
 	}
 	public static WebElement navigateToTrainersPage(WebDriver d) {
 		try {
-			Thread.sleep(3000);
+			Thread.sleep(1000);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
@@ -54,7 +54,7 @@ public class NavBar {
 	}
 	public static WebElement navigateToProfilePage(WebDriver d) {
 		try {
-			Thread.sleep(3000);
+			Thread.sleep(1000);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
@@ -63,7 +63,7 @@ public class NavBar {
 	}
 	public static WebElement navigateToReportsPage(WebDriver d) {
 		try {
-			Thread.sleep(3000);
+			Thread.sleep(1000);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
@@ -72,7 +72,7 @@ public class NavBar {
 	}
 	public static WebElement navigateToSettingsPage(WebDriver d) {
 		try {
-			Thread.sleep(3000);
+			Thread.sleep(1000);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
