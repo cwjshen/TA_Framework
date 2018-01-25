@@ -1,24 +1,58 @@
 package com.revature.pom;
 
+import java.io.File;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 
-// ONE CLASS PER HOMEPAGE
 public class Login {
-	static WebElement e = null;
+
+	static WebDriver wd = null;
 	
-	public static WebElement user(WebDriver d) {
-		e = d.findElement(By.name("username"));
-		return e;
+	public static void main(String[] args) {
+//		openApp();
+		//login();
+		//login2();
+		//loginWrongUser();
+		//loginWrongPassword();
+		//forgotPasswordButton();
 	}
 	
-	public static WebElement password(WebDriver d) {
-		e = d.findElement(By.name("pw"));
-		return e;
+//	static void openApp() {
+//		File f1 = new File("src/main/resources/chromedriver.exe");
+//		System.setProperty("webdriver.chrome.driver", f1.getAbsolutePath());
+//		wd = new ChromeDriver();
+//		wd.get("https://dev.assignforce.revaturelabs.com");
+//	}
+	
+	public static void login() {
+		wd.findElement(By.id("username")).sendKeys("test.trainer@revature.com.int1");
+		wd.findElement(By.name("pw")).sendKeys("p@$$w0rd2");
+		wd.findElement(By.id("Login")).submit();
 	}
-	public static WebElement signin(WebDriver d) {
-		e = d.findElement(By.name("Login"));
-		return e;
+	
+	public static void login2() {
+		wd.findElement(By.id("username")).sendKeys("test");
+		wd.findElement(By.name("pw")).sendKeys("testpw");
+		wd.findElement(By.id("Login")).submit();
+	}
+	
+	public static void loginWrongUser() {
+		wd.findElement(By.id("username")).sendKeys("wronguser");
+		wd.findElement(By.name("pw")).sendKeys("p@$$w0rd2");
+		wd.findElement(By.id("Login")).submit();
+	}
+	
+	public static void loginWrongPassword() {
+		wd.findElement(By.id("username")).sendKeys("test.trainer@revature.com.int1");
+		wd.findElement(By.name("pw")).sendKeys("wrongPass");
+		wd.findElement(By.id("Login")).submit();
+	}
+	
+	public static void forgotPasswordButton() {
+		wd.findElement(By.id("forgot_password_link")).click();
 	}
 }
+
+ 
