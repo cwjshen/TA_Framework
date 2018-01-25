@@ -35,12 +35,18 @@ public class OverviewCukes {
 
 	@Then("^I should see the 'Export to CSV' button$")
 	public static boolean i_should_see_the_Export_to_CSV_button(WebDriver wd) throws Throwable {
-		return OverviewTab.findCSVButton(wd);
+		if (OverviewTab.findCSVButton(wd) != null) {
+			return true;
+		}
+		return false;
 	}
 
 	@Then("^'Fiter' button$")
 	public static boolean fiter_button(WebDriver wd) throws Throwable {
-		return OverviewTab.findFilterButton(wd);
+		if (OverviewTab.findFilterButton(wd) != null) {
+			return true;
+		}
+		return false;	
 	}
 
 

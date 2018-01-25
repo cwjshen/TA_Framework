@@ -1,11 +1,7 @@
-package com.revature.util;
-
-
+package com.revature.hibernate.dao;
 
 import java.util.List;
-
 import com.revature.model.Batch;
-
 
 
 public interface BatchDao {

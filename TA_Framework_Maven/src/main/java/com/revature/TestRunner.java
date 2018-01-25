@@ -64,6 +64,11 @@ public class TestRunner extends AbstractTestNGCucumberTests {
 	@BeforeTest
 	public void beforeTest() {
 		System.out.println("Running Overview Tab Test");
+
+	}
+
+	@Test
+	public void TestOne() {
 		try {
 			OverviewCukes.click_the_Overview_tab(wd);
 			System.out.println("Looking for CSV button");
@@ -76,7 +81,8 @@ public class TestRunner extends AbstractTestNGCucumberTests {
 			e.printStackTrace();
 		}
 	}
-
+	
+	
 	@AfterTest
 	public void afterTest() {
 		System.out.println("Tests successful. Overview tab working as intended");

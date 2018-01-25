@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="3482" started-at="2018-01-25T20:10:09Z" finished-at="2018-01-25T20:10:13Z">
+  <suite name="Default suite" duration-ms="3861" started-at="2018-01-25T20:53:34Z" finished-at="2018-01-25T20:53:38Z">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.revature.TestRunner@1794d431]" name="feature" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.revature.TestRunner@73ad2d6]" name="feature" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test name="Default test" duration-ms="3482" started-at="2018-01-25T20:10:09Z" finished-at="2018-01-25T20:10:13Z">
+    <test name="Default test" duration-ms="3861" started-at="2018-01-25T20:53:34Z" finished-at="2018-01-25T20:53:38Z">
       <class name="com.revature.TestRunner">
-        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:com.revature.TestRunner@1794d431]" name="beforeSuite" is-config="true" duration-ms="6599" started-at="2018-01-25T15:10:03Z" finished-at="2018-01-25T15:10:09Z">
+        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:com.revature.TestRunner@73ad2d6]" name="beforeSuite" is-config="true" duration-ms="6549" started-at="2018-01-25T15:53:27Z" finished-at="2018-01-25T15:53:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.revature.TestRunner@1794d431]" name="beforeTest" is-config="true" duration-ms="3167" started-at="2018-01-25T15:10:09Z" finished-at="2018-01-25T15:10:13Z">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.revature.TestRunner@73ad2d6]" name="beforeTest" is-config="true" duration-ms="0" started-at="2018-01-25T15:53:34Z" finished-at="2018-01-25T15:53:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.revature.TestRunner@1794d431]" name="setUpClass" is-config="true" duration-ms="202" started-at="2018-01-25T15:10:13Z" finished-at="2018-01-25T15:10:13Z">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.revature.TestRunner@73ad2d6]" name="setUpClass" is-config="true" duration-ms="436" started-at="2018-01-25T15:53:34Z" finished-at="2018-01-25T15:53:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.revature.TestRunner@1794d431]" name="feature" duration-ms="12" started-at="2018-01-25T15:10:13Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2018-01-25T15:10:13Z">
+        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.revature.TestRunner@73ad2d6]" name="feature" duration-ms="126" started-at="2018-01-25T15:53:34Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2018-01-25T15:53:35Z">
           <params>
             <param index="0">
               <value>
@@ -33,15 +33,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- feature -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.revature.TestRunner@1794d431]" name="tearDownClass" is-config="true" duration-ms="6" started-at="2018-01-25T15:10:13Z" finished-at="2018-01-25T15:10:13Z">
+        <test-method status="PASS" signature="TestOne()[pri:0, instance:com.revature.TestRunner@73ad2d6]" name="TestOne" duration-ms="3169" started-at="2018-01-25T15:53:35Z" finished-at="2018-01-25T15:53:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestOne -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.revature.TestRunner@73ad2d6]" name="tearDownClass" is-config="true" duration-ms="2" started-at="2018-01-25T15:53:38Z" finished-at="2018-01-25T15:53:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.revature.TestRunner@1794d431]" name="afterTest" is-config="true" duration-ms="1" started-at="2018-01-25T15:10:13Z" finished-at="2018-01-25T15:10:13Z">
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.revature.TestRunner@73ad2d6]" name="afterTest" is-config="true" duration-ms="1" started-at="2018-01-25T15:53:38Z" finished-at="2018-01-25T15:53:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-        <test-method status="PASS" signature="afterSuite()[pri:0, instance:com.revature.TestRunner@1794d431]" name="afterSuite" is-config="true" duration-ms="1162" started-at="2018-01-25T15:10:13Z" finished-at="2018-01-25T15:10:14Z">
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:com.revature.TestRunner@73ad2d6]" name="afterSuite" is-config="true" duration-ms="1115" started-at="2018-01-25T15:53:38Z" finished-at="2018-01-25T15:53:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->

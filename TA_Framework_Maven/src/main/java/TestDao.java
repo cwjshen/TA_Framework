@@ -1,8 +1,8 @@
 import java.util.Iterator;
 
 import com.revature.model.Batch;
-import com.revature.util.BatchDaoImp;
-import com.revature.util.TrainerDaoImp;
+import com.revature.hibernate.dao.BatchDaoImp;
+import com.revature.hibernate.dao.TrainerDaoImp;
 
 public class TestDao {
 

@@ -1,4 +1,4 @@
-package com.revature.util;
+package com.revature.hibernate.dao;
 import java.util.List;
 
 import org.hibernate.HibernateException;
@@ -6,6 +6,7 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 
 import com.revature.model.Trainer;
+import com.revature.util.HibernateUtil;
 
 
 
