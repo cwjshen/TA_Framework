@@ -35,7 +35,7 @@ public class WDTestClass {
 //		Login.signin(wd).submit();
 		
 		
-		//HomePage.navigateToReportsPage(wd).click();
+		NavBar.navigateToReportsPage(wd).click();
 		//Logout.logout(wd).click();
 		NavBar.navigateToReportsPage(wd).click();
 		Logout.logout(wd).click();
