@@ -47,10 +47,10 @@ public class Locations {
 			return d.findElement(By.xpath("span[@aria-label='CUNY QUEENS']"));
 		}
 			public static WebElement CunyQueens210(WebDriver d) {
-				return d.findElement(By.xpath("//*[@id=\'bldg242\']/md-list-item[1]/div/button"));
+				return d.findElement(By.xpath("//*[@id='bldg242']/md-list-item[1]/div/button"));
 			}
 			public static WebElement CunyQueens1(WebDriver d) {
-				return d.findElement(By.xpath("//*[@id=\'bldg242\']/md-list-item[2]/div/button"));
+				return d.findElement(By.xpath("//*[@id='bldg242']/md-list-item[2]/div/button"));
 			}
 		
 		public static WebElement CunySPS(WebDriver d) {
