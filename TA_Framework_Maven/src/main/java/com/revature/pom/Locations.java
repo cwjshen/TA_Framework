@@ -12,6 +12,7 @@ public class Locations {
 	public static WebElement RevatureHQ(WebDriver d) {
 		return d.findElement(By.xpath("span[@aria-label='Revature HQ Reston, VA Reston VA']"));
 	}
+	
 		public static WebElement Reston11730(WebDriver d) {
 			return d.findElement(By.xpath("span[@aria-label='Reston 11730']"));
 		}
@@ -41,6 +42,7 @@ public class Locations {
 	public static WebElement NewYorkCity(WebDriver d) {
 		return d.findElement(By.xpath("span[@aria-label='New York City New York, NY New York NY']"));
 	}
+	
 		public static WebElement CunyQueens(WebDriver d) {
 			return d.findElement(By.xpath("span[@aria-label='CUNY QUEENS']"));
 		}
