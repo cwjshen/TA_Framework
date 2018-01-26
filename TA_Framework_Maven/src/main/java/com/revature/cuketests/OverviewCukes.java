@@ -31,7 +31,7 @@ public class OverviewCukes {
 	@When("^Click the Overview tab$")
 	public static void clickOverview(WebDriver wd) throws Throwable {
 		Thread.sleep(2000);
-		NavBar.navigateToLocationsPage(wd).click();
+		NavBar.navigateToOverviewPage(wd).click();
 	}
 
 	@Then("^I should see the Export to CSV button$")

@@ -63,7 +63,7 @@ public class TestBatches extends TrainerSuite {
 			e.printStackTrace();
 		}
 	}
-	
+	@Test
 	public void TestTwo() {
 		try {
 			// Need assert statements for these? Idk though because they can never be false

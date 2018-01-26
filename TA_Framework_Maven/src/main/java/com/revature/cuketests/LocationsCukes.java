@@ -23,10 +23,6 @@ public class LocationsCukes {
 		System.out.println("In Location tab");
 	}
 	
-	@Given("^I am logged in as a trainer$")
-	public static void loggedAsTrainer(WebDriver wd) throws Throwable {
-		System.out.println("Logged in as trainer");
-	}
 
 	@When("^Click the Locations tab$")
 	public static void clickLocations(WebDriver wd) throws Throwable {

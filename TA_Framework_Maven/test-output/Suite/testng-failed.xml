@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="-1" name="Failed suite [Suite]">
+  <test name="TestOverview(failed)">
+    <classes>
+      <class name="com.revature.TestBatches">
+        <methods>
+          <include name="TestOne"/>
+          <include name="afterSuite"/>
+          <include name="beforeSuite"/>
+          <include name="afterTest"/>
+          <include name="setUpClass"/>
+          <include name="beforeTest"/>
+          <include name="feature"/>
+          <include name="TestLocations"/>
+          <include name="TestTwo"/>
+          <include name="tearDownClass"/>
+        </methods>
+      </class> <!-- com.revature.TestBatches -->
+      <class name="com.revature.TestOverview">
+        <methods>
+          <include name="afterSuite"/>
+          <include name="beforeSuite"/>
+          <include name="TestOne"/>
+          <include name="setUpClass"/>
+          <include name="afterTest"/>
+          <include name="feature"/>
+          <include name="beforeTest"/>
+          <include name="TestTwo"/>
+          <include name="tearDownClass"/>
+        </methods>
+      </class> <!-- com.revature.TestOverview -->
+    </classes>
+  </test> <!-- TestOverview(failed) -->
+</suite> <!-- Failed suite [Suite] -->
