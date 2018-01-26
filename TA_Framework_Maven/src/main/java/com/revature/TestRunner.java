@@ -28,19 +28,18 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 @CucumberOptions(features="src/test/java")
 public class TestRunner extends AbstractTestNGCucumberTests {
 	
+	static WebDriver wd = DriverUtil.getChromeDriver();
+	
 	@BeforeSuite
 	public void beforeSuite() {
 		System.out.println("TA Framework Tests");
-		WebDriver wd = DriverUtil.getChromeDriver();
 		try {
 			wd.get("https://dev.assignforce.revaturelabs.com");		
-
+			LoginUtil.loginAsTrainer(wd);
 			// Log in as trainer 
 //			we should put this login method inside of the overviewcukes.loggedastrainer method no?
-			
-			LoginUtil.loginAsTrainer(wd);
+			OverviewCukes.loggedAsTrainer(wd);
 			OverviewCukes.isInOverview();
-			OverviewCukes.loggedAsTrainer();
 			
 			// Log in as VP
 //			LoginUtil.loginAsVP(wd);
@@ -59,7 +58,6 @@ public class TestRunner extends AbstractTestNGCucumberTests {
 
 	@Test
 	public void TestOne() {
-		WebDriver wd = DriverUtil.getChromeDriver();
 		try {
 			// Need assert statements for these? Idk though because they can never be false
 			//	since it would just jump to catch block with NoSuchElementException
@@ -81,7 +79,6 @@ public class TestRunner extends AbstractTestNGCucumberTests {
 
 	@AfterSuite
 	public void afterSuite() {
-		WebDriver wd = DriverUtil.getChromeDriver();
 		System.out.println("Logging out");
 		Logout.logout(wd).click();
 		wd.close();

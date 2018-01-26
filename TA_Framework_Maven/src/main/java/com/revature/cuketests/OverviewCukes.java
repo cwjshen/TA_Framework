@@ -8,6 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import com.revature.pom.Login;
 import com.revature.pom.NavBar;
 import com.revature.pom.OverviewTab;
+import com.revature.util.LoginUtil;
 
 import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
@@ -23,7 +24,7 @@ public class OverviewCukes {
 	}
 	
 	@Given("^I am logged in as a trainer$")
-	public static void loggedAsTrainer() throws Throwable {
+	public static void loggedAsTrainer(WebDriver wd) throws Throwable {
 		System.out.println("Logged in as trainer");
 	}
 
@@ -33,7 +34,7 @@ public class OverviewCukes {
 		NavBar.navigateToOverviewPage(wd).click();
 	}
 
-	@Then("^I should see the 'Export to CSV' button$")
+	@Then("^I should see the Export to CSV button$")
 	public static boolean exportButtonExists(WebDriver wd) throws Throwable {
 		System.out.println("Looking for CSV button");
 		if (OverviewTab.findCSVButton(wd) != null) {
@@ -42,7 +43,7 @@ public class OverviewCukes {
 		return false;
 	}
 
-	@Then("^'Fiter' button$")
+	@Then("^Fiter button$")
 	public static boolean filterButtonExists(WebDriver wd) throws Throwable {
 		System.out.println("Looking for filter button");
 		if (OverviewTab.findFilterButton(wd) != null) {
