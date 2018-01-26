@@ -26,36 +26,15 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 
 //Hook Class to run Cucumber Tests
 @CucumberOptions(features="src/test/java")
-public class TestRunner extends AbstractTestNGCucumberTests {
+public class TestBatches extends TrainerSuite {
 	
-	static WebDriver wd = DriverUtil.getChromeDriver();
 	
-	@BeforeSuite
-	public void beforeSuite() {
-		System.out.println("TA Framework Tests");
-		try {
-			wd.get("https://dev.assignforce.revaturelabs.com");		
-			LoginUtil.loginAsTrainer(wd);
-			// Log in as trainer 
-//			we should put this login method inside of the overviewcukes.loggedastrainer method no?
-			OverviewCukes.loggedAsTrainer(wd);
-			OverviewCukes.isInOverview();
-			
-			// Log in as VP
-//			LoginUtil.loginAsVP(wd);
-			
-		} catch (Throwable e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
-
 	@BeforeTest
 	public void beforeTest() {
 		System.out.println("Running Overview Tab Test");
 
 	}
-
+	
 	@Test
 	public void TestOne() {
 		try {
@@ -71,16 +50,24 @@ public class TestRunner extends AbstractTestNGCucumberTests {
 		}
 	}
 	
-	
+	@Test
+	public void TestTwo() {
+		try {
+			// Need assert statements for these? Idk though because they can never be false
+			//	since it would just jump to catch block with NoSuchElementException
+			OverviewCukes.clickOverview(wd);
+			OverviewCukes.exportButtonExists(wd);
+			OverviewCukes.filterButtonExists(wd);
+
+		} catch (Throwable e) { 
+			System.out.println("CSV button/ filter button not found. Not in Overview tab");
+			e.printStackTrace();
+		}
+	}		
+
 	@AfterTest
 	public void afterTest() {
 		System.out.println("Tests successful. Overview tab working as intended");
 	}
 
-	@AfterSuite
-	public void afterSuite() {
-		System.out.println("Logging out");
-		Logout.logout(wd).click();
-		wd.close();
-	}
 }
