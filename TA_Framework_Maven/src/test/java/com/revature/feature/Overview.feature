@@ -27,5 +27,13 @@ Feature: Overview Tab for trainers
     When Click the Overview tab <webdriver>
     Then I should see the Export to CSV button <webdriver>
     And Fiter button <webdriver>
+    
+  @tag2
+  Scenario: Check if CSV downloaded
+		Given That I am in the Overview tab
+		When I click the CSV button <webdriver>
+		Then The download should start
+		And it should be in the download location
+   	
 
  

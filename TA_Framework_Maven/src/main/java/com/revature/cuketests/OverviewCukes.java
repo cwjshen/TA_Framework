@@ -51,6 +51,48 @@ public class OverviewCukes {
 		}
 		return false;	
 	}
+	
+	@When("^I click the CSV button$")
+	public static void clickCSVButton(WebDriver wd) throws Throwable {
+		Thread.sleep(2000);
+		OverviewTab.findCSVButton(wd).click();
+	}
+
+	@Then("^The download should start$")
+	public static void the_download_should_start() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+	    System.out.println("Downloading CSV file...");
+	    isFileDownloaded("D:\\Users\\Tuan Pham\\Downloads", "batches.csv");
+	    
+	}
+
+	@Then("^it should be in the download location$")
+	public static void it_should_be_in_the_download_location() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+		System.out.println("Deleting CSV file");
+	}
+
+	 public static boolean isFileDownloaded(String downloadPath, String fileName) {
+		 try {
+			Thread.sleep(2000);
+			
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		  File dir = new File(downloadPath);
+		  File[] dirContents = dir.listFiles();
+
+		  for (int i = 0; i < dirContents.length; i++) {
+		      if (dirContents[i].getName().equals(fileName)) {
+		          // File has been found, it can now be deleted:
+		    	  System.out.println("Downloaded file found. Deleting file...");
+		          dirContents[i].delete();
+		          return true;
+		      }
+		          }
+		      return false;
+		  }
 
 
 }
