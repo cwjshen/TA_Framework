@@ -15,8 +15,11 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import com.revature.cuketests.OverviewCukes;
 import com.revature.pom.Login;
 import com.revature.pom.Logout;
+import com.revature.util.DriverUtil;
+import com.revature.util.LoginUtil;
 
 import cucumber.api.CucumberOptions;
 import cucumber.api.testng.AbstractTestNGCucumberTests;
@@ -24,37 +27,24 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 //Hook Class to run Cucumber Tests
 @CucumberOptions(features="src/test/java")
 public class TestRunner extends AbstractTestNGCucumberTests {
-
-	static WebDriver wd = null;
 	
 	@BeforeSuite
 	public void beforeSuite() {
 		System.out.println("TA Framework Tests");
-
+		WebDriver wd = DriverUtil.getChromeDriver();
 		try {
-			File f1 = new File("src/main/resources/chromedriver.exe");
-			System.setProperty("webdriver.chrome.driver", f1.getAbsolutePath());
-			wd = new ChromeDriver();
-			wd.get("https://dev.assignforce.revaturelabs.com");
+			wd.get("https://dev.assignforce.revaturelabs.com");		
+
+			// Log in as trainer 
+//			we should put this login method inside of the overviewcukes.loggedastrainer method no?
 			
-			OverviewCukes.that_I_am_in_the_Overview_tab();
-			OverviewCukes.i_am_logged_in_as_a_trainer();
-			// Log in as trainer
-			Login.user(wd).sendKeys("test.trainer@revature.com.int1");
-			Thread.sleep(1000);
-			Login.password(wd).sendKeys("trainer123");
-			Thread.sleep(1000);
-			Login.signin(wd).submit();
-
+			LoginUtil.loginAsTrainer(wd);
+			OverviewCukes.isInOverview();
+			OverviewCukes.loggedAsTrainer();
+			
 			// Log in as VP
-//			Login.user(wd).sendKeys("test.vpoftech@revature.com.int1");
-//			Thread.sleep(1000);
-//			Login.password(wd).sendKeys("p@$$w0rd1");
-//			Thread.sleep(1000);
-//			Login.signin(wd).submit();
-
-		} catch(Exception e){
-			e.printStackTrace();
+//			LoginUtil.loginAsVP(wd);
+			
 		} catch (Throwable e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -69,14 +59,15 @@ public class TestRunner extends AbstractTestNGCucumberTests {
 
 	@Test
 	public void TestOne() {
+		WebDriver wd = DriverUtil.getChromeDriver();
 		try {
-			OverviewCukes.click_the_Overview_tab(wd);
-			System.out.println("Looking for CSV button");
-			OverviewCukes.i_should_see_the_Export_to_CSV_button(wd);
-			System.out.println("Looking for filter button");
-			OverviewCukes.fiter_button(wd);
+			// Need assert statements for these? Idk though because they can never be false
+			//	since it would just jump to catch block with NoSuchElementException
+			OverviewCukes.clickOverview(wd);
+			OverviewCukes.exportButtonExists(wd);
+			OverviewCukes.filterButtonExists(wd);
 
-		} catch (Throwable e) {
+		} catch (Throwable e) { 
 			System.out.println("CSV button/ filter button not found. Not in Overview tab");
 			e.printStackTrace();
 		}
@@ -90,8 +81,9 @@ public class TestRunner extends AbstractTestNGCucumberTests {
 
 	@AfterSuite
 	public void afterSuite() {
+		WebDriver wd = DriverUtil.getChromeDriver();
 		System.out.println("Logging out");
-		Logout.logout(wd);
+		Logout.logout(wd).click();
 		wd.close();
 	}
 }
