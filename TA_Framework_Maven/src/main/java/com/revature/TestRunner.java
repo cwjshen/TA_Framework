@@ -15,6 +15,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import com.revature.cuketests.LocationsCukes;
 import com.revature.cuketests.OverviewCukes;
 import com.revature.pom.Login;
 import com.revature.pom.Logout;
@@ -71,6 +72,18 @@ public class TestRunner extends AbstractTestNGCucumberTests {
 		}
 	}
 	
+	@Test
+	public void TestLocations() {
+		try {
+			LocationsCukes.clickLocations(wd);
+			LocationsCukes.RevatureHQExists(wd);
+			LocationsCukes.NewYorkCityExists(wd);
+		}
+		catch (Throwable e) {
+			System.out.println("Revature HQ and/or New York City drop downs not found. Not in Locations tab");
+			e.printStackTrace();
+		}
+	}
 	
 	@AfterTest
 	public void afterTest() {
