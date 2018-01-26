@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name="Suite" parallel="false">
-  <test name="Test">
+  <test name="TestOverview">
     <classes>
-      <class name="com.revature.testng.OverviewTestNG"/>
+      <class name="com.revature.TestOverview"/>
+	  <class name="com.revature.TestBatches"/>    
     </classes>
   </test> <!-- Test -->
+ 
 </suite> <!-- Suite -->
