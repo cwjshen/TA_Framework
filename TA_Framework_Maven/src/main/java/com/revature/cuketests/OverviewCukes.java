@@ -1,4 +1,4 @@
-package com.revature;
+package com.revature.cuketests;
 
 import java.io.File;
 
@@ -8,6 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import com.revature.pom.Login;
 import com.revature.pom.NavBar;
 import com.revature.pom.OverviewTab;
+import com.revature.util.LoginUtil;
 
 import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
@@ -18,31 +19,33 @@ public class OverviewCukes {
 	
 
 	@Given("^That I am in the Overview tab$")
-	public static void that_I_am_in_the_Overview_tab() throws Throwable {
-		System.out.println("Clicking Overview tab");
+	public static void isInOverview() throws Throwable {
+		System.out.println("In Overview tab");
 	}
 	
 	@Given("^I am logged in as a trainer$")
-	public static void i_am_logged_in_as_a_trainer() throws Throwable {
-		System.out.println("Logging in as trainer");
+	public static void loggedAsTrainer(WebDriver wd) throws Throwable {
+		System.out.println("Logged in as trainer");
 	}
 
 	@When("^Click the Overview tab$")
-	public static void click_the_Overview_tab(WebDriver wd) throws Throwable {
+	public static void clickOverview(WebDriver wd) throws Throwable {
 		Thread.sleep(2000);
 		NavBar.navigateToOverviewPage(wd).click();
 	}
 
-	@Then("^I should see the 'Export to CSV' button$")
-	public static boolean i_should_see_the_Export_to_CSV_button(WebDriver wd) throws Throwable {
+	@Then("^I should see the Export to CSV button$")
+	public static boolean exportButtonExists(WebDriver wd) throws Throwable {
+		System.out.println("Looking for CSV button");
 		if (OverviewTab.findCSVButton(wd) != null) {
 			return true;
 		}
 		return false;
 	}
 
-	@Then("^'Fiter' button$")
-	public static boolean fiter_button(WebDriver wd) throws Throwable {
+	@Then("^Fiter button$")
+	public static boolean filterButtonExists(WebDriver wd) throws Throwable {
+		System.out.println("Looking for filter button");
 		if (OverviewTab.findFilterButton(wd) != null) {
 			return true;
 		}

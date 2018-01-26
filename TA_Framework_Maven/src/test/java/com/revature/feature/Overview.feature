@@ -21,11 +21,11 @@ Feature: Overview Tab for trainers
   Assignforce Overview tab scenarios
 
   @tag1
-  Scenario: Check if in Overview Tab for trainer
-    Given That I am in the Overview tab
-    And I am logged in as a trainer
-    When Click the Overview tab "Overview"
-    Then I should see the 'Export to CSV' button
-    And 'Fiter' button
+  Scenario Outline: Check if in Overview Tab for trainer
+    Given That I am in the Overview tab 
+    Given I am logged in as a trainer <webdriver>
+    When Click the Overview tab <webdriver>
+    Then I should see the Export to CSV button <webdriver>
+    And Fiter button <webdriver>
 
  
