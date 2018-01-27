@@ -1,4 +1,4 @@
-package com.revature.cuketests;
+package com.revature.cukes.trainer;
 
 import java.io.File;
 
@@ -38,8 +38,10 @@ public class OverviewCukes {
 	public static boolean exportButtonExists(WebDriver wd) throws Throwable {
 		System.out.println("Looking for CSV button");
 		if (OverviewTab.findCSVButton(wd) != null) {
+			System.out.println("true");
 			return true;
 		}
+		System.out.println("false");
 		return false;
 	}
 
@@ -47,8 +49,10 @@ public class OverviewCukes {
 	public static boolean filterButtonExists(WebDriver wd) throws Throwable {
 		System.out.println("Looking for filter button");
 		if (OverviewTab.findFilterButton(wd) != null) {
+			System.out.println("true");
 			return true;
 		}
+		System.out.println("false");
 		return false;	
 	}
 

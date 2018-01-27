@@ -10,9 +10,7 @@
           <include name="TestOne"/>
           <include name="setUpClass"/>
           <include name="afterTest"/>
-          <include name="feature"/>
           <include name="beforeTest"/>
-          <include name="TestTwo"/>
           <include name="tearDownClass"/>
         </methods>
       </class> <!-- com.revature.TestOverview -->

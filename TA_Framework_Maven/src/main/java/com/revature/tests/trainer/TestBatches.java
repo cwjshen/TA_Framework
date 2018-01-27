@@ -1,4 +1,6 @@
-package com.revature;
+package com.revature.tests.trainer;
+
+import static org.testng.Assert.fail;
 
 import java.io.File;
 
@@ -15,8 +17,8 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import com.revature.cuketests.LocationsCukes;
-import com.revature.cuketests.OverviewCukes;
+import com.revature.cukes.trainer.LocationsCukes;
+import com.revature.cukes.trainer.OverviewCukes;
 import com.revature.pom.Login;
 import com.revature.pom.Logout;
 import com.revature.util.DriverUtil;
@@ -25,8 +27,6 @@ import com.revature.util.LoginUtil;
 import cucumber.api.CucumberOptions;
 import cucumber.api.testng.AbstractTestNGCucumberTests;
 
-//Hook Class to run Cucumber Tests
-@CucumberOptions(features="src/test/java")
 public class TestBatches extends TrainerSuite {
 	
 	
@@ -46,7 +46,7 @@ public class TestBatches extends TrainerSuite {
 			OverviewCukes.filterButtonExists(wd);
 
 		} catch (Throwable e) { 
-			System.out.println("CSV button/ filter button not found. Not in Overview tab");
+			fail("CSV button/ filter button not found. Not in Overview tab");
 			e.printStackTrace();
 		}
 	}
@@ -59,7 +59,7 @@ public class TestBatches extends TrainerSuite {
 			LocationsCukes.NewYorkCityExists(wd);
 		}
 		catch (Throwable e) {
-			System.out.println("Revature HQ and/or New York City drop downs not found. Not in Locations tab");
+			fail("Revature HQ and/or New York City drop downs not found. Not in Locations tab");
 			e.printStackTrace();
 		}
 	}
@@ -73,7 +73,7 @@ public class TestBatches extends TrainerSuite {
 			OverviewCukes.filterButtonExists(wd);
 
 		} catch (Throwable e) { 
-			System.out.println("CSV button/ filter button not found. Not in Overview tab");
+			fail("CSV button/ filter button not found. Not in Overview tab");
 			e.printStackTrace();
 		}
 	}		
