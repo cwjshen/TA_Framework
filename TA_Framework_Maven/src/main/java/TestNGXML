@@ -2,13 +2,9 @@
 <suite name="Trainer Tests " parallel="false">
   <test name="Test Overview Tab">
     <classes>
-      <class name="com.revature.tests.trainer.TestOverview"/>
-    </classes>
-  </test> <!-- Test -->
-
-  <test name="Test Batches Tab">
-    <classes>
-	  <class name="com.revature.tests.trainer.TestBatches"/>    
+      <class name="com.revature.TestOverview"/>
+	  <!--<class name="com.revature.TestBatches"/>-->
+	  <class name="com.revature.TestSettings"/>
     </classes>
   </test> <!-- Test -->
  

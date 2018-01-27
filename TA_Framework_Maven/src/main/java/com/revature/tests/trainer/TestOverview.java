@@ -3,7 +3,6 @@ package com.revature.tests.trainer;
 import static org.testng.Assert.fail;
 
 import java.io.File;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
