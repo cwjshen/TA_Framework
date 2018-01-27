@@ -1,11 +1,20 @@
 package com.revature.pom;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+
+
 public class OverviewTab {
 	static WebElement e = null;
+//	public static List<WebElement> tr_collection = new ArrayList<WebElement>();
+//	public static List<WebElement> td_collection = new ArrayList<WebElement>();
+	
+	
 	public static WebElement findCSVButton(WebDriver d) {
 		return d.findElement(By.xpath("html/body/div/div[2]/div/div/md-card/md-toolbar/div[1]/button"));
 	}
@@ -35,5 +44,15 @@ public class OverviewTab {
 	}
 	public static WebElement filterEndDate(WebDriver d) {
 		return d.findElement(By.xpath("/html/body/div[1]/div[2]/div/div/md-card/md-content/md-table-container/table/thead/tr/th[8]"));
+	}
+	public static List<WebElement> getBatchNames(WebDriver wd) {
+		WebElement table_element = wd.findElement(By.xpath("//*[@id=\"view\"]/div/md-card/md-content/md-table-container/table"));
+        List<WebElement> rows=table_element.findElements(By.xpath("//*[@id=\"view\"]/div/md-card/md-content/md-table-container/table/tbody/tr"));
+        List<WebElement> columns = new ArrayList<WebElement>();
+        
+		for (WebElement e : rows) {
+			columns.addAll(e.findElements(By.xpath("td[1]")));
+		}
+		return columns;
 	}
 }

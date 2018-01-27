@@ -7,9 +7,9 @@
         <methods>
           <include name="afterSuite"/>
           <include name="beforeSuite"/>
+          <include name="TestClickOverview"/>
           <include name="setUpClass"/>
           <include name="afterTest"/>
-          <include name="feature"/>
           <include name="beforeTest"/>
           <include name="tearDownClass"/>
         </methods>
