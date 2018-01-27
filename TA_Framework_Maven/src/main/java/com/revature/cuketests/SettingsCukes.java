@@ -82,7 +82,7 @@ public class SettingsCukes {
 		if (maxbsize == MaxBatchSize) {
 			System.out.println("Match Batch Size value is correct");
 		} else {
-				System.out.println("Match  Outgoing Grads valus is incorrect");
+				System.out.println("Match Outgoing Grads valus is incorrect");
 			}
 		if (mindaybetween == MDBTbatches){
 			System.out.println("Minimum Day Between Trainer Batches value is correct");

@@ -1,22 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="-1" name="Failed suite [Trainer Tests]">
-  <test name="Test Batches Tab(failed)">
-    <classes>
-      <class name="com.revature.tests.trainer.TestBatches">
-        <methods>
-          <include name="beforeTest"/>
-          <include name="afterSuite"/>
-          <include name="setUpClass"/>
-          <include name="beforeSuite"/>
-          <include name="TestLocations"/>
-          <include name="afterTest"/>
-          <include name="tearDownClass"/>
-        </methods>
-      </class> <!-- com.revature.tests.trainer.TestBatches -->
-    </classes>
-  </test> <!-- Test Batches Tab(failed) -->
-  <test name="Test Locations Tab(failed)">
+<suite thread-count="-1" guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
     <classes>
       <class name="com.revature.tests.trainer.TestLocations">
         <methods>
@@ -30,5 +15,5 @@
         </methods>
       </class> <!-- com.revature.tests.trainer.TestLocations -->
     </classes>
-  </test> <!-- Test Locations Tab(failed) -->
-</suite> <!-- Failed suite [Trainer Tests] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

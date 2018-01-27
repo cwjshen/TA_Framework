@@ -16,19 +16,19 @@
       </class> <!-- com.revature.tests.trainer.TestBatches -->
     </classes>
   </test> <!-- Test Batches Tab(failed) -->
-  <test name="Test Locations Tab(failed)">
+  <test name="Test Settings Tab(failed)">
     <classes>
-      <class name="com.revature.tests.trainer.TestLocations">
+      <class name="com.revature.tests.trainer.TestSettings">
         <methods>
-          <include name="afterSuite"/>
           <include name="afterTest"/>
-          <include name="TestOne"/>
+          <include name="afterSuite"/>
+          <include name="beforeTest"/>
           <include name="setUpClass"/>
           <include name="beforeSuite"/>
-          <include name="beforeTest"/>
+          <include name="TestOne"/>
           <include name="tearDownClass"/>
         </methods>
-      </class> <!-- com.revature.tests.trainer.TestLocations -->
+      </class> <!-- com.revature.tests.trainer.TestSettings -->
     </classes>
-  </test> <!-- Test Locations Tab(failed) -->
+  </test> <!-- Test Settings Tab(failed) -->
 </suite> <!-- Failed suite [Trainer Tests] -->

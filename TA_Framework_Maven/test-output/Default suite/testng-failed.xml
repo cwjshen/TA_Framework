@@ -3,17 +3,17 @@
 <suite thread-count="-1" guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.revature.TestOverview">
+      <class name="com.revature.tests.trainer.TestLocations">
         <methods>
           <include name="afterSuite"/>
-          <include name="beforeSuite"/>
+          <include name="afterTest"/>
           <include name="TestOne"/>
           <include name="setUpClass"/>
-          <include name="afterTest"/>
+          <include name="beforeSuite"/>
           <include name="beforeTest"/>
           <include name="tearDownClass"/>
         </methods>
-      </class> <!-- com.revature.TestOverview -->
+      </class> <!-- com.revature.tests.trainer.TestLocations -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
