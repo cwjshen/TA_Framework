@@ -30,7 +30,6 @@ public class TrainerSuite extends AbstractTestNGCucumberTests{
 //			LoginUtil.loginAsVP(wd);
 			
 		} catch (Throwable e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}

@@ -17,15 +17,12 @@
 ## (Comments)
 #Sample Feature Definition Template
 @tag
-Feature: Overview Tab for trainers
-  Assignforce Overview tab scenarios
+Feature: Reports Tab for trainers
+  Assignforce Reports tab scenarios
 
   @tag1
-  Scenario: Check if in Overview Tab for trainer
-    Given That I am in the Overview tab 
-    Given I am logged in as a trainer <webdriver>
-    When Click the Overview tab <webdriver>
-    Then I should see the Export to CSV button <webdriver>
-    And Fiter button <webdriver>
-
- 
+  Scenario: Check if in Reports Tab for trainer
+    Given That I am in the Reports tab 
+    When Click the Reports tab <webdriver>
+    Then I should see the Add new card button<webdriver>
+    And Export to CSV button <webdriver>
