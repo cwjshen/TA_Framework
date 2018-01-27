@@ -1,19 +1,22 @@
-package com.revature;
+package com.revature.tests.trainer;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
-import com.revature.cuketests.OverviewCukes;
+import com.revature.cukes.trainer.OverviewCukes;
 import com.revature.pom.Logout;
 import com.revature.util.DriverUtil;
 import com.revature.util.LoginUtil;
 
+import cucumber.api.CucumberOptions;
 import cucumber.api.testng.AbstractTestNGCucumberTests;
 
+//Hook Class to run Cucumber Tests
+@CucumberOptions(features="src/test/resources/com/revature/features/trainer")
 public class TrainerSuite extends AbstractTestNGCucumberTests{
 
-	static WebDriver wd = DriverUtil.getChromeDriver();
+	public static WebDriver wd = DriverUtil.getChromeDriver();
 	
 	@BeforeSuite
 	public void beforeSuite() {

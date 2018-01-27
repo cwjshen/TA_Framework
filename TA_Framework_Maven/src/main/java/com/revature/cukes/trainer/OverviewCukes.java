@@ -1,4 +1,5 @@
-package com.revature.cuketests;
+
+package com.revature.cukes.trainer;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -11,6 +12,7 @@ import org.openqa.selenium.WebElement;
 
 import com.revature.pom.NavBar;
 import com.revature.pom.OverviewTab;
+
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -38,8 +40,10 @@ public class OverviewCukes {
 	public static boolean exportButtonExists(WebDriver wd) throws Throwable {
 		System.out.println("Looking for CSV button");
 		if (OverviewTab.findCSVButton(wd) != null) {
+			System.out.println("true");
 			return true;
 		}
+		System.out.println("false");
 		return false;
 	}
 
@@ -47,8 +51,10 @@ public class OverviewCukes {
 	public static boolean filterButtonExists(WebDriver wd) throws Throwable {
 		System.out.println("Looking for filter button");
 		if (OverviewTab.findFilterButton(wd) != null) {
+			System.out.println("true");
 			return true;
 		}
+		System.out.println("false");
 		return false;	
 	}
 

@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
@@ -23,6 +24,43 @@
           </reporter-output>
         </test-method> <!-- setUpClass -->
         <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.revature.TestOverview@7d900ecf]" name="feature" duration-ms="10" started-at="2018-01-27T18:17:45Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2018-01-27T18:17:45Z">
+=======
+<testng-results skipped="0" failed="1" ignored="0" total="3" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="3686" started-at="2018-01-27T23:12:22Z" finished-at="2018-01-27T23:12:26Z">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.revature.tests.trainer.TestLocations@782a4fff]" name="feature" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test name="Default test" duration-ms="3686" started-at="2018-01-27T23:12:22Z" finished-at="2018-01-27T23:12:26Z">
+      <class name="com.revature.tests.trainer.TestLocations">
+        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:com.revature.tests.trainer.TestLocations@782a4fff]" name="beforeSuite" is-config="true" duration-ms="3931" started-at="2018-01-27T18:12:18Z" finished-at="2018-01-27T18:12:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.revature.tests.trainer.TestLocations@782a4fff]" name="beforeTest" is-config="true" duration-ms="0" started-at="2018-01-27T18:12:22Z" finished-at="2018-01-27T18:12:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.revature.tests.trainer.TestLocations@782a4fff]" name="setUpClass" is-config="true" duration-ms="327" started-at="2018-01-27T18:12:22Z" finished-at="2018-01-27T18:12:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.revature.tests.trainer.TestLocations@782a4fff]" name="feature" duration-ms="22" started-at="2018-01-27T18:12:22Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2018-01-27T18:12:22Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Locations Tab for trainers]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.revature.tests.trainer.TestLocations@782a4fff]" name="feature" duration-ms="1" started-at="2018-01-27T18:12:22Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2018-01-27T18:12:22Z">
+>>>>>>> d8e13a192b0dd783ede26ad6d97d6e619ad93fb2
           <params>
             <param index="0">
               <value>
@@ -33,6 +71,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- feature -->
+<<<<<<< HEAD
         <test-method status="PASS" signature="TestClickOverview()[pri:1, instance:com.revature.TestOverview@7d900ecf]" name="TestClickOverview" duration-ms="3121" started-at="2018-01-27T18:17:45Z" finished-at="2018-01-27T18:17:48Z">
           <reporter-output>
           </reporter-output>
@@ -54,6 +93,33 @@
           </reporter-output>
         </test-method> <!-- afterSuite -->
       </class> <!-- com.revature.TestOverview -->
+=======
+        <test-method status="FAIL" signature="TestOne()[pri:0, instance:com.revature.tests.trainer.TestLocations@782a4fff]" name="TestOne" duration-ms="3199" started-at="2018-01-27T18:12:22Z" finished-at="2018-01-27T18:12:26Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Revature HQ and/or New York City drop downs not found. Not in Locations tab]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Revature HQ and/or New York City drop downs not found. Not in Locations tabat org.testng.Assert.fail(Assert.java:96)at com.revature.tests.trainer.TestLocations.TestOne(TestLocations.java:30)at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)at java.lang.reflect.Method.invoke(Unknown Source)at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)at org.testng.internal.Invoker.invokeMethod(Invoker.java:571)at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:707)at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:979)at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)at org.testng.TestRunner.privateRun(TestRunner.java:648)at org.testng.TestRunner.run(TestRunner.java:505)at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)at org.testng.SuiteRunner.run(SuiteRunner.java:364)at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)at org.testng.TestNG.runSuites(TestNG.java:1028)at org.testng.TestNG.run(TestNG.java:996)at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestOne -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.revature.tests.trainer.TestLocations@782a4fff]" name="tearDownClass" is-config="true" duration-ms="8" started-at="2018-01-27T18:12:26Z" finished-at="2018-01-27T18:12:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.revature.tests.trainer.TestLocations@782a4fff]" name="afterTest" is-config="true" duration-ms="0" started-at="2018-01-27T18:12:26Z" finished-at="2018-01-27T18:12:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:com.revature.tests.trainer.TestLocations@782a4fff]" name="afterSuite" is-config="true" duration-ms="3169" started-at="2018-01-27T18:12:26Z" finished-at="2018-01-27T18:12:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- com.revature.tests.trainer.TestLocations -->
+>>>>>>> d8e13a192b0dd783ede26ad6d97d6e619ad93fb2
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

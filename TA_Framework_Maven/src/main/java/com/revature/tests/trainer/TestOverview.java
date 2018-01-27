@@ -1,39 +1,13 @@
-package com.revature;
+package com.revature.tests.trainer;
 
 import static org.junit.Assert.assertTrue;
 import static org.testng.Assert.fail;
 
-import java.io.File;
-import java.util.ArrayList;
-import java.util.List;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+import com.revature.cukes.trainer.OverviewCukes;
 
-import com.revature.cuketests.OverviewCukes;
-import com.revature.pom.Login;
-import com.revature.pom.Logout;
-import com.revature.pom.OverviewTab;
-import com.revature.util.DriverUtil;
-import com.revature.util.LoginUtil;
-
-import cucumber.api.CucumberOptions;
-import cucumber.api.testng.AbstractTestNGCucumberTests;
-
-//Hook Class to run Cucumber Tests
-@CucumberOptions(features="src/test/java")
 public class TestOverview extends TrainerSuite {
 
 	@BeforeTest
@@ -143,6 +117,7 @@ public class TestOverview extends TrainerSuite {
  			e.printStackTrace();
  		}
 	}
+
 
 	@AfterTest
 	public void afterTest() {

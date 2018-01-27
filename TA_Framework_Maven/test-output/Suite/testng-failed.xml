@@ -3,14 +3,40 @@
 <suite thread-count="-1" name="Failed suite [Suite]">
   <test name="TestOverview(failed)">
     <classes>
+<<<<<<< HEAD
+=======
+      <class name="com.revature.TestBatches">
+        <methods>
+          <include name="TestOne"/>
+          <include name="afterSuite"/>
+          <include name="beforeSuite"/>
+          <include name="afterTest"/>
+          <include name="setUpClass"/>
+          <include name="beforeTest"/>
+          <include name="feature"/>
+          <include name="TestLocations"/>
+          <include name="TestTwo"/>
+          <include name="tearDownClass"/>
+        </methods>
+      </class> <!-- com.revature.TestBatches -->
+>>>>>>> d8e13a192b0dd783ede26ad6d97d6e619ad93fb2
       <class name="com.revature.TestOverview">
         <methods>
           <include name="afterSuite"/>
           <include name="beforeSuite"/>
+<<<<<<< HEAD
           <include name="TestClickOverview"/>
           <include name="setUpClass"/>
           <include name="afterTest"/>
           <include name="beforeTest"/>
+=======
+          <include name="TestOne"/>
+          <include name="setUpClass"/>
+          <include name="afterTest"/>
+          <include name="feature"/>
+          <include name="beforeTest"/>
+          <include name="TestTwo"/>
+>>>>>>> d8e13a192b0dd783ede26ad6d97d6e619ad93fb2
           <include name="tearDownClass"/>
         </methods>
       </class> <!-- com.revature.TestOverview -->
