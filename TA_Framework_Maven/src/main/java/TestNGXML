@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite name="Trainer Tests " parallel="false">
+<suite name="Trainer Tests" parallel="false">
   <test name="Test Overview Tab">
     <classes>
       <class name="com.revature.tests.trainer.TestOverview"/>
