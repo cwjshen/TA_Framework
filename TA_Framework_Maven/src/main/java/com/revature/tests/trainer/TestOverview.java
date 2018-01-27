@@ -1,6 +1,7 @@
 package com.revature.tests.trainer;
 
 import static org.testng.Assert.fail;
+
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;

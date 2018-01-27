@@ -16,7 +16,7 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 @CucumberOptions(features="src/test/resources/com/revature/features/trainer")
 public class TrainerSuite extends AbstractTestNGCucumberTests{
 
-	static WebDriver wd = DriverUtil.getChromeDriver();
+	public static WebDriver wd = DriverUtil.getChromeDriver();
 	
 	@BeforeSuite
 	public void beforeSuite() {
