@@ -27,31 +27,35 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 
 //Hook Class to run Cucumber Tests
 @CucumberOptions(features="src/test/java")
-public class TestLocations extends TrainerSuite {
+public class TestProfile extends TrainerSuite {
 
 	@BeforeTest
 	public void beforeTest() {
-		System.out.println("Running Location Tab Test");
+		System.out.println("Running Profile Tab Protractor Test");
 
 	}
 	
-	@Test
-	public void TestOne() {
+	//Protractor test
+	//Protractor is a TrainerSuite for now, so log in is done with WebDriver;
+	//		maybe replace with pure protractor code so log in is done through protractor too?
+	@Test 
+	public void TestProfile() {
 		try {
-			// Need assert statements for these? Idk though because they can never be false
-			LocationsCukes.clickLocations(wd);
-			LocationsCukes.RevatureHQExists(wd);
-			LocationsCukes.NewYorkCityExists(wd);
-
+			//For now, use WebDriver NavBar method; maybe replace with Protractor click later
+			//Run "cd <PATH>" to get to conf.js location
+			//Run "protractor conf.js" statement in command line to start test
+			
+			//For now, manually have Selenium server opened for Protractor before running this test
 		} catch (Throwable e) { 
-			System.out.println("Revature HQ and/or New York City drop downs not found. Not in Locations tab");
+			//Update this error message once we learn more about what reasons are possible for failure
+			System.out.println("Profile test failed for whatever reason");
 			e.printStackTrace();
 		}
 	}
 	
 	@AfterTest
 	public void afterTest() {
-		System.out.println("Tests successful. Locations tab working as intended");
+		System.out.println("Tests successful. Profile tab working as intended");
 	}
 
 }

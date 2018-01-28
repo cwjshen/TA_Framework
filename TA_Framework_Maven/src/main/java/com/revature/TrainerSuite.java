@@ -23,7 +23,6 @@ public class TrainerSuite extends AbstractTestNGCucumberTests{
 			LoginUtil.loginAsTrainer(wd);
 			// Log in as trainer 
 //			we should put this login method inside of the overviewcukes.loggedastrainer method no?
-			OverviewCukes.loggedAsTrainer(wd);
 			OverviewCukes.isInOverview();
 			
 			// Log in as VP

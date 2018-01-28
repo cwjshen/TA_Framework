@@ -27,7 +27,7 @@ public class OverviewCukes {
 	public static void loggedAsTrainer(WebDriver wd) throws Throwable {
 		System.out.println("Logged in as trainer");
 	}
-
+	
 	@When("^Click the Overview tab$")
 	public static void clickOverview(WebDriver wd) throws Throwable {
 		Thread.sleep(2000);
