@@ -84,6 +84,12 @@ public class SettingsCukes {
 		} else {
 				System.out.println("Match Outgoing Grads valus is incorrect");
 			}
+		if (dblength == DBatchLength){
+			System.out.println("Batch length value is correct");
+		} else {
+				System.out.println("Batch length valus is incorrect");
+			}
+		
 		if (mindaybetween == MDBTbatches){
 			System.out.println("Minimum Day Between Trainer Batches value is correct");
 		} else {
