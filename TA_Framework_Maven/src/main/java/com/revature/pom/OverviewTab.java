@@ -55,4 +55,74 @@ public class OverviewTab {
 		}
 		return columns;
 	}
+	public static List<WebElement> getCurricula(WebDriver wd) {
+		WebElement table_element = wd.findElement(By.xpath("//*[@id=\"view\"]/div/md-card/md-content/md-table-container/table"));
+        List<WebElement> rows=table_element.findElements(By.xpath("//*[@id=\"view\"]/div/md-card/md-content/md-table-container/table/tbody/tr"));
+        List<WebElement> columns = new ArrayList<WebElement>();
+        
+		for (WebElement e : rows) {
+			columns.addAll(e.findElements(By.xpath("td[2]")));
+		}
+		return columns;
+	}
+	public static List<WebElement> getTrainer(WebDriver wd) {
+		WebElement table_element = wd.findElement(By.xpath("//*[@id=\"view\"]/div/md-card/md-content/md-table-container/table"));
+        List<WebElement> rows=table_element.findElements(By.xpath("//*[@id=\"view\"]/div/md-card/md-content/md-table-container/table/tbody/tr"));
+        List<WebElement> columns = new ArrayList<WebElement>();
+        
+		for (WebElement e : rows) {
+			columns.addAll(e.findElements(By.xpath("td[3]")));
+		}
+		return columns;
+	}
+	public static List<WebElement> getLocation(WebDriver wd) {
+		WebElement table_element = wd.findElement(By.xpath("//*[@id=\"view\"]/div/md-card/md-content/md-table-container/table"));
+        List<WebElement> rows=table_element.findElements(By.xpath("//*[@id=\"view\"]/div/md-card/md-content/md-table-container/table/tbody/tr"));
+        List<WebElement> columns = new ArrayList<WebElement>();
+        
+		for (WebElement e : rows) {
+			columns.addAll(e.findElements(By.xpath("td[4]")));
+		}
+		return columns;
+	}
+	public static List<WebElement> getBuilding(WebDriver wd) {
+		WebElement table_element = wd.findElement(By.xpath("//*[@id=\"view\"]/div/md-card/md-content/md-table-container/table"));
+        List<WebElement> rows=table_element.findElements(By.xpath("//*[@id=\"view\"]/div/md-card/md-content/md-table-container/table/tbody/tr"));
+        List<WebElement> columns = new ArrayList<WebElement>();
+        
+		for (WebElement e : rows) {
+			columns.addAll(e.findElements(By.xpath("td[5]")));
+		}
+		return columns;
+	}
+	public static List<WebElement> getRoom(WebDriver wd) {
+		WebElement table_element = wd.findElement(By.xpath("//*[@id=\"view\"]/div/md-card/md-content/md-table-container/table"));
+        List<WebElement> rows=table_element.findElements(By.xpath("//*[@id=\"view\"]/div/md-card/md-content/md-table-container/table/tbody/tr"));
+        List<WebElement> columns = new ArrayList<WebElement>();
+        
+		for (WebElement e : rows) {
+			columns.addAll(e.findElements(By.xpath("td[6]")));
+		}
+		return columns;
+	}
+	public static List<WebElement> getStartDates(WebDriver wd) {
+		WebElement table_element = wd.findElement(By.xpath("//*[@id=\"view\"]/div/md-card/md-content/md-table-container/table"));
+        List<WebElement> rows=table_element.findElements(By.xpath("//*[@id=\"view\"]/div/md-card/md-content/md-table-container/table/tbody/tr"));
+        List<WebElement> columns = new ArrayList<WebElement>();
+        
+		for (WebElement e : rows) {
+			columns.addAll(e.findElements(By.xpath("td[7]")));
+		}
+		return columns;
+	}
+	public static List<WebElement> getEndDates(WebDriver wd) {
+		WebElement table_element = wd.findElement(By.xpath("//*[@id=\"view\"]/div/md-card/md-content/md-table-container/table"));
+        List<WebElement> rows=table_element.findElements(By.xpath("//*[@id=\"view\"]/div/md-card/md-content/md-table-container/table/tbody/tr"));
+        List<WebElement> columns = new ArrayList<WebElement>();
+        
+		for (WebElement e : rows) {
+			columns.addAll(e.findElements(By.xpath("td[8]")));
+		}
+		return columns;
+	}
 }

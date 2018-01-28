@@ -3,31 +3,30 @@
 <suite thread-count="-1" guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-<<<<<<< HEAD
-      <class name="com.revature.TestOverview">
+      <class name="com.revature.tests.trainer.TestOverview">
         <methods>
-          <include name="afterSuite"/>
-          <include name="beforeSuite"/>
-          <include name="setUpClass"/>
-          <include name="afterTest"/>
+          <include name="CheckBuildingFilterASC"/>
+          <include name="CheckEndFilterDSC"/>
+          <include name="CheckLocationFilterASC"/>
+          <include name="CheckRoomFilterDSC"/>
           <include name="beforeTest"/>
-          <include name="tearDownClass"/>
+          <include name="beforeSuite"/>
+          <include name="CheckStartFilterDSC"/>
+          <include name="CheckStartFilterASC"/>
+          <include name="CheckTrainerFilterASC"/>
+          <include name="CheckEndFilterASC"/>
+          <include name="CheckRoomFilterASC"/>
+          <include name="afterSuite"/>
+          <include name="setUpClass"/>
+          <include name="CheckNameFilterASC"/>
+          <include name="afterTest"/>
           <include name="CheckNameFilterDSC"/>
-        </methods>
-      </class> <!-- com.revature.TestOverview -->
-=======
-      <class name="com.revature.tests.trainer.TestLocations">
-        <methods>
-          <include name="afterSuite"/>
-          <include name="afterTest"/>
-          <include name="TestOne"/>
-          <include name="setUpClass"/>
-          <include name="beforeSuite"/>
-          <include name="beforeTest"/>
+          <include name="CheckTrainerFilterDSC"/>
+          <include name="CheckLocationFilterDSC"/>
           <include name="tearDownClass"/>
+          <include name="CheckBuildingFilterDSC"/>
         </methods>
-      </class> <!-- com.revature.tests.trainer.TestLocations -->
->>>>>>> d8e13a192b0dd783ede26ad6d97d6e619ad93fb2
+      </class> <!-- com.revature.tests.trainer.TestOverview -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
