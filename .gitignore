@@ -4,3 +4,4 @@ TA_Framework_Maven/target/
 .settings/
 **/chromedriver.exe
 **/geckodriver.exe
+**/test-output
