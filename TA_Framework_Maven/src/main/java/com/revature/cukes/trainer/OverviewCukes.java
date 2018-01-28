@@ -455,7 +455,7 @@ public class OverviewCukes {
 		OverviewTab.filterStartDate(wd).click();
 	}
 
-	@Then("^The buildings should be filtered in ASC order <webdriver>$")
+	@Then("^The starts should be filtered in ASC order <webdriver>$")
 	public static boolean the_start_should_be_filtered_in_ASC_order(WebDriver wd) throws Throwable {
 		// Get the list of all trainer names
 		boolean isSorted = true;
@@ -488,7 +488,7 @@ public class OverviewCukes {
 		OverviewTab.filterStartDate(wd).click();
 	}
 
-	@Then("^The buildings should be filtered in DSC order <webdriver>$")
+	@Then("^The starts should be filtered in DSC order <webdriver>$")
 	public static boolean the_starts_should_be_filtered_in_DSC_order(WebDriver wd) throws Throwable {
 		// Get the list of all batch names
 		boolean isSorted = true;
@@ -521,7 +521,7 @@ public class OverviewCukes {
 		OverviewTab.filterEndDate(wd).click();
 	}
 
-	@Then("^The buildings should be filtered in ASC order <webdriver>$")
+	@Then("^The ends should be filtered in ASC order <webdriver>$")
 	public static boolean the_ends_should_be_filtered_in_ASC_order(WebDriver wd) throws Throwable {
 		// Get the list of all trainer names
 		boolean isSorted = true;
@@ -645,5 +645,27 @@ public class OverviewCukes {
 			}
 		}
 		return isSorted;
+	}
+	
+	@When("^I click the filter button <webdriver>$")
+	public static void i_click_the_filter_button_webdriver(WebDriver wd) throws Throwable {
+		Thread.sleep(1000);
+		OverviewTab.clickFilterButton(wd);
+	}
+
+	@Then("^Three options should show <webdriver>$")
+	public static void three_options_should_show_webdriver(WebDriver wd) throws Throwable {
+		System.out.println("Filter Button Clicked");
+	}
+
+	@Then("^If I click the In Progress button <webdriver>$")
+	public static void if_I_click_the_In_Progress_button_webdriver(WebDriver wd) throws Throwable {
+		Thread.sleep(1000);
+		OverviewTab.findFilterInProgress(wd);
+	}
+
+	@Then("^The batches in progress should display <webdriver>$")
+	public static void the_batches_in_progress_should_display_webdriver(WebDriver wd) throws Throwable {
+		
 	}
 }
