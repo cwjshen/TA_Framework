@@ -8,10 +8,6 @@ public class TrainersTab {
 
 	public static WebElement findCalendarButton(WebDriver driver) {
 		return driver.findElement(By.xpath("//*[@id=\"view\"]/md-card/md-toolbar[1]/div/button[2]/md-icon"));
-		
-//driver.findElement(By.xpath("//*[@id=\"view\"]/md-card/md-toolbar[1]/div/button[2]"));
-//		driver.findElement(By.xpath("span[@aria-label='View PTO Calendar']"));
-		//*[@id="view"]/md-card/md-toolbar[1]/div/button[2]
 	}
 
 	public static WebElement downloadResumeButton(WebDriver driver) {
@@ -29,6 +25,7 @@ public class TrainersTab {
 	
 	public static WebElement addPtoRequestButton(WebDriver driver) {
 		return driver.findElement(By.xpath("//*[@id=\"dialogContent_1\"]/md-dialog-actions/button[1]"));
+		
 	}
 	
 	public static WebElement isPtoRequestWindowOpen(WebDriver driver) {
@@ -36,6 +33,6 @@ public class TrainersTab {
 	}
 	
 	public static WebElement cancelButton(WebDriver driver) {
-		return driver.findElement(By.xpath("//*[@id=\"dialogContent_66\"]/md-dialog-actions/button[2]/span"));
+		return driver.findElement(By.xpath("//*[@id=\"dialogContent_1\"]/md-dialog-actions/button[2]"));
 	}
 }

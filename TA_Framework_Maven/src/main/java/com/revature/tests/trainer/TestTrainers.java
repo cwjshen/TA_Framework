@@ -22,7 +22,7 @@ public class TestTrainers extends TrainerSuite {
 	public void onTrainersTab() {
 		try {
 			TrainerCukes.clickTrainers(wd);
-
+			Thread.sleep(4000);
 		} catch (Throwable e) { 
 			System.out.println("Not in Trainers tab");
 			e.printStackTrace();
@@ -62,6 +62,26 @@ public class TestTrainers extends TrainerSuite {
 			e.printStackTrace();
 		}
 	}
+	
+	@Test (priority = 5) 
+	public void clickAddPtoButton() {
+		try {
+			TrainerCukes.clickAddPtoRequestButton(wd);
+			Thread.sleep(2000);
+			System.out.println("Clicking Add request button");
+		} catch (Throwable e) {
+			e.printStackTrace();                                                                        
+		} 
+	}
+	
+//	@Test (priority = 6) 
+//	public void clickCancelButton() {
+//		try {
+//			TrainerCukes.clickCancelButton(wd);
+//		} catch (Throwable e) {
+//			e.printStackTrace();
+//		}
+//	}
 	
 	
 

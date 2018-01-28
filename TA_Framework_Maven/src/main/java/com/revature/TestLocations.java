@@ -16,9 +16,10 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.revature.cuketests.OverviewCukes;
-import com.revature.cuketests.LocationsCukes;
+import com.revature.cukes.trainer.LocationsCukes;
 import com.revature.pom.Login;
 import com.revature.pom.Logout;
+import com.revature.tests.trainer.TrainerSuite;
 import com.revature.util.DriverUtil;
 import com.revature.util.LoginUtil;
 
