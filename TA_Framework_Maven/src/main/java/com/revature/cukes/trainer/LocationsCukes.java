@@ -23,21 +23,28 @@ public class LocationsCukes {
 	}
 
 	@Then("^I should see the Revature HQ drop down$")
-	public static boolean RevatureHQExists(WebDriver wd) throws Throwable {
+	public static boolean RevatureHQExists(WebDriver wd) {
 		System.out.println("Looking for Revature HQ drop down");
-		if (Locations.findRevatureHQ(wd) != null) {
+		try {
+			Locations.findRevatureHQ(wd);
 			return true;
 		}
-		return false;
+		catch (Throwable e) {
+			return false;
+		}
+
 	}
 
 	@Then("^New York City drop down$")
 	public static boolean NewYorkCityExists(WebDriver wd) throws Throwable {
 		System.out.println("Looking for New York City drop down");
-		if (Locations.findNewYorkCity(wd) != null) {
+		try {
+			Locations.findNewYorkCity(wd);
 			return true;
 		}
-		return false;	
+		catch (Throwable e) {
+			return false;
+		}
 	}
 
 

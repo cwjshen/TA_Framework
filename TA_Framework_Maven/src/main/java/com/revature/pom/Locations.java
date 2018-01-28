@@ -10,7 +10,8 @@ public class Locations {
 	
 	//RevatureHQ location
 	public static WebElement findRevatureHQ(WebDriver d) {
-		return d.findElement(By.xpath("span[@aria-label='Revature HQ Reston, VA Reston VA']"));
+		return d.findElement(By.xpath("/html/body/div/div[2]/div/md-card/md-content/md-list/md-list-item[1]/div[1]/button"));
+
 	}
 	
 		public static WebElement findReston11730(WebDriver d) {
@@ -40,7 +41,7 @@ public class Locations {
 	
 	//NewYorkCity location
 	public static WebElement findNewYorkCity(WebDriver d) {
-		return d.findElement(By.xpath("span[@aria-label='New York City New York, NY New York NY']"));
+		return d.findElement(By.xpath("/html/body/div/div[2]/div/md-card/md-content/md-list/md-list-item[2]/div[1]/button"));
 	}
 	
 		public static WebElement findCunyQueens(WebDriver d) {
