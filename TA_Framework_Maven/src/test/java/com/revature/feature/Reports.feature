@@ -21,7 +21,7 @@ Feature: Reports Tab for trainers
   Assignforce Reports tab scenarios
 
   @tag1
-  Scenario: Check if in Reports Tab for trainer
+  Scenario Outline: Check if in Reports Tab for trainer
     Given That I am in the Reports tab 
     When Click the Reports tab <webdriver>
     Then I should see the Add new card button<webdriver>

@@ -1,55 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+<testng-results ignored="0" total="9" passed="9" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="7699" started-at="2018-01-27T23:17:44Z" finished-at="2018-01-27T23:17:52Z">
+  <suite started-at="2018-01-28T02:02:35Z" name="Default suite" finished-at="2018-01-28T02:02:40Z" duration-ms="4901">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.revature.TestOverview@7d900ecf]" name="feature" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.revature.tests.trainer.TestTrainers@46c670a6]" name="feature" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test name="Default test" duration-ms="7699" started-at="2018-01-27T23:17:44Z" finished-at="2018-01-27T23:17:52Z">
-      <class name="com.revature.TestOverview">
-        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:com.revature.TestOverview@7d900ecf]" name="beforeSuite" is-config="true" duration-ms="3815" started-at="2018-01-27T18:17:41Z" finished-at="2018-01-27T18:17:44Z">
+    <test started-at="2018-01-28T02:02:35Z" name="Default test" finished-at="2018-01-28T02:02:40Z" duration-ms="4901">
+      <class name="com.revature.tests.trainer.TestTrainers">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:com.revature.tests.trainer.TestTrainers@46c670a6]" started-at="2018-01-27T21:02:31Z" name="beforeSuite" finished-at="2018-01-27T21:02:35Z" duration-ms="4663" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.revature.TestOverview@7d900ecf]" name="beforeTest" is-config="true" duration-ms="1" started-at="2018-01-27T18:17:44Z" finished-at="2018-01-27T18:17:44Z">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.revature.tests.trainer.TestTrainers@46c670a6]" started-at="2018-01-27T21:02:35Z" name="beforeTest" finished-at="2018-01-27T21:02:35Z" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.revature.TestOverview@7d900ecf]" name="setUpClass" is-config="true" duration-ms="325" started-at="2018-01-27T18:17:44Z" finished-at="2018-01-27T18:17:45Z">
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:com.revature.tests.trainer.TestTrainers@46c670a6]" started-at="2018-01-27T21:02:35Z" name="setUpClass" finished-at="2018-01-27T21:02:36Z" duration-ms="785" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.revature.TestOverview@7d900ecf]" name="feature" duration-ms="10" started-at="2018-01-27T18:17:45Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2018-01-27T18:17:45Z">
-=======
-<testng-results skipped="0" failed="1" ignored="0" total="3" passed="2">
-  <reporter-output>
-  </reporter-output>
-  <suite name="Default suite" duration-ms="3686" started-at="2018-01-27T23:12:22Z" finished-at="2018-01-27T23:12:26Z">
-    <groups>
-      <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.revature.tests.trainer.TestLocations@782a4fff]" name="feature" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
-      </group> <!-- cucumber -->
-    </groups>
-    <test name="Default test" duration-ms="3686" started-at="2018-01-27T23:12:22Z" finished-at="2018-01-27T23:12:26Z">
-      <class name="com.revature.tests.trainer.TestLocations">
-        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:com.revature.tests.trainer.TestLocations@782a4fff]" name="beforeSuite" is-config="true" duration-ms="3931" started-at="2018-01-27T18:12:18Z" finished-at="2018-01-27T18:12:22Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeSuite -->
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.revature.tests.trainer.TestLocations@782a4fff]" name="beforeTest" is-config="true" duration-ms="0" started-at="2018-01-27T18:12:22Z" finished-at="2018-01-27T18:12:22Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.revature.tests.trainer.TestLocations@782a4fff]" name="setUpClass" is-config="true" duration-ms="327" started-at="2018-01-27T18:12:22Z" finished-at="2018-01-27T18:12:22Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUpClass -->
-        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.revature.tests.trainer.TestLocations@782a4fff]" name="feature" duration-ms="22" started-at="2018-01-27T18:12:22Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2018-01-27T18:12:22Z">
+        <test-method signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.revature.tests.trainer.TestTrainers@46c670a6]" started-at="2018-01-27T21:02:36Z" name="feature" description="Runs Cucumber Feature" data-provider="features" finished-at="2018-01-27T21:02:36Z" duration-ms="12" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -60,29 +33,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- feature -->
-        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.revature.tests.trainer.TestLocations@782a4fff]" name="feature" duration-ms="1" started-at="2018-01-27T18:12:22Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2018-01-27T18:12:22Z">
->>>>>>> d8e13a192b0dd783ede26ad6d97d6e619ad93fb2
-=======
-<testng-results ignored="0" total="3" passed="0" failed="3" skipped="0">
-  <reporter-output>
-  </reporter-output>
-  <suite started-at="2018-01-27T19:13:50Z" name="Default suite" finished-at="2018-01-27T19:13:53Z" duration-ms="3094">
-    <groups>
-      <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.revature.TrainerSuite@4a9cc6cb]" name="feature" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
-      </group> <!-- cucumber -->
-    </groups>
-    <test started-at="2018-01-27T19:13:50Z" name="Default test" finished-at="2018-01-27T19:13:53Z" duration-ms="3094">
-      <class name="com.revature.TrainerSuite">
-        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:com.revature.TrainerSuite@4a9cc6cb]" started-at="2018-01-27T14:13:43Z" name="beforeSuite" finished-at="2018-01-27T14:13:50Z" duration-ms="6643" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeSuite -->
-        <test-method is-config="true" signature="setUpClass()[pri:0, instance:com.revature.TrainerSuite@4a9cc6cb]" started-at="2018-01-27T14:13:50Z" name="setUpClass" finished-at="2018-01-27T14:13:52Z" duration-ms="1855" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUpClass -->
-        <test-method signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.revature.TrainerSuite@4a9cc6cb]" started-at="2018-01-27T14:13:52Z" name="feature" description="Runs Cucumber Feature" data-provider="features" finished-at="2018-01-27T14:13:53Z" duration-ms="611" status="FAIL">
+        <test-method signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.revature.tests.trainer.TestTrainers@46c670a6]" started-at="2018-01-27T21:02:36Z" name="feature" description="Runs Cucumber Feature" data-provider="features" finished-at="2018-01-27T21:02:36Z" duration-ms="5" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -90,19 +41,10 @@
               </value>
             </param>
           </params>
-          <exception class="cucumber.runtime.CucumberException">
-            <message>
-              <![CDATA[cucumber.runtime.CucumberException: Arity mismatch: Step Definition 'com.revature.cuketests.TrainerCukes.loggedAsTrainer(WebDriver) in file:/C:/project_2_repo/TA_Framework/TA_Framework_Maven/target/classes/' with pattern [^I am logged in as a trainer <webdriver>$] is declared with 1 parameters. However, the gherkin step has 0 arguments []. Step: Given I am logged in as a trainer <webdriver>]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[cucumber.runtime.CucumberException: cucumber.runtime.CucumberException: Arity mismatch: Step Definition 'com.revature.cuketests.TrainerCukes.loggedAsTrainer(WebDriver) in file:/C:/project_2_repo/TA_Framework/TA_Framework_Maven/target/classes/' with pattern [^I am logged in as a trainer <webdriver>$] is declared with 1 parameters. However, the gherkin step has 0 arguments []. Step: Given I am logged in as a trainer <webdriver>at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:69)at cucumber.api.testng.AbstractTestNGCucumberTests.feature(AbstractTestNGCucumberTests.java:21)at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)at java.base/java.lang.reflect.Method.invoke(Unknown Source)at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)at org.testng.internal.Invoker.invokeMethod(Invoker.java:571)at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:707)at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:979)at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)at org.testng.TestRunner.privateRun(TestRunner.java:648)at org.testng.TestRunner.run(TestRunner.java:505)at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)at org.testng.SuiteRunner.run(SuiteRunner.java:364)at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)at org.testng.TestNG.runSuites(TestNG.java:1028)at org.testng.TestNG.run(TestNG.java:996)at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)Caused by: cucumber.runtime.CucumberException: Arity mismatch: Step Definition 'com.revature.cuketests.TrainerCukes.loggedAsTrainer(WebDriver) in file:/C:/project_2_repo/TA_Framework/TA_Framework_Maven/target/classes/' with pattern [^I am logged in as a trainer <webdriver>$] is declared with 1 parameters. However, the gherkin step has 0 arguments []. Step: Given I am logged in as a trainer <webdriver>at cucumber.runtime.StepDefinitionMatch.arityMismatch(StepDefinitionMatch.java:102)at cucumber.runtime.StepDefinitionMatch.transformedArgs(StepDefinitionMatch.java:60)at cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:37)at cucumber.runtime.Runtime.runStep(Runtime.java:300)at cucumber.runtime.model.StepContainer.runStep(StepContainer.java:44)at cucumber.runtime.model.StepContainer.runSteps(StepContainer.java:39)at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:44)at cucumber.runtime.model.CucumberFeature.run(CucumberFeature.java:165)at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:63)... 26 more]]>
-            </full-stacktrace>
-          </exception> <!-- cucumber.runtime.CucumberException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- feature -->
-        <test-method signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.revature.TrainerSuite@4a9cc6cb]" started-at="2018-01-27T14:13:53Z" name="feature" description="Runs Cucumber Feature" data-provider="features" finished-at="2018-01-27T14:13:53Z" duration-ms="39" status="FAIL">
->>>>>>> Amin
+        <test-method signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.revature.tests.trainer.TestTrainers@46c670a6]" started-at="2018-01-27T21:02:36Z" name="feature" description="Runs Cucumber Feature" data-provider="features" finished-at="2018-01-27T21:02:36Z" duration-ms="3" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -110,69 +52,21 @@
               </value>
             </param>
           </params>
-          <exception class="cucumber.runtime.CucumberException">
-            <message>
-              <![CDATA[cucumber.runtime.CucumberException: Arity mismatch: Step Definition 'com.revature.cuketests.ReportsCukes.clickReports(WebDriver) in file:/C:/project_2_repo/TA_Framework/TA_Framework_Maven/target/classes/' with pattern [^Click the Reports tab <webdriver>$] is declared with 1 parameters. However, the gherkin step has 0 arguments []. Step: When Click the Reports tab <webdriver>]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[cucumber.runtime.CucumberException: cucumber.runtime.CucumberException: Arity mismatch: Step Definition 'com.revature.cuketests.ReportsCukes.clickReports(WebDriver) in file:/C:/project_2_repo/TA_Framework/TA_Framework_Maven/target/classes/' with pattern [^Click the Reports tab <webdriver>$] is declared with 1 parameters. However, the gherkin step has 0 arguments []. Step: When Click the Reports tab <webdriver>at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:69)at cucumber.api.testng.AbstractTestNGCucumberTests.feature(AbstractTestNGCucumberTests.java:21)at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)at java.base/java.lang.reflect.Method.invoke(Unknown Source)at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)at org.testng.internal.Invoker.invokeMethod(Invoker.java:571)at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:707)at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:979)at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)at org.testng.TestRunner.privateRun(TestRunner.java:648)at org.testng.TestRunner.run(TestRunner.java:505)at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)at org.testng.SuiteRunner.run(SuiteRunner.java:364)at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)at org.testng.TestNG.runSuites(TestNG.java:1028)at org.testng.TestNG.run(TestNG.java:996)at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)Caused by: cucumber.runtime.CucumberException: Arity mismatch: Step Definition 'com.revature.cuketests.ReportsCukes.clickReports(WebDriver) in file:/C:/project_2_repo/TA_Framework/TA_Framework_Maven/target/classes/' with pattern [^Click the Reports tab <webdriver>$] is declared with 1 parameters. However, the gherkin step has 0 arguments []. Step: When Click the Reports tab <webdriver>at cucumber.runtime.StepDefinitionMatch.arityMismatch(StepDefinitionMatch.java:102)at cucumber.runtime.StepDefinitionMatch.transformedArgs(StepDefinitionMatch.java:60)at cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:37)at cucumber.runtime.Runtime.runStep(Runtime.java:300)at cucumber.runtime.model.StepContainer.runStep(StepContainer.java:44)at cucumber.runtime.model.StepContainer.runSteps(StepContainer.java:39)at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:44)at cucumber.runtime.model.CucumberFeature.run(CucumberFeature.java:165)at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:63)... 26 more]]>
-            </full-stacktrace>
-          </exception> <!-- cucumber.runtime.CucumberException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- feature -->
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <test-method status="PASS" signature="TestClickOverview()[pri:1, instance:com.revature.TestOverview@7d900ecf]" name="TestClickOverview" duration-ms="3121" started-at="2018-01-27T18:17:45Z" finished-at="2018-01-27T18:17:48Z">
+        <test-method signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.revature.tests.trainer.TestTrainers@46c670a6]" started-at="2018-01-27T21:02:36Z" name="feature" description="Runs Cucumber Feature" data-provider="features" finished-at="2018-01-27T21:02:36Z" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Settings to test on the]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TestClickOverview -->
-        <test-method status="PASS" signature="CheckNameFilterDSC()[pri:7, instance:com.revature.TestOverview@7d900ecf]" name="CheckNameFilterDSC" duration-ms="4116" started-at="2018-01-27T18:17:48Z" finished-at="2018-01-27T18:17:52Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- CheckNameFilterDSC -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.revature.TestOverview@7d900ecf]" name="tearDownClass" is-config="true" duration-ms="5" started-at="2018-01-27T18:17:52Z" finished-at="2018-01-27T18:17:52Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDownClass -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.revature.TestOverview@7d900ecf]" name="afterTest" is-config="true" duration-ms="0" started-at="2018-01-27T18:17:52Z" finished-at="2018-01-27T18:17:52Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterTest -->
-        <test-method status="PASS" signature="afterSuite()[pri:0, instance:com.revature.TestOverview@7d900ecf]" name="afterSuite" is-config="true" duration-ms="3455" started-at="2018-01-27T18:17:52Z" finished-at="2018-01-27T18:17:56Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterSuite -->
-      </class> <!-- com.revature.TestOverview -->
-=======
-        <test-method status="FAIL" signature="TestOne()[pri:0, instance:com.revature.tests.trainer.TestLocations@782a4fff]" name="TestOne" duration-ms="3199" started-at="2018-01-27T18:12:22Z" finished-at="2018-01-27T18:12:26Z">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Revature HQ and/or New York City drop downs not found. Not in Locations tab]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Revature HQ and/or New York City drop downs not found. Not in Locations tabat org.testng.Assert.fail(Assert.java:96)at com.revature.tests.trainer.TestLocations.TestOne(TestLocations.java:30)at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)at java.lang.reflect.Method.invoke(Unknown Source)at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)at org.testng.internal.Invoker.invokeMethod(Invoker.java:571)at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:707)at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:979)at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)at org.testng.TestRunner.privateRun(TestRunner.java:648)at org.testng.TestRunner.run(TestRunner.java:505)at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)at org.testng.SuiteRunner.run(SuiteRunner.java:364)at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)at org.testng.TestNG.runSuites(TestNG.java:1028)at org.testng.TestNG.run(TestNG.java:996)at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TestOne -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.revature.tests.trainer.TestLocations@782a4fff]" name="tearDownClass" is-config="true" duration-ms="8" started-at="2018-01-27T18:12:26Z" finished-at="2018-01-27T18:12:26Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDownClass -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.revature.tests.trainer.TestLocations@782a4fff]" name="afterTest" is-config="true" duration-ms="0" started-at="2018-01-27T18:12:26Z" finished-at="2018-01-27T18:12:26Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterTest -->
-        <test-method status="PASS" signature="afterSuite()[pri:0, instance:com.revature.tests.trainer.TestLocations@782a4fff]" name="afterSuite" is-config="true" duration-ms="3169" started-at="2018-01-27T18:12:26Z" finished-at="2018-01-27T18:12:29Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterSuite -->
-      </class> <!-- com.revature.tests.trainer.TestLocations -->
->>>>>>> d8e13a192b0dd783ede26ad6d97d6e619ad93fb2
-=======
-        <test-method signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.revature.TrainerSuite@4a9cc6cb]" started-at="2018-01-27T14:13:53Z" name="feature" description="Runs Cucumber Feature" data-provider="features" finished-at="2018-01-27T14:13:53Z" duration-ms="36" status="FAIL">
+        </test-method> <!-- feature -->
+        <test-method signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.revature.tests.trainer.TestTrainers@46c670a6]" started-at="2018-01-27T21:02:36Z" name="feature" description="Runs Cucumber Feature" data-provider="features" finished-at="2018-01-27T21:02:36Z" duration-ms="2" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -180,27 +74,46 @@
               </value>
             </param>
           </params>
-          <exception class="cucumber.runtime.CucumberException">
-            <message>
-              <![CDATA[cucumber.runtime.CucumberException: Arity mismatch: Step Definition 'com.revature.cuketests.TrainerCukes.clickTrainers(WebDriver) in file:/C:/project_2_repo/TA_Framework/TA_Framework_Maven/target/classes/' with pattern [^Click the Trainers tab <webdriver>$] is declared with 1 parameters. However, the gherkin step has 0 arguments []. Step: When Click the Trainers tab <webdriver>]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[cucumber.runtime.CucumberException: cucumber.runtime.CucumberException: Arity mismatch: Step Definition 'com.revature.cuketests.TrainerCukes.clickTrainers(WebDriver) in file:/C:/project_2_repo/TA_Framework/TA_Framework_Maven/target/classes/' with pattern [^Click the Trainers tab <webdriver>$] is declared with 1 parameters. However, the gherkin step has 0 arguments []. Step: When Click the Trainers tab <webdriver>at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:69)at cucumber.api.testng.AbstractTestNGCucumberTests.feature(AbstractTestNGCucumberTests.java:21)at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)at java.base/java.lang.reflect.Method.invoke(Unknown Source)at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)at org.testng.internal.Invoker.invokeMethod(Invoker.java:571)at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:707)at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:979)at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)at org.testng.TestRunner.privateRun(TestRunner.java:648)at org.testng.TestRunner.run(TestRunner.java:505)at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)at org.testng.SuiteRunner.run(SuiteRunner.java:364)at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)at org.testng.TestNG.runSuites(TestNG.java:1028)at org.testng.TestNG.run(TestNG.java:996)at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)Caused by: cucumber.runtime.CucumberException: Arity mismatch: Step Definition 'com.revature.cuketests.TrainerCukes.clickTrainers(WebDriver) in file:/C:/project_2_repo/TA_Framework/TA_Framework_Maven/target/classes/' with pattern [^Click the Trainers tab <webdriver>$] is declared with 1 parameters. However, the gherkin step has 0 arguments []. Step: When Click the Trainers tab <webdriver>at cucumber.runtime.StepDefinitionMatch.arityMismatch(StepDefinitionMatch.java:102)at cucumber.runtime.StepDefinitionMatch.transformedArgs(StepDefinitionMatch.java:60)at cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:37)at cucumber.runtime.Runtime.runStep(Runtime.java:300)at cucumber.runtime.model.StepContainer.runStep(StepContainer.java:44)at cucumber.runtime.model.StepContainer.runSteps(StepContainer.java:39)at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:44)at cucumber.runtime.model.CucumberFeature.run(CucumberFeature.java:165)at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:63)... 26 more]]>
-            </full-stacktrace>
-          </exception> <!-- cucumber.runtime.CucumberException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- feature -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.revature.TrainerSuite@4a9cc6cb]" started-at="2018-01-27T14:13:53Z" name="tearDownClass" finished-at="2018-01-27T14:13:53Z" duration-ms="58" status="PASS">
+        <test-method signature="onTrainersTab()[pri:1, instance:com.revature.tests.trainer.TestTrainers@46c670a6]" started-at="2018-01-27T21:02:36Z" name="onTrainersTab" finished-at="2018-01-27T21:02:40Z" duration-ms="3218" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- onTrainersTab -->
+        <test-method signature="ptoCalendarButtonExists()[pri:2, instance:com.revature.tests.trainer.TestTrainers@46c670a6]" started-at="2018-01-27T21:02:40Z" name="ptoCalendarButtonExists" finished-at="2018-01-27T21:02:40Z" duration-ms="94" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ptoCalendarButtonExists -->
+        <test-method signature="downloadButtonExists()[pri:3, instance:com.revature.tests.trainer.TestTrainers@46c670a6]" started-at="2018-01-27T21:02:40Z" name="downloadButtonExists" finished-at="2018-01-27T21:02:40Z" duration-ms="60" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- downloadButtonExists -->
+        <test-method signature="clickCalendarButton()[pri:4, instance:com.revature.tests.trainer.TestTrainers@46c670a6]" started-at="2018-01-27T21:02:40Z" name="clickCalendarButton" finished-at="2018-01-27T21:02:40Z" duration-ms="503" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickCalendarButton -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.revature.tests.trainer.TestTrainers@46c670a6]" started-at="2018-01-27T21:02:40Z" name="tearDownClass" finished-at="2018-01-27T21:02:40Z" duration-ms="9" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
-        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.revature.TrainerSuite@4a9cc6cb]" started-at="2018-01-27T14:13:53Z" name="afterSuite" finished-at="2018-01-27T14:13:58Z" duration-ms="4673" status="PASS">
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.revature.tests.trainer.TestTrainers@46c670a6]" started-at="2018-01-27T21:02:40Z" name="afterTest" finished-at="2018-01-27T21:02:40Z" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.revature.tests.trainer.TestTrainers@46c670a6]" started-at="2018-01-27T21:02:40Z" name="afterSuite" finished-at="2018-01-27T21:02:42Z" duration-ms="1123" status="FAIL">
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[unknown error: Element <li class="md-nav-item ng-scope ng-isolate-scope layout-align-end-end" role="option" aria-selected="false" md-nav-click="mCtrl.logout();" name="logout" layout-align="end end">...</li> is not clickable at point (967, 120). Other element would receive the click: <div class="md-dialog-container ng-scope" tabindex="-1" style="top: 0px; height: 708px;">...</div>  (Session info: chrome=63.0.3239.132)  (Driver info: chromedriver=2.35.528161 (5b82f2d2aae0ca24b877009200ced9065a772e73),platform=Windows NT 10.0.16299 x86_64) (WARNING: The server did not provide any stacktrace information)Command duration or timeout: 0 millisecondsBuild info: version: '3.8.1', revision: '6e95a6684b', time: '2017-12-01T18:33:54.468Z'System info: host: 'DESKTOP-EDGVJKP', ip: '192.168.61.105', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '9.0.1'Driver info: org.openqa.selenium.chrome.ChromeDriverCapabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.35.528161 (5b82f2d2aae0ca..., userDataDir: C:\Users\AminPC\AppData\Loc...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 63.0.3239.132, webStorageEnabled: true}Session ID: edcba0bc63610ae29b4a9353e2b4d704]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: unknown error: Element <li class="md-nav-item ng-scope ng-isolate-scope layout-align-end-end" role="option" aria-selected="false" md-nav-click="mCtrl.logout();" name="logout" layout-align="end end">...</li> is not clickable at point (967, 120). Other element would receive the click: <div class="md-dialog-container ng-scope" tabindex="-1" style="top: 0px; height: 708px;">...</div>  (Session info: chrome=63.0.3239.132)  (Driver info: chromedriver=2.35.528161 (5b82f2d2aae0ca24b877009200ced9065a772e73),platform=Windows NT 10.0.16299 x86_64) (WARNING: The server did not provide any stacktrace information)Command duration or timeout: 0 millisecondsBuild info: version: '3.8.1', revision: '6e95a6684b', time: '2017-12-01T18:33:54.468Z'System info: host: 'DESKTOP-EDGVJKP', ip: '192.168.61.105', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '9.0.1'Driver info: org.openqa.selenium.chrome.ChromeDriverCapabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.35.528161 (5b82f2d2aae0ca..., userDataDir: C:\Users\AminPC\AppData\Loc...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 63.0.3239.132, webStorageEnabled: true}Session ID: edcba0bc63610ae29b4a9353e2b4d704at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)at java.base/java.lang.reflect.Constructor.newInstance(Unknown Source)at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:279)at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)at com.revature.tests.trainer.TrainerSuite.afterSuite(TrainerSuite.java:43)at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)at java.base/java.lang.reflect.Method.invoke(Unknown Source)at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:451)at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)at org.testng.SuiteRunner.privateRun(SuiteRunner.java:425)at org.testng.SuiteRunner.run(SuiteRunner.java:364)at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)at org.testng.TestNG.runSuites(TestNG.java:1028)at org.testng.TestNG.run(TestNG.java:996)at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->
-      </class> <!-- com.revature.TrainerSuite -->
->>>>>>> Amin
+      </class> <!-- com.revature.tests.trainer.TestTrainers -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

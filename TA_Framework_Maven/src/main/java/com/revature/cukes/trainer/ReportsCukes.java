@@ -1,4 +1,4 @@
-package com.revature.cuketests;
+package com.revature.cukes.trainer;
 
 import org.openqa.selenium.WebDriver;
 
