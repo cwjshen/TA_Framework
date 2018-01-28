@@ -4,8 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+
+import com.revature.util.JSClicker;
 
 
 
@@ -20,6 +23,18 @@ public class OverviewTab {
 	}
 	public static WebElement findFilterButton(WebDriver d) {
 		return d.findElement(By.xpath("/html/body/div/div[2]/div/div/md-card/md-toolbar/md-menu/button"));
+	}
+	public static void clickFilterButton(WebDriver d) {
+		JSClicker.executeJSClick(d, d.findElement(By.xpath("/html/body/div/div[2]/div/div/md-card/md-toolbar/md-menu/button")));
+	}
+	public static WebElement findFilterInProgress(WebDriver d) {
+		return d.findElement(By.xpath("/html/body/div[3]/md-menu-content/md-menu-item[1]/button"));
+	}
+	public static WebElement findFilterInTwoWeeks(WebDriver d) {
+		return d.findElement(By.xpath("/html/body/div[3]/md-menu-content/md-menu-item[2]/button"));
+	}
+	public static WebElement findFilterAll(WebDriver d) {
+		return d.findElement(By.xpath("/html/body/div[3]/md-menu-content/md-menu-item[3]/button"));
 	}
 	public static WebElement filterName(WebDriver d) {
 		return d.findElement(By.xpath("/html/body/div[1]/div[2]/div/div/md-card/md-content/md-table-container/table/thead/tr/th[1]"));
