@@ -1,6 +1,8 @@
 TA_Framework_Maven/target/
+TA_Framework_Maven/test-output/
 .classpath
 .project
 .settings/
 **/chromedriver.exe
 **/geckodriver.exe
+
