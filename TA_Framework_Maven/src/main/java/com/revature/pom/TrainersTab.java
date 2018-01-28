@@ -8,10 +8,15 @@ public class TrainersTab {
 
 	public static WebElement findCalendarButton(WebDriver driver) {
 		return driver.findElement(By.xpath("//*[@id=\"view\"]/md-card/md-toolbar[1]/div/button[2]/md-icon"));
+		
+//driver.findElement(By.xpath("//*[@id=\"view\"]/md-card/md-toolbar[1]/div/button[2]"));
+//		driver.findElement(By.xpath("span[@aria-label='View PTO Calendar']"));
+		//*[@id="view"]/md-card/md-toolbar[1]/div/button[2]
 	}
 
 	public static WebElement downloadResumeButton(WebDriver driver) {
-		return driver.findElement(By.xpath("//*[@id=\"view\"]/md-card/md-content[1]/md-list/md-list-item[1]/div[1]/div[1]/button[1]/i"));
+		return driver.findElement(By.xpath("//*[@id=\"view\"]/md-card/md-content[1]/md-list/md-list-item[1]/div[1]/div[1]/button[1]"));
+	
 	}
 	
 	public static WebElement clickTrainer(WebDriver driver) {

@@ -4,7 +4,8 @@ import static org.testng.Assert.fail;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-import com.revature.cuketests.SettingsCukes;
+
+import com.revature.cukes.trainer.SettingsCukes;
 
 
 	public class TestSettings extends TrainerSuite {
