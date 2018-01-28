@@ -1,8 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<<<<<<< HEAD
 <suite thread-count="-1" name="Failed suite [Trainer Tests ]">
   <test name="Test Locations Tab(failed)">
     <classes>
+=======
+<suite thread-count="-1" name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test name="Default test(failed)">
+    <classes>
+<<<<<<< HEAD
+<<<<<<< HEAD
+      <class name="com.revature.TestOverview">
+        <methods>
+          <include name="afterSuite"/>
+          <include name="beforeSuite"/>
+          <include name="setUpClass"/>
+          <include name="afterTest"/>
+          <include name="beforeTest"/>
+          <include name="tearDownClass"/>
+          <include name="CheckNameFilterDSC"/>
+        </methods>
+      </class> <!-- com.revature.TestOverview -->
+=======
+>>>>>>> 6066c350e4ccc08b74aebb97834954498ea61238
       <class name="com.revature.tests.trainer.TestLocations">
         <methods>
           <include name="afterSuite"/>
@@ -14,6 +34,23 @@
           <include name="tearDownClass"/>
         </methods>
       </class> <!-- com.revature.tests.trainer.TestLocations -->
+>>>>>>> d8e13a192b0dd783ede26ad6d97d6e619ad93fb2
+=======
+      <class name="com.revature.TrainerSuite">
+        <methods>
+          <include name="afterSuite"/>
+          <include name="beforeSuite"/>
+          <include name="setUpClass"/>
+          <include name="feature" invocation-numbers="0 1 2"/>
+          <include name="tearDownClass"/>
+        </methods>
+      </class> <!-- com.revature.TrainerSuite -->
+>>>>>>> Amin
     </classes>
+<<<<<<< HEAD
   </test> <!-- Test Locations Tab(failed) -->
 </suite> <!-- Failed suite [Trainer Tests ] -->
+=======
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
+>>>>>>> 6066c350e4ccc08b74aebb97834954498ea61238

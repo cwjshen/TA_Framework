@@ -7,7 +7,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import com.revature.pom.NavBar;
-import com.revature.pom.Login;
 import com.revature.pom.Logout;
 
 public class WDTestClass {

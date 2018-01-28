@@ -27,5 +27,28 @@ Feature: Overview Tab for trainers
     When Click the Overview tab <webdriver>
     Then I should see the Export to CSV button <webdriver>
     And Fiter button <webdriver>
+    
+  @tag2
+  Scenario Outline: Check if CSV downloaded
+		Given That I am in the Overview tab
+		When I click the CSV button <webdriver>
+		Then The download should start
+		And it should be in the download location
+		
+	@tag3
+	Scenario Outline: Click the Name button to sort data ASC/DSC
+		Given That I am in the Overview tab
+		When I click the name button <webdriver>
+		Then The names should be filtered in ASC order <webdriver>
+		And If I click the name button again <webdriver>
+		Then The names should be filtered in DSC order <webdriver>
+   	
+   	@tag3
+	Scenario Outline: Click the Curriculum button to sort data ASC/DSC
+		Given That I am in the Overview tab
+		When I click the curriculum button <webdriver>
+		Then The curricula should be filtered in ASC order <webdriver>
+		And If I click the curriculum button again <webdriver>
+		Then The curricula should be filtered in DSC order <webdriver>
 
  

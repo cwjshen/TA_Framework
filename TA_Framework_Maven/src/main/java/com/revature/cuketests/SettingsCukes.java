@@ -82,7 +82,7 @@ public class SettingsCukes {
 		if (maxbsize == MaxBatchSize) {
 			System.out.println("Match Batch Size value is correct");
 		} else {
-				System.out.println("Match  Outgoing Grads valus is incorrect");
+				System.out.println("Match Outgoing Grads valus is incorrect");
 			}
 		if (dblength == DBatchLength){
 			System.out.println("Batch length value is correct");
