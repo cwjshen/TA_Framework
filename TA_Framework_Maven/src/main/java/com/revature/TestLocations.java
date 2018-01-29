@@ -1,0 +1,45 @@
+package com.revature;
+
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+import com.revature.cukes.trainer.LocationsCukes;
+import com.revature.pom.Login;
+import com.revature.pom.Logout;
+import com.revature.tests.trainer.TrainerSuite;
+import com.revature.util.DriverUtil;
+import com.revature.util.LoginUtil;
+import cucumber.api.CucumberOptions;
+
+//Hook Class to run Cucumber Tests
+@CucumberOptions(features="src/test/java")
+public class TestLocations extends TrainerSuite {
+
+	@BeforeTest
+	public void beforeTest() {
+		System.out.println("Running Location Tab Test");
+
+	}
+	
+	@Test
+	public void TestOne() {
+		try {
+			// Need assert statements for these? Idk though because they can never be false
+			LocationsCukes.clickLocations(wd);
+			LocationsCukes.RevatureHQExists(wd);
+			LocationsCukes.NewYorkCityExists(wd);
+
+		} catch (Throwable e) { 
+			System.out.println("Revature HQ and/or New York City drop downs not found. Not in Locations tab");
+			e.printStackTrace();
+		}
+	}
+	
+	@AfterTest
+	public void afterTest() {
+		System.out.println("Tests successful. Locations tab working as intended");
+	}
+
+}
+

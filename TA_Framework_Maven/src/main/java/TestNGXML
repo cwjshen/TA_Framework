@@ -6,6 +6,8 @@
     </classes>
   </test> <!-- Test -->
  
+ <!--
+ 
   <test name="Test Batches Tab">
     <classes>
 	  <class name="com.revature.tests.trainer.TestBatches"/> 
@@ -23,6 +25,8 @@
 	  <class name="com.revature.tests.trainer.TestSettings"/> 
     </classes>
   </test> <!-- Test -->   
+  
+  -->
 
 
 </suite> <!-- Suite -->

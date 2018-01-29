@@ -1,6 +1,5 @@
-package com.revature.tests.trainer;
+package com.revature.tests.vp;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
@@ -15,7 +14,7 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 
 //Hook Class to run Cucumber Tests
 @CucumberOptions(features="src/test/resources/com/revature/features/trainer")
-public class TrainerSuite extends AbstractTestNGCucumberTests{
+public class VPSuite extends AbstractTestNGCucumberTests{
 
 	public static WebDriver wd = DriverUtil.getChromeDriver();
 	
@@ -24,13 +23,10 @@ public class TrainerSuite extends AbstractTestNGCucumberTests{
 		System.out.println("TA Framework Tests");
 		try {
 			wd.get("https://dev.assignforce.revaturelabs.com");		
-			LoginUtil.loginAsTrainer(wd);
+			LoginUtil.loginAsVP(wd);
 			// Log in as trainer 
 //			we should put this login method inside of the overviewcukes.loggedastrainer method no?
 			OverviewCukes.isInOverview();
-			
-			// Log in as VP
-//			LoginUtil.loginAsVP(wd);
 			
 		} catch (Throwable e) {
 			e.printStackTrace();
@@ -40,7 +36,6 @@ public class TrainerSuite extends AbstractTestNGCucumberTests{
 	@AfterSuite
 	public void afterSuite() {
 		System.out.println("Logging out");
-		wd.findElement(By.xpath("/html/body/div[1]/div[1]/ng-include/div/md-content")).click();
 		Logout.logout(wd).click();
 		wd.close();
 	}

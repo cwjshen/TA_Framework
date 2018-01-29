@@ -16,13 +16,16 @@
 #""
 ## (Comments)
 #Sample Feature Definition Template
-@tag
-Feature: Reports Tab for trainers
-  Assignforce Reports tab scenarios
+Feature: Batches Tab 
+  Feature file for batches tab
 
-  @tag1
-  Scenario Outline: Check if in Reports Tab for trainer
-    Given That I am in the Reports tab 
-    When Click the Reports tab <webdriver>
-    Then I should see the Add new card button<webdriver>
-    And Export to CSV button <webdriver>
+  Scenario Outline: Check that I am in the batches tab
+    Given that I click the batches tab <webdriver>
+		Then I should see the Create New Batch section <webdriver>
+		Then I should see the All Batches section <webdriver>
+		Then I should see the Batch Timeline section <webdriver>
+
+  Scenario Outline: Invalidate Empty Batch Form
+    Given that the batches form is empty <webdriver>
+    When I click the create batch button <webdriver>
+		Then All batches should not contain a new batch <webdriver>

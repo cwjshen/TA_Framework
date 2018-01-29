@@ -13,7 +13,7 @@ public class Logout {
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-		e = d.findElement(By.xpath("/html/body/div[1]/div[1]/ng-include/div/md-content/md-nav-bar/div/nav/ul/li[9]"));
+		e = d.findElement(By.xpath("/html/body/div[1]/div[1]/ng-include/div/md-content/md-nav-bar/div/nav/ul/li[9]/button"));
 		return e;
 	}
 

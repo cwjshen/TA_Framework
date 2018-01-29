@@ -21,40 +21,46 @@ Feature: Trainers Tab for trainers
   Assignforce Trainers tab scenarios
 
   @tag1
-    Scenario: Check if in Trainers Tab for trainer
-    Given That I am in the Trainers tab 
+    Scenario Outline: Check if in Trainers Tab for trainer
+    Given That I am in the Trainers tab <webdriver>
     When Click the Trainers tab <webdriver>
     Then I should see the View PTO Calendar button<webdriver>
     And Download Resume button <webdriver>
     
   @tag2
-    Scenario: Check if PTO Calendar button works
-    Given That I am in the Trainers tab 
+    Scenario Outline: Check if PTO Calendar button works
+    Given That I am in the Trainers tab <webdriver>
     When Click the View PTO Calendar button <webdriver>
     Then I should see the PTO Calendar<webdriver>
     
   @tag3
-  	Scenario: Checking if the new PTO request button on the PTO calendar works
-  	Given that the PTO calendar is open
-  	When I click the new PTO request button
-  	Then A new window should appear which allows the user to enter a start date and an end date 
+  	Scenario Outline: Checking if the new PTO request button on the PTO calendar works
+  	Given that the PTO calendar is open <webdriver>
+  	When I click the new PTO request button <webdriver>
+  	Then A new window should appear which allows the user to enter a start date and an end date <webdriver>
+  	
+  @tag4
+  	Scenario Outline: Checking if the cancel PTO request button on the PTO calendar works
+  	Given that the add PTO request popup is open <webdriver>
+  	When I click the cancel PTO request button <webdriver>
+  	Then I should see the PTO Calendar button <webdriver>	
  
-   @tag4
-  	Scenario: Checking if the cancel button on the PTO calendar works
-  	Given that the PTO calendar is open
-  	When I click the cancel button
-  	Then The PTO calendar should close
-  	And I should see the Trainers tab	
-    
-  @tag5
-    Scenario: Check if clicking on a trainer brings you to their profile
-    Given That I am in the Trainers tab 
-    When I click on a trainer <webdriver>
-    Then I should see that trainers profile page<webdriver> 
+   @tag5
+  	Scenario Outline: Checking if the cancel button on the PTO calendar works
+  	Given that the PTO calendar is open <webdriver>
+  	When I click the cancel button <webdriver>
+  	Then The PTO calendar should close <webdriver>
+  	And I should see the Trainers tab	<webdriver>
     
   @tag6
-    Scenario: Check if clicking on download resume button works
-    Given That I am in the Trainers tab 
+    Scenario Outline: Check if clicking on a trainer brings you to their profile
+    Given That I am in the Trainers tab <webdriver>
+    When I click on a trainer <webdriver> 
+    Then I should see that trainers profile page<webdriver> 
+    
+  @tag7
+    Scenario Outline: Check if clicking on download resume button works
+    Given That I am in the Trainers tab <webdriver>
     When I click on the download resume button on a given trainer <webdriver>
     Then the download should start<webdriver>
-    And I should see the file in the download location
+    And I should see the file in the download location <webdriver>
