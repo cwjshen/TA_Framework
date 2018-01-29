@@ -2,27 +2,21 @@
 package com.revature.cukes.trainer;
 
 import java.io.File;
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Date;
 import java.util.List;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-
 import com.revature.pom.NavBar;
 import com.revature.pom.OverviewTab;
-
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 public class OverviewCukes {
-
-
 	@Given("^That I am in the Overview tab$")
 	public static void isInOverview() throws Throwable {
 		System.out.println("In Overview tab");
@@ -35,7 +29,6 @@ public class OverviewCukes {
 
 	@When("^Click the Overview tab$")
 	public static void clickOverview(WebDriver wd) throws Throwable {
-		Thread.sleep(1000);
 		NavBar.navigateToOverviewPage(wd).click();
 	}
 
@@ -63,13 +56,11 @@ public class OverviewCukes {
 
 	@When("^I click the CSV button <webdriver>$")
 	public static void clickCSVButton(WebDriver wd) throws Throwable {
-		//Thread.sleep(1000);
 		OverviewTab.findCSVButton(wd).click();
 	}
 
 	@Then("^The download should start$")
 	public static void the_download_should_start() throws Throwable {
-		// Write code here that turns the phrase above into concrete actions
 		System.out.println("Downloading CSV file...");
 		isFileDownloaded("D:\\Users\\Tuan Pham\\Downloads", "batches.csv");
 
@@ -77,7 +68,6 @@ public class OverviewCukes {
 
 	@Then("^it should be in the download location$")
 	public static void it_should_be_in_the_download_location() throws Throwable {
-		// Write code here that turns the phrase above into concrete actions
 		System.out.println("Deleting CSV file");
 	}
 
@@ -98,7 +88,6 @@ public class OverviewCukes {
 	
 	@When("^I click the name button <webdriver>$")
 	public static void i_click_the_name_button(WebDriver wd) throws Throwable {
-		//Thread.sleep(1000);
 		OverviewTab.filterName(wd).click();
 	}
 
@@ -132,7 +121,6 @@ public class OverviewCukes {
 	
 	@Then("^If I click the name button again <webdriver>$")
 	public static void if_I_click_the_name_button_again(WebDriver wd) throws Throwable {
-		//Thread.sleep(1000);
 		OverviewTab.filterName(wd).click();
 	}
 
@@ -166,7 +154,6 @@ public class OverviewCukes {
 	
 	@When("^I click the curriculum button <webdriver>$")
 	public static void i_click_the_curriculum_button(WebDriver wd) throws Throwable {
-		//Thread.sleep(1000);
 		OverviewTab.filterCurriculum(wd).click();
 	}
 
@@ -199,7 +186,6 @@ public class OverviewCukes {
 	
 	@Then("^If I click the curriculum button again <webdriver>$")
 	public static void if_I_click_the_curriculum_button_again(WebDriver wd) throws Throwable {
-		//Thread.sleep(1000);
 		OverviewTab.filterCurriculum(wd).click();
 	}
 
@@ -232,7 +218,6 @@ public class OverviewCukes {
 	
 	@When("^I click the trainer button <webdriver>$")
 	public static void i_click_the_trainer_button(WebDriver wd) throws Throwable {
-		//Thread.sleep(1000);
 		OverviewTab.filterTrainer(wd).click();
 	}
 
@@ -268,7 +253,6 @@ public class OverviewCukes {
 	
 	@Then("^If I click the trainer button again <webdriver>$")
 	public static void if_I_click_the_trainer_button_again(WebDriver wd) throws Throwable {
-		//Thread.sleep(1000);
 		OverviewTab.filterTrainer(wd).click();
 	}
 
@@ -301,7 +285,6 @@ public class OverviewCukes {
 	
 	@When("^I click the location button <webdriver>$")
 	public static void i_click_the_location_button(WebDriver wd) throws Throwable {
-		//Thread.sleep(1000);
 		OverviewTab.filterLocation(wd).click();
 	}
 
@@ -334,7 +317,6 @@ public class OverviewCukes {
 	
 	@Then("^If I click the location button again <webdriver>$")
 	public static void if_I_click_the_location_button_again(WebDriver wd) throws Throwable {
-		Thread.sleep(1000);
 		OverviewTab.filterLocation(wd).click();
 	}
 
@@ -367,7 +349,6 @@ public class OverviewCukes {
 	
 	@When("^I click the room button <webdriver>$")
 	public static void i_click_the_room_button(WebDriver wd) throws Throwable {
-		//Thread.sleep(1000);
 		OverviewTab.filterRoom(wd).click();
 	}
 
@@ -400,7 +381,6 @@ public class OverviewCukes {
 	
 	@Then("^If I click the room button again <webdriver>$")
 	public static void if_I_click_the_room_button_again(WebDriver wd) throws Throwable {
-		//Thread.sleep(1000);
 		OverviewTab.filterRoom(wd).click();
 	}
 
@@ -433,7 +413,6 @@ public class OverviewCukes {
 	
 	@When("^I click the start button <webdriver>$")
 	public static void i_click_the_start_button(WebDriver wd) throws Throwable {
-		//Thread.sleep(1000);
 		OverviewTab.filterStartDate(wd).click();
 	}
 
@@ -477,7 +456,6 @@ public class OverviewCukes {
 	
 	@Then("^If I click the start button again <webdriver>$")
 	public static void if_I_click_the_start_button_again(WebDriver wd) throws Throwable {
-		//Thread.sleep(1000);
 		OverviewTab.filterStartDate(wd).click();
 	}
 
@@ -521,7 +499,6 @@ public class OverviewCukes {
 	
 	@When("^I click the end button <webdriver>$")
 	public static void i_click_the_end_button(WebDriver wd) throws Throwable {
-		//Thread.sleep(1000);
 		OverviewTab.filterEndDate(wd).click();
 	}
 
@@ -565,7 +542,6 @@ public class OverviewCukes {
 	
 	@Then("^If I click the end button again <webdriver>$")
 	public static void if_I_click_the_end_button_again(WebDriver wd) throws Throwable {
-		//Thread.sleep(1000);
 		OverviewTab.filterEndDate(wd).click();
 	}
 
@@ -609,7 +585,6 @@ public class OverviewCukes {
 	
 	@When("^I click the building button <webdriver>$")
 	public static void i_click_the_building_button(WebDriver wd) throws Throwable {
-		//Thread.sleep(1000);
 		OverviewTab.filterBuilding(wd).click();
 	}
 
@@ -642,7 +617,6 @@ public class OverviewCukes {
 	
 	@Then("^If I click the building button again <webdriver>$")
 	public static void if_I_click_the_building_button_again(WebDriver wd) throws Throwable {
-		//Thread.sleep(1000);
 		OverviewTab.filterBuilding(wd).click();
 	}
 
@@ -675,7 +649,6 @@ public class OverviewCukes {
 	
 	@When("^I click the filter button <webdriver>$")
 	public static void i_click_the_filter_button_webdriver(WebDriver wd) throws Throwable {
-		//Thread.sleep(1000);
 		OverviewTab.clickFilterButton(wd);
 	}
 
@@ -686,7 +659,6 @@ public class OverviewCukes {
 
 	@Then("^If I click the In Progress button <webdriver>$")
 	public static void if_I_click_the_In_Progress_button_webdriver(WebDriver wd) throws Throwable {
-		//Thread.sleep(1000);
 		OverviewTab.findFilterInProgress(wd).click();
 	}
 
@@ -697,30 +669,25 @@ public class OverviewCukes {
 	
 	@Then("^If I click the In Two Weeks button <webdriver>$")
 	public static void if_I_click_the_In_Two_Weeks_button_webdriver(WebDriver wd) throws Throwable {
-		//Thread.sleep(1000);
 		OverviewTab.findFilterInTwoWeeks(wd).click();
 	}
 
 	@Then("^If I click the All button <webdriver>$")
 	public static void if_I_click_the_all_button_webdriver(WebDriver wd) throws Throwable {
-		//Thread.sleep(1000);
 		OverviewTab.findFilterAll(wd).click();
 	}
 
 	@Then("^The batches in progress should display everything <webdriver>$")
 	public static boolean the_batches_in_progress_should_display_everything_webdriver(WebDriver wd) throws Throwable {
-		//Thread.sleep(1000);
 		return OverviewTab.isInProgress(OverviewTab.getStartDates(wd), OverviewTab.getEndDates(wd), wd);
 	}
 
 	
 	public static boolean the_batches_in_two_weeks_should_display(WebDriver wd) throws Throwable {
-		//Thread.sleep(1000);
 		return OverviewTab.isInTwoWeeks(OverviewTab.getStartDates(wd), wd);
 	}
 	
 	public static boolean all_batches_should_display(WebDriver wd) throws Throwable {
-		//Thread.sleep(1000);
 		return OverviewTab.allBatchesDisplayed(wd, OverviewTab.getBatchNames(wd));
 	}
 }
