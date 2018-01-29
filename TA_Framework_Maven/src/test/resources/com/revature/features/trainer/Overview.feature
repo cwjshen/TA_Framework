@@ -98,5 +98,27 @@ Feature: Overview Tab for trainers
 		Then The end dates should be filtered in ASC order <webdriver>
 		And If I click the end button again <webdriver>
 		Then The end dates should be filtered in DSC order <webdriver>
+		
+	@tag11
+	Scenario Outline: Click the filter button then click In Progress
+		Given That I am in the Overview tab
+		When I click the filter button <webdriver>
+		Then Three options should show <webdriver>
+		And If I click the In Progress button <webdriver>
+		Then The batches in progress should display <webdriver>
+		
+	@tag12
+	Scenario Outline: Click the beginning in two weeks filter
+		Given That I am in the Overview tab
+		When I click the beginning in two weeks button <webdriver>
+		Then The batches in two weeks should display <webdriver>
+	
+	@tag13
+	Scenario Outline: Click the all filter
+		Given That I am in the Overview tab
+		When I click the all button <webdriver>
+		Then The batches should display everything <webdriver>
+		
+		
 
  

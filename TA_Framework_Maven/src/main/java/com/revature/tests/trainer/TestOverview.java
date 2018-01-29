@@ -7,12 +7,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import com.revature.cukes.trainer.OverviewCukes;
+import com.revature.pom.NavBar;
 
 public class TestOverview extends TrainerSuite {
 
@@ -259,6 +261,42 @@ public class TestOverview extends TrainerSuite {
 			assertTrue(OverviewCukes.the_ends_should_be_filtered_in_DSC_order(wd));
  		} catch (Throwable e) {
  			fail("End DSC button not working");
+ 			e.printStackTrace();
+ 		}
+	}
+	@Test(priority = 22)
+	public void ClickInProgress() {
+		try {
+			OverviewCukes.i_click_the_filter_button_webdriver(wd);
+			OverviewCukes.three_options_should_show_webdriver(wd);
+			OverviewCukes.if_I_click_the_In_Progress_button_webdriver(wd);
+			assertTrue(OverviewCukes.the_batches_in_progress_should_display_everything_webdriver(wd));
+ 		} catch (Throwable e) {
+ 			fail("Can't click In Progress");
+ 			e.printStackTrace();
+ 		}
+	}
+	@Test(priority = 23)
+	public void ClickBeginningInTwoWeeks() {
+		try {
+			OverviewCukes.i_click_the_filter_button_webdriver(wd);
+			OverviewCukes.three_options_should_show_webdriver(wd);
+			OverviewCukes.if_I_click_the_In_Two_Weeks_button_webdriver(wd);
+			OverviewCukes.the_batches_in_two_weeks_should_display(wd);
+ 		} catch (Throwable e) {
+ 			fail("Can't Click Beginning in Two Weeks");
+ 			e.printStackTrace();
+ 		}
+	}
+	@Test(priority = 24)
+	public void ClickAllFilter() {
+		try {
+			OverviewCukes.i_click_the_filter_button_webdriver(wd);
+			OverviewCukes.if_I_click_the_all_button_webdriver(wd);
+			OverviewCukes.all_batches_should_display(wd);
+
+ 		} catch (Throwable e) {
+ 			fail("Not all batches displayed");
  			e.printStackTrace();
  		}
 	}

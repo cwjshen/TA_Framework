@@ -72,7 +72,7 @@ public class Locations {
 		public static WebElement findNewYorkCityLocations(WebDriver d) {
 			return d.findElement(By.xpath("//*[@id=\"view\"]/md-card/md-content/md-list/md-list[2]"));
 			}
-	
+
 		public static WebElement findCunyQueens(WebDriver d) {
 			return d.findElement(By.xpath("span[@aria-label='CUNY QUEENS']"));
 		}

@@ -38,21 +38,27 @@ Feature: Trainers Tab for trainers
   	Given that the PTO calendar is open <webdriver>
   	When I click the new PTO request button <webdriver>
   	Then A new window should appear which allows the user to enter a start date and an end date <webdriver>
+  	
+  @tag4
+  	Scenario Outline: Checking if the cancel PTO request button on the PTO calendar works
+  	Given that the add PTO request popup is open <webdriver>
+  	When I click the cancel PTO request button <webdriver>
+  	Then I should see the PTO Calendar button <webdriver>	
  
-   @tag4
+   @tag5
   	Scenario Outline: Checking if the cancel button on the PTO calendar works
   	Given that the PTO calendar is open <webdriver>
   	When I click the cancel button <webdriver>
   	Then The PTO calendar should close <webdriver>
   	And I should see the Trainers tab	<webdriver>
     
-  @tag5
+  @tag6
     Scenario Outline: Check if clicking on a trainer brings you to their profile
     Given That I am in the Trainers tab <webdriver>
     When I click on a trainer <webdriver> 
     Then I should see that trainers profile page<webdriver> 
     
-  @tag6
+  @tag7
     Scenario Outline: Check if clicking on download resume button works
     Given That I am in the Trainers tab <webdriver>
     When I click on the download resume button on a given trainer <webdriver>

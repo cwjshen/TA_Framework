@@ -23,12 +23,12 @@ public class LocationsCukes {
 	}
 
 	@Then("^I should see the Revature HQ drop down$")
-	public static boolean RevatureHQExists(WebDriver wd) throws Throwable {
+	public static boolean RevatureHQExists(WebDriver wd) {
 		System.out.println("Looking for Revature HQ drop down");
 		if (Locations.findRevatureHQButton(wd) != null) {
 			return true;
 		}
-		return false;
+			return false;
 	}
 
 	@Then("^New York City drop down$")
@@ -58,14 +58,14 @@ public class LocationsCukes {
 	// BUT the style is blank and not set yet
 	public static boolean LocationsInitiallyExpanded(WebDriver wd) throws Throwable {
 		Thread.sleep(4000);
-		System.out.println(
-				"!!!!!!!!!!!!!!!!!!! STYLE INITIALLY EXPANDED: " + Locations.findRevatureHQLocations(wd).getAttribute("style"));
-		
+		System.out.println("!!!!!!!!!!!!!!!!!!! STYLE INITIALLY EXPANDED: "
+				+ Locations.findRevatureHQLocations(wd).getAttribute("style"));
+
 		if ((Locations.findRevatureHQLocations(wd).getAttribute("style").equals("")
 				|| Locations.findRevatureHQLocations(wd).getAttribute("style").contains("display: block"))
 				&& (Locations.findNewYorkCityLocations(wd).getAttribute("style").equals("")
 						|| Locations.findNewYorkCityLocations(wd).getAttribute("style").contains("display: block"))) {
-			
+
 			return true;
 		}
 		return false;
@@ -82,7 +82,7 @@ public class LocationsCukes {
 		Thread.sleep(4000);
 		System.out.println(
 				"!!!!!!!!!!!!!!!!!!! STYLE NOW HIDDEN: " + Locations.findRevatureHQLocations(wd).getAttribute("style"));
-		
+
 		if ((Locations.findRevatureHQLocations(wd).getAttribute("style").contains("display: none"))
 				&& (Locations.findNewYorkCityLocations(wd).getAttribute("style").contains("display: none"))) {
 			return true;
@@ -96,9 +96,8 @@ public class LocationsCukes {
 	@Given("^Revature HQ and New York City are hidden$")
 	public static boolean LocationsInitiallyHidden(WebDriver wd) throws Throwable {
 		Thread.sleep(4000);
-		System.out.println(
-				"!!!!!!!!!!!!!!!!!!! STYLE: " + Locations.findRevatureHQLocations(wd).getAttribute("style"));
-		
+		System.out.println("!!!!!!!!!!!!!!!!!!! STYLE: " + Locations.findRevatureHQLocations(wd).getAttribute("style"));
+
 		if ((Locations.findRevatureHQLocations(wd).getAttribute("style").contains("display: none"))
 				&& (Locations.findNewYorkCityLocations(wd).getAttribute("style").contains("display: none"))) {
 			return true;
@@ -115,9 +114,9 @@ public class LocationsCukes {
 	@Then("^Revature HQ and Yew York City style should be display block, meaning expanded$")
 	public static boolean LocationsNowExpanded(WebDriver wd) throws Throwable {
 		Thread.sleep(4000);
-		System.out.println(
-				"!!!!!!!!!!!!!!!!!!! STYLE NOW EXPANDED: " + Locations.findRevatureHQLocations(wd).getAttribute("style"));
-		
+		System.out.println("!!!!!!!!!!!!!!!!!!! STYLE NOW EXPANDED: "
+				+ Locations.findRevatureHQLocations(wd).getAttribute("style"));
+
 		if ((Locations.findRevatureHQLocations(wd).getAttribute("style").contains("display: block"))
 				&& (Locations.findNewYorkCityLocations(wd).getAttribute("style").contains("display: block"))) {
 			return true;
