@@ -37,6 +37,6 @@ public class VPSuite extends AbstractTestNGCucumberTests{
 	public void afterSuite() {
 		System.out.println("Logging out");
 		Logout.logout(wd).click();
-		wd.close();
+		wd.quit();
 	}
 }
