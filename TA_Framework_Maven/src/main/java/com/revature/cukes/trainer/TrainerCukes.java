@@ -22,9 +22,17 @@ public class TrainerCukes {
 	}
 
 	@When("^Click the Trainers tab$")
-	public static void clickTrainers(WebDriver wd) throws Throwable {
-		Thread.sleep(2000);
-		NavBar.navigateToTrainersPage(wd).click();
+	public static boolean clickTrainers(WebDriver wd) {
+		try {
+			Thread.sleep(2000);
+			NavBar.navigateToTrainersPage(wd).click();
+			Thread.sleep(1000);
+			return true;
+		} catch (Throwable e) {
+			e.printStackTrace();
+			return false;
+		}
+
 	}
 
 	@Then("^I should see the View PTO Calendar button$")
@@ -43,10 +51,18 @@ public class TrainerCukes {
 	}
 
 	@When("^Click the View PTO Calendar button$")
-	public static void clickPtoCalendarButton(WebDriver wd) throws Throwable {
-		System.out.println("Clicking PTO Calendar button");
-		Thread.sleep(1000);
-		TrainersTab.findCalendarButton(wd).click();
+	public static boolean clickPtoCalendarButton(WebDriver wd) {
+		try {
+			Thread.sleep(1000);
+			TrainersTab.findCalendarButton(wd).click();
+			Thread.sleep(1000);
+			return true;
+
+		} catch (Throwable e) {
+			System.out.println("Calendar button doesn't work");
+			e.printStackTrace();
+			return false;
+		}
 	}
 
 	@Then("^I should see the PTO Calendar$")
@@ -62,9 +78,16 @@ public class TrainerCukes {
 	}
 
 	@When("^I click the new PTO request button$")
-	public static void clickAddPtoRequestButton(WebDriver wd) throws Throwable {
-		System.out.println("Clicking PTO request button");
-		TrainersTab.addPtoRequestButton(wd);
+	public static boolean clickAddPtoRequestButton(WebDriver wd) {
+		try {
+			Thread.sleep(1000);
+			TrainersTab.addPtoRequestButton(wd);
+			Thread.sleep(1000);
+			return true;
+		} catch (Throwable e) {
+			e.printStackTrace();
+			return false;
+		}
 	}
 
 	@Then("^A new window should appear which allows the user to enter a start date and an end date$")
@@ -72,17 +95,30 @@ public class TrainerCukes {
 		System.out.println("Is new request window open");
 		TrainersTab.isPtoRequestWindowOpen(wd);
 	}
-	
+
 	@When("^I click the cancel PTO request button$")
-	public static void clickCancelRequestButton(WebDriver wd) throws Throwable {
-		System.out.println("Clicking the cancel request button");
-		TrainersTab.cancelRequestButton(wd);
+	public static boolean clickCancelRequestButton(WebDriver wd) {
+		try {
+			TrainersTab.cancelRequestButton(wd);
+			Thread.sleep(1000);
+			return true;
+		} catch (Throwable e) {
+			e.printStackTrace();
+			return false;
+		}
 	}
 
 	@When("^I click the cancel button$")
-	public static void clickCancelButton(WebDriver wd) throws Throwable {
-		System.out.println("Clicking the cancel button");
-		TrainersTab.cancelButton(wd);
+	public static boolean clickCancelButton(WebDriver wd) {
+		try {
+			Thread.sleep(1000);
+			TrainersTab.cancelButton(wd);
+			Thread.sleep(1000);
+			return true;
+		} catch (Throwable e) {
+			e.printStackTrace();
+			return false;
+		}
 	}
 
 	@Then("^The PTO calendar should close$")
@@ -98,9 +134,17 @@ public class TrainerCukes {
 	}
 
 	@When("^I click on a trainer$")
-	public static void clickOnTrainer(WebDriver wd) throws Throwable {
-		System.out.println("Click on a trainer");
-		TrainersTab.clickTrainer(wd).click();
+	public static boolean clickOnTrainer(WebDriver wd) {
+		try {
+			Thread.sleep(1000);
+			TrainersTab.clickTrainer(wd).click();
+			Thread.sleep(2000);
+			wd.navigate().back();
+			return true;
+		} catch (Throwable e) {
+			e.printStackTrace();
+			return false;
+		}
 	}
 
 	@Then("^I should see that trainers profile page$")
@@ -112,9 +156,16 @@ public class TrainerCukes {
 	}
 
 	@When("^I click on the download resume button on a given trainer$")
-	public static void clickOnDownloadResumeButton(WebDriver wd) throws Throwable {
-		System.out.println("Click on download resume button");
-		TrainersTab.downloadResumeButton(wd).click();
+	public static boolean clickOnDownloadResumeButton(WebDriver wd) {
+		try {
+			Thread.sleep(1000);
+			TrainersTab.clickDownloadButton(wd);
+			Thread.sleep(1000);
+			return true;
+		} catch (Throwable e) {
+			e.printStackTrace();
+			return false;
+		}
 	}
 
 	@Then("^the download should start$")
@@ -148,38 +199,83 @@ public class TrainerCukes {
 	public static void isTheFileDownloaded(WebDriver wd) throws Throwable {
 		System.out.println("Deleting the file");
 	}
-	
+
 	@When("^I click on the start date input field$")
-	public static void clickOnStartDate(WebDriver wd) throws Throwable {
-		System.out.println("Click on start date field");
-		TrainersTab.requestStartDate(wd);
+	public static boolean clickOnStartDate(WebDriver wd) {
+		try {
+			TrainersTab.requestStartDate(wd);
+			Thread.sleep(1000);
+			return true;
+		} catch (Throwable e) {
+			e.printStackTrace();
+			return false;
+		}
 	}
 
 	@When("^I click on a start date$")
-	public static void pickStartDate(WebDriver wd) throws Throwable {
-		System.out.println("Click on a start date");
-		TrainersTab.pickStartYear(wd);
-		Thread.sleep(1000);
-		TrainersTab.pickStartDate(wd);
+	public static boolean pickStartDate(WebDriver wd) {
+		try {
+			TrainersTab.pickStartYear(wd);
+			Thread.sleep(1000);
+			TrainersTab.pickStartDate(wd);
+			return true;
+		} catch (Throwable e) {
+			e.printStackTrace();
+			return false;
+		}
 	}
-	
+
 	@When("^I click on the end date input field$")
-	public static void clickOnEndDate(WebDriver wd) throws Throwable {
-		System.out.println("Click on start date field");
-		TrainersTab.requestEndDate(wd);
+	public static boolean clickOnEndDate(WebDriver wd) {
+		try {
+			TrainersTab.requestEndDate(wd);
+			Thread.sleep(1000);
+			return true;
+		} catch (Throwable e) {
+			e.printStackTrace();
+			return false;
+		}
 	}
-	
+
 	@When("^I click on an end date$")
-	public static void pickEndDate(WebDriver wd) throws Throwable {
-		System.out.println("Click on a start date");
-		TrainersTab.pickEndYear(wd);
-		Thread.sleep(1000);
-		TrainersTab.pickEndDate(wd);
+	public static boolean pickEndDate(WebDriver wd) {
+		try {
+			TrainersTab.pickEndYear(wd);
+			Thread.sleep(1000);
+			TrainersTab.pickEndDate(wd);
+			Thread.sleep(1000);
+			return true;
+		} catch (Throwable e) {
+			e.printStackTrace();
+			return false;
+		}
+
 	}
-	
+
 	@When("^I click on send request$")
-	public static void clickSendRequestButton(WebDriver wd) throws Throwable {
-		System.out.println("Click send request");
-		TrainersTab.sendRequestButton(wd);
+	public static boolean clickSendRequestButton(WebDriver wd) {
+		try {
+			System.out.println("clicking send request button");
+			Thread.sleep(1000);
+			TrainersTab.sendRequestButton(wd);
+			Thread.sleep(2000);
+			wd.navigate().back();
+			TrainerCukes.clickPtoCalendarButton(wd);
+			Thread.sleep(1000);
+			TrainerCukes.clickAddPtoRequestButton(wd);
+			Thread.sleep(1000);
+			TrainerCukes.clickOnStartDate(wd);
+			Thread.sleep(1000);
+			TrainerCukes.pickStartDate(wd);
+			Thread.sleep(1000);
+			TrainerCukes.clickOnEndDate(wd);
+			Thread.sleep(1000);
+			TrainerCukes.pickEndDate(wd);
+			Thread.sleep(1000);
+			return true;
+		} catch (Throwable e) {
+			e.printStackTrace();
+			return false;
+		}
 	}
 }
