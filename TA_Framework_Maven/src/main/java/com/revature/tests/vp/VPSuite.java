@@ -13,7 +13,7 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.testng.AbstractTestNGCucumberTests;
 
 //Hook Class to run Cucumber Tests
-@CucumberOptions(features="src/test/resources/com/revature/features/trainer")
+@CucumberOptions(features="src/test/resources/com/revature/features/vp")
 public class VPSuite extends AbstractTestNGCucumberTests{
 
 	public static WebDriver wd = DriverUtil.getChromeDriver();
