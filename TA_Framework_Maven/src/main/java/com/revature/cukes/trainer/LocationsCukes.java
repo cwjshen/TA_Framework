@@ -8,7 +8,7 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 public class LocationsCukes {
-
+/*
 	@Given("^That I am initially in the Overview tab$")
 	public static boolean startingInOverview(WebDriver wd) throws Throwable {
 		if (Locations.inHomePage(wd) != null) {
@@ -16,14 +16,20 @@ public class LocationsCukes {
 		}
 		return false;
 	}
-
-	@When("^Click the Locations tab$")
-	public static void clickLocations(WebDriver wd) throws Throwable {
-		NavBar.navigateToLocationsPage(wd).click();
+*/
+	@When("^The Locations Tab is selected$")
+	public static boolean clickedLocations(WebDriver wd){
+		try {
+			Thread.sleep(2000);
+			NavBar.navigateToLocationsPage(wd).click();			
+			return true;
+		} catch (Throwable e) {
+			return false;
+		}
 	}
 
 	@Then("^I should see the Revature HQ drop down$")
-	public static boolean RevatureHQExists(WebDriver wd) {
+	public static boolean RevatureHQExists(WebDriver wd) throws Throwable {
 		System.out.println("Looking for Revature HQ drop down");
 		if (Locations.findRevatureHQButton(wd) != null) {
 			return true;
@@ -42,11 +48,6 @@ public class LocationsCukes {
 
 	@Given("^That I am in the Locations tab$")
 	public static boolean inLocationsTab(WebDriver wd) throws Throwable {
-		/*
-		 * boolean LocationsTabSelected =
-		 * Boolean.parseBoolean(Locations.findLocationsTab(wd).getAttribute(
-		 * "aria-selected")); if (LocationsTabSelected) { return true; } return false;
-		 */
 		if ((Locations.findRevatureHQButton(wd) != null) && (Locations.findNewYorkCityButton(wd) != null)) {
 			return true;
 		}

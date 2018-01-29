@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="7" passed="6" failed="1" skipped="0">
+<testng-results skipped="0" failed="0" ignored="0" total="7" passed="7">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2018-01-28T01:27:58Z" name="Default suite" finished-at="2018-01-28T01:28:09Z" duration-ms="10979">
+  <suite name="Default suite" duration-ms="30854" started-at="2018-01-29T21:28:04Z" finished-at="2018-01-29T21:28:35Z">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.revature.tests.trainer.TestBatches@1133ec6e]" name="feature" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.revature.tests.trainer.TestLocations@4007f65e]" name="feature" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2018-01-28T01:27:58Z" name="Default test" finished-at="2018-01-28T01:28:09Z" duration-ms="10979">
-      <class name="com.revature.tests.trainer.TestBatches">
-        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:com.revature.tests.trainer.TestBatches@1133ec6e]" started-at="2018-01-27T20:27:52Z" name="beforeSuite" finished-at="2018-01-27T20:27:58Z" duration-ms="5847" status="PASS">
+    <test name="Default test" duration-ms="30854" started-at="2018-01-29T21:28:04Z" finished-at="2018-01-29T21:28:35Z">
+      <class name="com.revature.tests.trainer.TestLocations">
+        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:com.revature.tests.trainer.TestLocations@4007f65e]" name="beforeSuite" is-config="true" duration-ms="18235" started-at="2018-01-29T16:27:46Z" finished-at="2018-01-29T16:28:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.revature.tests.trainer.TestBatches@1133ec6e]" started-at="2018-01-27T20:27:58Z" name="beforeTest" finished-at="2018-01-27T20:27:58Z" duration-ms="0" status="PASS">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.revature.tests.trainer.TestLocations@4007f65e]" name="beforeTest" is-config="true" duration-ms="9379" started-at="2018-01-29T16:28:04Z" finished-at="2018-01-29T16:28:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method is-config="true" signature="setUpClass()[pri:0, instance:com.revature.tests.trainer.TestBatches@1133ec6e]" started-at="2018-01-27T20:27:58Z" name="setUpClass" finished-at="2018-01-27T20:27:59Z" duration-ms="780" status="PASS">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.revature.tests.trainer.TestLocations@4007f65e]" name="setUpClass" is-config="true" duration-ms="791" started-at="2018-01-29T16:28:13Z" finished-at="2018-01-29T16:28:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.revature.tests.trainer.TestBatches@1133ec6e]" started-at="2018-01-27T20:27:59Z" name="feature" description="Runs Cucumber Feature" data-provider="features" finished-at="2018-01-27T20:27:59Z" duration-ms="13" status="PASS">
+        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.revature.tests.trainer.TestLocations@4007f65e]" name="feature" duration-ms="17" started-at="2018-01-29T16:28:15Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2018-01-29T16:28:15Z">
           <params>
             <param index="0">
               <value>
@@ -33,7 +33,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- feature -->
-        <test-method signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.revature.tests.trainer.TestBatches@1133ec6e]" started-at="2018-01-27T20:27:59Z" name="feature" description="Runs Cucumber Feature" data-provider="features" finished-at="2018-01-27T20:27:59Z" duration-ms="2" status="PASS">
+        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.revature.tests.trainer.TestLocations@4007f65e]" name="feature" duration-ms="2" started-at="2018-01-29T16:28:15Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2018-01-29T16:28:15Z">
           <params>
             <param index="0">
               <value>
@@ -44,7 +44,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- feature -->
-        <test-method signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.revature.tests.trainer.TestBatches@1133ec6e]" started-at="2018-01-27T20:27:59Z" name="feature" description="Runs Cucumber Feature" data-provider="features" finished-at="2018-01-27T20:27:59Z" duration-ms="4" status="PASS">
+        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.revature.tests.trainer.TestLocations@4007f65e]" name="feature" duration-ms="4" started-at="2018-01-29T16:28:15Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2018-01-29T16:28:15Z">
           <params>
             <param index="0">
               <value>
@@ -55,7 +55,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- feature -->
-        <test-method signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.revature.tests.trainer.TestBatches@1133ec6e]" started-at="2018-01-27T20:27:59Z" name="feature" description="Runs Cucumber Feature" data-provider="features" finished-at="2018-01-27T20:27:59Z" duration-ms="2" status="PASS">
+        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.revature.tests.trainer.TestLocations@4007f65e]" name="feature" duration-ms="2" started-at="2018-01-29T16:28:15Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2018-01-29T16:28:15Z">
           <params>
             <param index="0">
               <value>
@@ -66,39 +66,31 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- feature -->
-        <test-method signature="TestLocations()[pri:0, instance:com.revature.tests.trainer.TestBatches@1133ec6e]" started-at="2018-01-27T20:27:59Z" name="TestLocations" finished-at="2018-01-27T20:28:02Z" duration-ms="3450" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Revature HQ and/or New York City drop downs not found. Not in Locations tab]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Revature HQ and/or New York City drop downs not found. Not in Locations tabat org.testng.Assert.fail(Assert.java:96)at com.revature.tests.trainer.TestBatches.TestLocations(TestBatches.java:42)at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)at java.base/java.lang.reflect.Method.invoke(Unknown Source)at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)at org.testng.internal.Invoker.invokeMethod(Invoker.java:571)at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:707)at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:979)at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)at org.testng.TestRunner.privateRun(TestRunner.java:648)at org.testng.TestRunner.run(TestRunner.java:505)at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)at org.testng.SuiteRunner.run(SuiteRunner.java:364)at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)at org.testng.TestNG.runSuites(TestNG.java:1028)at org.testng.TestNG.run(TestNG.java:996)at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        <test-method status="PASS" signature="TestLocationsTab()[pri:1, instance:com.revature.tests.trainer.TestLocations@4007f65e]" name="TestLocationsTab" duration-ms="2083" started-at="2018-01-29T16:28:15Z" finished-at="2018-01-29T16:28:17Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TestLocations -->
-        <test-method signature="TestOne()[pri:0, instance:com.revature.tests.trainer.TestBatches@1133ec6e]" started-at="2018-01-27T20:28:02Z" name="TestOne" finished-at="2018-01-27T20:28:06Z" duration-ms="3374" status="PASS">
+        </test-method> <!-- TestLocationsTab -->
+        <test-method status="PASS" signature="TestCloseDropDowns()[pri:2, instance:com.revature.tests.trainer.TestLocations@4007f65e]" name="TestCloseDropDowns" duration-ms="8953" started-at="2018-01-29T16:28:17Z" finished-at="2018-01-29T16:28:26Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TestOne -->
-        <test-method signature="TestTwo()[pri:0, instance:com.revature.tests.trainer.TestBatches@1133ec6e]" started-at="2018-01-27T20:28:06Z" name="TestTwo" finished-at="2018-01-27T20:28:09Z" duration-ms="3155" status="PASS">
+        </test-method> <!-- TestCloseDropDowns -->
+        <test-method status="PASS" signature="TestExpandDropDowns()[pri:3, instance:com.revature.tests.trainer.TestLocations@4007f65e]" name="TestExpandDropDowns" duration-ms="8805" started-at="2018-01-29T16:28:26Z" finished-at="2018-01-29T16:28:35Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TestTwo -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.revature.tests.trainer.TestBatches@1133ec6e]" started-at="2018-01-27T20:28:09Z" name="tearDownClass" finished-at="2018-01-27T20:28:09Z" duration-ms="9" status="PASS">
+        </test-method> <!-- TestExpandDropDowns -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.revature.tests.trainer.TestLocations@4007f65e]" name="tearDownClass" is-config="true" duration-ms="60" started-at="2018-01-29T16:28:35Z" finished-at="2018-01-29T16:28:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.revature.tests.trainer.TestBatches@1133ec6e]" started-at="2018-01-27T20:28:09Z" name="afterTest" finished-at="2018-01-27T20:28:09Z" duration-ms="0" status="PASS">
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.revature.tests.trainer.TestLocations@4007f65e]" name="afterTest" is-config="true" duration-ms="1" started-at="2018-01-29T16:28:35Z" finished-at="2018-01-29T16:28:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.revature.tests.trainer.TestBatches@1133ec6e]" started-at="2018-01-27T20:28:09Z" name="afterSuite" finished-at="2018-01-27T20:28:12Z" duration-ms="3404" status="PASS">
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:com.revature.tests.trainer.TestLocations@4007f65e]" name="afterSuite" is-config="true" duration-ms="3690" started-at="2018-01-29T16:28:35Z" finished-at="2018-01-29T16:28:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->
-      </class> <!-- com.revature.tests.trainer.TestBatches -->
+      </class> <!-- com.revature.tests.trainer.TestLocations -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

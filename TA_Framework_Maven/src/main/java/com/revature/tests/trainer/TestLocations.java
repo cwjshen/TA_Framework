@@ -17,24 +17,18 @@ public class TestLocations extends TrainerSuite {
 	@BeforeTest
 	public void beforeTest() {
 		System.out.println("Running Locations Tab Test");
+		try {
+			Thread.sleep(6000);
+			LocationsCukes.clickedLocations(wd);
+		} catch (Throwable e) {
+			fail("Currently not in Locations Tab; Locations Tab not found or could not be clicked");
+			e.printStackTrace();
+		}
 
 	}
 
 	@Test(priority = 1)
 	public void TestLocationsTab() {
-		try {
-			Thread.sleep(6000);
-			assert (LocationsCukes.startingInOverview(wd));
-		} catch (Throwable e) {
-			fail("Test did not start in Overview Tab");
-			e.printStackTrace();
-		}
-		try {
-			LocationsCukes.clickLocations(wd);
-		} catch (Throwable e) {
-			fail("Locations Tab not found or could not be clicked");
-			e.printStackTrace();
-		}
 		try {
 			Thread.sleep(2000);
 			LocationsCukes.RevatureHQExists(wd);
@@ -52,13 +46,6 @@ public class TestLocations extends TrainerSuite {
 
 	@Test(priority = 2)
 	public void TestCloseDropDowns() {
-		try {
-			Thread.sleep(7000);
-			assert (LocationsCukes.inLocationsTab(wd));
-		} catch (Throwable e) {
-			fail("Test did not start in Locations Tab");
-			e.printStackTrace();
-		}
 		try {
 			assert (LocationsCukes.LocationsInitiallyExpanded(wd));
 		} catch (Throwable e) {
@@ -81,12 +68,6 @@ public class TestLocations extends TrainerSuite {
 
 	@Test(priority = 3)
 	public void TestExpandDropDowns() {
-		try {
-			assert (LocationsCukes.inLocationsTab(wd));
-		} catch (Throwable e) {
-			fail("Test did not start in Locations Tab");
-			e.printStackTrace();
-		}
 		try {
 			assert (LocationsCukes.LocationsInitiallyHidden(wd));
 		} catch (Throwable e) {
