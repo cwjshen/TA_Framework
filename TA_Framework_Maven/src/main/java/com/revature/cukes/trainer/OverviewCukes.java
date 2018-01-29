@@ -661,11 +661,40 @@ public class OverviewCukes {
 	@Then("^If I click the In Progress button <webdriver>$")
 	public static void if_I_click_the_In_Progress_button_webdriver(WebDriver wd) throws Throwable {
 		Thread.sleep(1000);
-		OverviewTab.findFilterInProgress(wd);
+		OverviewTab.findFilterInProgress(wd).click();
 	}
 
 	@Then("^The batches in progress should display <webdriver>$")
 	public static void the_batches_in_progress_should_display_webdriver(WebDriver wd) throws Throwable {
 		
+	}
+	
+	@Then("^If I click the In Two Weeks button <webdriver>$")
+	public static void if_I_click_the_In_Two_Weeks_button_webdriver(WebDriver wd) throws Throwable {
+		Thread.sleep(1000);
+		OverviewTab.findFilterInTwoWeeks(wd).click();
+	}
+
+	@Then("^If I click the All button <webdriver>$")
+	public static void if_I_click_the_all_button_webdriver(WebDriver wd) throws Throwable {
+		Thread.sleep(1000);
+		OverviewTab.findFilterAll(wd).click();
+	}
+
+	@Then("^The batches in progress should display everything <webdriver>$")
+	public static boolean the_batches_in_progress_should_display_everything_webdriver(WebDriver wd) throws Throwable {
+		Thread.sleep(1000);
+		return OverviewTab.isInProgress(OverviewTab.getStartDates(wd), OverviewTab.getEndDates(wd), wd);
+	}
+
+	
+	public static boolean the_batches_in_two_weeks_should_display(WebDriver wd) throws Throwable {
+		Thread.sleep(1000);
+		return OverviewTab.isInTwoWeeks(OverviewTab.getStartDates(wd), wd);
+	}
+	
+	public static boolean all_batches_should_display(WebDriver wd) throws Throwable {
+		Thread.sleep(1000);
+		return OverviewTab.allBatchesDisplayed(wd, OverviewTab.getBatchNames(wd));
 	}
 }

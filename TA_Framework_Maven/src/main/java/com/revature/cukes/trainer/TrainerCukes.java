@@ -45,6 +45,7 @@ public class TrainerCukes {
 	@When("^Click the View PTO Calendar button$")
 	public static void clickPtoCalendarButton(WebDriver wd) throws Throwable {
 		System.out.println("Clicking PTO Calendar button");
+		Thread.sleep(1000);
 		TrainersTab.findCalendarButton(wd).click();
 	}
 
