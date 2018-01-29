@@ -8,10 +8,35 @@ public class Locations {
 	
 	static WebElement e = null;
 	
-	//RevatureHQ location
-	public static WebElement findRevatureHQ(WebDriver d) {
-		return d.findElement(By.xpath("span[@aria-label='Revature HQ Reston, VA Reston VA']"));
+	//find Overview Tab
+	public static WebElement findOverviewTab(WebDriver d) {
+		return d.findElement(By.name("overview"));
 	}
+	
+	//check if we start on Overview/Home Page
+	//NOTE: Overview Tab does not start selected, though we are on the page
+	public static WebElement inHomePage(WebDriver d) {
+		return d.findElement(By.xpath("//*[@id=\"view\"]/div/md-card/md-toolbar/div[1]/span"));
+	}
+	
+	//find Location Tab so we can check if we're in it
+	public static WebElement findLocationsTab(WebDriver d) {
+		return d.findElement(By.name("location"));
+	}
+	
+	//RevatureHQ location button
+	public static WebElement findRevatureHQButton(WebDriver d) {
+		//return d.findElement(By.xpath("span[@aria-label='Revature HQ Reston, VA Reston VA']"));
+		//return d.findElement(By.xpath("/html/body/div/div[2]/div/md-card/md-content/md-list/md-list-item/div/button"));
+		return d.findElement(By.xpath("//*[@id=\"view\"]/md-card/md-content/md-list/md-list-item[1]/div[1]/button"));
+	}
+	
+	//RevatureHQ location container for the subections
+		public static WebElement findRevatureHQLocations(WebDriver d) {
+			//return d.findElement(By.xpath("span[@aria-label='Revature HQ Reston, VA Reston VA']"));
+			//return d.findElement(By.xpath("/html/body/div/div[2]/div/md-card/md-content/md-list/md-list-item/div/button"));
+			return d.findElement(By.xpath("//*[@id=\"view\"]/md-card/md-content/md-list/md-list[1]"));
+		}
 	
 		public static WebElement findReston11730(WebDriver d) {
 			return d.findElement(By.xpath("span[@aria-label='Reston 11730']"));
@@ -20,7 +45,7 @@ public class Locations {
 				return d.findElement(By.xpath("//*[@id='bldg1']/md-list-item[1]/div/button"));
 			}
 			public static WebElement findReston201(WebDriver d) {
-				return d.findElement(By.xpath("//*[@id='bldg1']/md-list-item[2]/div/button"));
+				return d.findElement(By.xpath("//*[@id=bldg1']/md-list-item[2]/div/button"));
 			}
 			public static WebElement findReston202(WebDriver d) {
 				return d.findElement(By.xpath("//*[@id='bldg1']/md-list-item[3]/div/button"));
@@ -39,9 +64,14 @@ public class Locations {
 			}
 	
 	//NewYorkCity location
-	public static WebElement findNewYorkCity(WebDriver d) {
-		return d.findElement(By.xpath("span[@aria-label='New York City New York, NY New York NY']"));
-	}
+	public static WebElement findNewYorkCityButton(WebDriver d) {
+		return d.findElement(By.xpath("//*[@id=\"view\"]/md-card/md-content/md-list/md-list-item[2]/div[1]/button"));
+		}
+	
+	//NewYorkCity location container for the subections
+		public static WebElement findNewYorkCityLocations(WebDriver d) {
+			return d.findElement(By.xpath("//*[@id=\"view\"]/md-card/md-content/md-list/md-list[2]"));
+			}
 	
 		public static WebElement findCunyQueens(WebDriver d) {
 			return d.findElement(By.xpath("span[@aria-label='CUNY QUEENS']"));
