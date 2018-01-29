@@ -28,6 +28,49 @@ public class TestOverview extends TrainerSuite {
 		}
 	}
 
+	@Test(priority = 2)
+	public void ClickInProgress() {
+		try {
+			//Thread.sleep(500);
+			OverviewCukes.i_click_the_filter_button_webdriver(wd);
+			OverviewCukes.three_options_should_show_webdriver(wd);
+			//Thread.sleep(500);
+			OverviewCukes.if_I_click_the_In_Progress_button_webdriver(wd);
+			assertTrue(OverviewCukes.the_batches_in_progress_should_display_everything_webdriver(wd));
+ 		} catch (Throwable e) {
+ 			fail("Can't click In Progress");
+ 			e.printStackTrace();
+ 		}
+	}
+	@Test(priority =3)
+	public void ClickBeginningInTwoWeeks() {
+		try {
+			//Thread.sleep(500);
+			OverviewCukes.i_click_the_filter_button_webdriver(wd);
+			OverviewCukes.three_options_should_show_webdriver(wd);
+			//Thread.sleep(500);
+			OverviewCukes.if_I_click_the_In_Two_Weeks_button_webdriver(wd);
+			OverviewCukes.the_batches_in_two_weeks_should_display(wd);
+ 		} catch (Throwable e) {
+ 			fail("Can't Click Beginning in Two Weeks");
+ 			e.printStackTrace();
+ 		}
+	}
+	@Test(priority = 4)
+	public void ClickAllFilter() {
+		try {
+			//Thread.sleep(500);
+			OverviewCukes.i_click_the_filter_button_webdriver(wd);
+			//Thread.sleep(500);
+			OverviewCukes.if_I_click_the_all_button_webdriver(wd);
+			OverviewCukes.all_batches_should_display(wd);
+
+ 		} catch (Throwable e) {
+ 			fail("Not all batches displayed");
+ 			e.printStackTrace();
+ 		}
+	}
+	
 	@Test(priority = 5)
 	public void TestFindExport() {
 		try {
@@ -257,49 +300,6 @@ public class TestOverview extends TrainerSuite {
  			e.printStackTrace();
  		}
 	}
-	@Test(priority = 2)
-	public void ClickInProgress() {
-		try {
-			//Thread.sleep(500);
-			OverviewCukes.i_click_the_filter_button_webdriver(wd);
-			OverviewCukes.three_options_should_show_webdriver(wd);
-			//Thread.sleep(500);
-			OverviewCukes.if_I_click_the_In_Progress_button_webdriver(wd);
-			assertTrue(OverviewCukes.the_batches_in_progress_should_display_everything_webdriver(wd));
- 		} catch (Throwable e) {
- 			fail("Can't click In Progress");
- 			e.printStackTrace();
- 		}
-	}
-	@Test(priority =3)
-	public void ClickBeginningInTwoWeeks() {
-		try {
-			//Thread.sleep(500);
-			OverviewCukes.i_click_the_filter_button_webdriver(wd);
-			OverviewCukes.three_options_should_show_webdriver(wd);
-			//Thread.sleep(500);
-			OverviewCukes.if_I_click_the_In_Two_Weeks_button_webdriver(wd);
-			OverviewCukes.the_batches_in_two_weeks_should_display(wd);
- 		} catch (Throwable e) {
- 			fail("Can't Click Beginning in Two Weeks");
- 			e.printStackTrace();
- 		}
-	}
-	@Test(priority = 4)
-	public void ClickAllFilter() {
-		try {
-			//Thread.sleep(500);
-			OverviewCukes.i_click_the_filter_button_webdriver(wd);
-			//Thread.sleep(500);
-			OverviewCukes.if_I_click_the_all_button_webdriver(wd);
-			OverviewCukes.all_batches_should_display(wd);
-
- 		} catch (Throwable e) {
- 			fail("Not all batches displayed");
- 			e.printStackTrace();
- 		}
-	}
-	
 
 	@AfterTest
 	public void afterTest() {

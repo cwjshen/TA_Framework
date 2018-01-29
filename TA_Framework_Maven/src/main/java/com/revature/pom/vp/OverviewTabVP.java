@@ -13,6 +13,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import com.revature.util.JSClicker;
+import com.revature.util.WaitToLoad;
 
 public class OverviewTabVP {
 	static WebElement e = null;
@@ -21,53 +22,90 @@ public class OverviewTabVP {
 	
 	
 	public static WebElement findCSVButton(WebDriver d) {
+		//WaitToLoad.waitForLoad(d, "html/body/div/div[2]/div/div/md-card/md-toolbar/div[1]/button");
+		WaitToLoad.findDynamicElement(d,By.xpath("html/body/div/div[2]/div/div/md-card/md-toolbar/div[1]/button") , 30);
 		return d.findElement(By.xpath("html/body/div/div[2]/div/div/md-card/md-toolbar/div[1]/button"));
 	}
 	public static WebElement findFilterButton(WebDriver d) {
+		try {
+			Thread.sleep(500);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		//WaitToLoad.waitForLoad(d, "/html/body/div/div[2]/div/div/md-card/md-toolbar/md-menu/button");
 		return d.findElement(By.xpath("/html/body/div/div[2]/div/div/md-card/md-toolbar/md-menu/button"));
 	}
 	public static void clickFilterButton(WebDriver d) {
+		//WaitToLoad.waitForLoad(d, "/html/body/div/div[2]/div/div/md-card/md-toolbar/md-menu/button");
+		WaitToLoad.findDynamicElement(d, By.xpath("/html/body/div/div[2]/div/div/md-card/md-toolbar/md-menu/button") , 30);
 		JSClicker.executeJSClick(d, d.findElement(By.xpath("/html/body/div/div[2]/div/div/md-card/md-toolbar/md-menu/button")));
 	}
 	public static WebElement findFilterInProgress(WebDriver d) {
+		//WaitToLoad.waitForLoad(d, "/html/body/div[3]/md-menu-content/md-menu-item[1]/button");
+		WaitToLoad.findDynamicElement(d, By.xpath("/html/body/div[3]/md-menu-content/md-menu-item[1]/button") , 30);
 		return d.findElement(By.xpath("/html/body/div[3]/md-menu-content/md-menu-item[1]/button"));
 	}
 	public static WebElement findFilterInTwoWeeks(WebDriver d) {
+		//WaitToLoad.waitForLoad(d, "/html/body/div[3]/md-menu-content/md-menu-item[2]/button");
+		WaitToLoad.findDynamicElement(d, By.xpath("/html/body/div[3]/md-menu-content/md-menu-item[2]/button") , 30);
 		return d.findElement(By.xpath("/html/body/div[3]/md-menu-content/md-menu-item[2]/button"));
 	}
 	public static WebElement findFilterAll(WebDriver d) {
+		//WaitToLoad.waitForLoad(d, "/html/body/div[3]/md-menu-content/md-menu-item[3]/button");
+		WaitToLoad.findDynamicElement(d, By.xpath("/html/body/div[3]/md-menu-content/md-menu-item[3]/button") , 30);
 		return d.findElement(By.xpath("/html/body/div[3]/md-menu-content/md-menu-item[3]/button"));
 	}
 	public static WebElement filterName(WebDriver d) {
+		//WaitToLoad.waitForLoad(d, "/html/body/div[1]/div[2]/div/div/md-card/md-content/md-table-container/table/thead/tr/th[1]");
+		WaitToLoad.findDynamicElement(d, By.xpath("/html/body/div[1]/div[2]/div/div/md-card/md-content/md-table-container/table/thead/tr/th[1]") , 30);
 		return d.findElement(By.xpath("/html/body/div[1]/div[2]/div/div/md-card/md-content/md-table-container/table/thead/tr/th[1]"));
 	}
 	public static WebElement filterCurriculum(WebDriver d) {
+		//WaitToLoad.waitForLoad(d, "/html/body/div[1]/div[2]/div/div/md-card/md-content/md-table-container/table/thead/tr/th[2]");
+		WaitToLoad.findDynamicElement(d, By.xpath("/html/body/div[1]/div[2]/div/div/md-card/md-content/md-table-container/table/thead/tr/th[2]") , 30);
 		return d.findElement(By.xpath("/html/body/div[1]/div[2]/div/div/md-card/md-content/md-table-container/table/thead/tr/th[2]"));
 	}
 	public static WebElement filterTrainer(WebDriver d) {
+		//WaitToLoad.waitForLoad(d, "/html/body/div[1]/div[2]/div/div/md-card/md-content/md-table-container/table/thead/tr/th[3]");
+		WaitToLoad.findDynamicElement(d, By.xpath("/html/body/div[1]/div[2]/div/div/md-card/md-content/md-table-container/table/thead/tr/th[3]") , 30);
 		return d.findElement(By.xpath("/html/body/div[1]/div[2]/div/div/md-card/md-content/md-table-container/table/thead/tr/th[3]"));
 	}
 	public static WebElement filterLocation(WebDriver d) {
+		//WaitToLoad.waitForLoad(d, "/html/body/div[1]/div[2]/div/div/md-card/md-content/md-table-container/table/thead/tr/th[4]");
+		WaitToLoad.findDynamicElement(d, By.xpath("/html/body/div[1]/div[2]/div/div/md-card/md-content/md-table-container/table/thead/tr/th[4]") , 30);
 		return d.findElement(By.xpath("/html/body/div[1]/div[2]/div/div/md-card/md-content/md-table-container/table/thead/tr/th[4]"));
 	}
 	public static WebElement filterBuilding(WebDriver d) {
+		//WaitToLoad.waitForLoad(d, "/html/body/div[1]/div[2]/div/div/md-card/md-content/md-table-container/table/thead/tr/th[5]");
+		WaitToLoad.findDynamicElement(d, By.xpath("/html/body/div[1]/div[2]/div/div/md-card/md-content/md-table-container/table/thead/tr/th[5]") , 30);
 		return d.findElement(By.xpath("/html/body/div[1]/div[2]/div/div/md-card/md-content/md-table-container/table/thead/tr/th[5]"));
 	}
 	public static WebElement filterRoom(WebDriver d) {
+		//WaitToLoad.waitForLoad(d, "/html/body/div[1]/div[2]/div/div/md-card/md-content/md-table-container/table/thead/tr/th[6]");
+		WaitToLoad.findDynamicElement(d, By.xpath("/html/body/div[1]/div[2]/div/div/md-card/md-content/md-table-container/table/thead/tr/th[6]") , 30);
 		return d.findElement(By.xpath("/html/body/div[1]/div[2]/div/div/md-card/md-content/md-table-container/table/thead/tr/th[6]"));
 	}
 	public static WebElement filterStartDate(WebDriver d) {
+		//WaitToLoad.waitForLoad(d, "/html/body/div[1]/div[2]/div/div/md-card/md-content/md-table-container/table/thead/tr/th[7]");
+		WaitToLoad.findDynamicElement(d, By.xpath("/html/body/div[1]/div[2]/div/div/md-card/md-content/md-table-container/table/thead/tr/th[7]") , 30);
 		return d.findElement(By.xpath("/html/body/div[1]/div[2]/div/div/md-card/md-content/md-table-container/table/thead/tr/th[7]"));
 	}
 	public static WebElement filterEndDate(WebDriver d) {
+		//WaitToLoad.waitForLoad(d, "/html/body/div[1]/div[2]/div/div/md-card/md-content/md-table-container/table/thead/tr/th[8]");
+		WaitToLoad.findDynamicElement(d, By.xpath("/html/body/div[1]/div[2]/div/div/md-card/md-content/md-table-container/table/thead/tr/th[8]") , 30);
 		return d.findElement(By.xpath("/html/body/div[1]/div[2]/div/div/md-card/md-content/md-table-container/table/thead/tr/th[8]"));
 	}
 	public static List<WebElement> getTable(WebDriver d) {
+		//WaitToLoad.waitForLoad(d, "/*[@id=\\\"view\\\"]/div/md-card/md-content/md-table-container/table");
+		WaitToLoad.findDynamicElement(d, By.xpath("//*[@id=\"view\"]/div/md-card/md-content/md-table-container/table") , 30);
 		WebElement table_element = d.findElement(By.xpath("//*[@id=\"view\"]/div/md-card/md-content/md-table-container/table"));
         List<WebElement> rows=table_element.findElements(By.xpath("//*[@id=\"view\"]/div/md-card/md-content/md-table-container/table/tbody/tr"));
         return rows;
 	}
 	public static List<WebElement> getBatchNames(WebDriver wd) {
+		//WaitToLoad.waitForLoad(wd, "/*[@id=\\\"view\\\"]/div/md-card/md-content/md-table-container/table");
+		WaitToLoad.findDynamicElement(wd, By.xpath("//*[@id=\"view\"]/div/md-card/md-content/md-table-container/table") , 30);
 		WebElement table_element = wd.findElement(By.xpath("//*[@id=\"view\"]/div/md-card/md-content/md-table-container/table"));
         List<WebElement> rows=table_element.findElements(By.xpath("//*[@id=\"view\"]/div/md-card/md-content/md-table-container/table/tbody/tr"));
         List<WebElement> columns = new ArrayList<WebElement>();
@@ -78,6 +116,8 @@ public class OverviewTabVP {
 		return columns;
 	}
 	public static List<WebElement> getCurricula(WebDriver wd) {
+		//WaitToLoad.waitForLoad(wd, "//*[@id=\\\"view\\\"]/div/md-card/md-content/md-table-container/table");
+		WaitToLoad.findDynamicElement(wd, By.xpath("//*[@id=\"view\"]/div/md-card/md-content/md-table-container/table") , 30);
 		WebElement table_element = wd.findElement(By.xpath("//*[@id=\"view\"]/div/md-card/md-content/md-table-container/table"));
         List<WebElement> rows=table_element.findElements(By.xpath("//*[@id=\"view\"]/div/md-card/md-content/md-table-container/table/tbody/tr"));
         List<WebElement> columns = new ArrayList<WebElement>();
@@ -88,6 +128,8 @@ public class OverviewTabVP {
 		return columns;
 	}
 	public static List<WebElement> getTrainer(WebDriver wd) {
+		//WaitToLoad.waitForLoad(wd, "//*[@id=\\\"view\\\"]/div/md-card/md-content/md-table-container/table");
+		WaitToLoad.findDynamicElement(wd, By.xpath("//*[@id=\"view\"]/div/md-card/md-content/md-table-container/table") , 30);
 		WebElement table_element = wd.findElement(By.xpath("//*[@id=\"view\"]/div/md-card/md-content/md-table-container/table"));
         List<WebElement> rows=table_element.findElements(By.xpath("//*[@id=\"view\"]/div/md-card/md-content/md-table-container/table/tbody/tr"));
         List<WebElement> columns = new ArrayList<WebElement>();
@@ -98,6 +140,8 @@ public class OverviewTabVP {
 		return columns;
 	}
 	public static List<WebElement> getLocation(WebDriver wd) {
+		//WaitToLoad.waitForLoad(wd, "/*[@id=\\\"view\\\"]/div/md-card/md-content/md-table-container/table");
+		WaitToLoad.findDynamicElement(wd, By.xpath("//*[@id=\"view\"]/div/md-card/md-content/md-table-container/table") , 30);
 		WebElement table_element = wd.findElement(By.xpath("//*[@id=\"view\"]/div/md-card/md-content/md-table-container/table"));
         List<WebElement> rows=table_element.findElements(By.xpath("//*[@id=\"view\"]/div/md-card/md-content/md-table-container/table/tbody/tr"));
         List<WebElement> columns = new ArrayList<WebElement>();
@@ -108,6 +152,8 @@ public class OverviewTabVP {
 		return columns;
 	}
 	public static List<WebElement> getBuilding(WebDriver wd) {
+		//WaitToLoad.waitForLoad(wd, "//*[@id=\\\"view\\\"]/div/md-card/md-content/md-table-container/table");
+		WaitToLoad.findDynamicElement(wd, By.xpath("//*[@id=\"view\"]/div/md-card/md-content/md-table-container/table") , 30);
 		WebElement table_element = wd.findElement(By.xpath("//*[@id=\"view\"]/div/md-card/md-content/md-table-container/table"));
         List<WebElement> rows=table_element.findElements(By.xpath("//*[@id=\"view\"]/div/md-card/md-content/md-table-container/table/tbody/tr"));
         List<WebElement> columns = new ArrayList<WebElement>();
@@ -118,6 +164,8 @@ public class OverviewTabVP {
 		return columns;
 	}
 	public static List<WebElement> getRoom(WebDriver wd) {
+		//WaitToLoad.waitForLoad(wd, "//*[@id=\\\"view\\\"]/div/md-card/md-content/md-table-container/table");
+		WaitToLoad.findDynamicElement(wd, By.xpath("//*[@id=\"view\"]/div/md-card/md-content/md-table-container/table") , 30);
 		WebElement table_element = wd.findElement(By.xpath("//*[@id=\"view\"]/div/md-card/md-content/md-table-container/table"));
         List<WebElement> rows=table_element.findElements(By.xpath("//*[@id=\"view\"]/div/md-card/md-content/md-table-container/table/tbody/tr"));
         List<WebElement> columns = new ArrayList<WebElement>();
@@ -128,6 +176,8 @@ public class OverviewTabVP {
 		return columns;
 	}
 	public static List<WebElement> getStartDates(WebDriver wd) {
+		//WaitToLoad.waitForLoad(wd, "//*[@id=\\\"view\\\"]/div/md-card/md-content/md-table-container/table");
+		WaitToLoad.findDynamicElement(wd, By.xpath("//*[@id=\"view\"]/div/md-card/md-content/md-table-container/table") , 30);
 		WebElement table_element = wd.findElement(By.xpath("//*[@id=\"view\"]/div/md-card/md-content/md-table-container/table"));
         List<WebElement> rows=table_element.findElements(By.xpath("//*[@id=\"view\"]/div/md-card/md-content/md-table-container/table/tbody/tr"));
         List<WebElement> columns = new ArrayList<WebElement>();
@@ -138,6 +188,8 @@ public class OverviewTabVP {
 		return columns;
 	}
 	public static List<WebElement> getEndDates(WebDriver wd) {
+		//WaitToLoad.waitForLoad(wd, "/*[@id=\\\"view\\\"]/div/md-card/md-content/md-table-container/table");
+		WaitToLoad.findDynamicElement(wd, By.xpath("//*[@id=\"view\"]/div/md-card/md-content/md-table-container/table") , 30);
 		WebElement table_element = wd.findElement(By.xpath("//*[@id=\"view\"]/div/md-card/md-content/md-table-container/table"));
         List<WebElement> rows=table_element.findElements(By.xpath("//*[@id=\"view\"]/div/md-card/md-content/md-table-container/table/tbody/tr"));
         List<WebElement> columns = new ArrayList<WebElement>();
@@ -163,6 +215,8 @@ public class OverviewTabVP {
 		
 		SimpleDateFormat format=new SimpleDateFormat("MMM. dd, yyyy");  
 		Date date = new Date();
+		System.out.println(format.format(date));
+		
 		for (int i=0; i < start.size(); i++) {
 			try {
 				Date date1=new SimpleDateFormat("MMM. dd, yyyy").parse(start.get(i));
@@ -211,6 +265,8 @@ public class OverviewTabVP {
 	
 	public static boolean allBatchesDisplayed(WebDriver wd, List<WebElement> table) {
 		boolean compare = true;
+		//WaitToLoad.waitForLoad(wd, "//*[@id=\\\"view\\\"]/div/md-card/md-content/md-table-container/table");
+		WaitToLoad.findDynamicElement(wd, By.xpath("//*[@id=\"view\"]/div/md-card/md-content/md-table-container/table") , 30);
 		WebElement table_element = wd.findElement(By.xpath("//*[@id=\"view\"]/div/md-card/md-content/md-table-container/table"));
         List<WebElement> rows=table_element.findElements(By.xpath("//*[@id=\"view\"]/div/md-card/md-content/md-table-container/table/tbody/tr"));
         for (int i = 0; i < rows.size(); i++) {
