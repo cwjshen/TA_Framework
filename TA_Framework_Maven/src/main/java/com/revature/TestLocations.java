@@ -5,8 +5,11 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import com.revature.cukes.trainer.LocationsCukes;
+import com.revature.pom.Login;
+import com.revature.pom.Logout;
 import com.revature.tests.trainer.TrainerSuite;
-
+import com.revature.util.DriverUtil;
+import com.revature.util.LoginUtil;
 import cucumber.api.CucumberOptions;
 
 //Hook Class to run Cucumber Tests

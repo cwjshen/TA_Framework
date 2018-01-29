@@ -22,7 +22,7 @@ public class TestTrainers extends TrainerSuite {
 	public void onTrainersTab() {
 		try {
 			TrainerCukes.clickTrainers(wd);
-
+			Thread.sleep(1000);
 		} catch (Throwable e) { 
 			System.out.println("Not in Trainers tab");
 			e.printStackTrace();
@@ -30,35 +30,106 @@ public class TestTrainers extends TrainerSuite {
 	} 
 	
 	@Test (priority = 2)
-	public void ptoCalendarButtonExists() {
-		try {
-			TrainerCukes.calendarButtonExists(wd);
-
-		} catch (Throwable e) { 
-			System.out.println("Calendar button not found");
-			e.printStackTrace();
-		}
-	}		
-	 
-	@Test (priority = 3)
-	public void downloadButtonExists() {
-		try {
-			TrainerCukes.downloadResumeButton(wd);
-
-		} catch (Throwable e) { 
-			System.out.println("Download resume button not found");
-			e.printStackTrace();
-		}
-	}	
-	
-	@Test (priority = 4)
 	public void clickCalendarButton() {
 		try {
 			TrainerCukes.clickPtoCalendarButton(wd);
+			Thread.sleep(1000);
 			System.out.println("PTO calendar was clicked");
 			
 		} catch (Throwable e) {
 			System.out.println("Calendar button doesn't work");
+			e.printStackTrace();
+		}
+	}
+	
+	@Test (priority = 3) 
+	public void clickAddPtoButton() {
+		try {
+			System.out.println("Clicking Add request button");
+			Thread.sleep(1000);
+			TrainerCukes.clickAddPtoRequestButton(wd); 
+			
+		
+			
+		} catch (Throwable e) {
+			e.printStackTrace();                                                                          
+		} 
+	}
+	
+	@Test (priority = 4)
+	public void clickStartDate() {
+		try {
+			System.out.println("Clicking start date");
+			Thread.sleep(1000);
+			TrainerCukes.clickOnStartDate(wd);
+		} catch (Throwable e) {
+			e.printStackTrace();
+		}
+	}
+	
+	@Test (priority = 5)
+	public void pickStartDate() {
+		try {
+			System.out.println("Selecting a start date");
+			Thread.sleep(1000);
+			TrainerCukes.pickStartDate(wd);
+			Thread.sleep(1000);
+		} catch (Throwable e) {
+			e.printStackTrace();
+		}
+	}
+	
+	@Test (priority = 6)
+	public void clickEndDate() {
+		try {
+			System.out.println("Clicking ending date");
+			Thread.sleep(1000);
+			TrainerCukes.clickOnEndDate(wd);
+		} catch (Throwable e) {
+			e.printStackTrace();
+		}
+	}
+	
+	@Test (priority = 7)
+	public void pickEndDate() {
+		try {
+			System.out.println("Selecting an end date");
+			Thread.sleep(1000);
+			TrainerCukes.pickEndDate(wd);
+			Thread.sleep(1000);
+		} catch (Throwable e) {
+			e.printStackTrace();
+		}
+	}
+	
+//	@Test (priority = 8)
+//	public void sendRequestButton() {
+//		try {
+//			System.out.println("clicking send request button");
+//			Thread.sleep(1000);
+//			TrainerCukes.clickSendRequestButton(wd);
+//		} catch (Throwable e) {
+//			e.printStackTrace();
+//		}
+//	}
+	@Test (priority = 8) 
+	public void clickCancelPtoButton() {
+		try {
+			System.out.println("Clicking cancel request button");
+			Thread.sleep(1000);
+			TrainerCukes.clickCancelRequestButton(wd);
+		} catch (Throwable e) {
+			e.printStackTrace();                                                                          
+		} 
+	}
+	
+	@Test (priority = 9) 
+	public void clickCancelButton() {
+		try {
+			Thread.sleep(1000);
+			TrainerCukes.clickCancelButton(wd);
+			Thread.sleep(1000);
+		} catch (Throwable e) {
 			e.printStackTrace();
 		}
 	}

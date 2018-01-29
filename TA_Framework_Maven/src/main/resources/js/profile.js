@@ -70,31 +70,53 @@ describe("Profile Tab Protractor Test (Profile Subsection)", function() {
 	// var formTest = element(by.name("nameForm"));
 	it("Should input and detect that input is valid / field is not empty",
 			function() {
-				browser.driver.sleep(11000);
-
+				browser.driver.sleep(5000);
 				// expect(formTest.getAttribute("name")).toEqual("nameForm");
-				firstNameField.sendKeys("Sayaka");
-				lastNameField.sendKeys("Miki");
+				firstNameField.clear().then(function() {
+					firstNameField.sendKeys("Sayaka");
+				});
+				lastNameField.clear().then(function() {
+					lastNameField.sendKeys("Miki");
+				});
 
-				expect(firstNameField.getText()).toContain("Sayaka");
-				//OR TRY:
-				expect(firstNameField.getAttribute()).toEqual("Sayaka"));
-				
-				/*
-				firstNameField.getAttribute("").then(
-						function(value) {
-							expect(value.toBe("false"));
-						});*/
-				// expect(lastNameField.getAttribute("aria-invalid").toEqual("false"));
+				expect(firstNameField.getAttribute("value")).toEqual("Sayaka");
+				expect(lastNameField.getAttribute("value")).toEqual("Miki");
 			});
-	/*
-	 * it("When I change tabs away and change back to Profile Tab, the new names
-	 * should be there", function(){ element(by.name("locations")).click();
-	 * element(by.name("profile")).click();
-	 * 
-	 * expect(firstNameField.getText()).toEqual("Sayaka"); });
-	 */
 });
+
+describe("Profile Tab Protractor Test (Test that Trainer wasn't allowed to change name)", function(){
+	it('Should be able to switch to Locations Tab', function() {
+		browser.driver.sleep(1000);
+		element(by.name("locations")).click();
+		// If tab is clicked, that tab's class should be changed to this instead
+		// of unselected
+		expect(element(by.name("locations")).getAttribute("aria-selected"))
+				.toEqual("true");
+	});
+	it("Should be able to switch back to Profile Tab to check if name is the same", function(){
+		browser.driver.sleep(1000);
+		element(by.name("profile")).click();
+		expect(element(by.name("profile")).getAttribute("aria-selected")).toEqual("true");
+	});
+	it("Should show that Profile name is still Test Trainer and did not change", function(){
+		browser.driver.sleep(5000);
+		
+		var firstNameField = element(by.model("pCtrl.trainer.firstName"));
+		var lastNameField = element(by.model("pCtrl.trainer.lastName"));
+	
+		expect(firstNameField.getAttribute("value")).toEqual("Test");
+		expect(lastNameField.getAttribute("value")).toEqual("Trainer");
+	});
+});
+
+
+/*
+ * it("When I change tabs away and change back to Profile Tab, the new names
+ * should be there", function(){ element(by.name("locations")).click();
+ * element(by.name("profile")).click();
+ * 
+ * expect(firstNameField.getText()).toEqual("Sayaka"); });
+ */
 /*
  * // Test suite for clicking Profile Tab describe('Profile Tab Navbar Click',
  * function(){ var profileTab = element(by.href("profile"));

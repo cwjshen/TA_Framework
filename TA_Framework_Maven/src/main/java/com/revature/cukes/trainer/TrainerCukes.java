@@ -45,6 +45,7 @@ public class TrainerCukes {
 	@When("^Click the View PTO Calendar button$")
 	public static void clickPtoCalendarButton(WebDriver wd) throws Throwable {
 		System.out.println("Clicking PTO Calendar button");
+		Thread.sleep(1000);
 		TrainersTab.findCalendarButton(wd).click();
 	}
 
@@ -63,7 +64,7 @@ public class TrainerCukes {
 	@When("^I click the new PTO request button$")
 	public static void clickAddPtoRequestButton(WebDriver wd) throws Throwable {
 		System.out.println("Clicking PTO request button");
-		TrainersTab.addPtoRequestButton(wd).click();
+		TrainersTab.addPtoRequestButton(wd);
 	}
 
 	@Then("^A new window should appear which allows the user to enter a start date and an end date$")
@@ -71,17 +72,23 @@ public class TrainerCukes {
 		System.out.println("Is new request window open");
 		TrainersTab.isPtoRequestWindowOpen(wd);
 	}
+	
+	@When("^I click the cancel PTO request button$")
+	public static void clickCancelRequestButton(WebDriver wd) throws Throwable {
+		System.out.println("Clicking the cancel request button");
+		TrainersTab.cancelRequestButton(wd);
+	}
 
 	@When("^I click the cancel button$")
 	public static void clickCancelButton(WebDriver wd) throws Throwable {
 		System.out.println("Clicking the cancel button");
-		TrainersTab.cancelButton(wd).click();
+		TrainersTab.cancelButton(wd);
 	}
 
 	@Then("^The PTO calendar should close$")
 	public static void ptoCalendarIsClosed(WebDriver wd) throws Throwable {
 		System.out.println("PTO calendar should close");
-		TrainersTab.addPtoRequestButton(wd).isDisplayed();
+		TrainersTab.addPtoRequestButton(wd);
 	}
 
 	@Then("^I should see the Trainers tab$")
@@ -99,10 +106,9 @@ public class TrainerCukes {
 	@Then("^I should see that trainers profile page$")
 	public static void trainersProfileShowing(WebDriver wd) throws Throwable {
 		System.out.println("Should see trainers profile");
-		
-		
-		System.out.println(wd.findElement(By.xpath("//*[@id=\"view\"]/md-card/md-content[1]/md-list/md-list-item[6]/div[1]/button")).getText());
-		
+		System.out.println(wd
+				.findElement(By.xpath("//*[@id=\"view\"]/md-card/md-content[1]/md-list/md-list-item[6]/div[1]/button"))
+				.getText());
 	}
 
 	@When("^I click on the download resume button on a given trainer$")
@@ -116,7 +122,7 @@ public class TrainerCukes {
 		System.out.println("Did the download start");
 		isFileDownloaded("C:\\Downloads", "resume.pdf");
 	}
-	
+
 	public static boolean isFileDownloaded(String downloadPath, String fileName) {
 		try {
 			Thread.sleep(2000);
@@ -141,5 +147,39 @@ public class TrainerCukes {
 	@Then("^I should see the file in the download location$")
 	public static void isTheFileDownloaded(WebDriver wd) throws Throwable {
 		System.out.println("Deleting the file");
+	}
+	
+	@When("^I click on the start date input field$")
+	public static void clickOnStartDate(WebDriver wd) throws Throwable {
+		System.out.println("Click on start date field");
+		TrainersTab.requestStartDate(wd);
+	}
+
+	@When("^I click on a start date$")
+	public static void pickStartDate(WebDriver wd) throws Throwable {
+		System.out.println("Click on a start date");
+		TrainersTab.pickStartYear(wd);
+		Thread.sleep(1000);
+		TrainersTab.pickStartDate(wd);
+	}
+	
+	@When("^I click on the end date input field$")
+	public static void clickOnEndDate(WebDriver wd) throws Throwable {
+		System.out.println("Click on start date field");
+		TrainersTab.requestEndDate(wd);
+	}
+	
+	@When("^I click on an end date$")
+	public static void pickEndDate(WebDriver wd) throws Throwable {
+		System.out.println("Click on a start date");
+		TrainersTab.pickEndYear(wd);
+		Thread.sleep(1000);
+		TrainersTab.pickEndDate(wd);
+	}
+	
+	@When("^I click on send request$")
+	public static void clickSendRequestButton(WebDriver wd) throws Throwable {
+		System.out.println("Click send request");
+		TrainersTab.sendRequestButton(wd);
 	}
 }
