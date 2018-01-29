@@ -28,7 +28,7 @@ public class TestOverview extends TrainerSuite {
 		}
 	}
 
-	@Test(priority = 2)
+	@Test(priority = 5)
 	public void TestFindExport() {
 		try {
 			// Need assert statements for these? Idk though because they can never be false
@@ -42,7 +42,7 @@ public class TestOverview extends TrainerSuite {
 		}
 	}		
 
-	@Test(priority = 3)
+	@Test(priority = 6)
 	public void TestFindFilter() {
 		try {
 			// Need assert statements for these? Idk though because they can never be false
@@ -56,11 +56,12 @@ public class TestOverview extends TrainerSuite {
 		}
 	}	
 
-	@Test(priority = 4)
+	@Test(priority = 7)
 	public void TestClickExportCSV() {
 		try {
 			// Need assert statements for these? Idk though because they can never be false
 			//	since it would just jump to catch block with NoSuchElementException
+			Thread.sleep(500);
 			OverviewCukes.clickCSVButton(wd);
 			OverviewCukes.the_download_should_start();
 		} catch (Throwable e) { 
@@ -69,7 +70,7 @@ public class TestOverview extends TrainerSuite {
 		}
 	}	
 
-	@Test(priority = 5)
+	@Test(priority = 8)
 	public void CheckIfCSVDownload() {
 		try {
 			OverviewCukes.the_download_should_start();
@@ -81,29 +82,29 @@ public class TestOverview extends TrainerSuite {
 
 	}
 	
-	@Test(priority = 6)
+	@Test(priority = 9)
 	public void CheckNameFilterASC() {
 		try {
 			OverviewCukes.i_click_the_name_button(wd);
 			assertTrue(OverviewCukes.the_names_should_be_filtered_in_ASC_order(wd));
  		} catch (Throwable e) {
- 			fail("Filter ASC button not working");
+ 			fail("Name filter ASC button not working because of lowercases");
  			e.printStackTrace();
  		}
 	}
 	
-	@Test(priority = 7)
+	@Test(priority = 10)
 	public void CheckNameFilterDSC() {
 		try {
 			OverviewCukes.if_I_click_the_name_button_again(wd);
 			assertTrue(OverviewCukes.the_names_should_be_filtered_in_DSC_order(wd));
  		} catch (Throwable e) {
- 			fail("Filter DSC button not working");
+ 			fail("Name filter DSC button not working because of lowercases");
  			e.printStackTrace();
  		}
 	}
 
-	@Test(priority = 8)
+	@Test(priority = 11)
 	public void CheckCurrFilterASC() {
 		try {
 			OverviewCukes.i_click_the_curriculum_button(wd);
@@ -114,7 +115,7 @@ public class TestOverview extends TrainerSuite {
  		}
 	}
 	
-	@Test(priority = 9)
+	@Test(priority = 12)
 	public void CheckCurrFilterDSC() {
 		try {
 			OverviewCukes.if_I_click_the_curriculum_button_again(wd);
@@ -125,7 +126,7 @@ public class TestOverview extends TrainerSuite {
  		}
 	}
 
-	@Test(priority = 10)
+	@Test(priority = 13)
 	public void CheckTrainerFilterASC() {
 		try {
 			OverviewCukes.i_click_the_trainer_button(wd);
@@ -136,7 +137,7 @@ public class TestOverview extends TrainerSuite {
  		}
 	}
 	
-	@Test(priority = 11)
+	@Test(priority = 14)
 	public void CheckTrainerFilterDSC() {
 		try {
 			OverviewCukes.if_I_click_the_trainer_button_again(wd);
@@ -146,7 +147,7 @@ public class TestOverview extends TrainerSuite {
  			e.printStackTrace();
  		}
 	}
-	@Test(priority = 12)
+	@Test(priority = 15)
 	public void CheckLocationFilterASC() {
 		try {
 			OverviewCukes.i_click_the_location_button(wd);
@@ -157,7 +158,7 @@ public class TestOverview extends TrainerSuite {
  		}
 	}
 	
-	@Test(priority = 13)
+	@Test(priority = 16)
 	public void CheckLocationFilterDSC() {
 		try {
 			OverviewCukes.if_I_click_the_location_button_again(wd);
@@ -168,7 +169,7 @@ public class TestOverview extends TrainerSuite {
  		}
 	}
 	
-	@Test(priority = 14)
+	@Test(priority = 17)
 	public void CheckBuildingFilterASC() {
 		try {
 			OverviewCukes.i_click_the_building_button(wd);
@@ -179,7 +180,7 @@ public class TestOverview extends TrainerSuite {
  		}
 	}
 	
-	@Test(priority = 15)
+	@Test(priority = 18)
 	public void CheckBuildingFilterDSC() {
 		try {
 			OverviewCukes.if_I_click_the_building_button_again(wd);
@@ -190,7 +191,7 @@ public class TestOverview extends TrainerSuite {
  		}
 	}
 	
-	@Test(priority = 16)
+	@Test(priority = 19)
 	public void CheckRoomFilterASC() {
 		try {
 			OverviewCukes.i_click_the_room_button(wd);
@@ -201,7 +202,7 @@ public class TestOverview extends TrainerSuite {
  		}
 	}
 	
-	@Test(priority = 17)
+	@Test(priority = 20)
 	public void CheckRoomFilterDSC() {
 		try {
 			OverviewCukes.if_I_click_the_room_button_again(wd);
@@ -212,9 +213,10 @@ public class TestOverview extends TrainerSuite {
  		}
 	}
 	
-	@Test(priority = 18)
+	@Test(priority = 21)
 	public void CheckStartFilterASC() {
 		try {
+			// No need to click the start button because it's clicked to ascending order on default
 			OverviewCukes.i_click_the_start_button(wd);
 			assertTrue(OverviewCukes.the_start_should_be_filtered_in_ASC_order(wd));
  		} catch (Throwable e) {
@@ -223,7 +225,7 @@ public class TestOverview extends TrainerSuite {
  		}
 	}
 	
-	@Test(priority = 19)
+	@Test(priority = 22)
 	public void CheckStartFilterDSC() {
 		try {
 			OverviewCukes.if_I_click_the_start_button_again(wd);
@@ -234,7 +236,7 @@ public class TestOverview extends TrainerSuite {
  		}
 	}
 	
-	@Test(priority = 20)
+	@Test(priority = 23)
 	public void CheckEndFilterASC() {
 		try {
 			OverviewCukes.i_click_the_end_button(wd);
@@ -245,7 +247,7 @@ public class TestOverview extends TrainerSuite {
  		}
 	}
 	
-	@Test(priority = 21)
+	@Test(priority = 24)
 	public void CheckEndFilterDSC() {
 		try {
 			OverviewCukes.if_I_click_the_end_button_again(wd);
@@ -255,11 +257,13 @@ public class TestOverview extends TrainerSuite {
  			e.printStackTrace();
  		}
 	}
-	@Test(priority = 22)
+	@Test(priority = 2)
 	public void ClickInProgress() {
 		try {
+			//Thread.sleep(500);
 			OverviewCukes.i_click_the_filter_button_webdriver(wd);
 			OverviewCukes.three_options_should_show_webdriver(wd);
+			//Thread.sleep(500);
 			OverviewCukes.if_I_click_the_In_Progress_button_webdriver(wd);
 			assertTrue(OverviewCukes.the_batches_in_progress_should_display_everything_webdriver(wd));
  		} catch (Throwable e) {
@@ -267,11 +271,13 @@ public class TestOverview extends TrainerSuite {
  			e.printStackTrace();
  		}
 	}
-	@Test(priority = 23)
+	@Test(priority =3)
 	public void ClickBeginningInTwoWeeks() {
 		try {
+			//Thread.sleep(500);
 			OverviewCukes.i_click_the_filter_button_webdriver(wd);
 			OverviewCukes.three_options_should_show_webdriver(wd);
+			//Thread.sleep(500);
 			OverviewCukes.if_I_click_the_In_Two_Weeks_button_webdriver(wd);
 			OverviewCukes.the_batches_in_two_weeks_should_display(wd);
  		} catch (Throwable e) {
@@ -279,10 +285,12 @@ public class TestOverview extends TrainerSuite {
  			e.printStackTrace();
  		}
 	}
-	@Test(priority = 24)
+	@Test(priority = 4)
 	public void ClickAllFilter() {
 		try {
+			//Thread.sleep(500);
 			OverviewCukes.i_click_the_filter_button_webdriver(wd);
+			//Thread.sleep(500);
 			OverviewCukes.if_I_click_the_all_button_webdriver(wd);
 			OverviewCukes.all_batches_should_display(wd);
 

@@ -24,20 +24,20 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite, 4 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
         <span>All suites</span>
-        <a href="#" title="Collapse/expand all the suites" class="collapse-all-link">
-          <img src="collapseall.gif" class="collapse-all-icon">
+        <a href="#" class="collapse-all-link" title="Collapse/expand all the suites">
+          <img class="collapse-all-icon" src="collapseall.gif">
           </img> <!-- collapse-all-icon -->
         </a> <!-- collapse-all-link -->
       </div> <!-- navigator-suite-header -->
       <div class="suite">
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
-            <a href="#" panel-name="suite-Default_suite" class="navigator-link">
+            <a href="#" class="navigator-link" panel-name="suite-Default_suite">
               <span class="suite-name border-failed">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
@@ -48,37 +48,37 @@
             <div class="suite-section-content">
               <ul>
                 <li>
-                  <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\csemi\AppData\Local\Temp\testng-eclipse--601162393\testng-customsuite.xml</span>
+                  <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
+                    <span>C:\Users\Tien Pham\AppData\Local\Temp\testng-eclipse--1531716492\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="testlist-Default_suite" class="navigator-link ">
+                  <a href="#" class="navigator-link " panel-name="testlist-Default_suite">
                     <span class="test-stats">1 test</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="group-Default_suite" class="navigator-link ">
+                  <a href="#" class="navigator-link " panel-name="group-Default_suite">
                     <span>1 group</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="times-Default_suite" class="navigator-link ">
+                  <a href="#" class="navigator-link " panel-name="times-Default_suite">
                     <span>Times</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="reporter-Default_suite" class="navigator-link ">
+                  <a href="#" class="navigator-link " panel-name="reporter-Default_suite">
                     <span>Reporter output</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="ignored-methods-Default_suite" class="navigator-link ">
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-Default_suite">
                     <span>Ignored methods</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="chronological-Default_suite" class="navigator-link ">
+                  <a href="#" class="navigator-link " panel-name="chronological-Default_suite">
                     <span>Chronological view</span>
                   </a> <!-- navigator-link  -->
                 </li>
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">7 methods, 1 failed,   6 passed</span>
+                    <span class="method-stats">28 methods, 4 failed,   24 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -101,8 +101,23 @@
                     </span>
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.revature.tests.trainer.TestBatches" class="method navigator-link" hash-for-method="TestLocations">TestLocations</a> <!-- method navigator-link -->
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.revature.tests.trainer.TestOverview" hash-for-method="CheckNameFilterASC">CheckNameFilterASC</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.revature.tests.trainer.TestOverview" hash-for-method="CheckNameFilterDSC">CheckNameFilterDSC</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.revature.tests.trainer.TestOverview" hash-for-method="CheckTrainerFilterASC">CheckTrainerFilterASC</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.revature.tests.trainer.TestOverview" hash-for-method="CheckTrainerFilterDSC">CheckTrainerFilterDSC</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -115,33 +130,123 @@
                     </span>
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.revature.tests.trainer.TestBatches" class="method navigator-link" hash-for-method="TestOne">TestOne</a> <!-- method navigator-link -->
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.revature.tests.trainer.TestOverview" hash-for-method="CheckBuildingFilterASC">CheckBuildingFilterASC</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.revature.tests.trainer.TestBatches" class="method navigator-link" hash-for-method="TestTwo">TestTwo</a> <!-- method navigator-link -->
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.revature.tests.trainer.TestOverview" hash-for-method="CheckBuildingFilterDSC">CheckBuildingFilterDSC</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.revature.tests.trainer.TestBatches" class="method navigator-link" hash-for-method="feature(Overview Tab for trainers)">feature(Overview Tab for trainers)</a> <!-- method navigator-link -->
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.revature.tests.trainer.TestOverview" hash-for-method="CheckCurrFilterASC">CheckCurrFilterASC</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.revature.tests.trainer.TestBatches" class="method navigator-link" hash-for-method="feature(Settings to test on the)">feature(Settings to test on the)</a> <!-- method navigator-link -->
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.revature.tests.trainer.TestOverview" hash-for-method="CheckCurrFilterDSC">CheckCurrFilterDSC</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.revature.tests.trainer.TestBatches" class="method navigator-link" hash-for-method="feature(I want to display information under two tabs)">feature(I want to display information under two tabs)</a> <!-- method navigator-link -->
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.revature.tests.trainer.TestOverview" hash-for-method="CheckEndFilterASC">CheckEndFilterASC</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.revature.tests.trainer.TestBatches" class="method navigator-link" hash-for-method="feature(Locations Tab for trainers)">feature(Locations Tab for trainers)</a> <!-- method navigator-link -->
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.revature.tests.trainer.TestOverview" hash-for-method="CheckEndFilterDSC">CheckEndFilterDSC</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.revature.tests.trainer.TestOverview" hash-for-method="CheckIfCSVDownload">CheckIfCSVDownload</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.revature.tests.trainer.TestOverview" hash-for-method="CheckLocationFilterASC">CheckLocationFilterASC</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.revature.tests.trainer.TestOverview" hash-for-method="CheckLocationFilterDSC">CheckLocationFilterDSC</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.revature.tests.trainer.TestOverview" hash-for-method="CheckRoomFilterASC">CheckRoomFilterASC</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.revature.tests.trainer.TestOverview" hash-for-method="CheckRoomFilterDSC">CheckRoomFilterDSC</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.revature.tests.trainer.TestOverview" hash-for-method="CheckStartFilterASC">CheckStartFilterASC</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.revature.tests.trainer.TestOverview" hash-for-method="CheckStartFilterDSC">CheckStartFilterDSC</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.revature.tests.trainer.TestOverview" hash-for-method="ClickAllFilter">ClickAllFilter</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.revature.tests.trainer.TestOverview" hash-for-method="ClickBeginningInTwoWeeks">ClickBeginningInTwoWeeks</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.revature.tests.trainer.TestOverview" hash-for-method="ClickInProgress">ClickInProgress</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.revature.tests.trainer.TestOverview" hash-for-method="TestClickExportCSV">TestClickExportCSV</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.revature.tests.trainer.TestOverview" hash-for-method="TestClickOverview">TestClickOverview</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.revature.tests.trainer.TestOverview" hash-for-method="TestFindExport">TestFindExport</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.revature.tests.trainer.TestOverview" hash-for-method="TestFindFilter">TestFindFilter</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.revature.tests.trainer.TestOverview" hash-for-method="feature(Overview Tab for trainers)">feature(Overview Tab for trainers)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.revature.tests.trainer.TestOverview" hash-for-method="feature(Settings to test on the)">feature(Settings to test on the)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.revature.tests.trainer.TestOverview" hash-for-method="feature(Locations Tab for trainers)">feature(Locations Tab for trainers)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.revature.tests.trainer.TestOverview" hash-for-method="feature(I want to display information under two tabs)">feature(I want to display information under two tabs)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -159,21 +264,132 @@
           <div class="suite-Default_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">com.revature.tests.trainer.TestBatches</span>
+              <span class="class-name">com.revature.tests.trainer.TestOverview</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="TestLocations">
-                  </a> <!-- TestLocations -->
-                  <span class="method-name">TestLocations</span>
-                  <div class="stack-trace">java.lang.AssertionError: Revature HQ and/or New York City drop downs not found. Not in Locations tab
+                  <a name="CheckNameFilterASC">
+                  </a> <!-- CheckNameFilterASC -->
+                  <span class="method-name">CheckNameFilterASC</span>
+                  <div class="stack-trace">java.lang.AssertionError: Name filter ASC button not working because of lowercases
 	at org.testng.Assert.fail(Assert.java:96)
-	at com.revature.tests.trainer.TestBatches.TestLocations(TestBatches.java:42)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at com.revature.tests.trainer.TestOverview.CheckNameFilterASC(TestOverview.java:91)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:571)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:707)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:979)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
+	at org.testng.TestNG.runSuites(TestNG.java:1028)
+	at org.testng.TestNG.run(TestNG.java:996)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="CheckNameFilterDSC">
+                  </a> <!-- CheckNameFilterDSC -->
+                  <span class="method-name">CheckNameFilterDSC</span>
+                  <div class="stack-trace">java.lang.AssertionError: Name filter DSC button not working because of lowercases
+	at org.testng.Assert.fail(Assert.java:96)
+	at com.revature.tests.trainer.TestOverview.CheckNameFilterDSC(TestOverview.java:102)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:571)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:707)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:979)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
+	at org.testng.TestNG.runSuites(TestNG.java:1028)
+	at org.testng.TestNG.run(TestNG.java:996)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="CheckTrainerFilterASC">
+                  </a> <!-- CheckTrainerFilterASC -->
+                  <span class="method-name">CheckTrainerFilterASC</span>
+                  <div class="stack-trace">java.lang.AssertionError: Trainer ASC button not working
+	at org.testng.Assert.fail(Assert.java:96)
+	at com.revature.tests.trainer.TestOverview.CheckTrainerFilterASC(TestOverview.java:135)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:571)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:707)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:979)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
+	at org.testng.TestNG.runSuites(TestNG.java:1028)
+	at org.testng.TestNG.run(TestNG.java:996)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="CheckTrainerFilterDSC">
+                  </a> <!-- CheckTrainerFilterDSC -->
+                  <span class="method-name">CheckTrainerFilterDSC</span>
+                  <div class="stack-trace">java.lang.AssertionError: Trainer DSC button not working
+	at org.testng.Assert.fail(Assert.java:96)
+	at com.revature.tests.trainer.TestOverview.CheckTrainerFilterDSC(TestOverview.java:146)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
 	at org.testng.internal.Invoker.invokeMethod(Invoker.java:571)
 	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:707)
@@ -204,21 +420,147 @@
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.revature.tests.trainer.TestBatches</span>
+              <span class="class-name">com.revature.tests.trainer.TestOverview</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="TestOne">
-                  </a> <!-- TestOne -->
-                  <span class="method-name">TestOne</span>
+                  <a name="CheckBuildingFilterASC">
+                  </a> <!-- CheckBuildingFilterASC -->
+                  <span class="method-name">CheckBuildingFilterASC</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="TestTwo">
-                  </a> <!-- TestTwo -->
-                  <span class="method-name">TestTwo</span>
+                  <a name="CheckBuildingFilterDSC">
+                  </a> <!-- CheckBuildingFilterDSC -->
+                  <span class="method-name">CheckBuildingFilterDSC</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="CheckCurrFilterASC">
+                  </a> <!-- CheckCurrFilterASC -->
+                  <span class="method-name">CheckCurrFilterASC</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="CheckCurrFilterDSC">
+                  </a> <!-- CheckCurrFilterDSC -->
+                  <span class="method-name">CheckCurrFilterDSC</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="CheckEndFilterASC">
+                  </a> <!-- CheckEndFilterASC -->
+                  <span class="method-name">CheckEndFilterASC</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="CheckEndFilterDSC">
+                  </a> <!-- CheckEndFilterDSC -->
+                  <span class="method-name">CheckEndFilterDSC</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="CheckIfCSVDownload">
+                  </a> <!-- CheckIfCSVDownload -->
+                  <span class="method-name">CheckIfCSVDownload</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="CheckLocationFilterASC">
+                  </a> <!-- CheckLocationFilterASC -->
+                  <span class="method-name">CheckLocationFilterASC</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="CheckLocationFilterDSC">
+                  </a> <!-- CheckLocationFilterDSC -->
+                  <span class="method-name">CheckLocationFilterDSC</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="CheckRoomFilterASC">
+                  </a> <!-- CheckRoomFilterASC -->
+                  <span class="method-name">CheckRoomFilterASC</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="CheckRoomFilterDSC">
+                  </a> <!-- CheckRoomFilterDSC -->
+                  <span class="method-name">CheckRoomFilterDSC</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="CheckStartFilterASC">
+                  </a> <!-- CheckStartFilterASC -->
+                  <span class="method-name">CheckStartFilterASC</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="CheckStartFilterDSC">
+                  </a> <!-- CheckStartFilterDSC -->
+                  <span class="method-name">CheckStartFilterDSC</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="ClickAllFilter">
+                  </a> <!-- ClickAllFilter -->
+                  <span class="method-name">ClickAllFilter</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="ClickBeginningInTwoWeeks">
+                  </a> <!-- ClickBeginningInTwoWeeks -->
+                  <span class="method-name">ClickBeginningInTwoWeeks</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="ClickInProgress">
+                  </a> <!-- ClickInProgress -->
+                  <span class="method-name">ClickInProgress</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TestClickExportCSV">
+                  </a> <!-- TestClickExportCSV -->
+                  <span class="method-name">TestClickExportCSV</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TestClickOverview">
+                  </a> <!-- TestClickOverview -->
+                  <span class="method-name">TestClickOverview</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TestFindExport">
+                  </a> <!-- TestFindExport -->
+                  <span class="method-name">TestFindExport</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TestFindFilter">
+                  </a> <!-- TestFindFilter -->
+                  <span class="method-name">TestFindFilter</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -243,20 +585,20 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="feature(I want to display information under two tabs)">
-                  </a> <!-- feature(I want to display information under two tabs) -->
+                  <a name="feature(Locations Tab for trainers)">
+                  </a> <!-- feature(Locations Tab for trainers) -->
                   <span class="method-name">feature</span>
-                  <span class="parameters">(I want to display information under two tabs)</span>
+                  <span class="parameters">(Locations Tab for trainers)</span>
                   <em>
 (Runs Cucumber Feature)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="feature(Locations Tab for trainers)">
-                  </a> <!-- feature(Locations Tab for trainers) -->
+                  <a name="feature(I want to display information under two tabs)">
+                  </a> <!-- feature(I want to display information under two tabs) -->
                   <span class="method-name">feature</span>
-                  <span class="parameters">(Locations Tab for trainers)</span>
+                  <span class="parameters">(I want to display information under two tabs)</span>
                   <em>
 (Runs Cucumber Feature)                  </em>
                 </div> <!-- method-content -->
@@ -266,16 +608,16 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\csemi\AppData\Local\Temp\testng-eclipse--601162393\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Tien Pham\AppData\Local\Temp\testng-eclipse--1531716492\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite thread-count=&quot;-1&quot; name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
-  &lt;test name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
+&lt;suite thread-count=&quot;-1&quot; guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Default suite&quot;&gt;
+  &lt;test verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.revature.tests.trainer.TestBatches&quot;/&gt;
+      &lt;class name=&quot;com.revature.tests.trainer.TestOverview&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -323,40 +665,124 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(7);
+data.addRows(28);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'TestLocations')
-data.setCell(0, 2, 'com.revature.tests.trainer.TestBatches')
-data.setCell(0, 3, 3450);
+data.setCell(0, 1, 'CheckNameFilterASC')
+data.setCell(0, 2, 'com.revature.tests.trainer.TestOverview')
+data.setCell(0, 3, 2799);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'TestOne')
-data.setCell(1, 2, 'com.revature.tests.trainer.TestBatches')
-data.setCell(1, 3, 3374);
+data.setCell(1, 1, 'ClickInProgress')
+data.setCell(1, 2, 'com.revature.tests.trainer.TestOverview')
+data.setCell(1, 3, 2649);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'TestTwo')
-data.setCell(2, 2, 'com.revature.tests.trainer.TestBatches')
-data.setCell(2, 3, 3155);
+data.setCell(2, 1, 'CheckLocationFilterDSC')
+data.setCell(2, 2, 'com.revature.tests.trainer.TestOverview')
+data.setCell(2, 3, 2532);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'feature')
-data.setCell(3, 2, 'com.revature.tests.trainer.TestBatches')
-data.setCell(3, 3, 13);
+data.setCell(3, 1, 'CheckTrainerFilterASC')
+data.setCell(3, 2, 'com.revature.tests.trainer.TestOverview')
+data.setCell(3, 3, 2061);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'feature')
-data.setCell(4, 2, 'com.revature.tests.trainer.TestBatches')
-data.setCell(4, 3, 4);
+data.setCell(4, 1, 'CheckCurrFilterASC')
+data.setCell(4, 2, 'com.revature.tests.trainer.TestOverview')
+data.setCell(4, 3, 2043);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'feature')
-data.setCell(5, 2, 'com.revature.tests.trainer.TestBatches')
-data.setCell(5, 3, 2);
+data.setCell(5, 1, 'CheckStartFilterASC')
+data.setCell(5, 2, 'com.revature.tests.trainer.TestOverview')
+data.setCell(5, 3, 2041);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'feature')
-data.setCell(6, 2, 'com.revature.tests.trainer.TestBatches')
-data.setCell(6, 3, 2);
+data.setCell(6, 1, 'CheckLocationFilterASC')
+data.setCell(6, 2, 'com.revature.tests.trainer.TestOverview')
+data.setCell(6, 3, 2035);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'CheckNameFilterDSC')
+data.setCell(7, 2, 'com.revature.tests.trainer.TestOverview')
+data.setCell(7, 3, 2030);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'CheckBuildingFilterASC')
+data.setCell(8, 2, 'com.revature.tests.trainer.TestOverview')
+data.setCell(8, 3, 2012);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'CheckEndFilterASC')
+data.setCell(9, 2, 'com.revature.tests.trainer.TestOverview')
+data.setCell(9, 3, 2012);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'CheckRoomFilterASC')
+data.setCell(10, 2, 'com.revature.tests.trainer.TestOverview')
+data.setCell(10, 3, 1987);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'ClickAllFilter')
+data.setCell(11, 2, 'com.revature.tests.trainer.TestOverview')
+data.setCell(11, 3, 1647);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'CheckCurrFilterDSC')
+data.setCell(12, 2, 'com.revature.tests.trainer.TestOverview')
+data.setCell(12, 3, 1465);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'CheckBuildingFilterDSC')
+data.setCell(13, 2, 'com.revature.tests.trainer.TestOverview')
+data.setCell(13, 3, 1450);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'CheckTrainerFilterDSC')
+data.setCell(14, 2, 'com.revature.tests.trainer.TestOverview')
+data.setCell(14, 3, 1444);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'CheckStartFilterDSC')
+data.setCell(15, 2, 'com.revature.tests.trainer.TestOverview')
+data.setCell(15, 3, 1440);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'CheckRoomFilterDSC')
+data.setCell(16, 2, 'com.revature.tests.trainer.TestOverview')
+data.setCell(16, 3, 1422);
+data.setCell(17, 0, 17)
+data.setCell(17, 1, 'CheckEndFilterDSC')
+data.setCell(17, 2, 'com.revature.tests.trainer.TestOverview')
+data.setCell(17, 3, 1401);
+data.setCell(18, 0, 18)
+data.setCell(18, 1, 'TestClickOverview')
+data.setCell(18, 2, 'com.revature.tests.trainer.TestOverview')
+data.setCell(18, 3, 1238);
+data.setCell(19, 0, 19)
+data.setCell(19, 1, 'ClickBeginningInTwoWeeks')
+data.setCell(19, 2, 'com.revature.tests.trainer.TestOverview')
+data.setCell(19, 3, 1047);
+data.setCell(20, 0, 20)
+data.setCell(20, 1, 'TestClickExportCSV')
+data.setCell(20, 2, 'com.revature.tests.trainer.TestOverview')
+data.setCell(20, 3, 651);
+data.setCell(21, 0, 21)
+data.setCell(21, 1, 'TestFindFilter')
+data.setCell(21, 2, 'com.revature.tests.trainer.TestOverview')
+data.setCell(21, 3, 524);
+data.setCell(22, 0, 22)
+data.setCell(22, 1, 'TestFindExport')
+data.setCell(22, 2, 'com.revature.tests.trainer.TestOverview')
+data.setCell(22, 3, 48);
+data.setCell(23, 0, 23)
+data.setCell(23, 1, 'feature')
+data.setCell(23, 2, 'com.revature.tests.trainer.TestOverview')
+data.setCell(23, 3, 8);
+data.setCell(24, 0, 24)
+data.setCell(24, 1, 'feature')
+data.setCell(24, 2, 'com.revature.tests.trainer.TestOverview')
+data.setCell(24, 3, 3);
+data.setCell(25, 0, 25)
+data.setCell(25, 1, 'feature')
+data.setCell(25, 2, 'com.revature.tests.trainer.TestOverview')
+data.setCell(25, 3, 2);
+data.setCell(26, 0, 26)
+data.setCell(26, 1, 'CheckIfCSVDownload')
+data.setCell(26, 2, 'com.revature.tests.trainer.TestOverview')
+data.setCell(26, 3, 2);
+data.setCell(27, 0, 27)
+data.setCell(27, 1, 'feature')
+data.setCell(27, 2, 'com.revature.tests.trainer.TestOverview')
+data.setCell(27, 3, 1);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 10 seconds</span>
+              <span class="suite-total-time">Total running time: 37 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -382,60 +808,150 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.revature.tests.trainer.TestBatches</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.revature.tests.trainer.TestOverview</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">beforeSuite</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-test before">
                 <span class="method-name">beforeTest</span>
-                <span class="method-start">5850 ms</span>
+                <span class="method-start">3761 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-class before">
                 <span class="method-name">setUpClass</span>
-                <span class="method-start">5862 ms</span>
+                <span class="method-start">3772 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">feature(I want to display information under two tabs)</span>
-                <span class="method-start">6790 ms</span>
+                <span class="method-start">4173 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">feature(Locations Tab for trainers)</span>
-                <span class="method-start">6807 ms</span>
+                <span class="method-start">4183 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">feature(Overview Tab for trainers)</span>
-                <span class="method-start">6813 ms</span>
+                <span class="method-start">4186 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">feature(Settings to test on the)</span>
-                <span class="method-start">6819 ms</span>
+                <span class="method-start">4190 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">TestClickOverview</span>
+                <span class="method-start">4198 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">ClickInProgress</span>
+                <span class="method-start">5437 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">ClickBeginningInTwoWeeks</span>
+                <span class="method-start">8087 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">ClickAllFilter</span>
+                <span class="method-start">9136 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">TestFindExport</span>
+                <span class="method-start">10784 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">TestFindFilter</span>
+                <span class="method-start">10833 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">TestClickExportCSV</span>
+                <span class="method-start">11360 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">CheckIfCSVDownload</span>
+                <span class="method-start">12012 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">TestLocations</span>
-                <span class="method-start">6826 ms</span>
+                <span class="method-name">CheckNameFilterASC</span>
+                <span class="method-start">12015 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">TestOne</span>
-                <span class="method-start">10283 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">CheckNameFilterDSC</span>
+                <span class="method-start">14816 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">TestTwo</span>
-                <span class="method-start">13659 ms</span>
+                <span class="method-name">CheckCurrFilterASC</span>
+                <span class="method-start">16848 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">CheckCurrFilterDSC</span>
+                <span class="method-start">18892 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">CheckTrainerFilterASC</span>
+                <span class="method-start">20358 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">CheckTrainerFilterDSC</span>
+                <span class="method-start">22420 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">CheckLocationFilterASC</span>
+                <span class="method-start">23865 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">CheckLocationFilterDSC</span>
+                <span class="method-start">25901 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">CheckBuildingFilterASC</span>
+                <span class="method-start">28434 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">CheckBuildingFilterDSC</span>
+                <span class="method-start">30447 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">CheckRoomFilterASC</span>
+                <span class="method-start">31898 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">CheckRoomFilterDSC</span>
+                <span class="method-start">33886 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">CheckStartFilterASC</span>
+                <span class="method-start">35309 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">CheckStartFilterDSC</span>
+                <span class="method-start">37351 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">CheckEndFilterASC</span>
+                <span class="method-start">38792 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">CheckEndFilterDSC</span>
+                <span class="method-start">40805 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">16815 ms</span>
+                <span class="method-start">42207 ms</span>
               </div> <!-- configuration-class after -->
               <div class="configuration-test after">
                 <span class="method-name">afterTest</span>
-                <span class="method-start">16826 ms</span>
+                <span class="method-start">42210 ms</span>
               </div> <!-- configuration-test after -->
               <div class="configuration-suite after">
                 <span class="method-name">afterSuite</span>
-                <span class="method-start">16899 ms</span>
+                <span class="method-start">42262 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

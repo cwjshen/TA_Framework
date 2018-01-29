@@ -1,13 +1,9 @@
-
-package com.revature.cukes.trainer;
+package com.revature.cukes.vp;
 
 import java.io.File;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
-import java.util.Date;
 import java.util.List;
 
 import org.openqa.selenium.WebDriver;
@@ -16,12 +12,12 @@ import org.openqa.selenium.WebElement;
 import com.revature.pom.NavBar;
 import com.revature.pom.OverviewTab;
 
+import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
-public class OverviewCukes {
-
+public class OverviewCukesVP {
 
 	@Given("^That I am in the Overview tab$")
 	public static void isInOverview() throws Throwable {
@@ -63,7 +59,7 @@ public class OverviewCukes {
 
 	@When("^I click the CSV button <webdriver>$")
 	public static void clickCSVButton(WebDriver wd) throws Throwable {
-		//Thread.sleep(1000);
+		Thread.sleep(1000);
 		OverviewTab.findCSVButton(wd).click();
 	}
 
@@ -82,6 +78,12 @@ public class OverviewCukes {
 	}
 
 	public static boolean isFileDownloaded(String downloadPath, String fileName) {
+		try {
+			Thread.sleep(1000);
+
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 		File dir = new File(downloadPath);
 		File[] dirContents = dir.listFiles();
 
@@ -98,7 +100,7 @@ public class OverviewCukes {
 	
 	@When("^I click the name button <webdriver>$")
 	public static void i_click_the_name_button(WebDriver wd) throws Throwable {
-		//Thread.sleep(1000);
+		Thread.sleep(1000);
 		OverviewTab.filterName(wd).click();
 	}
 
@@ -132,7 +134,7 @@ public class OverviewCukes {
 	
 	@Then("^If I click the name button again <webdriver>$")
 	public static void if_I_click_the_name_button_again(WebDriver wd) throws Throwable {
-		//Thread.sleep(1000);
+		Thread.sleep(1000);
 		OverviewTab.filterName(wd).click();
 	}
 
@@ -166,7 +168,7 @@ public class OverviewCukes {
 	
 	@When("^I click the curriculum button <webdriver>$")
 	public static void i_click_the_curriculum_button(WebDriver wd) throws Throwable {
-		//Thread.sleep(1000);
+		Thread.sleep(1000);
 		OverviewTab.filterCurriculum(wd).click();
 	}
 
@@ -199,7 +201,7 @@ public class OverviewCukes {
 	
 	@Then("^If I click the curriculum button again <webdriver>$")
 	public static void if_I_click_the_curriculum_button_again(WebDriver wd) throws Throwable {
-		//Thread.sleep(1000);
+		Thread.sleep(1000);
 		OverviewTab.filterCurriculum(wd).click();
 	}
 
@@ -232,7 +234,7 @@ public class OverviewCukes {
 	
 	@When("^I click the trainer button <webdriver>$")
 	public static void i_click_the_trainer_button(WebDriver wd) throws Throwable {
-		//Thread.sleep(1000);
+		Thread.sleep(1000);
 		OverviewTab.filterTrainer(wd).click();
 	}
 
@@ -246,7 +248,6 @@ public class OverviewCukes {
 		}
 		names.removeAll(Arrays.asList("", null));
 		
-		
 		// Check if theyre already sorted
 		List<String> sorted = new ArrayList<String>();
 		for (WebElement col : OverviewTab.getTrainer(wd)) {
@@ -255,8 +256,6 @@ public class OverviewCukes {
 		sorted.removeAll(Arrays.asList("", null));
 		
 		Collections.sort(sorted);
-		
-		
 		for (int i = 0; i < names.size(); i++) {
 			// If no match return false
 			if (!(names.get(i).equals(sorted.get(i)))) {
@@ -268,7 +267,7 @@ public class OverviewCukes {
 	
 	@Then("^If I click the trainer button again <webdriver>$")
 	public static void if_I_click_the_trainer_button_again(WebDriver wd) throws Throwable {
-		//Thread.sleep(1000);
+		Thread.sleep(1000);
 		OverviewTab.filterTrainer(wd).click();
 	}
 
@@ -301,7 +300,7 @@ public class OverviewCukes {
 	
 	@When("^I click the location button <webdriver>$")
 	public static void i_click_the_location_button(WebDriver wd) throws Throwable {
-		//Thread.sleep(1000);
+		Thread.sleep(1000);
 		OverviewTab.filterLocation(wd).click();
 	}
 
@@ -367,7 +366,7 @@ public class OverviewCukes {
 	
 	@When("^I click the room button <webdriver>$")
 	public static void i_click_the_room_button(WebDriver wd) throws Throwable {
-		//Thread.sleep(1000);
+		Thread.sleep(1000);
 		OverviewTab.filterRoom(wd).click();
 	}
 
@@ -400,7 +399,7 @@ public class OverviewCukes {
 	
 	@Then("^If I click the room button again <webdriver>$")
 	public static void if_I_click_the_room_button_again(WebDriver wd) throws Throwable {
-		//Thread.sleep(1000);
+		Thread.sleep(1000);
 		OverviewTab.filterRoom(wd).click();
 	}
 
@@ -433,7 +432,7 @@ public class OverviewCukes {
 	
 	@When("^I click the start button <webdriver>$")
 	public static void i_click_the_start_button(WebDriver wd) throws Throwable {
-		//Thread.sleep(1000);
+		Thread.sleep(1000);
 		OverviewTab.filterStartDate(wd).click();
 	}
 
@@ -441,18 +440,12 @@ public class OverviewCukes {
 	public static boolean the_start_should_be_filtered_in_ASC_order(WebDriver wd) throws Throwable {
 		// Get the list of all trainer names
 		boolean isSorted = true;
-		List<String> startD = new ArrayList<String>();
+		List<String> names = new ArrayList<String>();
 		for (WebElement col : OverviewTab.getStartDates(wd)) {
-			startD.add(col.getText());
+			names.add(col.getText());
 		}
-		startD.removeAll(Arrays.asList("", null));
+		names.removeAll(Arrays.asList("", null));
 		
-		ArrayList<Date> theDates = new ArrayList<Date>();
-		for (int i=0; i < startD.size(); i++) {
-			Date startDate=new SimpleDateFormat("MMM. dd, yyyy").parse(startD.get(i));
-				theDates.add(startDate);
-		}
-
 		// Check if theyre already sorted
 		List<String> sorted = new ArrayList<String>();
 		for (WebElement col : OverviewTab.getStartDates(wd)) {
@@ -460,15 +453,10 @@ public class OverviewCukes {
 		}
 		sorted.removeAll(Arrays.asList("", null));
 		
-		ArrayList<Date> theDatesE = new ArrayList<Date>();
-		for (int i=0; i < sorted.size(); i++) {
-			Date startDate=new SimpleDateFormat("MMM. dd, yyyy").parse(sorted.get(i));
-				theDatesE.add(startDate);
-		}
-		Collections.sort(theDatesE);
-		for (int i = 0; i < theDates.size(); i++) {
+		Collections.sort(sorted);
+		for (int i = 0; i < names.size(); i++) {
 			// If no match return false
-			if (!(theDates.get(i).equals(theDatesE.get(i)))) {
+			if (!(names.get(i).equals(sorted.get(i)))) {
 				isSorted = false;
 			}
 		}
@@ -477,7 +465,7 @@ public class OverviewCukes {
 	
 	@Then("^If I click the start button again <webdriver>$")
 	public static void if_I_click_the_start_button_again(WebDriver wd) throws Throwable {
-		//Thread.sleep(1000);
+		Thread.sleep(1000);
 		OverviewTab.filterStartDate(wd).click();
 	}
 
@@ -491,12 +479,6 @@ public class OverviewCukes {
 		}
 		names.removeAll(Arrays.asList("", null));
 		
-		ArrayList<Date> theDates = new ArrayList<Date>();
-		for (int i=0; i < names.size(); i++) {
-			Date startDate=new SimpleDateFormat("MMM. dd, yyyy").parse(names.get(i));
-				theDates.add(startDate);
-		}
-		
 		// Check if theyre already sorted
 		List<String> sorted = new ArrayList<String>();
 		for (WebElement col : OverviewTab.getStartDates(wd)) {
@@ -504,15 +486,10 @@ public class OverviewCukes {
 		}
 		sorted.removeAll(Arrays.asList("", null));
 		
-		ArrayList<Date> theDatesE = new ArrayList<Date>();
-		for (int i=0; i < sorted.size(); i++) {
-			Date startDate=new SimpleDateFormat("MMM. dd, yyyy").parse(sorted.get(i));
-				theDatesE.add(startDate);
-		}
-		Collections.sort(theDatesE, Collections.reverseOrder());
+		   Collections.sort(sorted, Collections.reverseOrder());
 		for (int i = 0; i < names.size(); i++) {
 			// If no match return false
-			if (!(theDates.get(i).equals(theDatesE.get(i)))) {
+			if (!(names.get(i).equals(sorted.get(i)))) {
 				isSorted = false;
 			}
 		}
@@ -521,7 +498,7 @@ public class OverviewCukes {
 	
 	@When("^I click the end button <webdriver>$")
 	public static void i_click_the_end_button(WebDriver wd) throws Throwable {
-		//Thread.sleep(1000);
+		Thread.sleep(1000);
 		OverviewTab.filterEndDate(wd).click();
 	}
 
@@ -535,12 +512,6 @@ public class OverviewCukes {
 		}
 		names.removeAll(Arrays.asList("", null));
 		
-		ArrayList<Date> theDates = new ArrayList<Date>();
-		for (int i=0; i < names.size(); i++) {
-			Date startDate=new SimpleDateFormat("MMM. dd, yyyy").parse(names.get(i));
-				theDates.add(startDate);
-		}
-		
 		// Check if theyre already sorted
 		List<String> sorted = new ArrayList<String>();
 		for (WebElement col : OverviewTab.getEndDates(wd)) {
@@ -548,15 +519,10 @@ public class OverviewCukes {
 		}
 		sorted.removeAll(Arrays.asList("", null));
 		
-		ArrayList<Date> theDatesE = new ArrayList<Date>();
-		for (int i=0; i < sorted.size(); i++) {
-			Date startDate=new SimpleDateFormat("MMM. dd, yyyy").parse(sorted.get(i));
-				theDatesE.add(startDate);
-		}
-		Collections.sort(theDatesE);
+		Collections.sort(sorted);
 		for (int i = 0; i < names.size(); i++) {
 			// If no match return false
-			if (!(theDates.get(i).equals(theDatesE.get(i)))) {
+			if (!(names.get(i).equals(sorted.get(i)))) {
 				isSorted = false;
 			}
 		}
@@ -565,7 +531,7 @@ public class OverviewCukes {
 	
 	@Then("^If I click the end button again <webdriver>$")
 	public static void if_I_click_the_end_button_again(WebDriver wd) throws Throwable {
-		//Thread.sleep(1000);
+		Thread.sleep(1000);
 		OverviewTab.filterEndDate(wd).click();
 	}
 
@@ -579,12 +545,6 @@ public class OverviewCukes {
 		}
 		names.removeAll(Arrays.asList("", null));
 		
-		ArrayList<Date> theDates = new ArrayList<Date>();
-		for (int i=0; i < names.size(); i++) {
-			Date startDate=new SimpleDateFormat("MMM. dd, yyyy").parse(names.get(i));
-				theDates.add(startDate);
-		}
-		
 		// Check if theyre already sorted
 		List<String> sorted = new ArrayList<String>();
 		for (WebElement col : OverviewTab.getEndDates(wd)) {
@@ -592,15 +552,10 @@ public class OverviewCukes {
 		}
 		sorted.removeAll(Arrays.asList("", null));
 		
-		ArrayList<Date> theDatesE = new ArrayList<Date>();
-		for (int i=0; i < sorted.size(); i++) {
-			Date startDate=new SimpleDateFormat("MMM. dd, yyyy").parse(sorted.get(i));
-				theDatesE.add(startDate);
-		}
-		Collections.sort(theDatesE, Collections.reverseOrder());
+		   Collections.sort(sorted, Collections.reverseOrder());
 		for (int i = 0; i < names.size(); i++) {
 			// If no match return false
-			if (!(theDates.get(i).equals(theDatesE.get(i)))) {
+			if (!(names.get(i).equals(sorted.get(i)))) {
 				isSorted = false;
 			}
 		}
@@ -609,7 +564,7 @@ public class OverviewCukes {
 	
 	@When("^I click the building button <webdriver>$")
 	public static void i_click_the_building_button(WebDriver wd) throws Throwable {
-		//Thread.sleep(1000);
+		Thread.sleep(1000);
 		OverviewTab.filterBuilding(wd).click();
 	}
 
@@ -642,7 +597,7 @@ public class OverviewCukes {
 	
 	@Then("^If I click the building button again <webdriver>$")
 	public static void if_I_click_the_building_button_again(WebDriver wd) throws Throwable {
-		//Thread.sleep(1000);
+		Thread.sleep(1000);
 		OverviewTab.filterBuilding(wd).click();
 	}
 
@@ -675,7 +630,7 @@ public class OverviewCukes {
 	
 	@When("^I click the filter button <webdriver>$")
 	public static void i_click_the_filter_button_webdriver(WebDriver wd) throws Throwable {
-		//Thread.sleep(1000);
+		Thread.sleep(1000);
 		OverviewTab.clickFilterButton(wd);
 	}
 
@@ -686,7 +641,7 @@ public class OverviewCukes {
 
 	@Then("^If I click the In Progress button <webdriver>$")
 	public static void if_I_click_the_In_Progress_button_webdriver(WebDriver wd) throws Throwable {
-		//Thread.sleep(1000);
+		Thread.sleep(1000);
 		OverviewTab.findFilterInProgress(wd).click();
 	}
 
@@ -697,30 +652,30 @@ public class OverviewCukes {
 	
 	@Then("^If I click the In Two Weeks button <webdriver>$")
 	public static void if_I_click_the_In_Two_Weeks_button_webdriver(WebDriver wd) throws Throwable {
-		//Thread.sleep(1000);
+		Thread.sleep(1000);
 		OverviewTab.findFilterInTwoWeeks(wd).click();
 	}
 
 	@Then("^If I click the All button <webdriver>$")
 	public static void if_I_click_the_all_button_webdriver(WebDriver wd) throws Throwable {
-		//Thread.sleep(1000);
+		Thread.sleep(1000);
 		OverviewTab.findFilterAll(wd).click();
 	}
 
 	@Then("^The batches in progress should display everything <webdriver>$")
 	public static boolean the_batches_in_progress_should_display_everything_webdriver(WebDriver wd) throws Throwable {
-		//Thread.sleep(1000);
+		Thread.sleep(1000);
 		return OverviewTab.isInProgress(OverviewTab.getStartDates(wd), OverviewTab.getEndDates(wd), wd);
 	}
 
 	
 	public static boolean the_batches_in_two_weeks_should_display(WebDriver wd) throws Throwable {
-		//Thread.sleep(1000);
+		Thread.sleep(1000);
 		return OverviewTab.isInTwoWeeks(OverviewTab.getStartDates(wd), wd);
 	}
 	
 	public static boolean all_batches_should_display(WebDriver wd) throws Throwable {
-		//Thread.sleep(1000);
+		Thread.sleep(1000);
 		return OverviewTab.allBatchesDisplayed(wd, OverviewTab.getBatchNames(wd));
 	}
 }
