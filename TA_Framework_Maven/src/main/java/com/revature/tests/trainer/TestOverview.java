@@ -1,20 +1,10 @@
 package com.revature.tests.trainer;
 
-import static org.junit.Assert.assertTrue;
 import static org.testng.Assert.fail;
-
-import java.util.ArrayList;
-import java.util.List;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-
 import com.revature.cukes.trainer.OverviewCukes;
-import com.revature.pom.NavBar;
 
 public class TestOverview extends TrainerSuite {
 
