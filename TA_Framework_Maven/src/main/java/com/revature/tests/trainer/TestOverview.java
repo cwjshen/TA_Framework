@@ -1,5 +1,6 @@
 package com.revature.tests.trainer;
 
+import static org.junit.Assert.assertTrue;
 import static org.testng.Assert.fail;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
