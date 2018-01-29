@@ -74,7 +74,7 @@ public class TestLocations extends TrainerSuite {
 		try {
 			LocationsCukes.LocationsNowHidden(wd);
 		} catch (Throwable e) {
-			fail("RevatureHQ and New York City not initally expanded");
+			fail("RevatureHQ and New York City not hidden");
 			e.printStackTrace();
 		}
 	}
@@ -102,7 +102,7 @@ public class TestLocations extends TrainerSuite {
 		try {
 			LocationsCukes.LocationsNowExpanded(wd);
 		} catch (Throwable e) {
-			fail("RevatureHQ and New York City not initally expanded");
+			fail("RevatureHQ and New York City not expanded");
 			e.printStackTrace();
 		}
 	}
