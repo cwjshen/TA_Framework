@@ -34,7 +34,7 @@ public class TestBatches extends TrainerSuite {
 	@Test
 	public void TestLocations() {
 		try {
-			LocationsCukes.clickLocations(wd);
+			LocationsCukes.clickedLocations(wd);
 			LocationsCukes.RevatureHQExists(wd);
 			LocationsCukes.NewYorkCityExists(wd);
 		}

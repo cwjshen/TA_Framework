@@ -42,6 +42,6 @@ public class TrainerSuite extends AbstractTestNGCucumberTests{
 		System.out.println("Logging out");
 		wd.findElement(By.xpath("/html/body/div[1]/div[1]/ng-include/div/md-content")).click();
 		Logout.logout(wd).click();
-		wd.close();
+		wd.quit();
 	}
 }

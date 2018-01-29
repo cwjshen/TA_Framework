@@ -1,4 +1,4 @@
-package com.revature.pom;
+package com.revature.pom.vp;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -12,7 +12,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import com.revature.util.WaitToLoad;
 
-public class OverviewTab {
+public class OverviewTabVP {
 	static WebElement e = null;
 	
 	public static WebElement findCSVButton(WebDriver d) {
