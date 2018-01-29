@@ -1,7 +1,5 @@
 package com.revature.tests.trainer;
 
-
-
 import static org.junit.Assert.assertTrue;
 import static org.testng.Assert.fail;
 
@@ -18,32 +16,81 @@ public class TestLocations extends TrainerSuite {
 
 	@BeforeTest
 	public void beforeTest() {
-		System.out.println("Running Overview Tab Test");
+		System.out.println("Running Locations Tab Test");
+		try {
+			Thread.sleep(6000);
+			LocationsCukes.clickedLocations(wd);
+		} catch (Throwable e) {
+			fail("Currently not in Locations Tab; Locations Tab not found or could not be clicked");
+			e.printStackTrace();
+		}
 
 	}
-	
-	@Test
-	public void TestOne() {
+
+	@Test(priority = 1)
+	public void TestLocationsTab() {
 		try {
-			LocationsCukes.clickLocations(wd);
-			System.out.println("Entering locations tab...");
-			Thread.sleep(500);
-			assertTrue(LocationsCukes.RevatureHQExists(wd));
-			System.out.println("HQ Exists");
-			assertTrue(LocationsCukes.NewYorkCityExists(wd));
-			System.out.println("NYC Location Exists");
-			
-			
-		} catch (Throwable e) { 
-			fail("Revature HQ and/or New York City drop downs not found. Not in Locations tab");
+			Thread.sleep(2000);
+			LocationsCukes.RevatureHQExists(wd);
+		} catch (Throwable e) {
+			fail("Revature HQ drop down not found");
+			e.printStackTrace();
+		}
+		try {
+			LocationsCukes.NewYorkCityExists(wd);
+		} catch (Throwable e) {
+			fail("NewYorkCity drop down not found");
 			e.printStackTrace();
 		}
 	}
-	
+
+	@Test(priority = 2)
+	public void TestCloseDropDowns() {
+		try {
+			assert (LocationsCukes.LocationsInitiallyExpanded(wd));
+		} catch (Throwable e) {
+			fail("RevatureHQ and New York City not initally expanded");
+			e.printStackTrace();
+		}
+		try {
+			LocationsCukes.closeDropDowns(wd);
+		} catch (Throwable e) {
+			fail("Failed to close drop downs");
+			e.printStackTrace();
+		}
+		try {
+			LocationsCukes.LocationsNowHidden(wd);
+		} catch (Throwable e) {
+			fail("RevatureHQ and New York City not hidden");
+			e.printStackTrace();
+		}
+	}
+
+	@Test(priority = 3)
+	public void TestExpandDropDowns() {
+		try {
+			assert (LocationsCukes.LocationsInitiallyHidden(wd));
+		} catch (Throwable e) {
+			fail("RevatureHQ and New York City not initally hidden");
+			e.printStackTrace();
+		}
+		try {
+			LocationsCukes.expandDropDowns(wd);
+		} catch (Throwable e) {
+			fail("Failed to close drop downs");
+			e.printStackTrace();
+		}
+		try {
+			LocationsCukes.LocationsNowExpanded(wd);
+		} catch (Throwable e) {
+			fail("RevatureHQ and New York City not expanded");
+			e.printStackTrace();
+		}
+	}
+
 	@AfterTest
 	public void afterTest() {
-		System.out.println("Tests successful. Locations tab working as intended");
+		System.out.println("============ Location Tests finished ===============");
 	}
 
 }
-

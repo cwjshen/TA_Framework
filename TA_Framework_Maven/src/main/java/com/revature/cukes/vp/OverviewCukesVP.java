@@ -1,5 +1,4 @@
-
-package com.revature.cukes.trainer;
+package com.revature.cukes.vp;
 
 import java.io.File;
 import java.text.SimpleDateFormat;
@@ -16,7 +15,7 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
-public class OverviewCukes {
+public class OverviewCukesVP {
 	@Given("^That I am in the Overview tab$")
 	public static void isInOverview() throws Throwable {
 		System.out.println("In Overview tab");
@@ -691,3 +690,4 @@ public class OverviewCukes {
 		return OverviewTab.allBatchesDisplayed(wd, OverviewTab.getBatchNames(wd));
 	}
 }
+

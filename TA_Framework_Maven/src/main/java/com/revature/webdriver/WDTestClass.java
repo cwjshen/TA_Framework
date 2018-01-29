@@ -13,7 +13,7 @@ public class WDTestClass {
 	
 	static WebDriver wd = null;
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		openApplication();
 		testMethod();
 	}
@@ -25,7 +25,7 @@ public class WDTestClass {
 		wd.get("https://dev.assignforce.revaturelabs.com");
 	}
 
-	private static void testMethod() {
+	private static void testMethod() throws InterruptedException {
 		wd.findElement(By.id("username")).sendKeys("test.trainer@revature.com.int1");
 		wd.findElement(By.name("pw")).sendKeys("p@$$w0rd2");
 		wd.findElement(By.id("Login")).submit();

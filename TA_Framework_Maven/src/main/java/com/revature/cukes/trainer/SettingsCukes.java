@@ -37,6 +37,7 @@ public class SettingsCukes {
 		int maxbsize = Integer.parseInt(SettingsTab.Maximum_Batch_Size(wd));
 		int dblength = Integer.parseInt(SettingsTab.Default_Batch_Length(wd));
 		int mindaybetween   = Integer.parseInt(SettingsTab.MinimumDayBetweenTrainerBatches(wd));
+		
         /*
 		System.out.println(ttpp);
 		System.out.println(rograds);
@@ -47,8 +48,8 @@ public class SettingsCukes {
 		System.out.println(maxbsize);
 		System.out.println(dblength);
 		System.out.println(mindaybetween);
-		
 		*/
+		
 		if (ttpp == TTPP) {
 			System.out.println("Timeline Trainers Per Page value is correct");
 		} else {

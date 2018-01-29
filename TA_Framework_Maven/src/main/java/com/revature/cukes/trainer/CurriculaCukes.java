@@ -35,8 +35,7 @@ public class CurriculaCukes {
 	//  System.out.println("FocusArrowValue" + focusArrowValue);
 	  CurriculaTab.Focus_Curricula(wd).click();
 	  Assert.assertTrue(CurriculaTab.Core_Curricula(wd).isDisplayed(), "Core button is working");
-	  Assert.assertTrue(CurriculaTab.Focus_Curricula(wd).isDisplayed(),
-              "Focus button is working");
+	  Assert.assertTrue(CurriculaTab.Focus_Curricula(wd).isDisplayed(), "Focus button is working");
  	}
 
 	@Then("^display the content under each tab$")

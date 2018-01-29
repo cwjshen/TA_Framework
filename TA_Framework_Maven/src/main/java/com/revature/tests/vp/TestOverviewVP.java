@@ -1,4 +1,4 @@
-package com.revature.tests.trainer;
+package com.revature.tests.vp;
 
 import static org.junit.Assert.assertTrue;
 import static org.testng.Assert.fail;
@@ -7,11 +7,11 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import com.revature.cukes.trainer.OverviewCukes;
 
-public class TestOverview extends TrainerSuite {
+public class TestOverviewVP extends VPSuite {
 
 	@BeforeTest
 	public void beforeTest() {
-		System.out.println("Running Overview Tab Test");
+		System.out.println("Running Overview Tab Test For VP");
 
 	}
 
@@ -290,4 +290,3 @@ public class TestOverview extends TrainerSuite {
 		System.out.println("============ Tests finished ===============");
 	}
 }
-

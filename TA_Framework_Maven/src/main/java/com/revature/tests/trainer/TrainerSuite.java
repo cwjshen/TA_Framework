@@ -1,5 +1,6 @@
 package com.revature.tests.trainer;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
@@ -39,7 +40,8 @@ public class TrainerSuite extends AbstractTestNGCucumberTests{
 	@AfterSuite
 	public void afterSuite() {
 		System.out.println("Logging out");
+		wd.findElement(By.xpath("/html/body/div[1]/div[1]/ng-include/div/md-content")).click();
 		Logout.logout(wd).click();
-		wd.close();
+		wd.quit();
 	}
 }
