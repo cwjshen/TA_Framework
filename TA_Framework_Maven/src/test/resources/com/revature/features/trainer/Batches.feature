@@ -45,41 +45,48 @@ Feature: Overview Tab for trainers
 		Then The curricula should be filtered in DSC order <webdriver>
 		
 	@tag4
+	Scenario Outline: Click the focus button to sort data ASC/DSC
+		Given I click the focus button <webdriver>
+		Then The focus should be filtered in ASC order <webdriver>
+		And If I click the focus button again <webdriver>
+		Then The focus should be filtered in DSC order <webdriver>
+		
+	@tag5
 	Scenario Outline: Click the Trainer button to sort data ASC/DSC
 		Given I click the trainer button <webdriver>
 		Then The trainers should be filtered in ASC order <webdriver>
 		And If I click the trainer button again <webdriver>
 		Then The trainer should be filtered in DSC order <webdriver>
 		
-	@tag5
+	@tag6
 	Scenario Outline: Click the Location button to sort data ASC/DSC
 		Given I click the location button <webdriver>
 		Then The locations should be filtered in ASC order <webdriver>
 		And If I click the locations button again <webdriver>
 		Then The locations should be filtered in DSC order <webdriver>
 		
-	@tag6
+	@tag7
 	Scenario Outline: Click the Building button to sort data ASC/DSC
 		Given I click the building button <webdriver>
 		Then The buildings should be filtered in ASC order <webdriver>
 		And If I click the building button again <webdriver>
 		Then The buildings should be filtered in DSC order <webdriver>
 		
-	@tag7
+	@tag8
 	Scenario Outline: Click the Room button to sort data ASC/DSC
 		Given I click the room button <webdriver>
 		Then The rooms should be filtered in ASC order <webdriver>
 		And If I click the room button again <webdriver>
 		Then The rooms should be filtered in DSC order <webdriver>
 		
-	@tag8
+	@tag9
 	Scenario Outline: Click the Start Date button to sort data ASC/DSC
 		Given I click the start button <webdriver>
 		Then The start dates should be filtered in ASC order <webdriver>
 		And If I click the start button again <webdriver>
 		Then The start dates should be filtered in DSC order <webdriver>
 		
-	@tag9
+	@tag10
 	Scenario Outline: Click the End Date button to sort data ASC/DSC
 		Given I click the end button <webdriver>
 		Then The end dates should be filtered in ASC order <webdriver>

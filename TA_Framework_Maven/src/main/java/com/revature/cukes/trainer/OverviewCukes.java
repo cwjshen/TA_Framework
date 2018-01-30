@@ -381,17 +381,7 @@ public class OverviewCukes {
 		}
 
 		// Check if theyre already sorted
-//		List<String> sorted = new ArrayList<String>();
-//		for (WebElement col : OverviewTab.getStartDates(wd)) {
-//			sorted.add(col.getText());
-//		}
-//		sorted.removeAll(Arrays.asList("", null));
-		
 		ArrayList<Date> theDatesE = new ArrayList<Date>(theDates);
-//		for (int i=0; i < sorted.size(); i++) {
-//			Date startDate=new SimpleDateFormat("MMM. dd, yyyy").parse(sorted.get(i));
-//				theDatesE.add(startDate);
-//		}
 		Collections.sort(theDatesE);
 		for (int i = 0; i < theDates.size(); i++) {
 			// If no match return false
@@ -424,17 +414,7 @@ public class OverviewCukes {
 		}
 		
 		// Check if theyre already sorted
-		List<String> sorted = new ArrayList<String>();
-//		for (WebElement col : OverviewTab.getStartDates(wd)) {
-//			sorted.add(col.getText());
-//		}
-//		sorted.removeAll(Arrays.asList("", null));
-//		
 		ArrayList<Date> theDatesE = new ArrayList<Date>(theDates);
-//		for (int i=0; i < sorted.size(); i++) {
-//			Date startDate=new SimpleDateFormat("MMM. dd, yyyy").parse(sorted.get(i));
-//				theDatesE.add(startDate);
-//		}
 		Collections.sort(theDatesE, Collections.reverseOrder());
 		for (int i = 0; i < names.size(); i++) {
 			// If no match return false
@@ -467,17 +447,8 @@ public class OverviewCukes {
 		}
 		
 		// Check if theyre already sorted
-//		List<String> sorted = new ArrayList<String>();
-//		for (WebElement col : OverviewTab.getEndDates(wd)) {
-//			sorted.add(col.getText());
-//		}
-//		sorted.removeAll(Arrays.asList("", null));
 		
 		ArrayList<Date> theDatesE = new ArrayList<Date>(theDates);
-//		for (int i=0; i < sorted.size(); i++) {
-//			Date startDate=new SimpleDateFormat("MMM. dd, yyyy").parse(sorted.get(i));
-//				theDatesE.add(startDate);
-//		}
 		Collections.sort(theDatesE);
 		for (int i = 0; i < names.size(); i++) {
 			// If no match return false
@@ -510,17 +481,8 @@ public class OverviewCukes {
 		}
 		
 		// Check if theyre already sorted
-//		List<String> sorted = new ArrayList<String>();
-//		for (WebElement col : OverviewTab.getEndDates(wd)) {
-//			sorted.add(col.getText());
-//		}
-//		sorted.removeAll(Arrays.asList("", null));
 		
 		ArrayList<Date> theDatesE = new ArrayList<Date>(theDates);
-//		for (int i=0; i < sorted.size(); i++) {
-//			Date startDate=new SimpleDateFormat("MMM. dd, yyyy").parse(sorted.get(i));
-//				theDatesE.add(startDate);
-//		}
 		Collections.sort(theDatesE, Collections.reverseOrder());
 		for (int i = 0; i < names.size(); i++) {
 			// If no match return false
@@ -548,11 +510,6 @@ public class OverviewCukes {
 		
 		// Check if theyre already sorted
 		List<String> sorted = new ArrayList<String>(names);
-//		for (WebElement col : OverviewTab.getBuilding(wd)) {
-//			sorted.add(col.getText());
-//		}
-//		sorted.removeAll(Arrays.asList("", null));
-		
 		Collections.sort(sorted);
 		for (int i = 0; i < names.size(); i++) {
 			// If no match return false
@@ -580,12 +537,7 @@ public class OverviewCukes {
 		
 		// Check if theyre already sorted
 		List<String> sorted = new ArrayList<String>(names);
-//		for (WebElement col : OverviewTab.getBuilding(wd)) {
-//			sorted.add(col.getText());
-//		}
-//		sorted.removeAll(Arrays.asList("", null));
-		
-		   Collections.sort(sorted, Collections.reverseOrder());
+		Collections.sort(sorted, Collections.reverseOrder());
 		for (int i = 0; i < names.size(); i++) {
 			// If no match return false
 			if (!(names.get(i).equals(sorted.get(i)))) {
