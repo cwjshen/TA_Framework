@@ -71,9 +71,9 @@ public class LocationsCukesVP {
 	}
 
 	@When("^Fill out Location form and submit VP$")
-	public static void FillAndSubmitLocationForm(WebDriver wd) throws Throwable {
+	//public static boolean FillAndSubmitLocationForm(WebDriver wd) {
 		
-	}
+	//}
 
 	@Then("^I should see the new Location VP$")
 	public static void NewLocationExists(WebDriver wd) throws Throwable {
@@ -109,6 +109,11 @@ public class LocationsCukesVP {
 	@Then("^I should see the new Room VP$")
 	public static void NewRoomExists(WebDriver wd) throws Throwable {
 
+	}
+
+	public static boolean clickAddLocation(WebDriver wd) {
+		// TODO Auto-generated method stub
+		return false;
 	}
 
 }
