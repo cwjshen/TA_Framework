@@ -56,7 +56,7 @@ public class LocationsCukesVP {
 	 * }
 	 */
 
-	@Given("^Click the Add Location button$")
+	@When("^Click the Add Location button$")
 	public static boolean clickAddLocation(WebDriver wd) {
 		try {
 			LocationsVP.findAddLocationButton(wd).click();
@@ -70,6 +70,7 @@ public class LocationsCukesVP {
 	@When("^Fill out Location form and submit$")
 	public static boolean FillAndSubmitLocationForm(WebDriver wd) {
 		try {
+			Thread.sleep(3000);
 			LocationsVP.findNameField(wd).sendKeys("Mami's House");
 			LocationsVP.findCityField(wd).sendKeys("Mitakihara City");
 		} catch (Throwable e) {
