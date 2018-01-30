@@ -35,23 +35,23 @@ public class OverviewCukes {
 	@Then("^I should see the Export to CSV button$")
 	public static boolean exportButtonExists(WebDriver wd) throws Throwable {
 		System.out.println("Looking for CSV button");
-		if (OverviewTab.findCSVButton(wd) != null) {
-			System.out.println("true");
+		try {
+			OverviewTab.findCSVButton(wd);
 			return true;
+		} catch(Throwable e) {
+			return false;
 		}
-		System.out.println("false");
-		return false;
 	}
 
 	@Then("^Fiter button$")
 	public static boolean filterButtonExists(WebDriver wd) throws Throwable {
 		System.out.println("Looking for filter button");
-		if (OverviewTab.findFilterButton(wd) != null) {
-			System.out.println("true");
+		try {
+			OverviewTab.findFilterButton(wd);
 			return true;
+		} catch(Throwable e) {
+			return false;
 		}
-		System.out.println("false");
-		return false;	
 	}
 
 	@When("^I click the CSV button <webdriver>$")
