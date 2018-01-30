@@ -7,6 +7,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import com.revature.util.JSClicker;
 import com.revature.util.WaitToLoad;
 
 public class BatchesTab {
@@ -47,8 +48,11 @@ public class BatchesTab {
 	public static WebElement endDateSelector(WebDriver d) {
 		return WaitToLoad.findDynamicElement(d, By.xpath("/html/body/div[1]/div[2]/div/md-card/md-content[2]/div/div[1]/div[1]/div[1]/div[1]/md-input-container[2]/md-datepicker/div[1]/button"), 30);
 	}
-	public static WebElement curriculumSelector(WebDriver d) {
-		return WaitToLoad.findDynamicElement(d, By.xpath("/html/body/div[1]/div[2]/div/md-card/md-content[2]/div/div[1]/div[1]/md-input-container[1]/md-select/md-select-value/span[2]"), 30);
+	public static void curriculumSelector(WebDriver d) {
+		//return WaitToLoad.findDynamicElement(d, By.xpath("//*[@id=\"select_8\"]"), 10);
+		//return WaitToLoad.findDynamicElement(d, By.cssSelector("#select_8"), 10);
+		JSClicker.executeJSClick(d, d.findElement(By.xpath("/html/body/div[1]/div[2]/div/md-card/md-content[2]/div/div[1]/div[1]/md-input-container[1]")));
+		
 	}
 	public static WebElement focusSelector(WebDriver d) {
 		return WaitToLoad.findDynamicElement(d, By.xpath("/html/body/div[1]/div[2]/div/md-card/md-content[2]/div/div[1]/div[1]/md-input-container[2]/md-select/md-select-value/span[2]"), 30);
@@ -152,5 +156,31 @@ public class BatchesTab {
 		}
 		return columns;
 	}
+	
+	public static void clickNextPage(WebDriver wd) {
+		WaitToLoad.findDynamicElement(wd, By.xpath("//*[@id=\"nextTrainerPageButton\"]"), 10).click();
+	}
+	public static void clickJumpLast(WebDriver wd) {
+		WaitToLoad.findDynamicElement(wd, By.xpath("//*[@id=\"lastTrainerPageButton\"]"), 10).click();
+	}
+	public static void clickPreviousPage(WebDriver wd) {
+		WaitToLoad.findDynamicElement(wd, By.xpath("//*[@id=\"previousTrainerPageButton\"]"), 10).click();
+	}
+	public static void clickJumpFirst(WebDriver wd) {
+		WaitToLoad.findDynamicElement(wd, By.xpath("//*[@id=\"firstTrainerPageButton\"]"), 10).click();
+	}
+	public static void clickSelectAutomaticallyBox(WebDriver wd) {
+		WaitToLoad.findDynamicElement(wd, By.xpath("/html/body/div[1]/div[2]/div/md-card/md-content[2]/div/div[1]/div[1]/div[1]/div[2]/md-checkbox/div[1]"), 10).click();
+	}
+	public static void clickHideConcludedBox(WebDriver wd) {
+		WaitToLoad.findDynamicElement(wd, By.xpath("/html/body/div[1]/div[2]/div/md-card/md-content[2]/div/div[1]/div[1]/div[8]/md-checkbox[1]/div[1]"), 10).click();
+	}
+	public static void clickHideBatchlessBox(WebDriver wd) {
+		WaitToLoad.findDynamicElement(wd, By.xpath("/html/body/div[1]/div[2]/div/md-card/md-content[2]/div/div[1]/div[1]/div[8]/md-checkbox[2]/div[1]"), 10).click();
+	}
+	public static List<WebElement> curriculumDropDownOptions(WebDriver wd) {
+		return wd.findElements(By.xpath("/html/body/div[14]/md-select-menu/md-content/md-option/div[2]"));
+	}
+	
 	
 }
