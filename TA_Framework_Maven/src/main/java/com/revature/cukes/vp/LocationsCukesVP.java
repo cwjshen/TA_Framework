@@ -9,7 +9,7 @@ import cucumber.api.java.en.When;
 
 public class LocationsCukesVP {
 
-	@Given("^The Locations Tab is selected$")
+	@Given("^The Locations Tab is selected VP$")
 	public static boolean clickedLocations(WebDriver wd){
 		try {
 			Thread.sleep(2000);
@@ -20,7 +20,7 @@ public class LocationsCukesVP {
 		}
 	}
 
-	@Then("^I should see the Revature HQ drop down$")
+	@Then("^I should see the Revature HQ drop down VP$")
 	public static boolean RevatureHQExists(WebDriver wd) throws Throwable {
 		System.out.println("Looking for Revature HQ drop down");
 		if (Locations.findRevatureHQButton(wd) != null) {
@@ -29,7 +29,7 @@ public class LocationsCukesVP {
 			return false;
 	}
 
-	@Then("^New York City drop down$")
+	@Then("^New York City drop down VP$")
 	public static boolean NewYorkCityExists(WebDriver wd) throws Throwable {
 		System.out.println("Looking for New York City drop down");
 		if (Locations.findNewYorkCityButton(wd) != null) {
@@ -55,47 +55,47 @@ public class LocationsCukesVP {
 	}
 	*/
 	
-	@Given("^Click the Add Location button$")
+	@Given("^Click the Add Location button VP$")
 	public static void AddLocation(WebDriver wd){
 		
 	}
 
-	@When("^Fill out Location form and submit$")
+	@When("^Fill out Location form and submit VP$")
 	public static void FillAndSubmitLocationForm(WebDriver wd) throws Throwable {
 		
 	}
 
-	@Then("^I should see the new Location$")
+	@Then("^I should see the new Location VP$")
 	public static void NewLocationExists(WebDriver wd) throws Throwable {
 		
 	}
 	
-	@Given("^Click the Add Building button$")
+	@Given("^Click the Add Building button VP$")
 	public static void AddBuilding(WebDriver wd){
 		
 	}
 
-	@When("^Fill out Building form and submit$")
+	@When("^Fill out Building form and submit VP$")
 	public static void FillAndSubmitBuildingForm(WebDriver wd) throws Throwable {
 		
 	}
 
-	@Then("^I should see the new Building$")
+	@Then("^I should see the new Building VP$")
 	public static void NewBuildingExists(WebDriver wd) throws Throwable {
 		
 	}
 	
-	@Given("^Click the Add Room button$")
+	@Given("^Click the Add Room button VP$")
 	public static void AddRoom(WebDriver wd){
 		
 	}
 
-	@When("^Fill out Room form and submit$")
+	@When("^Fill out Room form and submit VP$")
 	public static void FillAndSubmitRoomForm(WebDriver wd) throws Throwable {
 		
 	}
 
-	@Then("^I should see the new Room$")
+	@Then("^I should see the new Room VP$")
 	public static void NewRoomExists(WebDriver wd) throws Throwable {
 		
 	}
