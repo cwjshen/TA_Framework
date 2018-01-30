@@ -50,15 +50,24 @@ public class BatchesCukes {
 		}
 		names.removeAll(Arrays.asList("", null));
 		
+//		System.out.println("Original-----");
+//		for (String e : names) {
+//			System.out.println(e);
+//		}
 		// Check if theyre already sorted
-		List<String> sorted = new ArrayList<String>();
-		for (WebElement col : BatchesTab.getBatchNames(wd)) {
-			sorted.add(col.getText());
-		}
-		sorted.removeAll(Arrays.asList("", null));
+		List<String> sorted = new ArrayList<String>(names);
+//		for (WebElement col : BatchesTab.getBatchNames(wd)) {
+//			sorted.add(col.getText());
+//		}
+		//sorted.removeAll(Arrays.asList("", null));
 		
 		Collections.sort(sorted);
 
+		
+//		System.out.println("sorted-----");
+//		for (String e : sorted) {
+//			System.out.println(e);
+//		}
 		for (int i = 0; i < names.size(); i++) {
 			// If no match return false
 			if (!(names.get(i).equals(sorted.get(i)))) {
@@ -85,11 +94,11 @@ public class BatchesCukes {
 				names.removeAll(Arrays.asList("", null));
 				
 				// Check if theyre already sorted
-				List<String> sorted = new ArrayList<String>();
-				for (WebElement col : BatchesTab.getBatchNames(wd)) {
-					sorted.add(col.getText());
-				}
-				sorted.removeAll(Arrays.asList("", null));
+				List<String> sorted = new ArrayList<String>(names);
+//				for (WebElement col : BatchesTab.getBatchNames(wd)) {
+//					sorted.add(col.getText());
+//				}
+//				sorted.removeAll(Arrays.asList("", null));
 				
 				   Collections.sort(sorted, Collections.reverseOrder());
 				   

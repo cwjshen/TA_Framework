@@ -60,13 +60,14 @@ public class BatchesTab {
 		return WaitToLoad.findDynamicElement(d, By.xpath("/html/body/div[1]/div[2]/div/md-card/md-content[2]/div/div[1]/div[1]/div[1]/div[1]/md-input-container[1]/md-datepicker/div/button"), 30);
 	}
 	public static List<WebElement> getBatchNames(WebDriver wd) {
-		WebElement table_element = WaitToLoad.findDynamicElement(wd, By.xpath("/html/body/div[1]/div[2]/div/md-card/md-content[1]/div/md-table-container/table"), 30);
-		//WebElement table_element = WaitToLoad.findDynamicElement(wd, By.xpath("//*[@id=\"view\"]/div/md-card/md-content/md-table-container/table"), 30);
-        //List<WebElement> rows=table_element.findElements(By.xpath("//*[@id=\"view\"]/div/md-card/md-content/md-table-container/table/tbody/tr"));
-        List<WebElement> rows=table_element.findElements(By.xpath("/html/body/div[1]/div[2]/div/md-card/md-content[1]/div/md-table-container/table/tbody/tr"));
+		//WebElement table_element = WaitToLoad.findDynamicElement(wd, By.xpath("/html/body/div[1]/div[2]/div/md-card/md-content[1]/div/md-table-container/table"), 30);
+		WebElement table_element = WaitToLoad.findDynamicElement(wd, By.xpath("//*[@id=\"view\"]/div/md-card/md-content/md-table-container/table"), 30);
+        List<WebElement> rows=table_element.findElements(By.xpath("//*[@id=\"view\"]/div/md-card/md-content/md-table-container/table/tbody/tr"));
+       // List<WebElement> rows=table_element.findElements(By.xpath("/html/body/div[1]/div[2]/div/md-card/md-content[1]/div/md-table-container/table/tbody/tr"));
         List<WebElement> columns = new ArrayList<WebElement>();
         
 		for (WebElement e : rows) {
+			System.out.println(e);
 			columns.addAll(e.findElements(By.xpath("td[1]")));
 		}
 		return columns;
