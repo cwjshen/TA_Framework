@@ -50,8 +50,8 @@ public class TestLocationsVP extends VPSuite {
 	@Test(priority = 2)
 	public void TestAddLocation() {
 		assertTrue(LocationsCukesVP.clickAddLocation(wd));
-		assertTrue(LocationsCukesVP.FillAndSubmitLocationForm(wd));
-		LocationsCukesVP.NewLocationExists(wd);
+		//assertTrue(LocationsCukesVP.FillAndSubmitLocationForm(wd));
+		//LocationsCukesVP.NewLocationExists(wd);
 	}
 
 	@AfterTest
