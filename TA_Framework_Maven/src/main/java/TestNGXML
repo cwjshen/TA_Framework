@@ -1,30 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name="Trainer Tests" parallel="false">
+
+
+
   <test name="Test Overview Tab">
     <classes>
       <class name="com.revature.tests.trainer.TestOverview"/>
     </classes>
-  </test> <!-- Test -->
+  </test> 
+  
+
  
- <!--
- 
+
   <test name="Test Batches Tab">
     <classes>
 	  <class name="com.revature.tests.trainer.TestBatches"/> 
     </classes>
-  </test> <!-- Test -->   
+  </test>  
+  
 
+ <!--
   <test name="Test Locations Tab">
     <classes>
 	  <class name="com.revature.tests.trainer.TestLocations"/> 
     </classes>
-  </test> <!-- Test -->   
+  </test> 
 
   <test name="Test Settings Tab">
     <classes>
 	  <class name="com.revature.tests.trainer.TestSettings"/> 
     </classes>
-  </test> <!-- Test -->   
+  </test>   
   
   -->
 

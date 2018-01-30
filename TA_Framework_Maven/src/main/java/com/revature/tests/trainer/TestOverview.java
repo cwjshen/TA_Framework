@@ -18,8 +18,6 @@ public class TestOverview extends TrainerSuite {
 	@Test(priority = 1)
 	public void TestClickOverview() {
 		try {
-			// Need assert statements for these? Idk though because they can never be false
-			//	since it would just jump to catch block with NoSuchElementException
 			OverviewCukes.clickOverview(wd);
 			System.out.println("Clicked overview tab");
 		} catch (Throwable e) { 
@@ -28,11 +26,46 @@ public class TestOverview extends TrainerSuite {
 		}
 	}
 
+	@Test(priority = 2)
+	public void ClickInProgress() {
+		try {
+			OverviewCukes.i_click_the_filter_button_webdriver(wd);
+			OverviewCukes.three_options_should_show_webdriver(wd);
+			OverviewCukes.if_I_click_the_In_Progress_button_webdriver(wd);
+			assertTrue(OverviewCukes.the_batches_in_progress_should_display_everything_webdriver(wd));
+ 		} catch (Throwable e) {
+ 			fail("Can't click In Progress");
+ 			e.printStackTrace();
+ 		}
+	}
+	@Test(priority =3)
+	public void ClickBeginningInTwoWeeks() {
+		try {
+			OverviewCukes.i_click_the_filter_button_webdriver(wd);
+			OverviewCukes.three_options_should_show_webdriver(wd);
+			OverviewCukes.if_I_click_the_In_Two_Weeks_button_webdriver(wd);
+			OverviewCukes.the_batches_in_two_weeks_should_display(wd);
+ 		} catch (Throwable e) {
+ 			fail("Can't Click Beginning in Two Weeks");
+ 			e.printStackTrace();
+ 		}
+	}
+	@Test(priority = 4)
+	public void ClickAllFilter() {
+		try {
+			OverviewCukes.i_click_the_filter_button_webdriver(wd);
+			OverviewCukes.if_I_click_the_all_button_webdriver(wd);
+			OverviewCukes.all_batches_should_display(wd);
+
+ 		} catch (Throwable e) {
+ 			fail("Not all batches displayed");
+ 			e.printStackTrace();
+ 		}
+	}
+	
 	@Test(priority = 5)
 	public void TestFindExport() {
 		try {
-			// Need assert statements for these? Idk though because they can never be false
-			//	since it would just jump to catch block with NoSuchElementException
 			System.out.println("Export button found");
 			OverviewCukes.exportButtonExists(wd);
 
@@ -45,8 +78,6 @@ public class TestOverview extends TrainerSuite {
 	@Test(priority = 6)
 	public void TestFindFilter() {
 		try {
-			// Need assert statements for these? Idk though because they can never be false
-			//	since it would just jump to catch block with NoSuchElementException
 			OverviewCukes.filterButtonExists(wd);
 			System.out.println("Filter button found");
 
@@ -59,9 +90,6 @@ public class TestOverview extends TrainerSuite {
 	@Test(priority = 7)
 	public void TestClickExportCSV() {
 		try {
-			// Need assert statements for these? Idk though because they can never be false
-			//	since it would just jump to catch block with NoSuchElementException
-			Thread.sleep(500);
 			OverviewCukes.clickCSVButton(wd);
 			OverviewCukes.the_download_should_start();
 		} catch (Throwable e) { 
@@ -216,7 +244,6 @@ public class TestOverview extends TrainerSuite {
 	@Test(priority = 21)
 	public void CheckStartFilterASC() {
 		try {
-			// No need to click the start button because it's clicked to ascending order on default
 			OverviewCukes.i_click_the_start_button(wd);
 			assertTrue(OverviewCukes.the_start_should_be_filtered_in_ASC_order(wd));
  		} catch (Throwable e) {
@@ -257,54 +284,10 @@ public class TestOverview extends TrainerSuite {
  			e.printStackTrace();
  		}
 	}
-	@Test(priority = 2)
-	public void ClickInProgress() {
-		try {
-			//Thread.sleep(500);
-			OverviewCukes.i_click_the_filter_button_webdriver(wd);
-			OverviewCukes.three_options_should_show_webdriver(wd);
-			//Thread.sleep(500);
-			OverviewCukes.if_I_click_the_In_Progress_button_webdriver(wd);
-			assertTrue(OverviewCukes.the_batches_in_progress_should_display_everything_webdriver(wd));
- 		} catch (Throwable e) {
- 			fail("Can't click In Progress");
- 			e.printStackTrace();
- 		}
-	}
-	@Test(priority =3)
-	public void ClickBeginningInTwoWeeks() {
-		try {
-			//Thread.sleep(500);
-			OverviewCukes.i_click_the_filter_button_webdriver(wd);
-			OverviewCukes.three_options_should_show_webdriver(wd);
-			//Thread.sleep(500);
-			OverviewCukes.if_I_click_the_In_Two_Weeks_button_webdriver(wd);
-			OverviewCukes.the_batches_in_two_weeks_should_display(wd);
- 		} catch (Throwable e) {
- 			fail("Can't Click Beginning in Two Weeks");
- 			e.printStackTrace();
- 		}
-	}
-	@Test(priority = 4)
-	public void ClickAllFilter() {
-		try {
-			//Thread.sleep(500);
-			OverviewCukes.i_click_the_filter_button_webdriver(wd);
-			//Thread.sleep(500);
-			OverviewCukes.if_I_click_the_all_button_webdriver(wd);
-			OverviewCukes.all_batches_should_display(wd);
-
- 		} catch (Throwable e) {
- 			fail("Not all batches displayed");
- 			e.printStackTrace();
- 		}
-	}
-	
 
 	@AfterTest
 	public void afterTest() {
 		System.out.println("============ Tests finished ===============");
 	}
-
 }
 
