@@ -55,6 +55,46 @@ public class LocationsCukesVP {
 	 * 
 	 * }
 	 */
+
+	@When("^Click the Add Location button$")
+	public static boolean clickAddLocation(WebDriver wd) {
+		try {
+			LocationsVP.findAddLocationButton(wd).click();
+			return true;
+		} catch (Throwable e) {
+			System.out.println("Failed to find Add Location Button");
+			return false;
+		}
+	}
+
+	@When("^Fill out Location form and submit$")
+	public static boolean FillAndSubmitLocationForm(WebDriver wd) {
+		try {
+			Thread.sleep(3000);
+			LocationsVP.findNameField(wd).sendKeys("Mami's House");
+			LocationsVP.findCityField(wd).sendKeys("Mitakihara City");
+		} catch (Throwable e) {
+			System.out.println("Failed to input location name and city");
+			return false;
+		}
+		try {
+			Select stateDropDown = new Select(LocationsVP.findStateDropDown(wd));
+			stateDropDown.selectByVisibleText("VA");
+			LocationsVP.saveForm(wd).click();
+			// Iframe becomes *unhidden* when closing the form window
+
+		} catch (Throwable e) {
+			System.out.println("Failed to select VA from state drop down list");
+			return false;
+		}
+		if (LocationsVP.findIframe(wd).getAttribute("aria-hidden").equals("false")) {
+			return true;
+		} else {
+			System.out.println("IFRAME IS HIDDEN (Form is still visible and may not have submit)");
+			return false;
+		}
+	}
+		
 	@When("^TEMPLATE2$")
 	public static void aa(WebDriver wd) throws Throwable {
 		
@@ -111,9 +151,5 @@ public class LocationsCukesVP {
 
 	}
 
-	public static boolean clickAddLocation(WebDriver wd) {
-		// TODO Auto-generated method stub
-		return false;
-	}
 
 }

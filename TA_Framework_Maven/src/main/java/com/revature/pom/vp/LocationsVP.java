@@ -14,8 +14,7 @@ public class LocationsVP {
 
 	// Same XPath for Add Location name, Add Building name, Add Room name
 	public static WebElement findNameField(WebDriver d) {
-		return d.findElement(
-				By.xpath("/html/body/div[3]/md-dialog/form/md-dialogue-content/div/div/md-input-container[1]/input"));
+		return d.findElement(By.cssSelector("[ng-model='ldCtrl.location.name']"));
 	}
 
 	// Same XPath for Add Location city, Add Building city, Add Room city
