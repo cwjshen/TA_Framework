@@ -1,8 +1,12 @@
 package com.revature.cukes.vp;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.Select;
+
 import com.revature.pom.Locations;
 import com.revature.pom.NavBar;
+import com.revature.pom.vp.LocationsVP;
+
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -13,7 +17,7 @@ public class LocationsCukesVP {
 	public static boolean clickedLocations(WebDriver wd){
 		try {
 			Thread.sleep(2000);
-			NavBar.navigateToLocationsPage(wd).click();			
+			NavBar.navigateToLocationsPage(wd).click();
 			return true;
 		} catch (Throwable e) {
 			return false;
@@ -26,7 +30,7 @@ public class LocationsCukesVP {
 		if (Locations.findRevatureHQButton(wd) != null) {
 			return true;
 		}
-			return false;
+		return false;
 	}
 
 	@Then("^New York City drop down VP$")
@@ -39,11 +43,18 @@ public class LocationsCukesVP {
 	}
 
 	/*
-	@Given("^TEMPLATE$")
-	public static void a(WebDriver wd){
-		
-	}
-
+	 * @Given("^TEMPLATE$") public static void a(WebDriver wd){
+	 * 
+	 * }
+	 * 
+	 * @When("^TEMPLATE2$") public static void aa(WebDriver wd) throws Throwable {
+	 * 
+	 * }
+	 * 
+	 * @Then("^TEMPLATE3$") public static void aaa(WebDriver wd) throws Throwable {
+	 * 
+	 * }
+	 */
 	@When("^TEMPLATE2$")
 	public static void aa(WebDriver wd) throws Throwable {
 		
@@ -53,7 +64,6 @@ public class LocationsCukesVP {
 	public static void aaa(WebDriver wd) throws Throwable {
 		
 	}
-	*/
 	
 	@Given("^Click the Add Location button VP$")
 	public static void AddLocation(WebDriver wd){
@@ -72,32 +82,33 @@ public class LocationsCukesVP {
 	
 	@Given("^Click the Add Building button VP$")
 	public static void AddBuilding(WebDriver wd){
-		
+
 	}
 
 	@When("^Fill out Building form and submit VP$")
 	public static void FillAndSubmitBuildingForm(WebDriver wd) throws Throwable {
-		
+
 	}
 
 	@Then("^I should see the new Building VP$")
 	public static void NewBuildingExists(WebDriver wd) throws Throwable {
-		
+
 	}
 	
 	@Given("^Click the Add Room button VP$")
 	public static void AddRoom(WebDriver wd){
 		
+
 	}
 
 	@When("^Fill out Room form and submit VP$")
 	public static void FillAndSubmitRoomForm(WebDriver wd) throws Throwable {
-		
+
 	}
 
 	@Then("^I should see the new Room VP$")
 	public static void NewRoomExists(WebDriver wd) throws Throwable {
-		
+
 	}
-	
+
 }

@@ -31,6 +31,7 @@ Feature: VP Settings Tab
     When I click minimum batch size <Webdriver>
     When I click maximum batch size <Webdriver>
     When I click default batch length<Webdriver>
+    When I click Minimum Day Between Trainer<Webdriver>
     Then I click the save button  <Webdriver>
     
 

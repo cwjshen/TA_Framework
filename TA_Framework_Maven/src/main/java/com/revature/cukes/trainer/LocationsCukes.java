@@ -17,7 +17,7 @@ public class LocationsCukes {
 		return false;
 	}
 */
-	@When("^The Locations Tab is selected$")
+	@Given("^The Locations Tab is selected$")
 	public static boolean clickedLocations(WebDriver wd){
 		try {
 			Thread.sleep(2000);
