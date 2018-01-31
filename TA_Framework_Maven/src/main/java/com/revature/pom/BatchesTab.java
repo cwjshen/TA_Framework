@@ -229,28 +229,9 @@ public class BatchesTab {
 		return false;
 	}
 	public static void chooseRubyFocus(WebDriver wd) {
-		//return WaitToLoad.findDynamicElement(wd, By.id("select_option_85"), 10);
-		//return WaitToLoad.findDynamicElement(wd, By.xpath("//*[text() = 'Ruby On Rails']"), 10);
-		
-		//return WaitToLoad.findDynamicElement(wd, By.xpath("//*[@id=\"select_option_85\"]"), 10);
-		
-//		List<WebElement> allelemts = wd.findElements(By.xpath("//md-option[@id='select_option_0QD']/div"));
-//		  for(WebElement ele: allelemts){List<WebElement> allelemts = wd.findElements(By.xpath("
-//
-//		    wd.findElement(By.xpath("//md-option[@id='select_option_85']")).click();
-//
-//		    JavascriptExecutor executor = (JavascriptExecutor) wd;
-//		    executor.executeScript("arguments[0].click();", ele);
-//
-//		  }
 		// All options div text
 		List<WebElement> allelemts = wd.findElements(By.xpath("html/body/div[contains(@class, 'md-select-menu-container md-active')]/md-select-menu/md-content/md-option/div[2]"));
 		List<WebElement> allcheckboxes = wd.findElements(By.xpath("html/body/div[contains(@class, 'md-select-menu-container md-active')]/md-select-menu/md-content/md-option"));
-//		
-//		for (WebElement e : allelemts) {
-//			System.out.println("Text should be...");
-//			System.out.println(e.getText());
-//		}
 		
 		Actions actions = new Actions(wd);
 		for (WebElement e : allelemts) {
@@ -264,14 +245,41 @@ public class BatchesTab {
 				}
 			}
 		}
-		// text
-		
 	}
 	
-	public static WebElement chooseRestonHQ(WebDriver wd) {
-		return WaitToLoad.findDynamicElement(wd, By.id("select_option_113"), 10);
+	public static void chooseRestonHQ(WebDriver wd) {
+		List<WebElement> allelemts = wd.findElements(By.xpath("html/body/div[contains(@class, 'md-select-menu-container md-active')]/md-select-menu/md-content/md-option/div[2]"));
+		List<WebElement> allcheckboxes = wd.findElements(By.xpath("html/body/div[contains(@class, 'md-select-menu-container md-active')]/md-select-menu/md-content/md-option"));
+		
+		Actions actions = new Actions(wd);
+		for (WebElement e : allelemts) {
+			System.out.println("Current selection: " + e.getText());
+			if (e.getText().equals("Revature HQ - Reston, VA")) {
+				int target_index = allelemts.indexOf(e);
+				System.out.println(target_index);
+				if (allcheckboxes.get(target_index).getAttribute("aria-selected").equals("false")) {
+					actions.moveToElement(allcheckboxes.get(target_index)).click().perform();
+					break;
+				}
+			}
+		}
 	}
-	public static WebElement chooseReston11730(WebDriver wd) {
-		return WaitToLoad.findDynamicElement(wd, By.id("select_option_220"), 10);
+	public static void chooseReston11730(WebDriver wd) {
+		List<WebElement> allelemts = wd.findElements(By.xpath("html/body/div[contains(@class, 'md-select-menu-container md-active')]/md-select-menu/md-content/md-option/div[2]"));
+		List<WebElement> allcheckboxes = wd.findElements(By.xpath("html/body/div[contains(@class, 'md-select-menu-container md-active')]/md-select-menu/md-content/md-option"));
+		
+		Actions actions = new Actions(wd);
+		for (WebElement e : allelemts) {
+			System.out.println("Current selection: " + e.getText());
+			if (e.getText().equals("Reston 11730")) {
+				int target_index = allelemts.indexOf(e);
+				System.out.println(target_index);
+				if (allcheckboxes.get(target_index).getAttribute("aria-selected").equals("false")) {
+					actions.moveToElement(allcheckboxes.get(target_index)).click().perform();
+					break;
+				}
+			}
+		}
+
 	}
 }

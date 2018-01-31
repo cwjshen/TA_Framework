@@ -228,62 +228,61 @@ public class TestBatches extends TrainerSuite {
 // 		}
 //	}
 //////////////////////////////////////////////////////////////////////////////////
-//	@Test(priority = 20) 
-//	public void checkCurriculumDropDown() {		
-//		JavascriptExecutor jse = (JavascriptExecutor)wd;
-//		jse.executeScript("window.scrollBy(0,2000)", "");
-//		BatchesTab.curriculumSelector(wd);
-//		BatchesTab.chooseJACurriculum(wd).click();
-//		Actions action = new Actions(wd);
-//		action.sendKeys(Keys.ESCAPE).perform();
-//		
-//	}
+	@Test(priority = 20) 
+	public void checkCurriculumDropDown() {		
+		JavascriptExecutor jse = (JavascriptExecutor)wd;
+		jse.executeScript("window.scrollBy(0,2000)", "");
+		BatchesTab.curriculumSelector(wd);
+		BatchesTab.chooseJACurriculum(wd).click();
+		Actions action = new Actions(wd);
+		action.sendKeys(Keys.ESCAPE).perform();
+		
+	}
 	
 	@Test(priority = 21) 
 	public void checkFocusDropDown() {		
-		JavascriptExecutor jse = (JavascriptExecutor)wd;
-		jse.executeScript("window.scrollBy(0,2000)", "");
+//		JavascriptExecutor jse = (JavascriptExecutor)wd;
+//		jse.executeScript("window.scrollBy(0,2000)", "");
 		BatchesTab.focusSelector(wd);
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		BatchesTab.chooseRubyFocus(wd);
+		Actions action = new Actions(wd);
+		action.sendKeys(Keys.ESCAPE).perform();
+	}
+	@Test(priority = 22) 
+	public void checkLocationDropDown() {		
+	JavascriptExecutor jse = (JavascriptExecutor)wd;
+	jse.executeScript("window.scrollBy(0,2000)", "");
+		BatchesTab.locationSelector(wd);
 		try {
 			Thread.sleep(2000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		BatchesTab.chooseRubyFocus(wd);
-//		wd.findElement(By.xpath("html/body")).click();
+		BatchesTab.chooseRestonHQ(wd);
 		Actions action = new Actions(wd);
 		action.sendKeys(Keys.ESCAPE).perform();
 		
 	}
-//	@Test(priority = 22) 
-//	public void checkLocationDropDown() {		
-//		BatchesTab.locationSelector(wd);
-//		try {
-//			Thread.sleep(500);
-//		} catch (InterruptedException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-//		BatchesTab.chooseRestonHQ(wd).click();
-//		Actions action = new Actions(wd);
-//		action.sendKeys(Keys.ESCAPE).perform();
-//		
-//	}
-//	@Test(priority = 23) 
-//	public void checkBuildingDropDown() {		
-//		BatchesTab.buildingSelector(wd);
-//		try {
-//			Thread.sleep(500);
-//		} catch (InterruptedException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-//		BatchesTab.chooseReston11730(wd).click();
-//		Actions action = new Actions(wd);
-//		action.sendKeys(Keys.ESCAPE).perform();
-//		
-//	}
+	@Test(priority = 23) 
+	public void checkBuildingDropDown() {		
+		BatchesTab.buildingSelector(wd);
+		try {
+			Thread.sleep(500);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		BatchesTab.chooseReston11730(wd);
+		Actions action = new Actions(wd);
+		action.sendKeys(Keys.ESCAPE).perform();
+		
+	}
 /////////////////////////////////////////////////
 //	
 //	@Test(priority = 21)
