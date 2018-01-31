@@ -1,12 +1,14 @@
 package com.revature.cukes.vp;
 
+import java.util.List;
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import com.revature.pom.NavBar;
 import com.revature.pom.vp.BatchesTabVP;
 
-import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -17,7 +19,8 @@ public class BatchesCukesVP {
 	public static boolean clickBatchesTab(WebDriver wd) {
 		try {
 			Thread.sleep(2000);
-			NavBar.navigateToBatchesPage(wd).click();			
+			NavBar.navigateToBatchesPage(wd).click();	
+			wd.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
 			return true;
 		} catch (Throwable e) {
 			return false;
@@ -67,35 +70,50 @@ public class BatchesCukesVP {
 	@Given("^that the batches form is empty$")
 	public static boolean formIsEmpty(WebDriver wd) {
 		try {
-			System.out.println(BatchesTabVP.findStartDateInput(wd).getText());
-			BatchesTabVP.findCoreCurriculumSelection(wd);
-			BatchesTabVP.findFocusDropdownSelection(wd);
-			BatchesTabVP.findSkillsDropdownSelection(wd);
-			
-			if (!BatchesTabVP.findStartDateInput(wd).getText().equals("")) {
+			if (!BatchesTabVP.findCoreCurriculumDropdown(wd).getText().equals("Core Curriculum")
+					|| !BatchesTabVP.findFocusDropdown(wd).getText().equals("Focus")
+					|| !BatchesTabVP.findSkillsDropdown(wd).getText().equals("Skills")
+					|| !BatchesTabVP.findStartDateInput(wd).getAttribute("value").equals("")
+					|| !BatchesTabVP.findEndDateInput(wd).getAttribute("value").equals("")
+					|| !BatchesTabVP.findNameInput(wd).getAttribute("value").equals("")
+					|| !BatchesTabVP.findTrainerDropdown(wd).getText().equals("Trainer")
+					|| !BatchesTabVP.findCoTrainerDropdown(wd).getText().equals("Co-Trainer")
+					|| !BatchesTabVP.findBuildingDropdown(wd).getText().equals("Building")
+					|| !BatchesTabVP.findRoomDropdown(wd).getText().equals("Room")
+					) {
 				return false;
 			}
-			if (!BatchesTabVP.findEndDateInput(wd).getText().equals("")) {
-				return false;
-			}
-			
-			return false;
-		} catch (Throwable e) {
 			return true;
+		} catch (Throwable e) {
+			return false;
 		}
 	
 	}
 
 	@When("^I click the create batch button$")
-	public void i_click_the_create_batch_button_webdriver() throws Throwable {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new PendingException();
+	public static boolean createBatch(WebDriver wd) {
+		try {
+			BatchesTabVP.findCreateBatchButton(wd).click();
+			return true;
+		} catch (Throwable e) {
+			return false;
+		}
+		
 	}
 
 	@Then("^All batches should not contain a new batch$")
-	public void all_batches_should_not_contain_a_new_batch_webdriver() throws Throwable {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new PendingException();
+	public static boolean isNewBatchAdded(WebDriver wd, String batch_name) {
+		try {
+			List<List<WebElement>> rows_with_fields = BatchesTabVP.findBatchTableBodyRowFields(wd);
+			for (List<WebElement> row : rows_with_fields) {
+				if (row.get(1).getAttribute("innerHTML").equals(batch_name)) {
+					return true;
+				}
+			}
+			return false;
+		} catch (Throwable e) {
+			return false;
+		}
 	}
 
 	

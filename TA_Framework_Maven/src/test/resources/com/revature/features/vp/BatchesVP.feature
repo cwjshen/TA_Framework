@@ -29,3 +29,7 @@ Feature: Batches Tab
     Given that the batches form is empty <webdriver>
     When I click the create batch button <webdriver>
 		Then All batches should not contain a new batch <webdriver>
+		
+	Scenario: Refreshing the page
+		Given that I refresh the page
+		Then I should still see the Create New Batch Section
