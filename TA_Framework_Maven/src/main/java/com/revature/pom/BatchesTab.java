@@ -201,4 +201,19 @@ public class BatchesTab {
 		return false;
 	}
 	
+	public static boolean checkLastPage(WebDriver wd) {
+		String page = WaitToLoad.findDynamicElement(wd, By.xpath("/html/body/div[1]/div[2]/div/md-card/md-content[2]/div/div[1]/div[2]/div/div[3]/div/div/b"), 10).getText();
+		clickJumpLast(wd);
+		String npage = WaitToLoad.findDynamicElement(wd, By.xpath("/html/body/div[1]/div[2]/div/md-card/md-content[2]/div/div[1]/div[2]/div/div[3]/div/div"), 10).getText();
+		int fpage = (Integer.parseInt(page));
+		
+		int lpage = (Integer.parseInt(npage.substring(npage.length()-1)));
+		if (fpage == lpage) {
+			return true;
+		}
+		return false;
+	}
+	
+	
+	
 }

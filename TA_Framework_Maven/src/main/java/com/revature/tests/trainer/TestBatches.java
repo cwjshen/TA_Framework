@@ -252,7 +252,6 @@ public class TestBatches extends TrainerSuite {
 	@Test(priority = 22)
 	public void clickBatchless() {
 		BatchesTab.clickHideBatchlessBox(wd);
-		//BatchesTab.clickHideBatchlessBox(wd);
 	}
 //	@Test(priority = 23)
 //	public void clickSelectAutomatically() {
@@ -269,10 +268,18 @@ public class TestBatches extends TrainerSuite {
 	
 	@Test(priority = 25)
 	public void checkNextPage() {
-
-		//BatchesTab.clickNextPage(wd);
 		assertTrue(BatchesTab.checkIfNextPage(wd));
 	}
+	@Test(priority = 26)
+	public void checkJumpLastPage() {
+		try {
+		assertTrue(BatchesTab.checkLastPage(wd));
+		} catch (Throwable e) {
+			fail("Jump To Last Page button not working");
+			e.printStackTrace();
+		}
+	}
+	
 	
 	@AfterTest
 	public void afterTest() {
