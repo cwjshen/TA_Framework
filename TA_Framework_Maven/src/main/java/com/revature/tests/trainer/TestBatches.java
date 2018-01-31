@@ -233,7 +233,7 @@ public class TestBatches extends TrainerSuite {
 		JavascriptExecutor jse = (JavascriptExecutor)wd;
 		jse.executeScript("window.scrollBy(0,2000)", "");
 		BatchesTab.curriculumSelector(wd);
-		BatchesTab.chooseJACurriculum(wd).click();
+		BatchesTab.chooseJACurriculum(wd);
 		Actions action = new Actions(wd);
 		action.sendKeys(Keys.ESCAPE).perform();
 		
@@ -285,7 +285,7 @@ public class TestBatches extends TrainerSuite {
 	}
 /////////////////////////////////////////////////
 //	
-//	@Test(priority = 21)
+//	@Test(priority = 24)
 //	public void clickHideConcluded() {
 //		JavascriptExecutor jse = (JavascriptExecutor)wd;
 //		jse.executeScript("window.scrollBy(0,800)", "");
@@ -298,28 +298,28 @@ public class TestBatches extends TrainerSuite {
 //		BatchesTab.clickHideConcludedBox(wd);
 //		BatchesTab.clickHideConcludedBox(wd);
 //	}
-//	@Test(priority = 22)
+//	@Test(priority = 25)
 //	public void clickBatchless() {
 //		BatchesTab.clickHideBatchlessBox(wd);
 //	}
-//	@Test(priority = 23)
+//	@Test(priority = 26)
 //	public void clickSelectAutomatically() {
 //		BatchesTab.clickSelectAutomaticallyBox(wd);
 //		BatchesTab.clickSelectAutomaticallyBox(wd);
 //	}
 //	
-//	@Test(priority = 24)
+//	@Test(priority = 27)
 //	public void selectStartDate() {
 //		//BatchesTab.startDateSelector(wd).click();
 //		//BatchesTab.chooseStartingMonth(wd);
 //		//BatchesTab.chooseStartingDate(wd);
 //	}
 //	
-//	@Test(priority = 25)
+//	@Test(priority = 28)
 //	public void checkNextPage() {
 //		assertTrue(BatchesTab.checkIfNextPage(wd));
 //	}
-//	@Test(priority = 26)
+//	@Test(priority = 29)
 //	public void checkJumpLastPage() {
 //		try {
 //		assertTrue(BatchesTab.checkLastPage(wd));
@@ -329,7 +329,7 @@ public class TestBatches extends TrainerSuite {
 //		}
 //	}
 //	
-//	@Test(priority = 27) 
+//	@Test(priority = 30) 
 //	public void checkTrainersPerPage() {
 //		try {
 //			assertTrue(BatchesTab.trainersPerPage(wd));

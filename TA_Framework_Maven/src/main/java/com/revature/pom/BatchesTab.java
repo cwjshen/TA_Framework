@@ -185,8 +185,22 @@ public class BatchesTab {
 		//return wd.findElements(By.xpath("/html/body/div[14]/md-select-menu/md-content/md-option/div[2]"));
 		return wd.findElements(By.xpath("/html/body/div[4]/md-select-menu/md-content"));
 	}
-	public static WebElement chooseJACurriculum(WebDriver wd) {
-		return WaitToLoad.findDynamicElement(wd, By.id("select_option_123"), 10);
+	public static void chooseJACurriculum(WebDriver wd) {
+		List<WebElement> allelemts = wd.findElements(By.xpath("html/body/div[contains(@class, 'md-select-menu-container md-active')]/md-select-menu/md-content/md-option/div[2]"));
+		List<WebElement> allcheckboxes = wd.findElements(By.xpath("html/body/div[contains(@class, 'md-select-menu-container md-active')]/md-select-menu/md-content/md-option"));
+		
+		Actions actions = new Actions(wd);
+		for (WebElement e : allelemts) {
+			System.out.println("Current selection: " + e.getText());
+			if (e.getText().equals("Java Automation")) {
+				int target_index = allelemts.indexOf(e);
+				System.out.println(target_index);
+				if (allcheckboxes.get(target_index).getAttribute("aria-selected").equals("false")) {
+					actions.moveToElement(allcheckboxes.get(target_index)).click().perform();
+					break;
+				}
+			}
+		}
 	}
 	public static void chooseStartingMonth(WebDriver wd) {
 		//WaitToLoad.findDynamicElement(wd, By.xpath("/html/body/div[11]/div[2]/md-calendar/div/md-calendar-year/div/md-virtual-repeat-container/div/div[2]/table/tbody[1]/tr[2]/td[7]/span"), 10).click();
