@@ -258,25 +258,34 @@ public class TestBatches extends TrainerSuite {
 //		BatchesTab.clickSelectAutomaticallyBox(wd);
 //		BatchesTab.clickSelectAutomaticallyBox(wd);
 //	}
+//	
+//	@Test(priority = 24)
+//	public void selectStartDate() {
+//		//BatchesTab.startDateSelector(wd).click();
+//		//BatchesTab.chooseStartingMonth(wd);
+//		//BatchesTab.chooseStartingDate(wd);
+//	}
+//	
+//	@Test(priority = 25)
+//	public void checkNextPage() {
+//		assertTrue(BatchesTab.checkIfNextPage(wd));
+//	}
+//	@Test(priority = 26)
+//	public void checkJumpLastPage() {
+//		try {
+//		assertTrue(BatchesTab.checkLastPage(wd));
+//		} catch (Throwable e) {
+//			fail("Jump To Last Page button not working");
+//			e.printStackTrace();
+//		}
+//	}
 	
-	@Test(priority = 24)
-	public void selectStartDate() {
-		//BatchesTab.startDateSelector(wd).click();
-		//BatchesTab.chooseStartingMonth(wd);
-		//BatchesTab.chooseStartingDate(wd);
-	}
-	
-	@Test(priority = 25)
-	public void checkNextPage() {
-		assertTrue(BatchesTab.checkIfNextPage(wd));
-	}
-	@Test(priority = 26)
-	public void checkJumpLastPage() {
+	@Test(priority = 27) 
+	public void checkTrainersPerPage() {
 		try {
-		assertTrue(BatchesTab.checkLastPage(wd));
+			assertTrue(BatchesTab.trainersPerPage(wd));
 		} catch (Throwable e) {
-			fail("Jump To Last Page button not working");
-			e.printStackTrace();
+			fail("Doesn't display trainers per page");
 		}
 	}
 	

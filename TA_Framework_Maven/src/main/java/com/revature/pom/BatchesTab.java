@@ -213,6 +213,14 @@ public class BatchesTab {
 		}
 		return false;
 	}
+	public static boolean trainersPerPage(WebDriver wd) {
+		//String page = WaitToLoad.findDynamicElement(wd, By.xpath("//*[@id=\"timeline\"]"), 10).getText();
+		
+		// ^ grabs ton of data. you want to grab the rows of trainer
+		
+		//System.out.println(page);
+		return false;
+	}
 	
 	
 	
