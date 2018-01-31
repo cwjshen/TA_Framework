@@ -7,6 +7,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.reporters.FileStringBuffer;
 
 import com.revature.hibernate.dao.BatchDaoImp;
@@ -149,59 +150,77 @@ public class BatchesCukesVP {
 			List<WebElement> core_curricula = BatchesTabVP.findCoreCurriculumSelections(wd);
 			for (Batch b : batches) {
 				
-				System.out.println("Adding: " + b.getCurriculum());
-				Thread.sleep(1000);
-				BatchesTabVP.findCoreCurriculumDropdown(wd).click();
-//				Thread.sleep(1000);
-//				BatchesTabVP.findCoreCurriculumDropdown(wd).sendKeys(b.getCurriculum());
-////				Thread.sleep(1000);
-//				if (BatchesTabVP.findCoreCurriculumMenuContainer(wd).getAttribute("aria-hidden").equals("false")) {
-//					BatchesTabVP.findCoreCurriculumDropdown(wd).sendKeys(Keys.RETURN);
-//				}
-//				
-//				Thread.sleep(1000);
-//				
-//				
-//				BatchesTabVP.findFocusDropdown(wd).click();
-//				Thread.sleep(1000);
-//				BatchesTabVP.findFocusDropdown(wd).sendKeys(b.getFocus());
-////				Thread.sleep(1000);
-//				BatchesTabVP.findFocusDropdown(wd).sendKeys(Keys.RETURN);
-//				Thread.sleep(1000);
-				
+				boolean curriculum_found = false;
+				boolean focus_found = false;
+				boolean skill_found = false;
 				
 				
 				// Select the curriculum
+				System.out.println("Selecting curriculum: " + b.getCurriculum());
+				BatchesTabVP.findCoreCurriculumDropdown(wd).click();
 				for (WebElement c : core_curricula) {
-					System.out.println(c.getAttribute("innerHTML"));
-					if (c.getAttribute("innerHTML").contains(b.getCurriculum())) {
+					if (c.getAttribute("innerHTML").trim().equals(b.getCurriculum())) {
 						c.click();
+						curriculum_found = true;
 						break;
 					}
 				}
 				
-//				// Select the focus
-//				 List<WebElement> foci = BatchesTabVP.findFocusDropdownSelections(wd);
-//				 for (WebElement f : foci) {
-//					 if (b.getFocus().equals(f.getAttribute("innerHTML"))) {
-//						 f.click();
-//					 }
-//				 }
-//				
-//				// Select skills
-//				List<WebElement> skills = BatchesTabVP.findSkillsDropdownSelectionsText(wd);
-//				
-//				// Parses the string from database into list of strings
-//				// Could have been avoided if we had used join tables
-//				List<String> batch_skills = Arrays.asList(b.getSkills().split("\\s*,\\s*"));
-//				for (String batch_skill : batch_skills) {
-//					for (WebElement skill : skills) {
-//						if (batch_skill.equals(skill.getAttribute("innerHTML"))) {
-//							skill.click();
-//							break;
-//						}
-//					}
-//				}
+				if (curriculum_found == false) {
+					System.out.println("\t Curriculum not found...");
+					BatchesTabVP.body(wd).click();					
+					continue;
+				}
+
+				// Select the focus
+				System.out.println("Selecting focus: " + b.getCurriculum());
+				BatchesTabVP.findFocusDropdown(wd).click();
+				List<WebElement> foci = BatchesTabVP.findFocusDropdownSelections(wd);
+				for (WebElement f : foci) {
+					if ((f.getAttribute("innerHTML").trim().equals(b.getFocus()))) {
+						focus_found = true;
+						f.click();
+					}
+				}
+				
+				if (focus_found == false) {
+					System.out.println("Focus not found...");
+					BatchesTabVP.body(wd).click();					
+				}
+				
+				// Select the skills
+				System.out.println("Selecting skills for " + b.getCurriculum());
+				BatchesTabVP.findSkillsDropdown(wd).click();
+				List<String> batch_skills = Arrays.asList(b.getSkills().split("\\s*,\\s*"));
+				List<WebElement> skills = BatchesTabVP.findSkillsDropdownSelectionsText(wd);
+				List<WebElement> skills_checkboxes = BatchesTabVP.findSkillsDropdownSelectionsCheckbox(wd);
+				
+				Actions actions = new Actions(wd);
+				
+				for (String batch_skill : batch_skills) {
+					skill_found = false;
+					System.out.print("\t Looking for " + batch_skill + "...");
+					for (WebElement s : skills) {
+						int found_skill_index = 0;
+						if (s.getAttribute("innerHTML").trim().equals(batch_skill)) {
+							System.out.println(batch_skill + " found!");
+							skill_found = true;
+							found_skill_index = skills.indexOf(s);
+							if (!skills_checkboxes.get(found_skill_index).getAttribute("aria-selected").equals("true")) {
+								actions.moveToElement(skills_checkboxes.get(found_skill_index)).click().perform();
+							}
+							break;
+						}	
+					}
+					if (skill_found == false) {
+						System.out.println(batch_skill + " not found...");
+					}
+				}
+				
+				// Select the date
+				
+				BatchesTabVP.body(wd).click();					
+
 				
 			}
 			return true;
