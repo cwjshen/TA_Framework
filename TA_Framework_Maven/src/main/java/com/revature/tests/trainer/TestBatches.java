@@ -25,6 +25,12 @@ public class TestBatches extends TrainerSuite {
 			BatchesCukes.i_am_in_Batches(wd);
 			System.out.println("Clicked Batches tab");
 			assertTrue(BatchesCukes.i_should_see_All_Batches_text(wd));
+			try {
+				Thread.sleep(2000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		} catch (Throwable e) { 
 			fail("Can't find Batches button");
 			e.printStackTrace();
@@ -230,59 +236,72 @@ public class TestBatches extends TrainerSuite {
 //////////////////////////////////////////////////////////////////////////////////
 	@Test(priority = 20) 
 	public void checkCurriculumDropDown() {		
-		JavascriptExecutor jse = (JavascriptExecutor)wd;
-		jse.executeScript("window.scrollBy(0,2000)", "");
+		((JavascriptExecutor) wd)
+	     .executeScript("window.scrollTo(0, document.body.scrollHeight)");
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		BatchesTab.curriculumSelector(wd);
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		BatchesTab.chooseJACurriculum(wd);
+
 		Actions action = new Actions(wd);
 		action.sendKeys(Keys.ESCAPE).perform();
 		
 	}
 	
-	@Test(priority = 21) 
-	public void checkFocusDropDown() {		
-//		JavascriptExecutor jse = (JavascriptExecutor)wd;
-//		jse.executeScript("window.scrollBy(0,2000)", "");
-		BatchesTab.focusSelector(wd);
-		try {
-			Thread.sleep(2000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-		BatchesTab.chooseRubyFocus(wd);
-		Actions action = new Actions(wd);
-		action.sendKeys(Keys.ESCAPE).perform();
-	}
-	@Test(priority = 22) 
-	public void checkLocationDropDown() {		
-	JavascriptExecutor jse = (JavascriptExecutor)wd;
-	jse.executeScript("window.scrollBy(0,2000)", "");
-		BatchesTab.locationSelector(wd);
-		try {
-			Thread.sleep(2000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		BatchesTab.chooseRestonHQ(wd);
-		Actions action = new Actions(wd);
-		action.sendKeys(Keys.ESCAPE).perform();
-		
-	}
-	@Test(priority = 23) 
-	public void checkBuildingDropDown() {		
-		BatchesTab.buildingSelector(wd);
-		try {
-			Thread.sleep(500);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		BatchesTab.chooseReston11730(wd);
-		Actions action = new Actions(wd);
-		action.sendKeys(Keys.ESCAPE).perform();
-		
-	}
+//	@Test(priority = 21) 
+//	public void checkFocusDropDown() {		
+////		JavascriptExecutor jse = (JavascriptExecutor)wd;
+////		jse.executeScript("window.scrollBy(0,2000)", "");
+//		BatchesTab.focusSelector(wd);
+//		try {
+//			Thread.sleep(2000);
+//		} catch (InterruptedException e) {
+//			e.printStackTrace();
+//		}
+//		BatchesTab.chooseRubyFocus(wd);
+//		Actions action = new Actions(wd);
+//		action.sendKeys(Keys.ESCAPE).perform();
+//	}
+//	@Test(priority = 22) 
+//	public void checkLocationDropDown() {		
+//	JavascriptExecutor jse = (JavascriptExecutor)wd;
+//	jse.executeScript("window.scrollBy(0,2000)", "");
+//		BatchesTab.locationSelector(wd);
+//		try {
+//			Thread.sleep(2000);
+//		} catch (InterruptedException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//		BatchesTab.chooseRestonHQ(wd);
+//		Actions action = new Actions(wd);
+//		action.sendKeys(Keys.ESCAPE).perform();
+//		
+//	}
+//	@Test(priority = 23) 
+//	public void checkBuildingDropDown() {		
+//		BatchesTab.buildingSelector(wd);
+//		try {
+//			Thread.sleep(500);
+//		} catch (InterruptedException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//		BatchesTab.chooseReston11730(wd);
+//		Actions action = new Actions(wd);
+//		action.sendKeys(Keys.ESCAPE).perform();
+//		
+//	}
 /////////////////////////////////////////////////
 //	
 //	@Test(priority = 24)
@@ -329,14 +348,14 @@ public class TestBatches extends TrainerSuite {
 //		}
 //	}
 //	
-//	@Test(priority = 30) 
-//	public void checkTrainersPerPage() {
-//		try {
-//			assertTrue(BatchesTab.trainersPerPage(wd));
-//		} catch (Throwable e) {
-//			fail("Doesn't display trainers per page");
-//		}
-//	}
+	@Test(priority = 30) 
+	public void checkTrainersPerPage() {
+		try {
+			assertTrue(BatchesTab.trainersPerPage(wd));
+		} catch (Throwable e) {
+			fail("Doesn't display trainers per page");
+		}
+	}
 	
 	
 	@AfterTest

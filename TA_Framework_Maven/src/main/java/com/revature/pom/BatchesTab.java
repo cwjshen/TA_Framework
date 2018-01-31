@@ -54,7 +54,7 @@ public class BatchesTab {
 		//return WaitToLoad.findDynamicElement(d, By.cssSelector("#select_container_19"), 10);
 		//JSClicker.executeJSClick(d, d.findElement(By.xpath("/html/body/div[1]/div[2]/div/md-card/md-content[2]/div/div[1]/div[1]/md-input-container[1]")));
 		
-		WaitToLoad.findDynamicElement(d, By.cssSelector("[ng-model*='selectCurricula']"), 10).click();
+		WaitToLoad.findDynamicElement(d, By.cssSelector("[ng-model*='selectCurricula']"), 30).click();
 	}
 	public static void focusSelector(WebDriver d) {
 		//return WaitToLoad.findDynamicElement(d, By.xpath("/html/body/div[1]/div[2]/div/md-card/md-content[2]/div/div[1]/div[1]/md-input-container[2]/md-select/md-select-value/span[2]"), 30);
@@ -191,10 +191,8 @@ public class BatchesTab {
 		
 		Actions actions = new Actions(wd);
 		for (WebElement e : allelemts) {
-			System.out.println("Current selection: " + e.getText());
 			if (e.getText().equals("Java Automation")) {
 				int target_index = allelemts.indexOf(e);
-				System.out.println(target_index);
 				if (allcheckboxes.get(target_index).getAttribute("aria-selected").equals("false")) {
 					actions.moveToElement(allcheckboxes.get(target_index)).click().perform();
 					break;
@@ -235,11 +233,37 @@ public class BatchesTab {
 		return false;
 	}
 	public static boolean trainersPerPage(WebDriver wd) {
-		//String page = WaitToLoad.findDynamicElement(wd, By.xpath("//*[@id=\"timeline\"]"), 10).getText();
+		String page = WaitToLoad.findDynamicElement(wd, By.xpath("//*[@id=\"x axis\"]"), 10).getText();
+		String lines[] = page.split("\\r?\\n");
+		ArrayList<String> str = new ArrayList<String>();
+		for (String e : lines) {
+			String cleanText = e.replaceAll("([^_])([A-Z])", "$1 $2");
+			str.add(cleanText);
+		}
+		WebElement table_element = WaitToLoad.findDynamicElement(wd, By.xpath("/html/body/div[1]/div[2]/div/md-card/md-content[1]/div/md-table-container/table"), 30);
+        List<WebElement> rows = table_element.findElements(By.xpath("/html/body/div[1]/div[2]/div/md-card/md-content[1]/div/md-table-container/table/tbody/tr"));
+		int count = 0;
+		for (int i = 0; i < str.size(); i++) {
+	        for (WebElement e : rows) {
+				if (e.getText().contains(str.get(i)) && e.getText().contains("Java Automation")) {
+					count++;
+				}
+			}
+			
+		}
+		WebElement rows2 = wd.findElement(By.xpath("//div[@id=\"timeline\"]//*[name()=\"svg\"]/*[name()=\"g\"]"));
+		String lines2[] = rows2.getText().split("\\r?\\n");
 		
-		// ^ grabs ton of data. you want to grab the rows of trainer
+		int count2 = 0;
+		for (String e : lines2) {
+			if (e.contains("WEEKS")) {
+				count2++;
+			}
+		}
+		if (count == count2) {
+			return true;
+		}
 		
-		//System.out.println(page);
 		return false;
 	}
 	public static void chooseRubyFocus(WebDriver wd) {
@@ -249,10 +273,8 @@ public class BatchesTab {
 		
 		Actions actions = new Actions(wd);
 		for (WebElement e : allelemts) {
-			System.out.println("Current selection: " + e.getText());
 			if (e.getText().equals("Ruby on Rails")) {
 				int target_index = allelemts.indexOf(e);
-				System.out.println(target_index);
 				if (allcheckboxes.get(target_index).getAttribute("aria-selected").equals("false")) {
 					actions.moveToElement(allcheckboxes.get(target_index)).click().perform();
 					break;
@@ -267,10 +289,8 @@ public class BatchesTab {
 		
 		Actions actions = new Actions(wd);
 		for (WebElement e : allelemts) {
-			System.out.println("Current selection: " + e.getText());
 			if (e.getText().equals("Revature HQ - Reston, VA")) {
 				int target_index = allelemts.indexOf(e);
-				System.out.println(target_index);
 				if (allcheckboxes.get(target_index).getAttribute("aria-selected").equals("false")) {
 					actions.moveToElement(allcheckboxes.get(target_index)).click().perform();
 					break;
@@ -284,10 +304,8 @@ public class BatchesTab {
 		
 		Actions actions = new Actions(wd);
 		for (WebElement e : allelemts) {
-			System.out.println("Current selection: " + e.getText());
 			if (e.getText().equals("Reston 11730")) {
 				int target_index = allelemts.indexOf(e);
-				System.out.println(target_index);
 				if (allcheckboxes.get(target_index).getAttribute("aria-selected").equals("false")) {
 					actions.moveToElement(allcheckboxes.get(target_index)).click().perform();
 					break;
