@@ -21,7 +21,7 @@ public class TestTrainers extends TrainerSuite {
 	}
 
 	@Test(priority = 1)
-	public void onTrainersTab() {
+	public void onTrainersTab() { 
 		assertTrue(TrainerCukes.clickTrainers(wd));
 	}
 
