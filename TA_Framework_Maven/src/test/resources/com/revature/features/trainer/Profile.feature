@@ -22,7 +22,7 @@ Feature: Profile Tab for trainers
 
   @tag1
   Scenario: Navigate to Profile tab
-    Given I am logged in as trainer 
+    Given I am logged in as trainer  
     When I click on the Profile tab
     Then I should see first name and last name text boxes
     And Add/update resume button

@@ -3,8 +3,11 @@ package com.revature.cukes.trainer;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 import com.revature.pom.NavBar;
+import com.revature.pom.ProfileTab;
+import com.revature.pom.vp.BatchesTabVP;
 
 import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
@@ -19,7 +22,7 @@ public class ProfileCukes {
 	}
 
 	@When("^I click on the Profile tab$")
-	public static boolean i_click_on_the_Profile_tab(WebDriver wd)   {
+	public static boolean clickProfile(WebDriver wd)   {
 		try {
 			Thread.sleep(2000);
 			NavBar.navigateToProfilePage(wd).click();	
@@ -32,223 +35,289 @@ public class ProfileCukes {
 	}
 
 	@Then("^I should see first name and last name text boxes$")
-	public void i_should_see_first_name_and_last_name_text_boxes()   {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new PendingException();
+	public static boolean seeFirstAndLast(WebDriver wd)   {
+		try {
+			Thread.sleep(2000);
+			ProfileTab.findfNameBox(wd);	
+			wd.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+			ProfileTab.findlNameBox(wd);
+			return true;
+		} catch (Throwable e) {
+			return false;
+		}
+
 	}
 
 	@Then("^Add/update resume button$")
-	public void add_update_resume_button()   {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new PendingException();
-	}
+	public static boolean seeAddResumeButton(WebDriver wd)   {
+		try {
+			wd.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+			ProfileTab.findAddResumeButton(wd);	
+			return true;
+		} catch (Throwable e) {
+			return false;
+		}
 
+	}
 	@Given("^I am on the profile tab$")
-	public void i_am_on_the_profile_tab()   {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new PendingException();
+	public static boolean OnProfileTab(WebDriver wd)   {
+		try {
+			wd.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+			seeFirstAndLast(wd);
+			return true;
+		} catch (Throwable e) {
+			return false;
+		}
+
 	}
 
 	@When("^I click the first name text box$")
-	public void i_click_the_first_name_text_box()   {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new PendingException();
+	public static boolean clickfNameBox(WebDriver wd)   {
+		try {
+			wd.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+			ProfileTab.clickfNameBox(wd);
+			return true;
+		} catch (Throwable e) {
+			return false;
+		}
+
 	}
 
 	@Then("^A cursor should appear in the text box$")
-	public void a_cursor_should_appear_in_the_text_box()   {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new PendingException();
+	public static boolean fNameBoxSelected(WebDriver wd)   {
+		try {
+			wd.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+			ProfileTab.fNameBoxSelected(wd);
+			wd.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+			return true;
+		} catch (Throwable e) {
+			System.out.println("Cursor did not appear");
+			return false;
+			
+		}
+
 	}
 
-	@Then("^I should be able to type into it$")
-	public void i_should_be_able_to_type_into_it()   {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new PendingException();
-	}
+//	@Then("^I should be able to type into it$")
+//	public static boolean populatefName(WebDriver wd)   {
+//		try {
+//			wd.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+//			ProfileTab.populatefNameBox(wd);
+//			wd.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+//			return true;
+//		} catch (Throwable e) {
+//			return false;
+//		}
+//
+//	}
 
 	@Given("^I clicked on the first name text box$")
-	public void i_clicked_on_the_first_name_text_box()   {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new PendingException();
+	public static boolean fNameBoxClicked(WebDriver wd)   {
+		try {
+			wd.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+			ProfileTab.fNameBoxSelected(wd);
+			wd.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+			return true;
+		} catch (Throwable e) {
+			System.out.println("First Name box was not clicked");
+			return false;
+			
+		}
+
 	}
 
-	@When("^I type in a value$")
-	public void i_type_in_a_value()   {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new PendingException();
-	}
-
+//	@When("^I type in a value$")
+//	public static boolean populatefName(WebDriver wd)   {
+//		try {
+//			wd.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+//			ProfileTab.populatefNameBox(wd);
+//			wd.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+//			return true;
+//		} catch (Throwable e) {
+//			return false;
+//		}
+//
+//	}
+	
 	@Then("^that value should appear in the text box$")
-	public void that_value_should_appear_in_the_text_box()   {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new PendingException();
+	public static boolean fNamePopulated(WebDriver wd)   {
+		try {
+			WebElement element = ProfileTab.findfNameBox(wd);
+			WebElement element1 = ProfileTab.populatefNameBox(wd);
+			if (element.getText().equals(element1.getText())) {
+				return true;
+			}
+			return false;
+		} catch (Throwable e) {
+			return false;
+		}
+
 	}
 
 	@When("^I click the last name text box$")
-	public void i_click_the_last_name_text_box()   {
+	public static boolean i_click_the_last_name_text_box()   {
 	    // Write code here that turns the phrase above into concrete actions
 	    throw new PendingException();
 	}
 
 	@Given("^I clicked on the last name text box$")
-	public void i_clicked_on_the_last_name_text_box()   {
+	public static boolean i_clicked_on_the_last_name_text_box()   {
 	    // Write code here that turns the phrase above into concrete actions
 	    throw new PendingException();
 	}
 
 	@When("^I click on the add/update resume button$")
-	public void i_click_on_the_add_update_resume_button()   {
+	public static boolean i_click_on_the_add_update_resume_button()   {
 	    // Write code here that turns the phrase above into concrete actions
 	    throw new PendingException();
 	}
 
 	@Then("^A new window should appear$")
-	public void a_new_window_should_appear()   {
+	public static boolean a_new_window_should_appear()   {
 	    // Write code here that turns the phrase above into concrete actions
 	    throw new PendingException();
 	}
 
 	@Then("^I should be able to choose a file to upload from my pc$")
-	public void i_should_be_able_to_choose_a_file_to_upload_from_my_pc()   {
+	public static boolean i_should_be_able_to_choose_a_file_to_upload_from_my_pc()   {
 	    // Write code here that turns the phrase above into concrete actions
 	    throw new PendingException();
 	}
 
 	@Given("^I selected a resume from my pc$")
-	public void i_selected_a_resume_from_my_pc()   {
+	public static boolean i_selected_a_resume_from_my_pc()   {
 	    // Write code here that turns the phrase above into concrete actions
 	    throw new PendingException();
 	}
 
 	@When("^I click on the update resume button$")
-	public void i_click_on_the_update_resume_button()   {
+	public static boolean i_click_on_the_update_resume_button()   {
 	    // Write code here that turns the phrase above into concrete actions
 	    throw new PendingException();
 	}
 
 	@Then("^My new resume should file name should appear$")
-	public void my_new_resume_should_file_name_should_appear()   {
+	public static boolean my_new_resume_should_file_name_should_appear()   {
 	    // Write code here that turns the phrase above into concrete actions
 	    throw new PendingException();
 	}
 
 	@When("^I click on a skill to add$")
-	public void i_click_on_a_skill_to_add()   {
+	public static boolean i_click_on_a_skill_to_add()   {
 	    // Write code here that turns the phrase above into concrete actions
 	    throw new PendingException();
 	}
 
 	@Then("^The skill that was clicked should be removed from the Select a skill section$")
-	public void the_skill_that_was_clicked_should_be_removed_from_the_Select_a_skill_section()   {
+	public static boolean the_skill_that_was_clicked_should_be_removed_from_the_Select_a_skill_section()   {
 	    // Write code here that turns the phrase above into concrete actions
 	    throw new PendingException();
 	}
 
 	@Then("^The skill should appear under the Current skills section$")
-	public void the_skill_should_appear_under_the_Current_skills_section()   {
+	public static boolean the_skill_should_appear_under_the_Current_skills_section()   {
 	    // Write code here that turns the phrase above into concrete actions
 	    throw new PendingException();
 	}
 
 	@When("^I click on a current skill$")
-	public void i_click_on_a_current_skill()   {
+	public static boolean i_click_on_a_current_skill()   {
 	    // Write code here that turns the phrase above into concrete actions
 	    throw new PendingException();
 	}
 
 	@Then("^The skill that was clicked should be removed from the current skill section$")
-	public void the_skill_that_was_clicked_should_be_removed_from_the_current_skill_section()   {
+	public static boolean the_skill_that_was_clicked_should_be_removed_from_the_current_skill_section()   {
 	    // Write code here that turns the phrase above into concrete actions
 	    throw new PendingException();
 	}
 
 	@Then("^The skill should appear in the Select a skill section$")
-	public void the_skill_should_appear_in_the_Select_a_skill_section()   {
+	public static boolean the_skill_should_appear_in_the_Select_a_skill_section()   {
 	    // Write code here that turns the phrase above into concrete actions
 	    throw new PendingException();
 	}
 
 	@When("^I click on save skills button$")
-	public void i_click_on_save_skills_button()   {
+	public static boolean i_click_on_save_skills_button()   {
 	    // Write code here that turns the phrase above into concrete actions
 	    throw new PendingException();
 	}
 
 	@Then("^Skills listed under the current skills should be saved to your profile$")
-	public void skills_listed_under_the_current_skills_should_be_saved_to_your_profile()   {
+	public static boolean skills_listed_under_the_current_skills_should_be_saved_to_your_profile()   {
 	    // Write code here that turns the phrase above into concrete actions
 	    throw new PendingException();
 	}
 
 	@When("^I click on the add certification button$")
-	public void i_click_on_the_add_certification_button()   {
+	public static boolean i_click_on_the_add_certification_button()   {
 	    // Write code here that turns the phrase above into concrete actions
 	    throw new PendingException();
 	}
 
 	@Then("^A new window should pop up$")
-	public void a_new_window_should_pop_up()   {
+	public static boolean a_new_window_should_pop_up()   {
 	    // Write code here that turns the phrase above into concrete actions
 	    throw new PendingException();
 	}
 
 	@Then("^I should be able to choose a file from my pc$")
-	public void i_should_be_able_to_choose_a_file_from_my_pc()   {
+	public static boolean i_should_be_able_to_choose_a_file_from_my_pc()   {
 	    // Write code here that turns the phrase above into concrete actions
 	    throw new PendingException();
 	}
 
 	@When("^I click on the certification name text box$")
-	public void i_click_on_the_certification_name_text_box()   {
+	public static boolean i_click_on_the_certification_name_text_box()   {
 	    // Write code here that turns the phrase above into concrete actions
 	    throw new PendingException();
 	}
 
 	@Given("^I clicked on the certification name text box$")
-	public void i_clicked_on_the_certification_name_text_box()   {
+	public static boolean i_clicked_on_the_certification_name_text_box()   {
 	    // Write code here that turns the phrase above into concrete actions
 	    throw new PendingException();
 	}
 
 	@Given("^I selected a certification from my pc$")
-	public void i_selected_a_certification_from_my_pc()   {
+	public static boolean i_selected_a_certification_from_my_pc()   {
 	    // Write code here that turns the phrase above into concrete actions
 	    throw new PendingException();
 	}
 
 	@When("^I click on the update button$")
-	public void i_click_on_the_update_button()   {
+	public static boolean i_click_on_the_update_button()   {
 	    // Write code here that turns the phrase above into concrete actions
 	    throw new PendingException();
 	}
 
 	@Then("^My new certification should appear under certifications$")
-	public void my_new_certification_should_appear_under_certifications()   {
+	public static boolean my_new_certification_should_appear_under_certifications()   {
 	    // Write code here that turns the phrase above into concrete actions
 	    throw new PendingException();
 	}
 
 	@When("^I click on the remove certification button$")
-	public void i_click_on_the_remove_certification_button()   {
+	public static boolean i_click_on_the_remove_certification_button()   {
 	    // Write code here that turns the phrase above into concrete actions
 	    throw new PendingException();
 	}
 
 	@Then("^The selected certification should be removed from certifications section$")
-	public void the_selected_certification_should_be_removed_from_certifications_section()   {
+	public static boolean the_selected_certification_should_be_removed_from_certifications_section()   {
 	    // Write code here that turns the phrase above into concrete actions
 	    throw new PendingException();
 	}
 
 	@When("^I click on a certification$")
-	public void i_click_on_a_certification()   {
+	public static boolean i_click_on_a_certification()   {
 	    // Write code here that turns the phrase above into concrete actions
 	    throw new PendingException();
 	}
 
 	@Then("^I should see some information$")
-	public void i_should_see_some_information()   {
+	public static boolean i_should_see_some_information()   {
 	    // Write code here that turns the phrase above into concrete actions
 	    throw new PendingException();
 	}
