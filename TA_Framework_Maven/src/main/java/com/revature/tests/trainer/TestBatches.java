@@ -3,6 +3,7 @@ package com.revature.tests.trainer;
 import static org.junit.Assert.assertTrue;
 import static org.testng.Assert.fail;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -224,7 +225,7 @@ public class TestBatches extends TrainerSuite {
 // 			e.printStackTrace();
 // 		}
 //	}
-
+//////////////////////////////////////////////////////////////////////////////////
 //	@Test(priority = 20) 
 //	public void checkCurriculumDropDown() throws InterruptedException {
 //		Thread.sleep(1000);
@@ -233,21 +234,44 @@ public class TestBatches extends TrainerSuite {
 //		//action.moveToElement(BatchesTab.curriculumDropDownOptions(wd).get(0)).click().perform();
 //		Thread.sleep(500);
 //	}
+/////////////////////////////////////////////////
 	
 	@Test(priority = 21)
 	public void clickHideConcluded() {
+		JavascriptExecutor jse = (JavascriptExecutor)wd;
+		jse.executeScript("window.scrollBy(0,800)", "");
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		BatchesTab.clickHideConcludedBox(wd);
 		BatchesTab.clickHideConcludedBox(wd);
 	}
 	@Test(priority = 22)
 	public void clickBatchless() {
 		BatchesTab.clickHideBatchlessBox(wd);
-		BatchesTab.clickHideBatchlessBox(wd);
+		//BatchesTab.clickHideBatchlessBox(wd);
 	}
-	@Test(priority = 23)
-	public void clickSelectAutomatically() {
-		BatchesTab.clickSelectAutomaticallyBox(wd);
-		BatchesTab.clickSelectAutomaticallyBox(wd);
+//	@Test(priority = 23)
+//	public void clickSelectAutomatically() {
+//		BatchesTab.clickSelectAutomaticallyBox(wd);
+//		BatchesTab.clickSelectAutomaticallyBox(wd);
+//	}
+	
+	@Test(priority = 24)
+	public void selectStartDate() {
+		//BatchesTab.startDateSelector(wd).click();
+		//BatchesTab.chooseStartingMonth(wd);
+		//BatchesTab.chooseStartingDate(wd);
+	}
+	
+	@Test(priority = 25)
+	public void checkNextPage() {
+
+		//BatchesTab.clickNextPage(wd);
+		assertTrue(BatchesTab.checkIfNextPage(wd));
 	}
 	
 	@AfterTest
