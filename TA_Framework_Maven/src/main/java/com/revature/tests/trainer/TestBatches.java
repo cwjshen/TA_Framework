@@ -348,14 +348,14 @@ public class TestBatches extends TrainerSuite {
 //		}
 //	}
 //	
-	@Test(priority = 30) 
-	public void checkTrainersPerPage() {
-		try {
-			assertTrue(BatchesTab.trainersPerPage(wd));
-		} catch (Throwable e) {
-			fail("Doesn't display trainers per page");
-		}
-	}
+//	@Test(priority = 30) 
+//	public void checkTrainersPerPage() {
+//		try {
+//			assertTrue(BatchesTab.trainersPerPage(wd));
+//		} catch (Throwable e) {
+//			fail("Doesn't display trainers per page");
+//		}
+//	}
 	
 	
 	@AfterTest
