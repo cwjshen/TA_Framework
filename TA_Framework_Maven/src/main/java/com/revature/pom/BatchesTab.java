@@ -6,6 +6,7 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 
 import com.revature.util.JSClicker;
 import com.revature.util.WaitToLoad;
@@ -49,19 +50,21 @@ public class BatchesTab {
 		return WaitToLoad.findDynamicElement(d, By.xpath("/html/body/div[1]/div[2]/div/md-card/md-content[2]/div/div[1]/div[1]/div[1]/div[1]/md-input-container[2]/md-datepicker/div[1]/button"), 30);
 	}
 	public static void curriculumSelector(WebDriver d) {
-		//return WaitToLoad.findDynamicElement(d, By.xpath("//*[@id=\"select_8\"]"), 10);
-		//return WaitToLoad.findDynamicElement(d, By.cssSelector("#select_8"), 10);
-		JSClicker.executeJSClick(d, d.findElement(By.xpath("//*[@id=\"select_value_label_0\"]")));
+		//WaitToLoad.findDynamicElement(d, By.xpath("/html/body/div[1]/div[2]/div/md-card/md-content[2]/div/div[1]/div[1]/md-input-container[1]"), 30).click();
+		//return WaitToLoad.findDynamicElement(d, By.cssSelector("#select_container_19"), 10);
+		//JSClicker.executeJSClick(d, d.findElement(By.xpath("/html/body/div[1]/div[2]/div/md-card/md-content[2]/div/div[1]/div[1]/md-input-container[1]")));
 		
+		WaitToLoad.findDynamicElement(d, By.cssSelector("[ng-model*='selectCurricula']"), 10).click();
 	}
-	public static WebElement focusSelector(WebDriver d) {
-		return WaitToLoad.findDynamicElement(d, By.xpath("/html/body/div[1]/div[2]/div/md-card/md-content[2]/div/div[1]/div[1]/md-input-container[2]/md-select/md-select-value/span[2]"), 30);
+	public static void focusSelector(WebDriver d) {
+		//return WaitToLoad.findDynamicElement(d, By.xpath("/html/body/div[1]/div[2]/div/md-card/md-content[2]/div/div[1]/div[1]/md-input-container[2]/md-select/md-select-value/span[2]"), 30);
+		WaitToLoad.findDynamicElement(d, By.cssSelector("[ng-model*='selectFoci']"), 10).click();
 	}
-	public static WebElement locationSelector(WebDriver d) {
-		return WaitToLoad.findDynamicElement(d, By.xpath("span[@aria-label='Location']"), 30);
+	public static void locationSelector(WebDriver d) {
+		WaitToLoad.findDynamicElement(d, By.cssSelector("[ng-model*='selectLocations']"), 10).click();
 	}
-	public static WebElement buildingSelector(WebDriver d) {
-		return WaitToLoad.findDynamicElement(d, By.xpath("/html/body/div[1]/div[2]/div/md-card/md-content[2]/div/div[1]/div[1]/div[1]/div[1]/md-input-container[1]/md-datepicker/div/button"), 30);
+	public static void buildingSelector(WebDriver d) {
+		WaitToLoad.findDynamicElement(d, By.cssSelector("[ng-model*='selectBuildings']"), 10).click();
 	}
 	public static List<WebElement> getBatchNames(WebDriver wd) {
 		WebElement table_element = WaitToLoad.findDynamicElement(wd, By.xpath("/html/body/div[1]/div[2]/div/md-card/md-content[1]/div/md-table-container/table"), 30);
@@ -179,7 +182,11 @@ public class BatchesTab {
 		WaitToLoad.findDynamicElement(wd, By.xpath("/html/body/div[1]/div[2]/div/md-card/md-content[2]/div/div[1]/div[1]/div[8]/md-checkbox[2]/div[1]"), 10).click();
 	}
 	public static List<WebElement> curriculumDropDownOptions(WebDriver wd) {
-		return wd.findElements(By.xpath("/html/body/div[14]/md-select-menu/md-content/md-option/div[2]"));
+		//return wd.findElements(By.xpath("/html/body/div[14]/md-select-menu/md-content/md-option/div[2]"));
+		return wd.findElements(By.xpath("/html/body/div[4]/md-select-menu/md-content"));
+	}
+	public static WebElement chooseJACurriculum(WebDriver wd) {
+		return WaitToLoad.findDynamicElement(wd, By.id("select_option_123"), 10);
 	}
 	public static void chooseStartingMonth(WebDriver wd) {
 		//WaitToLoad.findDynamicElement(wd, By.xpath("/html/body/div[11]/div[2]/md-calendar/div/md-calendar-year/div/md-virtual-repeat-container/div/div[2]/table/tbody[1]/tr[2]/td[7]/span"), 10).click();
@@ -221,7 +228,13 @@ public class BatchesTab {
 		//System.out.println(page);
 		return false;
 	}
-	
-	
-	
+	public static WebElement chooseRubyFocus(WebDriver wd) {
+		return WaitToLoad.findDynamicElement(wd, By.id("select_option_85"), 10);
+	}
+	public static WebElement chooseRestonHQ(WebDriver wd) {
+		return WaitToLoad.findDynamicElement(wd, By.id("select_option_113"), 10);
+	}
+	public static WebElement chooseReston11730(WebDriver wd) {
+		return WaitToLoad.findDynamicElement(wd, By.id("select_option_220"), 10);
+	}
 }

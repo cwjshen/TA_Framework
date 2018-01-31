@@ -4,6 +4,7 @@ import static org.junit.Assert.assertTrue;
 import static org.testng.Assert.fail;
 
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -226,33 +227,60 @@ public class TestBatches extends TrainerSuite {
 // 		}
 //	}
 //////////////////////////////////////////////////////////////////////////////////
-//	@Test(priority = 20) 
-//	public void checkCurriculumDropDown() throws InterruptedException {
-//		Thread.sleep(1000);
-//		BatchesTab.curriculumSelector(wd);
-//		Actions action = new Actions(wd);
-//		//action.moveToElement(BatchesTab.curriculumDropDownOptions(wd).get(0)).click().perform();
-//		Thread.sleep(500);
-//	}
-/////////////////////////////////////////////////
-	
-	@Test(priority = 21)
-	public void clickHideConcluded() {
+	@Test(priority = 20) 
+	public void checkCurriculumDropDown() {		
 		JavascriptExecutor jse = (JavascriptExecutor)wd;
-		jse.executeScript("window.scrollBy(0,800)", "");
-		try {
-			Thread.sleep(1000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		BatchesTab.clickHideConcludedBox(wd);
-		BatchesTab.clickHideConcludedBox(wd);
+		jse.executeScript("window.scrollBy(0,2000)", "");
+		BatchesTab.curriculumSelector(wd);
+		BatchesTab.chooseJACurriculum(wd).click();
+		Actions action = new Actions(wd);
+		action.sendKeys(Keys.ESCAPE).perform();
+		
 	}
-	@Test(priority = 22)
-	public void clickBatchless() {
-		BatchesTab.clickHideBatchlessBox(wd);
+	
+	@Test(priority = 21) 
+	public void checkFocusDropDown() {		
+		BatchesTab.focusSelector(wd);
+		BatchesTab.chooseRubyFocus(wd).click();
+		Actions action = new Actions(wd);
+		action.sendKeys(Keys.ESCAPE).perform();
+		
 	}
+	@Test(priority = 22) 
+	public void checkLocationDropDown() {		
+		BatchesTab.locationSelector(wd);
+		BatchesTab.chooseRestonHQ(wd).click();
+		Actions action = new Actions(wd);
+		action.sendKeys(Keys.ESCAPE).perform();
+		
+	}
+	@Test(priority = 23) 
+	public void checkBuildingDropDown() {		
+		BatchesTab.buildingSelector(wd);
+		BatchesTab.chooseReston11730(wd).click();
+		Actions action = new Actions(wd);
+		action.sendKeys(Keys.ESCAPE).perform();
+		
+	}
+/////////////////////////////////////////////////
+//	
+//	@Test(priority = 21)
+//	public void clickHideConcluded() {
+//		JavascriptExecutor jse = (JavascriptExecutor)wd;
+//		jse.executeScript("window.scrollBy(0,800)", "");
+//		try {
+//			Thread.sleep(1000);
+//		} catch (InterruptedException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//		BatchesTab.clickHideConcludedBox(wd);
+//		BatchesTab.clickHideConcludedBox(wd);
+//	}
+//	@Test(priority = 22)
+//	public void clickBatchless() {
+//		BatchesTab.clickHideBatchlessBox(wd);
+//	}
 //	@Test(priority = 23)
 //	public void clickSelectAutomatically() {
 //		BatchesTab.clickSelectAutomaticallyBox(wd);
@@ -279,15 +307,15 @@ public class TestBatches extends TrainerSuite {
 //			e.printStackTrace();
 //		}
 //	}
-	
-	@Test(priority = 27) 
-	public void checkTrainersPerPage() {
-		try {
-			assertTrue(BatchesTab.trainersPerPage(wd));
-		} catch (Throwable e) {
-			fail("Doesn't display trainers per page");
-		}
-	}
+//	
+//	@Test(priority = 27) 
+//	public void checkTrainersPerPage() {
+//		try {
+//			assertTrue(BatchesTab.trainersPerPage(wd));
+//		} catch (Throwable e) {
+//			fail("Doesn't display trainers per page");
+//		}
+//	}
 	
 	
 	@AfterTest
