@@ -1,8 +1,6 @@
 package com.revature.tests.vp;
 
-import static org.junit.Assert.assertTrue;
 import com.revature.pom.vp.VPSettingsTab;
-import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;

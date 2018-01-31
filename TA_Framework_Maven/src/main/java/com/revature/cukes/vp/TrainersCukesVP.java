@@ -3,7 +3,6 @@ package com.revature.cukes.vp;
 import org.openqa.selenium.WebDriver;
 
 import com.revature.pom.NavBar;
-import com.revature.pom.TrainersTab;
 import com.revature.pom.vp.TrainersVP;
 
 import cucumber.api.PendingException;

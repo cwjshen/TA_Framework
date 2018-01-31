@@ -4,7 +4,6 @@ import static org.junit.Assert.assertTrue;
 import static org.testng.Assert.fail;
 
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
