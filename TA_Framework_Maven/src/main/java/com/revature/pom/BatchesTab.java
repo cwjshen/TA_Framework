@@ -244,23 +244,26 @@ public class BatchesTab {
 //
 //		  }
 		// All options div text
-		List<WebElement> allelemts = wd.findElements(By.xpath("//*[@id=\"select_container_21\"]/md-select-menu/md-content/div/md-option/div[2]"));
-		List<WebElement> allcheckboxes = wd.findElements(By.xpath("//*[@id=\"select_container_21\"]/md-select-menu/md-content/div/md-option"));
-		
-		for (WebElement e : allelemts) {
-			System.out.println(e.getAttribute("innerHTML").trim());
-		}
-		
-//		Actions actions = new Actions(wd);
+		List<WebElement> allelemts = wd.findElements(By.xpath("html/body/div[contains(@class, 'md-select-menu-container md-active')]/md-select-menu/md-content/md-option/div[2]"));
+		List<WebElement> allcheckboxes = wd.findElements(By.xpath("html/body/div[contains(@class, 'md-select-menu-container md-active')]/md-select-menu/md-content/md-option"));
+//		
 //		for (WebElement e : allelemts) {
-//			if (e.getAttribute("innerHTML").trim().equals("Ruby on Rails")) {
-//				int target_index = allcheckboxes.indexOf(e);
-//				if (allcheckboxes.get(target_index).getAttribute("aria-selected").equals("false")) {
-//					actions.moveToElement(allcheckboxes.get(target_index)).click().perform();
-//					break;
-//				}
-//			}
+//			System.out.println("Text should be...");
+//			System.out.println(e.getText());
 //		}
+		
+		Actions actions = new Actions(wd);
+		for (WebElement e : allelemts) {
+			System.out.println("Current selection: " + e.getText());
+			if (e.getText().equals("Ruby on Rails")) {
+				int target_index = allelemts.indexOf(e);
+				System.out.println(target_index);
+				if (allcheckboxes.get(target_index).getAttribute("aria-selected").equals("false")) {
+					actions.moveToElement(allcheckboxes.get(target_index)).click().perform();
+					break;
+				}
+			}
+		}
 		// text
 		
 	}

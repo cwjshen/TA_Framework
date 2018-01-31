@@ -244,8 +244,14 @@ public class TestBatches extends TrainerSuite {
 		JavascriptExecutor jse = (JavascriptExecutor)wd;
 		jse.executeScript("window.scrollBy(0,2000)", "");
 		BatchesTab.focusSelector(wd);
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		BatchesTab.chooseRubyFocus(wd);
-		wd.findElement(By.xpath("html/body")).click();
+//		wd.findElement(By.xpath("html/body")).click();
 		Actions action = new Actions(wd);
 		action.sendKeys(Keys.ESCAPE).perform();
 		
