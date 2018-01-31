@@ -228,9 +228,43 @@ public class BatchesTab {
 		//System.out.println(page);
 		return false;
 	}
-	public static WebElement chooseRubyFocus(WebDriver wd) {
-		return WaitToLoad.findDynamicElement(wd, By.id("select_option_85"), 10);
+	public static void chooseRubyFocus(WebDriver wd) {
+		//return WaitToLoad.findDynamicElement(wd, By.id("select_option_85"), 10);
+		//return WaitToLoad.findDynamicElement(wd, By.xpath("//*[text() = 'Ruby On Rails']"), 10);
+		
+		//return WaitToLoad.findDynamicElement(wd, By.xpath("//*[@id=\"select_option_85\"]"), 10);
+		
+//		List<WebElement> allelemts = wd.findElements(By.xpath("//md-option[@id='select_option_0QD']/div"));
+//		  for(WebElement ele: allelemts){List<WebElement> allelemts = wd.findElements(By.xpath("
+//
+//		    wd.findElement(By.xpath("//md-option[@id='select_option_85']")).click();
+//
+//		    JavascriptExecutor executor = (JavascriptExecutor) wd;
+//		    executor.executeScript("arguments[0].click();", ele);
+//
+//		  }
+		// All options div text
+		List<WebElement> allelemts = wd.findElements(By.xpath("//*[@id=\"select_container_21\"]/md-select-menu/md-content/div/md-option/div[2]"));
+		List<WebElement> allcheckboxes = wd.findElements(By.xpath("//*[@id=\"select_container_21\"]/md-select-menu/md-content/div/md-option"));
+		
+		for (WebElement e : allelemts) {
+			System.out.println(e.getAttribute("innerHTML").trim());
+		}
+		
+//		Actions actions = new Actions(wd);
+//		for (WebElement e : allelemts) {
+//			if (e.getAttribute("innerHTML").trim().equals("Ruby on Rails")) {
+//				int target_index = allcheckboxes.indexOf(e);
+//				if (allcheckboxes.get(target_index).getAttribute("aria-selected").equals("false")) {
+//					actions.moveToElement(allcheckboxes.get(target_index)).click().perform();
+//					break;
+//				}
+//			}
+//		}
+		// text
+		
 	}
+	
 	public static WebElement chooseRestonHQ(WebDriver wd) {
 		return WaitToLoad.findDynamicElement(wd, By.id("select_option_113"), 10);
 	}
