@@ -18,7 +18,7 @@ public class BatchesTabVP {
 	}
 	
 	public static WebElement findNewBatchSection(WebDriver driver) {
-		return WaitToLoad.findDynamicElement(driver, By.xpath("//*[@id=\"batchInfoDiv\"]/span"), 30);
+		return WaitToLoad.findDynamicElement(driver, By.xpath("//*[@id=\"batchInfoDiv\"]/span"), 5);
 	}
 	
 	public static WebElement findAllBatchesSection(WebDriver driver) {
@@ -38,6 +38,10 @@ public class BatchesTabVP {
 	public static WebElement findCoreCurriculumDropdown(WebDriver driver) {
 //		return WaitToLoad.findDynamicElement(driver, By.xpath("//md-select-value/span"), 30);
 		return WaitToLoad.findDynamicElement(driver, By.cssSelector("#select_9"), 30);
+	}
+	
+	public static WebElement findCoreCurriculumMenuContainer(WebDriver driver) {
+		return WaitToLoad.findDynamicElement(driver, By.cssSelector("#select_container_10"), 30);
 	}
 	
 	public static List<WebElement> findCoreCurriculumSelections(WebDriver driver) {

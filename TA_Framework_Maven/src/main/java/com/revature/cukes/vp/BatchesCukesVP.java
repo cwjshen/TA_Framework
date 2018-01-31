@@ -1,14 +1,20 @@
 package com.revature.cukes.vp;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.reporters.FileStringBuffer;
 
+import com.revature.hibernate.dao.BatchDaoImp;
+import com.revature.model.Batch;
 import com.revature.pom.NavBar;
 import com.revature.pom.vp.BatchesTabVP;
 
+import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -116,5 +122,98 @@ public class BatchesCukesVP {
 		}
 	}
 
+	@Given("^that I refresh the page$")
+	public static boolean refreshPageVP(WebDriver wd) {
+		try {
+			wd.navigate().refresh();
+			return true;
+		} catch (Throwable e) {
+			return false;
+		}
+	}
 	
+	
+	@Given("^that I pull dummy batch data from the database$")
+	public static List<Batch> getBatchDummyData() {
+		try {
+			List<Batch> batches = new BatchDaoImp().getFullBatch();
+			return batches;
+		} catch (Throwable e) {
+			return null;
+		}
+	}
+
+	@When("^I insert all the batch data$")
+	public static boolean insertAllBatchData(WebDriver wd, List<Batch> batches) {
+		try {
+			List<WebElement> core_curricula = BatchesTabVP.findCoreCurriculumSelections(wd);
+			for (Batch b : batches) {
+				
+				System.out.println("Adding: " + b.getCurriculum());
+				Thread.sleep(1000);
+				BatchesTabVP.findCoreCurriculumDropdown(wd).click();
+//				Thread.sleep(1000);
+//				BatchesTabVP.findCoreCurriculumDropdown(wd).sendKeys(b.getCurriculum());
+////				Thread.sleep(1000);
+//				if (BatchesTabVP.findCoreCurriculumMenuContainer(wd).getAttribute("aria-hidden").equals("false")) {
+//					BatchesTabVP.findCoreCurriculumDropdown(wd).sendKeys(Keys.RETURN);
+//				}
+//				
+//				Thread.sleep(1000);
+//				
+//				
+//				BatchesTabVP.findFocusDropdown(wd).click();
+//				Thread.sleep(1000);
+//				BatchesTabVP.findFocusDropdown(wd).sendKeys(b.getFocus());
+////				Thread.sleep(1000);
+//				BatchesTabVP.findFocusDropdown(wd).sendKeys(Keys.RETURN);
+//				Thread.sleep(1000);
+				
+				
+				
+				// Select the curriculum
+				for (WebElement c : core_curricula) {
+					System.out.println(c.getAttribute("innerHTML"));
+					if (c.getAttribute("innerHTML").contains(b.getCurriculum())) {
+						c.click();
+						break;
+					}
+				}
+				
+//				// Select the focus
+//				 List<WebElement> foci = BatchesTabVP.findFocusDropdownSelections(wd);
+//				 for (WebElement f : foci) {
+//					 if (b.getFocus().equals(f.getAttribute("innerHTML"))) {
+//						 f.click();
+//					 }
+//				 }
+//				
+//				// Select skills
+//				List<WebElement> skills = BatchesTabVP.findSkillsDropdownSelectionsText(wd);
+//				
+//				// Parses the string from database into list of strings
+//				// Could have been avoided if we had used join tables
+//				List<String> batch_skills = Arrays.asList(b.getSkills().split("\\s*,\\s*"));
+//				for (String batch_skill : batch_skills) {
+//					for (WebElement skill : skills) {
+//						if (batch_skill.equals(skill.getAttribute("innerHTML"))) {
+//							skill.click();
+//							break;
+//						}
+//					}
+//				}
+				
+			}
+			return true;
+		} catch (Throwable e) {
+			return false;
+		}
+	}
+
+	@Then("^All batches should contain the new batch$")
+	public void all_batches_should_contain_the_new_batch() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new PendingException();
+	}
+
 }
