@@ -18,7 +18,7 @@ import cucumber.api.java.en.When;
 public class LocationsCukesVP {
 
 	// change this number to change the test names of locations/buildings
-	static int iteration = 29;
+	static int iteration = 32;
 	static int loc_count = 0;
 	static List<WebElement> locCount;
 
@@ -163,10 +163,10 @@ public class LocationsCukesVP {
 	@Then("^I should see the success message$")
 	public static boolean SuccessMessageAppeared(WebDriver wd) {
 		try {
-			// Thread.sleep(1000);
-			// System.out.println(
-			// "!!!!!!!!!!!!!!!!!!!!! CONFIRMATION MESSAGE: " +
-			// LocationsVP.findConfirmationMessage(wd).getText());
+			 Thread.sleep(1000);
+			 System.out.println(
+			 "!!!!!!!!!!!!!!!!!!!!! CONFIRMATION MESSAGE: " +
+			 LocationsVP.findConfirmationMessage(wd).getText());
 			if (LocationsVP.findConfirmationMessage(wd).getText().contains("Failed")) {
 				return false;
 			} else {
@@ -600,7 +600,7 @@ public class LocationsCukesVP {
 	@When("^Click the Delete button$")
 	public static boolean ClickDelete(WebDriver wd) {
 		try {
-			Thread.sleep(1000);
+			Thread.sleep(1500);
 			LocationsVP.findDeleteButton(wd).click();
 			return true;
 		} catch (Throwable e) {
@@ -612,7 +612,7 @@ public class LocationsCukesVP {
 	@When("^Submit the Delete$")
 	public static boolean ConfirmDelete(WebDriver wd) {
 		try {
-			Thread.sleep(1000);
+			Thread.sleep(1500);
 			LocationsVP.confirmDelete(wd).click();
 			return true;
 		} catch (Throwable e) {
