@@ -283,22 +283,24 @@ public class TestBatches extends TrainerSuite {
 			e.printStackTrace();
 		}
 		BatchesTab.chooseRestonHQ(wd);
+		BatchesTab.chooseRestonHQ(wd);
 		Actions action = new Actions(wd);
 		action.sendKeys(Keys.ESCAPE).perform();
 		
 	}
 	@Test(priority = 23) 
 	public void checkBuildingDropDown() {		
-//		BatchesTab.buildingSelector(wd);
-//		try {
-//			Thread.sleep(500);
-//		} catch (InterruptedException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-//		BatchesTab.chooseReston11730(wd);
-//		Actions action = new Actions(wd);
-//		action.sendKeys(Keys.ESCAPE).perform();
+		BatchesTab.buildingSelector(wd);
+		try {
+			Thread.sleep(500);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		BatchesTab.chooseReston11730(wd);
+		BatchesTab.chooseReston11730(wd);
+		Actions action = new Actions(wd);
+		action.sendKeys(Keys.ESCAPE).perform();
 		
 	}
 	
