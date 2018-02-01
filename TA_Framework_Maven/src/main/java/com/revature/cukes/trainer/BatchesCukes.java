@@ -7,14 +7,11 @@ import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import com.revature.pom.BatchesTab;
 import com.revature.pom.NavBar;
-import com.revature.util.WaitToLoad;
-
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 

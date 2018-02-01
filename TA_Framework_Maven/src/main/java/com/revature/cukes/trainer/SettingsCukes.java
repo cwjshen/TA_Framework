@@ -1,7 +1,6 @@
 package com.revature.cukes.trainer;
 import org.openqa.selenium.WebDriver;
 import com.revature.pom.SettingsTab;
-import cucumber.api.PendingException;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
