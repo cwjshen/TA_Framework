@@ -1,6 +1,7 @@
 package com.revature.pom;
 
 import java.awt.AWTException;
+import java.awt.List;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
 
@@ -93,4 +94,6 @@ public class ProfileTab {
 	public static void clickOnCert(WebDriver d) {
 		WaitToLoad.findDynamicElement(d,By.xpath("/html/body/div/div[2]/div/md-card[1]/md-content[3]/div/md-list/md-list-item[1]") , 30).click();
 	}
+		
+	
 }

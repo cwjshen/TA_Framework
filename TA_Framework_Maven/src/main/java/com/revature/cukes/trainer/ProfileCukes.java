@@ -396,6 +396,7 @@ public class ProfileCukes {
 	// throw new PendingException();
 	// }
 	//
+	
 	 @When("^I click on a certification$")
 	 public static boolean clickOnCert(WebDriver wd) {
 			try {
@@ -408,11 +409,4 @@ public class ProfileCukes {
 			}
 
 	 }
-	
-	// @Then("^I should see some information$")
-	// public static boolean i_should_see_some_information() {
-	// // Write code here that turns the phrase above into concrete actions
-	// throw new PendingException();
-	// }
-
 }
