@@ -314,4 +314,28 @@ public class BatchesTab {
 		}
 
 	}
+	public static boolean checkIfPrevPage(WebDriver wd) {
+		String page = WaitToLoad.findDynamicElement(wd, By.xpath("/html/body/div[1]/div[2]/div/md-card/md-content[2]/div/div[1]/div[2]/div/div[3]/div/div/b"), 10).getText();
+		clickPreviousPage(wd);
+		String npage = WaitToLoad.findDynamicElement(wd, By.xpath("/html/body/div[1]/div[2]/div/md-card/md-content[2]/div/div[1]/div[2]/div/div[3]/div/div/b"), 10).getText();
+		int fpage = (Integer.parseInt(page));
+		int lpage = (Integer.parseInt(npage));
+		if (--fpage == lpage) {
+			return true;
+		}
+		return false;
+	}
+	public static boolean checkFirstPage(WebDriver wd) {
+		String page = WaitToLoad.findDynamicElement(wd, By.xpath("/html/body/div[1]/div[2]/div/md-card/md-content[2]/div/div[1]/div[2]/div/div[3]/div/div/b"), 10).getText();
+		System.out.println("Page = " + page);
+		clickNextPage(wd);
+		clickNextPage(wd);
+		clickJumpFirst(wd);
+		String npage = WaitToLoad.findDynamicElement(wd, By.xpath("/html/body/div[1]/div[2]/div/md-card/md-content[2]/div/div[1]/div[2]/div/div[3]/div/div/b"), 10).getText();
+		System.out.println("Page first= " + npage);
+		if (page.equals(npage)) {
+			return true;
+		}
+		return false;
+	}
 }

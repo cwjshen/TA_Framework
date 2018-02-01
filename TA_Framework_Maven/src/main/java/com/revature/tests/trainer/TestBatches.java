@@ -233,30 +233,29 @@ public class TestBatches extends TrainerSuite {
 // 			e.printStackTrace();
 // 		}
 //	}
-//////////////////////////////////////////////////////////////////////////////////
-	@Test(priority = 20) 
-	public void checkCurriculumDropDown() {		
-		((JavascriptExecutor) wd)
-	     .executeScript("window.scrollTo(0, document.body.scrollHeight)");
-		try {
-			Thread.sleep(1000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		BatchesTab.curriculumSelector(wd);
-		try {
-			Thread.sleep(1000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		BatchesTab.chooseJACurriculum(wd);
-
-		Actions action = new Actions(wd);
-		action.sendKeys(Keys.ESCAPE).perform();
-		
-	}
+//	@Test(priority = 20) 
+//	public void checkCurriculumDropDown() {		
+//		((JavascriptExecutor) wd)
+//	     .executeScript("window.scrollTo(0, document.body.scrollHeight)");
+//		try {
+//			Thread.sleep(1000);
+//		} catch (InterruptedException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//		BatchesTab.curriculumSelector(wd);
+//		try {
+//			Thread.sleep(1000);
+//		} catch (InterruptedException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//		BatchesTab.chooseJACurriculum(wd);
+//
+//		Actions action = new Actions(wd);
+//		action.sendKeys(Keys.ESCAPE).perform();
+//		
+//	}
 	
 //	@Test(priority = 21) 
 //	public void checkFocusDropDown() {		
@@ -317,10 +316,10 @@ public class TestBatches extends TrainerSuite {
 //		BatchesTab.clickHideConcludedBox(wd);
 //		BatchesTab.clickHideConcludedBox(wd);
 //	}
-//	@Test(priority = 25)
-//	public void clickBatchless() {
-//		BatchesTab.clickHideBatchlessBox(wd);
-//	}
+	@Test(priority = 25)
+	public void clickBatchless() {
+		BatchesTab.clickHideBatchlessBox(wd);
+	}
 //	@Test(priority = 26)
 //	public void clickSelectAutomatically() {
 //		BatchesTab.clickSelectAutomaticallyBox(wd);
@@ -334,19 +333,33 @@ public class TestBatches extends TrainerSuite {
 //		//BatchesTab.chooseStartingDate(wd);
 //	}
 //	
-//	@Test(priority = 28)
-//	public void checkNextPage() {
-//		assertTrue(BatchesTab.checkIfNextPage(wd));
-//	}
-//	@Test(priority = 29)
-//	public void checkJumpLastPage() {
-//		try {
-//		assertTrue(BatchesTab.checkLastPage(wd));
-//		} catch (Throwable e) {
-//			fail("Jump To Last Page button not working");
-//			e.printStackTrace();
-//		}
-//	}
+	@Test(priority = 28)
+	public void checkNextPage() {
+		assertTrue(BatchesTab.checkIfNextPage(wd));
+	}
+	@Test(priority = 29)
+	public void checkLastFirstPage() {
+		try {
+		assertTrue(BatchesTab.checkLastPage(wd));
+		} catch (Throwable e) {
+			fail("Jump To Last Page button not working");
+			e.printStackTrace();
+		}
+	}
+	@Test(priority = 28)
+	public void checkPrevPage() {
+		assertTrue(BatchesTab.checkIfPrevPage(wd));
+	}
+	@Test(priority = 29)
+	public void checkJFirstLastPage() {
+		try {
+		assertTrue(BatchesTab.checkFirstPage(wd));
+		} catch (Throwable e) {
+			fail("Jump To First Page button not working");
+			e.printStackTrace();
+		}
+	}
+	
 //	
 //	@Test(priority = 30) 
 //	public void checkTrainersPerPage() {
