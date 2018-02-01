@@ -1,11 +1,13 @@
 package com.revature.cukes.trainer;
 
 import java.io.File;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 import com.revature.pom.NavBar;
+import com.revature.pom.ProfileTab;
 import com.revature.pom.TrainersTab;
 
 import cucumber.api.java.en.Given;
@@ -15,38 +17,57 @@ import cucumber.api.java.en.When;
 public class TrainerCukes {
 
 	@Given("^That I am in the Trainers tab$")
-	public static void isInTrainers(WebDriver wd) throws Throwable {
-		System.out.println("In Trainers tab");
-		TrainersTab.findCalendarButton(wd);
+	public static boolean isInTrainers(WebDriver wd) {
+		try {
+			Thread.sleep(1000);
+			TrainersTab.findCalendarButton(wd);
+			return true;
+		} catch (Throwable e) {
+			e.printStackTrace();
+			System.out.println("I am not in the Trainers tab");
+			return false;
+		}
+
 	}
 
 	@When("^Click the Trainers tab$")
 	public static boolean clickTrainers(WebDriver wd) {
 		try {
-			Thread.sleep(2000);
+			Thread.sleep(1000);
 			NavBar.navigateToTrainersPage(wd).click();
 			Thread.sleep(1000);
 			return true;
 		} catch (Throwable e) {
 			e.printStackTrace();
+			System.out.println("Trainers tab was not clicked");
 			return false;
 		}
 
 	}
 
 	@Then("^I should see the View PTO Calendar button$")
-	public static void calendarButtonExists(WebDriver wd) throws Throwable {
-		System.out.println("Looking for PTO Calendar button");
-		TrainersTab.findCalendarButton(wd);
+	public static boolean calendarButtonExists(WebDriver wd) {
+		try {
+			Thread.sleep(1000);
+			TrainersTab.findCalendarButton(wd);
+			return true;
+		} catch (Throwable e) {
+			System.out.println("View PTO Calendar button is not appearing");
+			return false;
+		}
+
 	}
 
 	@Then("^Download Resume button$")
-	public static boolean downloadResumeButton(WebDriver wd) throws Throwable {
-		System.out.println("Looking for download resume button");
-		if (TrainersTab.downloadResumeButton(wd) != null) {
+	public static boolean downloadResumeButton(WebDriver wd) {
+		try {
+			TrainersTab.downloadResumeButton(wd);
 			return true;
+		} catch (Throwable e) {
+			System.out.println("I do not see the download resume button");
+			return false;
 		}
-		return false;
+
 	}
 
 	@When("^Click the View PTO Calendar button$")
@@ -58,22 +79,40 @@ public class TrainerCukes {
 			return true;
 
 		} catch (Throwable e) {
-			System.out.println("Calendar button doesn't work");
+			System.out.println("Calendar button was not clicked work");
 			e.printStackTrace();
 			return false;
 		}
 	}
 
 	@Then("^I should see the PTO Calendar$")
-	public static void isPtoCalendarOpen(WebDriver wd) throws Throwable {
-		System.out.println("Is the calendar open?");
-		TrainersTab.isCalendarOpen(wd);
+	public static boolean isPtoCalendarOpen(WebDriver wd) {
+		try {
+			Thread.sleep(1000);
+			TrainersTab.isCalendarOpen(wd);
+			Thread.sleep(1000);
+			return true;
+
+		} catch (Throwable e) {
+			System.out.println("Calendar button doesn't work");
+			e.printStackTrace();
+			return false;
+		}
 	}
 
 	@Given("^that the PTO calendar is open$")
-	public static void calendarIsOpen(WebDriver wd) throws Throwable {
-		System.out.println("Is the calendar open?");
-		TrainersTab.isCalendarOpen(wd);
+	public static boolean calendarIsOpen(WebDriver wd) {
+		try {
+			Thread.sleep(1000);
+			TrainersTab.isCalendarOpen(wd);
+			Thread.sleep(1000);
+			return true;
+
+		} catch (Throwable e) {
+			System.out.println("Calendar button is not open");
+			e.printStackTrace();
+			return false;
+		}
 	}
 
 	@When("^I click the new PTO request button$")
@@ -84,16 +123,26 @@ public class TrainerCukes {
 			Thread.sleep(1000);
 			return true;
 		} catch (Throwable e) {
+			System.out.println("New PTO request button was not clicked");
 			e.printStackTrace();
 			return false;
 		}
 	}
 
 	@Then("^A new window should appear which allows the user to enter a start date and an end date$")
-	public static void ptoRequestWindowOpen(WebDriver wd) throws Throwable {
-		System.out.println("Is new request window open");
-		TrainersTab.isPtoRequestWindowOpen(wd);
+	public static boolean ptoRequestWindowOpen(WebDriver wd) {
+		try {
+			Thread.sleep(1000);
+			TrainersTab.isPtoRequestWindowOpen(wd);
+			Thread.sleep(1000);
+			return true;
+		} catch (Throwable e) {
+			System.out.println("New PTO Request button doesn't work");
+			e.printStackTrace();
+			return false;
+		}
 	}
+		
 
 	@When("^I click the cancel PTO request button$")
 	public static boolean clickCancelRequestButton(WebDriver wd) {
@@ -102,6 +151,7 @@ public class TrainerCukes {
 			Thread.sleep(1000);
 			return true;
 		} catch (Throwable e) {
+			System.out.println("Cancel PTO Request button was not clicked");
 			e.printStackTrace();
 			return false;
 		}
@@ -115,6 +165,7 @@ public class TrainerCukes {
 			Thread.sleep(1000);
 			return true;
 		} catch (Throwable e) {
+			System.out.println("Cancel button on PTO calendar window was not clicked");
 			e.printStackTrace();
 			return false;
 		}
