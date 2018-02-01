@@ -1,5 +1,7 @@
 package com.revature.model;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
 import javax.persistence.Column;
 
@@ -16,10 +18,17 @@ import javax.persistence.TemporalType;
 @Table (name="BATCH")
 public class Batch {
 @Id
-@Column(name="BATCH_NAME", nullable=false)
+@Column(name="BATCH_ID", nullable=false)
+private int id;
+@Column(name="BATCH_NAME", nullable=true)
  private String name;
 @Column(name="BATCH_CURR", nullable=true)
  private String curriculum;
+@Column(name="BATCH_FOCUS", nullable=true)
+private String focus;
+@Column(name="BATCH_SKILLS", nullable=true)
+private String skills;
+
 @Column(name="BATCH_TRAINER", nullable=true)
  private String trainer;
 @Column(name="BATCH_LOCATION", nullable=true)
@@ -36,6 +45,10 @@ private Date start_date;
  private Date end_date;
 
 
+public Batch() {
+	 
+ }
+
  public Batch(String name, String curriculum, String trainer, String location, String building, int room,
 		Date start_date, Date end_date) {
 	super();
@@ -49,9 +62,46 @@ private Date start_date;
 	this.end_date = end_date;
 }
  
- public Batch() {
-	 
- }
+ public Batch(int id, String name, String curriculum, String focus, String skills, String trainer, String location,
+		String building, int room, Date start_date, Date end_date) {
+	super();
+	this.id = id;
+	this.name = name;
+	this.curriculum = curriculum;
+	this.focus = focus;
+	this.skills = skills;
+	this.trainer = trainer;
+	this.location = location;
+	this.building = building;
+	this.room = room;
+	this.start_date = start_date;
+	this.end_date = end_date;
+}
+
+public int getId() {
+	return id;
+}
+
+public void setId(int id) {
+	this.id = id;
+}
+
+public String getFocus() {
+	return focus;
+}
+
+public void setFocus(String focus) {
+	this.focus = focus;
+}
+
+public String getSkills() {
+	return skills;
+}
+
+public void setSkills(String skills) {
+	this.skills = skills;
+}
+
 
 public String getName() {
 	return name;
@@ -142,6 +192,8 @@ public String toString() {
 			+ ", BATCH_BUILDING=" + building + ", BATCH_ROOM=" + room + ", STARTDATE=" + start_date + ", ENDDATE=" + end_date +"]";
 
 }
+
+
 
 
 

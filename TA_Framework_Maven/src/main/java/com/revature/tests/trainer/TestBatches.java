@@ -233,7 +233,6 @@ public class TestBatches extends TrainerSuite {
 // 			e.printStackTrace();
 // 		}
 //	}
-//////////////////////////////////////////////////////////////////////////////////
 	@Test(priority = 20) 
 	public void checkCurriculumDropDown() {		
 		((JavascriptExecutor) wd)
@@ -258,105 +257,132 @@ public class TestBatches extends TrainerSuite {
 		
 	}
 	
-//	@Test(priority = 21) 
-//	public void checkFocusDropDown() {		
-////		JavascriptExecutor jse = (JavascriptExecutor)wd;
-////		jse.executeScript("window.scrollBy(0,2000)", "");
-//		BatchesTab.focusSelector(wd);
-//		try {
-//			Thread.sleep(2000);
-//		} catch (InterruptedException e) {
-//			e.printStackTrace();
-//		}
-//		BatchesTab.chooseRubyFocus(wd);
-//		Actions action = new Actions(wd);
-//		action.sendKeys(Keys.ESCAPE).perform();
-//	}
-//	@Test(priority = 22) 
-//	public void checkLocationDropDown() {		
-//	JavascriptExecutor jse = (JavascriptExecutor)wd;
-//	jse.executeScript("window.scrollBy(0,2000)", "");
-//		BatchesTab.locationSelector(wd);
-//		try {
-//			Thread.sleep(2000);
-//		} catch (InterruptedException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-//		BatchesTab.chooseRestonHQ(wd);
-//		Actions action = new Actions(wd);
-//		action.sendKeys(Keys.ESCAPE).perform();
-//		
-//	}
-//	@Test(priority = 23) 
-//	public void checkBuildingDropDown() {		
-//		BatchesTab.buildingSelector(wd);
-//		try {
-//			Thread.sleep(500);
-//		} catch (InterruptedException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-//		BatchesTab.chooseReston11730(wd);
-//		Actions action = new Actions(wd);
-//		action.sendKeys(Keys.ESCAPE).perform();
-//		
-//	}
-/////////////////////////////////////////////////
-//	
-//	@Test(priority = 24)
-//	public void clickHideConcluded() {
+	@Test(priority = 21) 
+	public void checkFocusDropDown() {		
 //		JavascriptExecutor jse = (JavascriptExecutor)wd;
-//		jse.executeScript("window.scrollBy(0,800)", "");
-//		try {
-//			Thread.sleep(1000);
-//		} catch (InterruptedException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-//		BatchesTab.clickHideConcludedBox(wd);
-//		BatchesTab.clickHideConcludedBox(wd);
-//	}
-//	@Test(priority = 25)
-//	public void clickBatchless() {
-//		BatchesTab.clickHideBatchlessBox(wd);
-//	}
-//	@Test(priority = 26)
-//	public void clickSelectAutomatically() {
-//		BatchesTab.clickSelectAutomaticallyBox(wd);
-//		BatchesTab.clickSelectAutomaticallyBox(wd);
-//	}
-//	
-//	@Test(priority = 27)
-//	public void selectStartDate() {
-//		//BatchesTab.startDateSelector(wd).click();
-//		//BatchesTab.chooseStartingMonth(wd);
-//		//BatchesTab.chooseStartingDate(wd);
-//	}
-//	
+//		jse.executeScript("window.scrollBy(0,2000)", "");
+		BatchesTab.focusSelector(wd);
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		BatchesTab.chooseRubyFocus(wd);
+		Actions action = new Actions(wd);
+		action.sendKeys(Keys.ESCAPE).perform();
+	}
+	@Test(priority = 22) 
+	public void checkLocationDropDown() {		
+	JavascriptExecutor jse = (JavascriptExecutor)wd;
+	jse.executeScript("window.scrollBy(0,2000)", "");
+		BatchesTab.locationSelector(wd);
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		BatchesTab.chooseRestonHQ(wd);
+		BatchesTab.chooseRestonHQ(wd);
+		Actions action = new Actions(wd);
+		action.sendKeys(Keys.ESCAPE).perform();
+		
+	}
+	@Test(priority = 23) 
+	public void checkBuildingDropDown() {		
+		BatchesTab.buildingSelector(wd);
+		try {
+			Thread.sleep(500);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		BatchesTab.chooseReston11730(wd);
+		BatchesTab.chooseReston11730(wd);
+		Actions action = new Actions(wd);
+		action.sendKeys(Keys.ESCAPE).perform();
+		
+	}
+	
+	@Test(priority = 24)
+	public void clickHideConcluded() {
+		JavascriptExecutor jse = (JavascriptExecutor)wd;
+		jse.executeScript("window.scrollBy(0,800)", "");
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		BatchesTab.clickHideConcludedBox(wd);
+		BatchesTab.clickHideConcludedBox(wd);
+	}
+
+	@Test(priority = 25)
+	public void clickBatchless() {
+		BatchesTab.clickHideBatchlessBox(wd);
+	}
+
+	@Test(priority = 26)
+	public void clickSelectAutomatically() {
+		BatchesTab.clickSelectAutomaticallyBox(wd);
+		BatchesTab.clickSelectAutomaticallyBox(wd);
+	}
+	
+	@Test(priority = 27)
+	public void selectStartDate() {
+		//BatchesTab.startDateSelector(wd).click();
+		//BatchesTab.chooseStartingMonth(wd);
+		//BatchesTab.chooseStartingDate(wd);
+	}
+	
+	@Test(priority = 28)
+	public void checkNextPage() {
+	//	assertTrue(BatchesTab.checkIfNextPage(wd));
+	}
+	@Test(priority = 29)
+	public void checkLastFirstPage() {
+		try {
+		assertTrue(BatchesTab.checkLastPage(wd));
+		} catch (Throwable e) {
+			fail("Jump To Last Page button not working");
+			e.printStackTrace();
+		}
+	}
 //	@Test(priority = 28)
-//	public void checkNextPage() {
-//		assertTrue(BatchesTab.checkIfNextPage(wd));
+//	public void checkPrevPage() {
+//		assertTrue(BatchesTab.checkIfPrevPage(wd));
 //	}
 //	@Test(priority = 29)
-//	public void checkJumpLastPage() {
+//	public void checkJFirstLastPage() {
 //		try {
-//		assertTrue(BatchesTab.checkLastPage(wd));
+//		assertTrue(BatchesTab.checkFirstPage(wd));
 //		} catch (Throwable e) {
-//			fail("Jump To Last Page button not working");
+//			fail("Jump To First Page button not working");
 //			e.printStackTrace();
 //		}
 //	}
-//	
-//	@Test(priority = 30) 
-//	public void checkTrainersPerPage() {
+	
+	
+	@Test(priority = 30) 
+	public void checkTrainersPerPage() {
+
 //		try {
 //			assertTrue(BatchesTab.trainersPerPage(wd));
 //		} catch (Throwable e) {
 //			fail("Doesn't display trainers per page");
 //		}
-//	}
-	
+	}
+
+	@Test(priority = 31) 
+	public void checkTrainersPerPageButton() {
+//		try {
+//			assertTrue(BatchesTab.checkTrainersPerPage(wd));
+//			Thread.sleep(3000);
+//		} catch (Throwable e) {
+//			fail("Doesn't accurately show correct amount of columns");
+//		}
+	}
 	
 	@AfterTest
 	public void afterTest() {

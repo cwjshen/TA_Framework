@@ -29,7 +29,22 @@ public class BatchDaoImp {
 		      
 		   }
 		   
-		 
+
+		@SuppressWarnings("unchecked")
+		public List<Batch> getNBatches(int n){
+		      Session session = HibernateUtil.getSession().openSession();
+		      @SuppressWarnings("unused")
+			 Transaction tx = null;
+		      
+		      try {
+		         tx = session.beginTransaction();
+				List<Batch> batchs = session.createQuery("from Batch").setMaxResults(n).list();
+		         return batchs; 
+		      } finally {
+		         session.close(); 
+		      }
+		      
+		   }		
 
 		/* Method to UPDATE salary for an employee */
 		   public void updateBatch(String batchName, String batchCurr,String batchTrainer, String batchLoc, String batchBuild,int batchRoom, Date batchStart, Date batchEnd){

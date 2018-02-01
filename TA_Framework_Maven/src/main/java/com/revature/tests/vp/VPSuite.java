@@ -1,5 +1,7 @@
 package com.revature.tests.vp;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
@@ -18,9 +20,13 @@ public class VPSuite extends AbstractTestNGCucumberTests{
 
 	public static WebDriver wd = DriverUtil.getChromeDriver();
 	
+	
 	@BeforeSuite
 	public void beforeSuite() {
 		System.out.println("TA Framework Tests");
+		System.out.print("Setting implicit wait timeout...");
+		wd.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		System.out.println("set!");
 		try {
 			wd.get("https://dev.assignforce.revaturelabs.com");		
 			LoginUtil.loginAsVP(wd);

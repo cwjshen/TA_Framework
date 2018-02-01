@@ -14,7 +14,7 @@ public class TestLocations extends TrainerSuite {
 	public void beforeTest() {
 		System.out.println("Running Locations Tab Test");
 		try {
-			Thread.sleep(6000);
+			Thread.sleep(2000);
 			LocationsCukes.clickedLocations(wd);
 		} catch (Throwable e) {
 			fail("Currently not in Locations Tab; Locations Tab not found or could not be clicked");

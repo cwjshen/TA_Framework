@@ -227,7 +227,7 @@ public class CurriculaTabVP {
 			e.printStackTrace();
 		}
 
-		e = (d.findElement(By.xpath("//*[@id=\"select_option_88\"]/div[2]")));
+		e = (d.findElement(By.xpath("//*[@id=\"select_option_95\"]/div[2]")));
 
 		return e;
 
@@ -242,7 +242,7 @@ public class CurriculaTabVP {
 			e.printStackTrace();
 		}
 
-		e = (d.findElement(By.xpath("//*[@id=\"select_option_89\"]")));
+		e = (d.findElement(By.xpath("//*[@id=\"select_option_100\"]")));
 
 		return e;
 
@@ -256,7 +256,7 @@ public class CurriculaTabVP {
 			e.printStackTrace();
 		}
 
-		e = (d.findElement(By.xpath("//*[@id=\"select_option_188\"]/div[2]")));
+		e = (d.findElement(By.xpath("//*[@id=\"select_option_190\"]/div[2]")));
 
 		return e;
 
@@ -271,7 +271,7 @@ public class CurriculaTabVP {
 			e.printStackTrace();
 		}
 
-		e = (d.findElement(By.xpath("//*[@id=\"select_option_190\"]")));
+		e = (d.findElement(By.xpath("//*[@id=\"select_option_195\"]")));
 
 		return e;
 
@@ -282,7 +282,7 @@ public class CurriculaTabVP {
 	public static WebElement randomClick(WebDriver d) {
 		//*[@id="focus"]/md-list/md-list-item[1]
 		try {
-			Thread.sleep(2000);
+			Thread.sleep(3000);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
