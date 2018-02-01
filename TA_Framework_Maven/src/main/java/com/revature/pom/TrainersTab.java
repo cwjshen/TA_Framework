@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import com.revature.util.JSClicker;
+import com.revature.util.WaitToLoad;
 
 public class TrainersTab {
 
@@ -21,7 +22,7 @@ public class TrainersTab {
 	}
 	
 	public static WebElement isCalendarOpen(WebDriver driver) {
-		return driver.findElement(By.xpath("//*[@id=\"dpPopup1\"]/div"));
+		return driver.findElement(By.xpath("//*[@id=\"dialogContent_1\"]"));
 	}
 	
 	public static void addPtoRequestButton(WebDriver driver) {
@@ -34,6 +35,11 @@ public class TrainersTab {
 	
 	public static void cancelButton(WebDriver driver) {
 		JSClicker.executeJSClick(driver, driver.findElement(By.xpath("/html/body/div[3]/md-dialog/md-dialog-actions/button[2]")));
+	}
+	
+	public static WebElement newPtoRequestWindowOpen(WebDriver driver) {
+		return WaitToLoad.findDynamicElement(driver,By.xpath("/html/body/div[3]/md-dialog/form") , 30);
+
 	}
 	
 	public static void requestStartDate(WebDriver driver) {
