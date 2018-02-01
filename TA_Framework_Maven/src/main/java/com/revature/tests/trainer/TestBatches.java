@@ -333,33 +333,33 @@ public class TestBatches extends TrainerSuite {
 //		//BatchesTab.chooseStartingDate(wd);
 //	}
 //	
-	@Test(priority = 28)
-	public void checkNextPage() {
-		assertTrue(BatchesTab.checkIfNextPage(wd));
-	}
-	@Test(priority = 29)
-	public void checkLastFirstPage() {
-		try {
-		assertTrue(BatchesTab.checkLastPage(wd));
-		} catch (Throwable e) {
-			fail("Jump To Last Page button not working");
-			e.printStackTrace();
-		}
-	}
-	@Test(priority = 28)
-	public void checkPrevPage() {
-		assertTrue(BatchesTab.checkIfPrevPage(wd));
-	}
-	@Test(priority = 29)
-	public void checkJFirstLastPage() {
-		try {
-		assertTrue(BatchesTab.checkFirstPage(wd));
-		} catch (Throwable e) {
-			fail("Jump To First Page button not working");
-			e.printStackTrace();
-		}
-	}
-	
+//	@Test(priority = 28)
+//	public void checkNextPage() {
+//		assertTrue(BatchesTab.checkIfNextPage(wd));
+//	}
+//	@Test(priority = 29)
+//	public void checkLastFirstPage() {
+//		try {
+//		assertTrue(BatchesTab.checkLastPage(wd));
+//		} catch (Throwable e) {
+//			fail("Jump To Last Page button not working");
+//			e.printStackTrace();
+//		}
+//	}
+//	@Test(priority = 28)
+//	public void checkPrevPage() {
+//		assertTrue(BatchesTab.checkIfPrevPage(wd));
+//	}
+//	@Test(priority = 29)
+//	public void checkJFirstLastPage() {
+//		try {
+//		assertTrue(BatchesTab.checkFirstPage(wd));
+//		} catch (Throwable e) {
+//			fail("Jump To First Page button not working");
+//			e.printStackTrace();
+//		}
+//	}
+//	
 //	
 //	@Test(priority = 30) 
 //	public void checkTrainersPerPage() {
@@ -369,6 +369,16 @@ public class TestBatches extends TrainerSuite {
 //			fail("Doesn't display trainers per page");
 //		}
 //	}
+
+	@Test(priority = 31) 
+	public void checkTrainersPerPageButton() {
+		try {
+			assertTrue(BatchesTab.checkTrainersPerPage(wd));
+			Thread.sleep(3000);
+		} catch (Throwable e) {
+			fail("Doesn't accurately show correct amount of columns");
+		}
+	}
 	
 	
 	@AfterTest

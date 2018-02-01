@@ -338,4 +338,9 @@ public class BatchesTab {
 		}
 		return false;
 	}
+	public static boolean checkTrainersPerPage(WebDriver wd) {
+		//System.out.println(WaitToLoad.findDynamicElement(wd, By.xpath("//*[@id=\"input_26\"]"), 10).getText());
+		
+		return true;
+	}
 }
