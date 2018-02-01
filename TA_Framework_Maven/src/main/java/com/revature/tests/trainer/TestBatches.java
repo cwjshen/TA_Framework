@@ -315,10 +315,12 @@ public class TestBatches extends TrainerSuite {
 		BatchesTab.clickHideConcludedBox(wd);
 		BatchesTab.clickHideConcludedBox(wd);
 	}
+
 	@Test(priority = 25)
 	public void clickBatchless() {
 		BatchesTab.clickHideBatchlessBox(wd);
 	}
+
 	@Test(priority = 26)
 	public void clickSelectAutomatically() {
 		BatchesTab.clickSelectAutomaticallyBox(wd);
@@ -362,6 +364,7 @@ public class TestBatches extends TrainerSuite {
 	
 	@Test(priority = 30) 
 	public void checkTrainersPerPage() {
+
 //		try {
 //			assertTrue(BatchesTab.trainersPerPage(wd));
 //		} catch (Throwable e) {
@@ -378,7 +381,6 @@ public class TestBatches extends TrainerSuite {
 //			fail("Doesn't accurately show correct amount of columns");
 //		}
 	}
-	
 	
 	@AfterTest
 	public void afterTest() {

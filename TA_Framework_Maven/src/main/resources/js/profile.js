@@ -99,7 +99,7 @@ describe("Profile Tab Protractor Test (Test that Trainer wasn't allowed to chang
 		expect(element(by.name("profile")).getAttribute("aria-selected")).toEqual("true");
 	});
 	it("Should show that Profile name is still Test Trainer and did not change", function(){
-		browser.driver.sleep(5000);
+		browser.driver.sleep(5000); 
 		
 		var firstNameField = element(by.model("pCtrl.trainer.firstName"));
 		var lastNameField = element(by.model("pCtrl.trainer.lastName"));
