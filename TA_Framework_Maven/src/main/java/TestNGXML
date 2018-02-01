@@ -8,9 +8,6 @@
       <class name="com.revature.tests.trainer.TestOverview"/>
     </classes>
   </test> 
-  
-
- 
 
   <test name="Test Batches Tab">
     <classes>
@@ -18,21 +15,34 @@
     </classes>
   </test>  
   
-
- <!--
   <test name="Test Locations Tab">
     <classes>
 	  <class name="com.revature.tests.trainer.TestLocations"/> 
     </classes>
   </test> 
 
+  <test name="Test Curricula Tab">
+    <classes>
+	  <class name="com.revature.tests.trainer.TestCurricula"/> 
+    </classes>
+  </test>  
+  
+  <test name="TestTrainers Tab">
+    <classes>
+	  <class name="com.revature.tests.trainer.TestTrainers"/> 
+    </classes>
+  </test>  
+  
+  <test name="Test Profile Tab">
+    <classes>
+	  <class name="com.revature.tests.trainer.TestProfile"/> 
+    </classes>
+  </test>  
+  
   <test name="Test Settings Tab">
     <classes>
 	  <class name="com.revature.tests.trainer.TestSettings"/> 
     </classes>
   </test>   
-  
-  -->
-
 
 </suite> <!-- Suite -->

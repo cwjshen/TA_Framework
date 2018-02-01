@@ -221,15 +221,15 @@ public class BatchesTab {
 	}
 	
 	public static boolean checkLastPage(WebDriver wd) {
-		String page = WaitToLoad.findDynamicElement(wd, By.xpath("/html/body/div[1]/div[2]/div/md-card/md-content[2]/div/div[1]/div[2]/div/div[3]/div/div/b"), 10).getText();
-		clickJumpLast(wd);
-		String npage = WaitToLoad.findDynamicElement(wd, By.xpath("/html/body/div[1]/div[2]/div/md-card/md-content[2]/div/div[1]/div[2]/div/div[3]/div/div"), 10).getText();
-		int fpage = (Integer.parseInt(page));
-		
-		int lpage = (Integer.parseInt(npage.substring(npage.length()-1)));
-		if (fpage == lpage) {
-			return true;
-		}
+//		String page = WaitToLoad.findDynamicElement(wd, By.xpath("/html/body/div[1]/div[2]/div/md-card/md-content[2]/div/div[1]/div[2]/div/div[3]/div/div/b"), 10).getText();
+//		clickJumpLast(wd);
+//		String npage = WaitToLoad.findDynamicElement(wd, By.xpath("/html/body/div[1]/div[2]/div/md-card/md-content[2]/div/div[1]/div[2]/div/div[3]/div/div"), 10).getText();
+//		int fpage = (Integer.parseInt(page));
+//		
+//		int lpage = (Integer.parseInt(npage.substring(npage.length()-1)));
+//		if (fpage == lpage) {
+//			return true;
+//		}
 		return false;
 	}
 	public static boolean trainersPerPage(WebDriver wd) {
@@ -289,7 +289,7 @@ public class BatchesTab {
 		
 		Actions actions = new Actions(wd);
 		for (WebElement e : allelemts) {
-			if (e.getText().equals("Revature HQ - Reston, VA")) {
+			if (e.getText().equals("Revature - Reston, VA")) {
 				int target_index = allelemts.indexOf(e);
 				if (allcheckboxes.get(target_index).getAttribute("aria-selected").equals("false")) {
 					actions.moveToElement(allcheckboxes.get(target_index)).click().perform();
@@ -304,7 +304,7 @@ public class BatchesTab {
 		
 		Actions actions = new Actions(wd);
 		for (WebElement e : allelemts) {
-			if (e.getText().equals("Reston 11730")) {
+			if (e.getText().equals("Revature 11730")) {
 				int target_index = allelemts.indexOf(e);
 				if (allcheckboxes.get(target_index).getAttribute("aria-selected").equals("false")) {
 					actions.moveToElement(allcheckboxes.get(target_index)).click().perform();
