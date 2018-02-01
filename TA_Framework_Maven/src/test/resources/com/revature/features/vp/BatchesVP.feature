@@ -29,3 +29,18 @@ Feature: Batches Tab
     Given that the batches form is empty <webdriver>
     When I click the create batch button <webdriver>
 		Then All batches should not contain a new batch <webdriver>
+		
+	Scenario Outline: Refreshing the page
+		Given that I refresh the page <webdriver>
+		Then I should see the Create New Batch Section <webdriver>
+		
+	Scenario Outline: Creating a new batch from database dummy data
+		Given that I pull dummy batch data from the database <webdriver>
+		When I insert a single batch data <webdriver> <batches>
+		When I click the create batch button <webdriver>
+		Then All batches should contain the new batch <webdriver>
+		
+	Scenario Outline: Creating multiple batches stress test
+		Given that I pull dummy batch data from the database <webdriver>
+		When I insert all the batch data <webdriver> <batches>
+		Then All batches should contain all new batches <webdriver>		

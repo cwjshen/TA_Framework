@@ -2,14 +2,14 @@
 <suite name="Trainer Tests" parallel="false">
 
 
-<!--
+
   <test name="Test Overview Tab">
     <classes>
       <class name="com.revature.tests.trainer.TestOverview"/>
     </classes>
   </test> 
   
-  -->
+
  
 
   <test name="Test Batches Tab">

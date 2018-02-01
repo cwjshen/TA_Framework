@@ -45,7 +45,7 @@ public class TrainersTab {
 	}
 	
 	public static void pickStartYear(WebDriver driver) {
-		JSClicker.executeJSClick(driver, driver.findElement(By.xpath("/html/body/div[4]/div[2]/md-calendar/div/md-calendar-year/div/md-virtual-repeat-container/div/div[2]/table/tbody[4]/tr[1]/td[4]/span")));
+		JSClicker.executeJSClick(driver, driver.findElement(By.xpath("/html/body/div[4]/div[2]/md-calendar/div/md-calendar-year/div/md-virtual-repeat-container/div/div[2]/table/tbody[4]/tr[1]/td[2]/span")));
 	}
 	
 	public static void pickStartDate(WebDriver driver) {
