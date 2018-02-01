@@ -4,14 +4,11 @@ import static org.testng.Assert.assertTrue;
 import static org.testng.Assert.fail;
 
 import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import com.revature.cukes.trainer.LocationsCukes;
 import com.revature.cukes.vp.LocationsCukesVP;
-import com.revature.tests.trainer.TestLocations;
-import com.revature.util.LoginUtil;
 
 public class TestLocationsVP extends VPSuite {
 	@BeforeTest

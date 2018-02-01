@@ -5,6 +5,7 @@ import static org.testng.Assert.fail;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -24,6 +25,12 @@ public class TestBatches extends TrainerSuite {
 			BatchesCukes.i_am_in_Batches(wd);
 			System.out.println("Clicked Batches tab");
 			assertTrue(BatchesCukes.i_should_see_All_Batches_text(wd));
+			try {
+				Thread.sleep(2000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		} catch (Throwable e) { 
 			fail("Can't find Batches button");
 			e.printStackTrace();
@@ -226,18 +233,76 @@ public class TestBatches extends TrainerSuite {
 // 			e.printStackTrace();
 // 		}
 //	}
-//////////////////////////////////////////////////////////////////////////////////
 //	@Test(priority = 20) 
-//	public void checkCurriculumDropDown() throws InterruptedException {
-//		Thread.sleep(1000);
+//	public void checkCurriculumDropDown() {		
+//		((JavascriptExecutor) wd)
+//	     .executeScript("window.scrollTo(0, document.body.scrollHeight)");
+//		try {
+//			Thread.sleep(1000);
+//		} catch (InterruptedException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
 //		BatchesTab.curriculumSelector(wd);
+//		try {
+//			Thread.sleep(1000);
+//		} catch (InterruptedException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//		BatchesTab.chooseJACurriculum(wd);
+//
 //		Actions action = new Actions(wd);
-//		//action.moveToElement(BatchesTab.curriculumDropDownOptions(wd).get(0)).click().perform();
-//		Thread.sleep(500);
+//		action.sendKeys(Keys.ESCAPE).perform();
+//		
 //	}
-/////////////////////////////////////////////////
+	
+//	@Test(priority = 21) 
+//	public void checkFocusDropDown() {		
+////		JavascriptExecutor jse = (JavascriptExecutor)wd;
+////		jse.executeScript("window.scrollBy(0,2000)", "");
+//		BatchesTab.focusSelector(wd);
+//		try {
+//			Thread.sleep(2000);
+//		} catch (InterruptedException e) {
+//			e.printStackTrace();
+//		}
+//		BatchesTab.chooseRubyFocus(wd);
+//		Actions action = new Actions(wd);
+//		action.sendKeys(Keys.ESCAPE).perform();
+//	}
+//	@Test(priority = 22) 
+//	public void checkLocationDropDown() {		
+//	JavascriptExecutor jse = (JavascriptExecutor)wd;
+//	jse.executeScript("window.scrollBy(0,2000)", "");
+//		BatchesTab.locationSelector(wd);
+//		try {
+//			Thread.sleep(2000);
+//		} catch (InterruptedException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//		BatchesTab.chooseRestonHQ(wd);
+//		Actions action = new Actions(wd);
+//		action.sendKeys(Keys.ESCAPE).perform();
+//		
+//	}
+//	@Test(priority = 23) 
+//	public void checkBuildingDropDown() {		
+//		BatchesTab.buildingSelector(wd);
+//		try {
+//			Thread.sleep(500);
+//		} catch (InterruptedException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//		BatchesTab.chooseReston11730(wd);
+//		Actions action = new Actions(wd);
+//		action.sendKeys(Keys.ESCAPE).perform();
+//		
+//	}
 //	
-//	@Test(priority = 21)
+//	@Test(priority = 24)
 //	public void clickHideConcluded() {
 //		JavascriptExecutor jse = (JavascriptExecutor)wd;
 //		jse.executeScript("window.scrollBy(0,800)", "");
@@ -250,29 +315,31 @@ public class TestBatches extends TrainerSuite {
 //		BatchesTab.clickHideConcludedBox(wd);
 //		BatchesTab.clickHideConcludedBox(wd);
 //	}
-//	@Test(priority = 22)
-//	public void clickBatchless() {
-//		BatchesTab.clickHideBatchlessBox(wd);
-//	}
-//	@Test(priority = 23)
+
+	@Test(priority = 25)
+	public void clickBatchless() {
+		BatchesTab.clickHideBatchlessBox(wd);
+	}
+//	@Test(priority = 26)
 //	public void clickSelectAutomatically() {
 //		BatchesTab.clickSelectAutomaticallyBox(wd);
 //		BatchesTab.clickSelectAutomaticallyBox(wd);
 //	}
-	
-//	@Test(priority = 24)
+
+//	@Test(priority = 27)
 //	public void selectStartDate() {
 //		//BatchesTab.startDateSelector(wd).click();
 //		//BatchesTab.chooseStartingMonth(wd);
 //		//BatchesTab.chooseStartingDate(wd);
 //	}
 //	
-//	@Test(priority = 25)
+
+//	@Test(priority = 28)
 //	public void checkNextPage() {
 //		assertTrue(BatchesTab.checkIfNextPage(wd));
 //	}
-//	@Test(priority = 26)
-//	public void checkJumpLastPage() {
+//	@Test(priority = 29)
+//	public void checkLastFirstPage() {
 //		try {
 //		assertTrue(BatchesTab.checkLastPage(wd));
 //		} catch (Throwable e) {
@@ -280,8 +347,28 @@ public class TestBatches extends TrainerSuite {
 //			e.printStackTrace();
 //		}
 //	}
+
 //	
 //	
+//	@Test(priority = 30) 
+//	public void checkTrainersPerPage() {
+//		try {
+//			assertTrue(BatchesTab.trainersPerPage(wd));
+//		} catch (Throwable e) {
+//			fail("Doesn't display trainers per page");
+//		}
+//	}
+
+	@Test(priority = 31) 
+	public void checkTrainersPerPageButton() {
+		try {
+			assertTrue(BatchesTab.checkTrainersPerPage(wd));
+			Thread.sleep(3000);
+		} catch (Throwable e) {
+			fail("Doesn't accurately show correct amount of columns");
+		}
+	}
+	
 	@AfterTest
 	public void afterTest() {
 		System.out.println("Tests successful. Batches tab working as intended");
