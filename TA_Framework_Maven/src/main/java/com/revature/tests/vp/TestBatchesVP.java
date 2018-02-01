@@ -2,22 +2,13 @@ package com.revature.tests.vp;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
-import static org.testng.Assert.assertEquals;
-
-import java.util.List;
-
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.os.WindowsUtils;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import com.revature.cukes.vp.BatchesCukesVP;
 import com.revature.pom.vp.BatchesTabVP;
-import com.revature.util.JSClicker;
 import com.revature.util.WaitToLoad;
 
 public class TestBatchesVP extends VPSuite {

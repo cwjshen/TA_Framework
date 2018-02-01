@@ -1,12 +1,10 @@
 package com.revature.tests.vp;
 
-import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
 
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import com.revature.cukes.trainer.TrainerCukes;
 import com.revature.cukes.vp.TrainersCukesVP;
 
 import cucumber.api.CucumberOptions;
