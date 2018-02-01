@@ -13,6 +13,5 @@ public class WaitToLoad {
 	    WebDriverWait wait = new WebDriverWait(wd, timeOut);
 	    WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(by));
 	    return element;
-
 	}
 }
