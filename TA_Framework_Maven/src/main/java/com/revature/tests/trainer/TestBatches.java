@@ -3,6 +3,7 @@ package com.revature.tests.trainer;
 import static org.junit.Assert.assertTrue;
 import static org.testng.Assert.fail;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.AfterTest;
@@ -235,52 +236,52 @@ public class TestBatches extends TrainerSuite {
 //		Thread.sleep(500);
 //	}
 /////////////////////////////////////////////////
-	
-	@Test(priority = 21)
-	public void clickHideConcluded() {
-		JavascriptExecutor jse = (JavascriptExecutor)wd;
-		jse.executeScript("window.scrollBy(0,800)", "");
-		try {
-			Thread.sleep(1000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		BatchesTab.clickHideConcludedBox(wd);
-		BatchesTab.clickHideConcludedBox(wd);
-	}
-	@Test(priority = 22)
-	public void clickBatchless() {
-		BatchesTab.clickHideBatchlessBox(wd);
-	}
+//	
+//	@Test(priority = 21)
+//	public void clickHideConcluded() {
+//		JavascriptExecutor jse = (JavascriptExecutor)wd;
+//		jse.executeScript("window.scrollBy(0,800)", "");
+//		try {
+//			Thread.sleep(1000);
+//		} catch (InterruptedException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//		BatchesTab.clickHideConcludedBox(wd);
+//		BatchesTab.clickHideConcludedBox(wd);
+//	}
+//	@Test(priority = 22)
+//	public void clickBatchless() {
+//		BatchesTab.clickHideBatchlessBox(wd);
+//	}
 //	@Test(priority = 23)
 //	public void clickSelectAutomatically() {
 //		BatchesTab.clickSelectAutomaticallyBox(wd);
 //		BatchesTab.clickSelectAutomaticallyBox(wd);
 //	}
 	
-	@Test(priority = 24)
-	public void selectStartDate() {
-		//BatchesTab.startDateSelector(wd).click();
-		//BatchesTab.chooseStartingMonth(wd);
-		//BatchesTab.chooseStartingDate(wd);
-	}
-	
-	@Test(priority = 25)
-	public void checkNextPage() {
-		assertTrue(BatchesTab.checkIfNextPage(wd));
-	}
-	@Test(priority = 26)
-	public void checkJumpLastPage() {
-		try {
-		assertTrue(BatchesTab.checkLastPage(wd));
-		} catch (Throwable e) {
-			fail("Jump To Last Page button not working");
-			e.printStackTrace();
-		}
-	}
-	
-	
+//	@Test(priority = 24)
+//	public void selectStartDate() {
+//		//BatchesTab.startDateSelector(wd).click();
+//		//BatchesTab.chooseStartingMonth(wd);
+//		//BatchesTab.chooseStartingDate(wd);
+//	}
+//	
+//	@Test(priority = 25)
+//	public void checkNextPage() {
+//		assertTrue(BatchesTab.checkIfNextPage(wd));
+//	}
+//	@Test(priority = 26)
+//	public void checkJumpLastPage() {
+//		try {
+//		assertTrue(BatchesTab.checkLastPage(wd));
+//		} catch (Throwable e) {
+//			fail("Jump To Last Page button not working");
+//			e.printStackTrace();
+//		}
+//	}
+//	
+//	
 	@AfterTest
 	public void afterTest() {
 		System.out.println("Tests successful. Batches tab working as intended");

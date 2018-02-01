@@ -36,6 +36,11 @@ Feature: Batches Tab
 		
 	Scenario Outline: Creating a new batch from database dummy data
 		Given that I pull dummy batch data from the database <webdriver>
-		When I insert all the batch data <webdriver> <batches>
+		When I insert a single batch data <webdriver> <batches>
 		When I click the create batch button <webdriver>
 		Then All batches should contain the new batch <webdriver>
+		
+	Scenario Outline: Creating multiple batches stress test
+		Given that I pull dummy batch data from the database <webdriver>
+		When I insert all the batch data <webdriver> <batches>
+		Then All batches should contain all new batches <webdriver>		

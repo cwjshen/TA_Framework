@@ -37,7 +37,7 @@ public class BatchesTabVP {
 	
 	public static WebElement findCoreCurriculumDropdown(WebDriver driver) {
 //		return WaitToLoad.findDynamicElement(driver, By.xpath("//md-select-value/span"), 30);
-		return WaitToLoad.findDynamicElement(driver, By.cssSelector("#select_9"), 30);
+		return WaitToLoad.findDynamicElement(driver, By.xpath("html/body/div[contains(@class, 'toastContainer')]/div[2]/div/md-card/md-content[1]/form/div[1]/div/md-input-container[1]/md-select"), 30);
 	}
 	
 	public static WebElement findCoreCurriculumMenuContainer(WebDriver driver) {
@@ -55,11 +55,11 @@ public class BatchesTabVP {
 	
 	public static WebElement findFocusDropdown(WebDriver driver) {
 //		return WaitToLoad.findDynamicElement(driver, By.xpath("//md-input-container[2]/md-select"), 30);
-		return WaitToLoad.findDynamicElement(driver, By.cssSelector("#select_11"), 30);
+		return WaitToLoad.findDynamicElement(driver, By.xpath("html/body/div[contains(@class, 'toastContainer')]/div[2]/div/md-card/md-content[1]/form/div[1]/div/md-input-container[2]/md-select"), 30);
 	}
 	
 	public static List<WebElement> findFocusDropdownSelections(WebDriver driver) {
-		return driver.findElements(By.xpath("//*[@id=\"select_container_12\"]/md-select-menu/md-content/div/md-option/div"));
+		return driver.findElements(By.xpath("html/body/div[contains(@class, 'md-select-menu-container md-active')]/md-select-menu/md-content/div/md-option/div"));
 	}	
 	
 
@@ -69,15 +69,15 @@ public class BatchesTabVP {
 	
 	
 	public static WebElement findSkillsDropdown(WebDriver driver) {
-		return WaitToLoad.findDynamicElement(driver, By.cssSelector("#select_13"), 30);
+		return WaitToLoad.findDynamicElement(driver, By.xpath("html/body/div[contains(@class, 'toastContainer')]/div[2]/div/md-card/md-content[1]/form/div[1]/div/md-input-container[3]/md-select"), 30);
 	}
 
 	public static List<WebElement> findSkillsDropdownSelectionsCheckbox(WebDriver driver) {
-		return driver.findElements(By.xpath("//*[@id=\"select_container_14\"]/md-select-menu/md-content/div/md-option"));
+		return driver.findElements(By.xpath("html/body/div[contains(@class, 'md-select-menu-container md-active')]/md-select-menu/md-content/div/md-option"));
 	}
 	
 	public static List<WebElement> findSkillsDropdownSelectionsText(WebDriver driver) {
-		return driver.findElements(By.xpath("//*[@id=\"select_container_14\"]/md-select-menu/md-content/div/md-option/div[2]"));
+		return driver.findElements(By.xpath("html/body/div[contains(@class, 'md-select-menu-container md-active')]/md-select-menu/md-content/div/md-option/div[2]"));
 	}
 	
 	
@@ -86,11 +86,15 @@ public class BatchesTabVP {
 //	=====================================================================================		
 	
 	public static WebElement findStartDateInput(WebDriver driver) {
-		return WaitToLoad.findDynamicElement(driver, By.cssSelector("#input_16"), 30);
+		return WaitToLoad.findDynamicElement(driver, 
+				By.xpath("html/body/div[contains(@class, 'toastContainer')]/div[2]/div/md-card/md-content[1]/form/div[2]/div[1]/md-input-container[1]/md-datepicker/div/input"), 
+				30);
 	}
 	
 	public static WebElement findEndDateInput(WebDriver driver) {
-		return WaitToLoad.findDynamicElement(driver, By.cssSelector("#input_18"), 30);
+		return WaitToLoad.findDynamicElement(driver, 
+				By.xpath("html/body/div[contains(@class, 'toastContainer')]/div[2]/div/md-card/md-content[1]/form/div[2]/div[1]/md-input-container[2]/md-datepicker/div/input"), 
+				30);
 	}
 	
 //	=====================================================================================
@@ -98,7 +102,9 @@ public class BatchesTabVP {
 //	=====================================================================================			
 	
 	public static WebElement findNameInput (WebDriver driver) {
-		return WaitToLoad.findDynamicElement(driver, By.cssSelector("#input_20"), 30);
+		return WaitToLoad.findDynamicElement(driver, 
+				By.xpath("html/body/div[contains(@class, 'toastContainer')]/div[2]/div/md-card/md-content[1]/form/div[2]/div[2]/md-input-container/input"), 
+				30);
 	}
 	
 //	=====================================================================================
@@ -106,7 +112,18 @@ public class BatchesTabVP {
 //	=====================================================================================			
 		
 	public static WebElement findTrainerDropdown (WebDriver driver) {
-		return WaitToLoad.findDynamicElement(driver, By.cssSelector("#select_21"), 30);
+		return WaitToLoad.findDynamicElement(driver, 
+				By.xpath("html/body/div[contains(@class, 'toastContainer')]/div[2]/div/md-card/md-content[1]/form/div[3]/div/md-input-container[1]/md-select"),  
+				30);
+	}
+	
+	public static List<WebElement> findTrainerSelections (WebDriver driver) {
+		return driver.findElements(By.xpath("html/body/div[contains(@class, 'md-select-menu-container md-active')]/)/md-select-menu/md-content/div/div/div"));
+	}
+	
+	public static List<WebElement> findTrainerSelectionsText (WebDriver driver) {
+		return driver.findElements(By.xpath("html/body/div[contains(@class, 'md-select-menu-container md-active')]/md-select-menu/md-content/div/div/div/md-option/div[contains(@class, 'md-text')]"));
+//		return driver.findElements(By.xpath("//*div[contains(@class, 'md-text ng-binding"))
 	}
 	
 //	=====================================================================================
@@ -114,7 +131,9 @@ public class BatchesTabVP {
 //	=====================================================================================			
 		
 	public static WebElement findCoTrainerDropdown (WebDriver driver) {
-		return WaitToLoad.findDynamicElement(driver, By.cssSelector("#select_23"), 30);
+		return WaitToLoad.findDynamicElement(driver, 
+				By.xpath("html/body/div[contains(@class, 'toastContainer')]/div[2]/div/md-card/md-content[1]/form/div[3]/div/md-input-container[2]/md-select"),  
+				30);
 	}	
 	
 //	=====================================================================================
@@ -122,23 +141,36 @@ public class BatchesTabVP {
 //	=====================================================================================			
 		
 	public static WebElement findLocationDropdown (WebDriver driver) {
-		return WaitToLoad.findDynamicElement(driver, By.cssSelector("#select_25"), 30);
+		return WaitToLoad.findDynamicElement(driver, 
+				By.xpath("html/body/div[contains(@class, 'toastContainer')]/div[2]/div/md-card/md-content[1]/form/div[4]/div/md-input-container[1]/md-select"), 
+				30);
 	}	
 
+	public static List<WebElement> findLocationSelectionsText (WebDriver driver) {
+		return driver.findElements(By.xpath("html/body/div[contains(@class, 'md-select-menu-container md-active')]/md-select-menu/md-content/md-option/div[contains(@class, 'md-text')]"));
+	}
+	
 //	=====================================================================================
 //  BUILDING
 //	=====================================================================================			
 		
 	public static WebElement findBuildingDropdown (WebDriver driver) {
-		return WaitToLoad.findDynamicElement(driver, By.cssSelector("#select_27"), 30);
+		return WaitToLoad.findDynamicElement(driver, 
+				By.xpath("html/body/div[contains(@class, 'toastContainer')]/div[2]/div/md-card/md-content[1]/form/div[4]/div/md-input-container[2]/md-select"), 
+				30);
 	}	
 
+	public static List<WebElement> findBuildingSelectionsText (WebDriver driver) {
+		return driver.findElements(By.xpath("html/body/div[contains(@class, 'md-select-menu-container md-active')]/md-select-menu/md-content/div/div/div/md-option/div[contains(@class, 'md-text')]"));
+	}
 //	=====================================================================================
 //  ROOM
 //	=====================================================================================			
 		
 	public static WebElement findRoomDropdown (WebDriver driver) {
-		return WaitToLoad.findDynamicElement(driver, By.cssSelector("#select_29"), 30);
+		return WaitToLoad.findDynamicElement(driver, 
+				By.xpath("html/body/div[contains(@class, 'toastContainer')]/div[2]/div/md-card/md-content[1]/form/div[4]/div/md-input-container[3]/md-select"), 
+				30);
 	}	
 	
 //	=====================================================================================
