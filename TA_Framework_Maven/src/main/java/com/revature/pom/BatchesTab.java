@@ -289,7 +289,7 @@ public class BatchesTab {
 		
 		Actions actions = new Actions(wd);
 		for (WebElement e : allelemts) {
-			if (e.getText().equals("Revature - Reston, VA")) {
+			if (e.getText().equals("Revature HQ - Restona, VA")) {
 				int target_index = allelemts.indexOf(e);
 				if (allcheckboxes.get(target_index).getAttribute("aria-selected").equals("false")) {
 					actions.moveToElement(allcheckboxes.get(target_index)).click().perform();
@@ -304,7 +304,7 @@ public class BatchesTab {
 		
 		Actions actions = new Actions(wd);
 		for (WebElement e : allelemts) {
-			if (e.getText().equals("Revature 11730")) {
+			if (e.getText().equals("reston 248")) {
 				int target_index = allelemts.indexOf(e);
 				if (allcheckboxes.get(target_index).getAttribute("aria-selected").equals("false")) {
 					actions.moveToElement(allcheckboxes.get(target_index)).click().perform();
