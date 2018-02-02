@@ -62,8 +62,7 @@ public class OverviewCukes {
 	@Then("^The download should start$")
 	public static void the_download_should_start() throws Throwable {
 		System.out.println("Downloading CSV file...");
-		isFileDownloaded("D:\\Users\\Tuan Pham\\Downloads", "batches.csv");
-
+		isFileDownloaded("C:\\Users\\Yoshi\\Downloads", "batches.csv");
 	}
 
 	@Then("^it should be in the download location$")

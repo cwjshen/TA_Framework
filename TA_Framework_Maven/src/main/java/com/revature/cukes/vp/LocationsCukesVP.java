@@ -18,14 +18,14 @@ import cucumber.api.java.en.When;
 public class LocationsCukesVP {
 
 	// change this number to change the test names of locations/buildings
-	static int iteration = 32;
+	static int iteration = 36;
 	static int loc_count = 0;
 	static List<WebElement> locCount;
 
 	@Given("^The Locations Tab is selected VP$")
 	public static boolean clickedLocations(WebDriver wd) {
 		try {
-			Thread.sleep(3000);
+			Thread.sleep(2000);
 			NavBar.navigateToLocationsPage(wd).click();
 			return true;
 		} catch (Throwable e) {
@@ -84,14 +84,14 @@ public class LocationsCukesVP {
 			// System.out.println("!!!!!!!!!!!!!!!!!!!!! THERE ARE " + (locCount.size() / 2)
 			// + " LOCATIONS");
 			Thread.sleep(1000);
-			LocationsVP.findLocationNameField(wd).sendKeys("Mami's House" + iteration);
+			LocationsVP.findLocationNameField(wd).sendKeys("Future Gadget Lab" + iteration);
 		} catch (Throwable e) {
 			System.out.println("Failed to input location name");
 			return false;
 		}
 		try {
 			Thread.sleep(1000);
-			LocationsVP.findLocationCityField(wd).sendKeys("Mitakihara City");
+			LocationsVP.findLocationCityField(wd).sendKeys("Akihabara");
 		} catch (Throwable e) {
 			System.out.println("Failed to input location city");
 			return false;
@@ -130,14 +130,14 @@ public class LocationsCukesVP {
 			// System.out.println("!!!!!!!!!!!!!!!!!!!!! THERE ARE " + (locCount.size() / 2)
 			// + " LOCATIONS");
 			Thread.sleep(1000);
-			LocationsVP.findLocationNameField(wd).sendKeys("Mami's House");
+			LocationsVP.findLocationNameField(wd).sendKeys("Future Gadget Lab");
 		} catch (Throwable e) {
 			System.out.println("Failed to input location name");
 			return false;
 		}
 		try {
 			Thread.sleep(1000);
-			LocationsVP.findLocationCityField(wd).sendKeys("Mitakihara City");
+			LocationsVP.findLocationCityField(wd).sendKeys("Akihabara");
 		} catch (Throwable e) {
 			System.out.println("Failed to input location city");
 			return false;
@@ -342,7 +342,7 @@ public class LocationsCukesVP {
 			Thread.sleep(1000);
 			LocationsVP.findLocationNameField(wd).clear();
 			Thread.sleep(1000);
-			LocationsVP.findLocationNameField(wd).sendKeys("Mami's House" + 10000 + iteration);
+			LocationsVP.findLocationNameField(wd).sendKeys("Future Gadget Lab" + 10000 + iteration);
 		} catch (Throwable e) {
 			System.out.println("Failed to update location name");
 			return false;
@@ -378,7 +378,7 @@ public class LocationsCukesVP {
 			Thread.sleep(1000);
 			LocationsVP.findLocationNameField(wd).clear();
 			Thread.sleep(1000);
-			LocationsVP.findLocationNameField(wd).sendKeys("Mami's House");
+			LocationsVP.findLocationNameField(wd).sendKeys("Future Gadget Lab");
 		} catch (Throwable e) {
 			System.out.println("Failed to update location name");
 			return false;
@@ -414,7 +414,7 @@ public class LocationsCukesVP {
 			Thread.sleep(1000);
 			LocationsVP.findLocationNameField(wd).clear();
 			Thread.sleep(1000);
-			LocationsVP.findLocationNameField(wd).sendKeys("Mami's House" + 10000 + iteration);
+			LocationsVP.findLocationNameField(wd).sendKeys("Future Gadget Lab" + 10000 + iteration);
 		} catch (Throwable e) {
 			System.out.println("Failed to update location name");
 			return false;
@@ -495,7 +495,7 @@ public class LocationsCukesVP {
 			Thread.sleep(1000);
 			LocationsVP.findBuildingNameField(wd).clear();
 			Thread.sleep(1000);
-			LocationsVP.findBuildingNameField(wd).sendKeys("Mami's House" + 10000 + iteration);
+			LocationsVP.findBuildingNameField(wd).sendKeys("Future Gadget Lab" + 10000 + iteration);
 		} catch (Throwable e) {
 			System.out.println("Failed to update building name");
 			return false;

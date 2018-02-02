@@ -15,19 +15,25 @@
     </classes>
   </test>  
   
+  <test name="Test Overview Tab VP">
+    <classes>
+      <class name="com.revature.tests.vp.TestOverviewVP"/>
+    </classes>
+  </test> 
+  
   <test name="Test Locations Tab">
     <classes>
 	  <class name="com.revature.tests.trainer.TestLocations"/> 
     </classes>
   </test> 
-
-  <test name="Test Curricula Tab">
-    <classes>
-	  <class name="com.revature.tests.trainer.TestCurricula"/> 
-    </classes>
-  </test>  
   
-  <test name="TestTrainers Tab">
+  <test name="Test Locations Tab VP">
+    <classes>
+	  <class name="com.revature.tests.vp.TestLocationsVP"/> 
+    </classes>
+  </test> 
+  
+  <test name="Test Trainers Tab">
     <classes>
 	  <class name="com.revature.tests.trainer.TestTrainers"/> 
     </classes>
@@ -45,4 +51,10 @@
     </classes>
   </test>   
 
+ <test name="Test Settings Tab VP">
+    <classes>
+	  <class name="com.revature.tests.vp.TestSettingsVP"/> 
+    </classes>
+  </test>   
+  
 </suite> <!-- Suite -->

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Trainer Tests" parallel="false">
+
+  <test name="Test Profile Tab">
+    <classes>
+	  <class name="com.revature.tests.trainer.TestProfile"/> 
+    </classes>
+  </test>  
+  
+</suite> <!-- Suite -->
