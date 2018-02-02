@@ -8,7 +8,8 @@ import { TestRunnerComponent } from './test-runner/test-runner.component';
 import { MyGraphsComponent } from './my-graphs/my-graphs.component';
 
 const appRoutes: Routes = [
-{ path:'metrics', component: MyGraphsComponent},
+{ path:'home', component: TestRunnerComponent },
+{ path:'metrics', component: MyGraphsComponent}
 
 ];
 
