@@ -1,3 +1,4 @@
+<router-outlet></router-outlet>
 <main role="main" class="container">
 <!-- Bar code Data -!>
     ================================================== -->
@@ -12,6 +13,8 @@
             [legend]="true"
             (chartClick)="onChartClick($event)">
         </canvas>
+        <br />
+        <app-vpgraph></app-vpgraph>
       </div>
     </main>
 

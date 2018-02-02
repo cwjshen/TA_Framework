@@ -1,12 +1,6 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<style>
-  .btn-primary, .btn-success {
-    border:none;
-    width:180px;
-  }
-</style>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
-      <a class="navbar-brand" href="#">Application Testing </a>
+      <a class="navbar-brand" href="home">Application Testing </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -16,7 +10,7 @@
             <a routerLink = "metrics" class="nav-link">Metrics<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"></a>
+            <a class="nav-link" routerLink="chart">Graphs</a>
           </li>
           <li class="nav-item">
             <a class="nav-link disabled" href="#"></a>
@@ -29,76 +23,5 @@
         </form>
       </div>
     </nav>
-
-    <main role="main" class="container">
-      <table class="table table-dark">
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Test Name</th>
-            <th scope="col">Trainer Testing</th>
-            <th scope="col">VP Testing</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            
-          <td>Overview</td>
-          <td><button id=overviewTrainerbtn class="btn-primary" (click)='runOverview()'>Run Overview</button></td>
-          <td><button id=overvieVPbtn class="btn-success" (click)='runOverviewVP()'>Run Overview VP</button></td>
-           
-           </tr> <tr>
-              <th scope="row">2</th>
-          
-          <td>Batches</td>
-          <td><button id=batchesTrainerbtn class="btn-primary" (click)='runBatches()'>Run Batches</button></td>
-          <td><button id=batchesVPbtn class="btn-success" (click)='runBatchesVP()'>Run Batches VP</button></td>
-
-           </tr><tr>
-            <th scope="row">3</th>
-
-          <td>Locations</td>
-          <td><button id=locationsTrainerbtn class="btn-primary" (click)='runLocations()'>Run Locations</button></td>
-          <td><button id=locationsVPbtn class="btn-success" (click)='runLocationsVP()'>Run Locations VP</button></td>
-
-          </tr><tr>
-            <th scope="row">4</th>
-
-          <td>Curricula</td>
-          <td><button id=curriculaTrainerbtn class="btn-primary" (click)='runCurricula()'>Run Curricula</button></td>
-          <td><button id=curriculaVPbtn class="btn-success" (click)='runCurriculaVP()'>Run Curricula VP</button></td>
-
-          </tr><tr>
-            <th scope="row">5</th>
-
-          <td>Trainers</td>
-          <td><button id=TrainersTrainerbtn class="btn-primary" (click)='runTrainers()'>Run Trainers</button></td>
-          <td><button id=TrainersVPbtn class="btn-success" (click)='runTrainersVP()'>Run Trainers VP</button></td>
-
-          </tr><tr>
-            <th scope="row">6</th>
-
-          <td>Profile</td>
-          <td><button id=profileTrainerbtn class="btn-primary" (click)='runProfile()'>Run Profile</button></td>
-          <td>N/A</td>
-
-          </tr><tr>
-            <th scope="row">7</th>
-          <td>Settings</td>
-          <td><button id=settingsTrainerbtn class="btn-primary" (click)='runSettings()'>Run Settings</button></td>
-          <td><button id=settingsVPbtn class="btn-success" (click)='runSettingsVP()'>Run Settings VP</button></td> 
-          </tr>
-        </tbody>
-      </table>
-      <br>
-      <router-outlet></router-outlet>
-      
-
+ <router-outlet></router-outlet>
     </main>
-
-<<<<<<< HEAD
->>>>>>> cc5d2b86de0d3a7715a40ef7943d57aa0e25ac22
-=======
->>>>>>> antoniomdotson
-    

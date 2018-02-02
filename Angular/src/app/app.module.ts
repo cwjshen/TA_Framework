@@ -11,8 +11,8 @@ import { DonutComponent } from './donut/donut.component';
 
 const appRoutes: Routes = [
 { path:'home', component: TestRunnerComponent },
-{ path:'metrics', component: MyGraphsComponent}
-
+{ path:'metrics', component: MyGraphsComponent},
+{ path:'chart', component: DonutComponent}
 ];
 
 @NgModule({
