@@ -11,13 +11,16 @@ public class DriverUtil {
 	private static WebDriver chromeDriver = null;
 	private static WebDriver firefoxDriver = null;
 	
+	private static String chromeDriverFilePath = "C:\\selenium\\chromedriver.exe";
+	private static String firefoxDriverFilePath = "C:\\selenium\\geckodriver.exe";
+	
 	private DriverUtil() {
 		
 	}
 	
 	public static WebDriver getChromeDriver() {
 		if (chromeDriver == null) {
-			File f1 = new File("src/main/resources/chromedriver.exe");
+			File f1 = new File(chromeDriverFilePath);
 			System.setProperty("webdriver.chrome.driver", f1.getAbsolutePath());
 			return new ChromeDriver();
 		}
@@ -27,7 +30,7 @@ public class DriverUtil {
 	
 	public static WebDriver getFirefoxDriver() {
 		if (firefoxDriver == null) {
-			File f1 = new File("src/main/resources/geckodriver.exe");
+			File f1 = new File(firefoxDriverFilePath);
 			System.setProperty("webdriver.geckodriver.driver", f1.getAbsolutePath());
 			return new FirefoxDriver();
 		}

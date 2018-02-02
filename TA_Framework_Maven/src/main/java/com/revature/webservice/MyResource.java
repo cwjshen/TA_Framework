@@ -31,24 +31,13 @@ public class MyResource {
 	
 	@GET
     public InputStream getIt() {
-//    	TestBatchesVP t = new TestBatchesVP();
-//    	t.beforeSuite();
-//    	t.beforeTest();
-//    	t.checkSectionHeaders();
-//    	t.invalidateEmptyForm();
-//    	t.insertSingleBatch();
-//    	t.insertBatchStressTest();
-//    	t.refreshTest();
-//    	t.afterTest();
-//    	t.afterSuite();
-		
-//		
-		TestListenerAdapter tla = new TestListenerAdapter();
-		TestNG testng = new TestNG();
-		List<String> suites = Lists.newArrayList();
-		suites.add("C:\\SpringToolSuite\\Workspace\\TA_Framework_WebService\\src\\main\\java\\TestNGXML");//path to xml..
-		testng.setTestSuites(suites);
-		testng.run();
+			
+//		TestListenerAdapter tla = new TestListenerAdapter();
+//		TestNG testng = new TestNG();
+//		List<String> suites = Lists.newArrayList();
+//		suites.add("C:\\SpringToolSuite\\Workspace\\TA_Framework_WebService\\src\\main\\java\\TestNGXML");//path to xml..
+//		testng.setTestSuites(suites);
+//		testng.run();
 
 //		String basePath = new File("").getAbsolutePath();
 //		System.out.println(basePath);
