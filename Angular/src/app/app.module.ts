@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { TestRunnerComponent } from './test-runner/test-runner.component';
 import { MyGraphsComponent } from './my-graphs/my-graphs.component';
 import { VpgraphComponent } from './vpgraph/vpgraph.component';
+import { DonutComponent } from './donut/donut.component';
 
 const appRoutes: Routes = [
 { path:'metrics', component: MyGraphsComponent},
@@ -18,7 +19,8 @@ const appRoutes: Routes = [
     AppComponent,
     TestRunnerComponent,
     MyGraphsComponent,
-    VpgraphComponent
+    VpgraphComponent,
+    DonutComponent
   ],
   imports: [
     BrowserModule,
