@@ -11,6 +11,8 @@ import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 
+import org.testng.ITestNGListener;
+import org.testng.ITestResult;
 import org.testng.TestListenerAdapter;
 import org.testng.TestNG;
 import org.testng.collections.Lists;
@@ -35,143 +37,184 @@ public class VPService {
 	
 	@GET
 	@Path("/overview")
-    public InputStream testOverview() {
+    public String testOverview() {
 		String fileName = "TestNGOverviewVP";
 			
 		TestListenerAdapter tla = new TestListenerAdapter();
 		TestNG testng = new TestNG();
+		testng.setOutputDirectory("C:\\Users\\Jason\\Desktop\\test-ouput");
 		List<String> suites = Lists.newArrayList();
 		suites.add(baseURL + fileName);//path to xml..
+		
+		ITestNGListener listener = tla;
+		testng.addListener(listener);
+		
 		testng.setTestSuites(suites);
 		testng.run();
-
-//		String basePath = new File("").getAbsolutePath();
-//		System.out.println(basePath);
-//		
-//		String path = new File("test-output/index.html").getAbsolutePath();
-//		System.out.println(path);
-//		
-//		System.out.println(System.getProperty("user.dir"));
-    	File f = new File(testOutputURL);
-    	try {
-			return new FileInputStream(f);
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-			return null;
+		
+		StringBuffer passed = new StringBuffer();
+		for (ITestResult result : ((TestListenerAdapter) listener).getPassedTests()) {
+			passed.append(" " + result.getName() + "...passed!<br>");
 		}
+
+		StringBuffer failed = new StringBuffer();
+		for (ITestResult result : ((TestListenerAdapter) listener).getFailedTests()) {
+			failed.append(" " + result.getName() + "...failed :(<br>");
+		}		
+		
+		return "Test complete!<br>" + passed.toString() + "<br>" + failed.toString();
     }
 	
 	@GET
 	@Path("/batches")
-    public InputStream testBatches() {
+    public String testBatches() {
 		String fileName = "TestNGBatchesVP";
 			
 		TestListenerAdapter tla = new TestListenerAdapter();
 		TestNG testng = new TestNG();
+		testng.setOutputDirectory("C:\\Users\\Jason\\Desktop\\test-ouput");
 		List<String> suites = Lists.newArrayList();
 		suites.add(baseURL + fileName);//path to xml..
+		
+		ITestNGListener listener = tla;
+		testng.addListener(listener);
+		
 		testng.setTestSuites(suites);
 		testng.run();
-
-    	File f = new File(testOutputURL);
-    	try {
-			return new FileInputStream(f);
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-			return null;
+		
+		StringBuffer passed = new StringBuffer();
+		for (ITestResult result : ((TestListenerAdapter) listener).getPassedTests()) {
+			passed.append(" " + result.getName() + "...passed!<br>");
 		}
+
+		StringBuffer failed = new StringBuffer();
+		for (ITestResult result : ((TestListenerAdapter) listener).getFailedTests()) {
+			failed.append(" " + result.getName() + "...failed :(<br>");
+		}		
+		
+		return "Test complete!<br>" + passed.toString() + "<br>" + failed.toString();
     }
 
 	@GET
 	@Path("/locations")
-    public InputStream testLocations() {
+    public String testLocations() {
 		String fileName = "TestNGLocationsVP";
 			
 		TestListenerAdapter tla = new TestListenerAdapter();
 		TestNG testng = new TestNG();
+		testng.setOutputDirectory("C:\\Users\\Jason\\Desktop\\test-ouput");
 		List<String> suites = Lists.newArrayList();
 		suites.add(baseURL + fileName);//path to xml..
+		
+		ITestNGListener listener = tla;
+		testng.addListener(listener);
+		
 		testng.setTestSuites(suites);
 		testng.run();
-
-    	File f = new File(testOutputURL);
-    	try {
-			return new FileInputStream(f);
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-			return null;
+		
+		StringBuffer passed = new StringBuffer();
+		for (ITestResult result : ((TestListenerAdapter) listener).getPassedTests()) {
+			passed.append(" " + result.getName() + "...passed!<br>");
 		}
+
+		StringBuffer failed = new StringBuffer();
+		for (ITestResult result : ((TestListenerAdapter) listener).getFailedTests()) {
+			failed.append(" " + result.getName() + "...failed :(<br>");
+		}		
+		
+		return "Test complete!<br>" + passed.toString() + "<br>" + failed.toString();
     }
 
 	
 	@GET
 	@Path("/curricula")
-    public InputStream testCurricula() {
+    public String testCurricula() {
 		String fileName = "TestNGCurriculaVP";
 			
 		TestListenerAdapter tla = new TestListenerAdapter();
 		TestNG testng = new TestNG();
+		testng.setOutputDirectory("C:\\Users\\Jason\\Desktop\\test-ouput");
 		List<String> suites = Lists.newArrayList();
 		suites.add(baseURL + fileName);//path to xml..
+		
+		ITestNGListener listener = tla;
+		testng.addListener(listener);
+		
 		testng.setTestSuites(suites);
 		testng.run();
-
-    	File f = new File(testOutputURL);
-    	try {
-			return new FileInputStream(f);
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-			return null;
+		
+		StringBuffer passed = new StringBuffer();
+		for (ITestResult result : ((TestListenerAdapter) listener).getPassedTests()) {
+			passed.append(" " + result.getName() + "...passed!<br>");
 		}
+
+		StringBuffer failed = new StringBuffer();
+		for (ITestResult result : ((TestListenerAdapter) listener).getFailedTests()) {
+			failed.append(" " + result.getName() + "...failed :(<br>");
+		}		
+		
+		return "Test complete!<br>" + passed.toString() + "<br>" + failed.toString();
     }
 	
 
 	@GET
 	@Path("/trainers")
-    public InputStream testTrainers() {
+    public String testTrainers() {
 		String fileName = "TestNGTrainersVP";
 			
 		TestListenerAdapter tla = new TestListenerAdapter();
 		TestNG testng = new TestNG();
+		testng.setOutputDirectory("C:\\Users\\Jason\\Desktop\\test-ouput");
 		List<String> suites = Lists.newArrayList();
 		suites.add(baseURL + fileName);//path to xml..
+		
+		ITestNGListener listener = tla;
+		testng.addListener(listener);
+		
 		testng.setTestSuites(suites);
 		testng.run();
-
-    	File f = new File(testOutputURL);
-    	try {
-			return new FileInputStream(f);
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-			return null;
+		
+		StringBuffer passed = new StringBuffer();
+		for (ITestResult result : ((TestListenerAdapter) listener).getPassedTests()) {
+			passed.append(" " + result.getName() + "...passed!<br>");
 		}
+
+		StringBuffer failed = new StringBuffer();
+		for (ITestResult result : ((TestListenerAdapter) listener).getFailedTests()) {
+			failed.append(" " + result.getName() + "...failed :(<br>");
+		}		
+		
+		return "Test complete!<br>" + passed.toString() + "<br>" + failed.toString();
     }
 	
 	@GET
 	@Path("/settings")
-    public InputStream testSettings() {
+    public String testSettings() {
 		String fileName = "TestNGSettingsVP";
 			
 		TestListenerAdapter tla = new TestListenerAdapter();
 		TestNG testng = new TestNG();
+		testng.setOutputDirectory("C:\\Users\\Jason\\Desktop\\test-ouput");
 		List<String> suites = Lists.newArrayList();
 		suites.add(baseURL + fileName);//path to xml..
+		
+		ITestNGListener listener = tla;
+		testng.addListener(listener);
+		
 		testng.setTestSuites(suites);
 		testng.run();
-
-    	File f = new File(testOutputURL);
-    	try {
-			return new FileInputStream(f);
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-			return null;
+		
+		StringBuffer passed = new StringBuffer();
+		for (ITestResult result : ((TestListenerAdapter) listener).getPassedTests()) {
+			passed.append(" " + result.getName() + "...passed!<br>");
 		}
+
+		StringBuffer failed = new StringBuffer();
+		for (ITestResult result : ((TestListenerAdapter) listener).getFailedTests()) {
+			failed.append(" " + result.getName() + "...failed :(<br>");
+		}		
+		
+		return "Test complete!<br>" + passed.toString() + "<br>" + failed.toString();
     }
 	
 

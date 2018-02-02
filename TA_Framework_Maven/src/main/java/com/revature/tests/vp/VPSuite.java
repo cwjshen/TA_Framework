@@ -15,7 +15,7 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.testng.AbstractTestNGCucumberTests;
 
 //Hook Class to run Cucumber Tests
-@CucumberOptions(features="src/test/resources/com/revature/features/vp")
+@CucumberOptions(features="C:/Users/Jason/Documents/GitHub/TA_Framework/TA_Framework_Maven/src/test/resources/com/revature/features/vp")
 public class VPSuite extends AbstractTestNGCucumberTests{
 
 	public static WebDriver wd = DriverUtil.getChromeDriver();

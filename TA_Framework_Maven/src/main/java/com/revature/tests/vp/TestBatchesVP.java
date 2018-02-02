@@ -22,9 +22,6 @@ public class TestBatchesVP extends VPSuite {
 	public void beforeTest() {
 		System.out.println("Running Batches VP Test");
 		assertTrue(BatchesCukesVP.clickBatchesTab(wd));		
-//		List<Batch> batches_to_add = new BatchDaoImp().getFullBatch();
-//		BatchesCukesVP.insertAllBatchData(wd, batches_to_add);
-		
 		// BODY,LOGOUT
 		BatchesTabVP.body(wd).click();
 	}
