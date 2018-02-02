@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  runOverview() : void {
+  	window.location.href = 'http://localhost:8080/TA_Framework_Maven/webapi/trainer/overview';
+  }
+  runOverviewVP() : void {
+  	window.location.href = 'http://localhost:8080/TA_Framework_Maven/webapi/vp/overview';
+  }
 }

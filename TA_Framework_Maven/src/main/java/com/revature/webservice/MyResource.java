@@ -9,6 +9,7 @@ import java.util.List;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
 
 import org.testng.TestListenerAdapter;
 import org.testng.TestNG;
@@ -19,7 +20,7 @@ import com.revature.tests.vp.TestBatchesVP;
 /**
  * Root resource (exposed at "myresource" path)
  */
-@Path("myresource")
+@Path("trainer")
 public class MyResource {
 
     /**
@@ -30,14 +31,15 @@ public class MyResource {
      */
 	
 	@GET
-    public InputStream getIt() {
+	@Path("/overview")
+    public InputStream testOverview() {
 			
-//		TestListenerAdapter tla = new TestListenerAdapter();
-//		TestNG testng = new TestNG();
-//		List<String> suites = Lists.newArrayList();
-//		suites.add("C:\\SpringToolSuite\\Workspace\\TA_Framework_WebService\\src\\main\\java\\TestNGXML");//path to xml..
-//		testng.setTestSuites(suites);
-//		testng.run();
+		TestListenerAdapter tla = new TestListenerAdapter();
+		TestNG testng = new TestNG();
+		List<String> suites = Lists.newArrayList();
+		suites.add("C:\\Users\\Jason\\Documents\\GitHub\\TA_Framework\\TA_Framework_Maven\\src\\main\\java\\TestNGOverview");//path to xml..
+		testng.setTestSuites(suites);
+		testng.run();
 
 //		String basePath = new File("").getAbsolutePath();
 //		System.out.println(basePath);
@@ -46,7 +48,7 @@ public class MyResource {
 //		System.out.println(path);
 //		
 //		System.out.println(System.getProperty("user.dir"));
-    	File f = new File("C:\\SpringToolSuite\\Workspace\\TA_Framework_WebService\\test-output\\index.html");
+    	File f = new File("C:\\Users\\Jason\\Documents\\GitHub\\TA_Framework\\TA_Framework_Maven\\test-output\\index.html");
     	try {
 			return new FileInputStream(f);
 		} catch (FileNotFoundException e) {
