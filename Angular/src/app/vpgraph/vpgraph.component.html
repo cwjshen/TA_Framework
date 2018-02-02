@@ -1,7 +1,7 @@
-<main role="main" class="container">
+<router-outlet></router-outlet>
 <!-- Bar code Data -!>
-    ================================================== -->
-    <h3 align="center">Trainer Tests</h3>
+================================================== -->
+    <h3 align="center">VP Tests</h3>
     <div style="width: 100%;">
         <canvas
             baseChart
@@ -10,13 +10,8 @@
             [labels]="chartLabels"
             [options]="chartOptions"
             [legend]="true"
+            [colors]="colors"
             (chartClick)="onChartClick($event)">
         </canvas>
       </div>
-    </main>
 
-      <br>
-
-      <app-vpgraph></app-vpgraph>
-          <br>
-      <app-donut></app-donut>
