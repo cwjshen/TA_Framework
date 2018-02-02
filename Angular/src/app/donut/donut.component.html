@@ -1,4 +1,6 @@
 <router-outlet></router-outlet>
+<main role="main" class="container">
+<router-outlet></router-outlet>
     <h3 align="center">Overview</h3>
     <div style="display: block">
       <canvas baseChart
@@ -8,4 +10,5 @@
                   (chartHover)="chartHovered($event)"
                   (chartClick)="chartClicked($event)"></canvas>
     </div>
+</main>
 
