@@ -21,7 +21,7 @@ import com.revature.tests.vp.TestBatchesVP;
  * Root resource (exposed at "myresource" path)
  */
 @Path("trainer")
-public class MyResource {
+public class TrainerTests {
 
     /**
      * Method handling HTTP GET requests. The returned object will be sent
