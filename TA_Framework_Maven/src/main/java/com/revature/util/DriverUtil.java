@@ -11,8 +11,8 @@ public class DriverUtil {
 	private static WebDriver chromeDriver = null;
 	private static WebDriver firefoxDriver = null;
 	
-	private static String chromeDriverURL = "C:\\selenium\\chromedriver.exe";
-	private static String firefoxDriverURL = "C:\\selenium\\geckodriver.exe";
+	private static String chromeDriverURL = "C:\\Users\\Yoshi\\Documents\\Revature\\my_git_repos\\TA_Framework\\TA_Framework_Maven\\src\\main\\resources\\chromedriver.exe";
+	private static String firefoxDriverURL = "C:\\Users\\Yoshi\\Documents\\Revature\\my_git_repos\\TA_Framework\\TA_Framework_Maven\\src\\main\\resources\\geckodriver.exe";
 	
 	
 	private DriverUtil() {

@@ -33,11 +33,11 @@ public class MyResource {
     public InputStream getIt() {
 			
 //		TestListenerAdapter tla = new TestListenerAdapter();
-		TestNG testng = new TestNG();
-		List<String> suites = Lists.newArrayList();
-		suites.add("C:\\Users\\Jason\\Documents\\GitHub\\TA_Framework\\TA_Framework_Maven\\src\\main\\java\\TestNGCurricula");//path to xml..
-		testng.setTestSuites(suites);
-		testng.run();
+//		TestNG testng = new TestNG();
+//		List<String> suites = Lists.newArrayList();
+//		suites.add("C:\\SpringToolSuite\\Workspace\\TA_Framework_WebService\\src\\main\\java\\TestNGXML");//path to xml..
+//		testng.setTestSuites(suites);
+//		testng.run();
 
 //		String basePath = new File("").getAbsolutePath();
 //		System.out.println(basePath);
