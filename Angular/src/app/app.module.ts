@@ -6,6 +6,7 @@ import { RouterModule, Routes} from '@angular/router';
 import { AppComponent } from './app.component';
 import { TestRunnerComponent } from './test-runner/test-runner.component';
 import { MyGraphsComponent } from './my-graphs/my-graphs.component';
+import { VpgraphComponent } from './vpgraph/vpgraph.component';
 
 const appRoutes: Routes = [
 { path:'metrics', component: MyGraphsComponent},
@@ -16,7 +17,8 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     TestRunnerComponent,
-    MyGraphsComponent
+    MyGraphsComponent,
+    VpgraphComponent
   ],
   imports: [
     BrowserModule,

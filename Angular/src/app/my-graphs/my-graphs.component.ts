@@ -17,8 +17,8 @@ export class MyGraphsComponent implements OnInit {
     };
   
     chartData = [
-      { data: [24, 13, 3, 1,12,19,12], label: 'Success' },
-      { data: [4, 1, 0, 0,0,2,2], label: 'Fail' }
+      { data: [4, 1, 0, 0,0,2,2], label: 'Fail' },
+      { data: [24, 13, 3, 1,12,19,12], label: 'Success' }
     ];
   
     chartLabels = ['Overview', 'Batches', 'Location', 'Curricula','Trainers','Profile','Settings'];
